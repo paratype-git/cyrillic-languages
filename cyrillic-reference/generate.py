@@ -155,6 +155,8 @@ def classify_variant_token(token: str) -> dict | None:
             style = label
             rest = rest[: -len(suffix)]
             break
+    if not rest:
+        return None
     pua_match = PUA_TOKEN.match(rest)
     if pua_match:
         codepoints = [f"{int(pua_match.group(1), 16):04X}"]
@@ -189,6 +191,14 @@ def collect_glyph_variants(data_root: Path, languages: list[str]) -> list[dict]:
                 for token in (block.get(side, "") or "").split():
                     info = classify_variant_token(token)
                     if info is None:
+                        continue
+                    # `+` alternates in ru-default languages are stylistic
+                    # alternates for letters that already have their own
+                    # codepoint and their own row in the main character
+                    # table — they are not locl shape variants, so they do
+                    # not belong here. (`&` tokens never occur in ru-default
+                    # sources anyway.)
+                    if locale == "ru" and info["marker"] == "alternate":
                         continue
                     variants.append({
                         **info,
@@ -292,9 +302,12 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
         "- **Case** — uppercase / lowercase."
     )
     out.append(
-        "- **Locale** — the source language's `local` field "
-        "(`ru` default, `bg` Bulgarian, `sr` Serbian, …). A `&`-marked "
-        "token is the localized glyph selected by that locale."
+        "- **Locale** — the source language's `local` field. Only "
+        "non-default locales (`bg` Bulgarian, `sr` Serbian, `ba` Bashkir, "
+        "`cv` Chuvash) appear here, because ru-default languages do not "
+        "produce locl shape variants — their `+` alternates are stylistic "
+        "forms of letters that already have their own Unicode codepoint, "
+        "listed in the main character table instead."
     )
     out.append(
         "- **Style** — `straight` or `italic` when the source token has "
