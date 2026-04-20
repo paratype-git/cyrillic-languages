@@ -298,7 +298,7 @@ This is a legacy shortcut that was never tidied up. Adding a new locale today th
 
 ## Utility scripts
 
-Everything below `scripts/` other than `compile_languages.py`. Ordered by "relevant now" → "semi-archived".
+`cyrillic-languages/scripts/` holds three active scripts. Everything historically in this folder — one-shot migrations, diagnostics, the old helper module, and the `langdesc-*.txt` / `latin_languages.txt` snapshots that were their inputs — has been moved into `scripts/_legacy/`, which is **gitignored** and kept only on the maintainer's machine. See [Archived scripts](#archived-scripts) below for a brief index.
 
 ### `compile_languages.py`
 
@@ -308,41 +308,26 @@ The main pipeline. See [Running the pipeline](#running-the-pipeline).
 
 Dumps every language's textual metadata (`name_eng`, `name_rus`, `language_group_rus`, `alt_names_eng`, `description_eng`, `description_rus`) into a single markdown-ish text file. Intended as an intermediate format when you want to edit descriptions in bulk in a text editor.
 
-**Hardcoded paths.** The current file has absolute paths to `/Users/alexander/WORKS/PythonWorks/...`. Before running it on a different machine, rewrite the `workpath` and `codeslangfile` constants to use paths relative to the script (see `reloadDescriptions.py` and `makeLatinLib.py` for the pattern). As currently written it targets the **Latin** base; to dump Cyrillic descriptions, change the path.
+**Hardcoded paths.** The current file has absolute paths to `/Users/alexander/WORKS/PythonWorks/...`. Before running it on a different machine, rewrite the `workpath` and `codeslangfile` constants to use paths relative to the script. As currently written it targets the **Latin** base; to dump Cyrillic descriptions, change the path.
 
 ### `reloadDescriptions.py`
 
-The inverse of `dumpLangDescriptions.py`: reads the markdown-ish text file and writes each language's `language_group_rus`, `alt_names_eng`, `description_eng`, and `description_rus` back into the corresponding `library/latin/base/<name>.json`. Operates on the Latin tree by default; set `applyChanges = False` to dry-run.
+The inverse of `dumpLangDescriptions.py`: reads the markdown-ish text file and writes each language's `language_group_rus`, `alt_names_eng`, `description_eng`, and `description_rus` back into the corresponding `library/latin/base/<name>.json`. Operates on the Latin tree by default; set `applyChanges = False` to dry-run. The default `descriptionsfile` constant points at `langdesc-rus-latin_g.txt`, which now lives under `scripts/_legacy/` — adjust the constant to the file you actually want to reload from.
 
-### `makeLatinLib.py`
+### Archived scripts
 
-Bootstraps the entire Latin tree from `latin_languages.txt`: creates one `library/latin/base/<Name>.json` per language and rewrites `library/latin/latin_library.json`. Run only when rebuilding the Latin library from scratch.
+`scripts/_legacy/` (gitignored) holds the following, kept only for historical reference:
 
-### `recode_basejson.py`, `recode_cyrlib.py`, `recode_mainlibfile.py`
+- `makeLatinLib.py` — one-shot bootstrap of the Latin tree from `latin_languages.txt`.
+- `recode_basejson.py`, `recode_cyrlib.py`, `recode_mainlibfile.py` — migrations from earlier schema generations. `recode_cyrlib.py` in particular turned the old flat `uppercase_alphabet` / `uppercase_dialect` / `uppercase_historic` / `uppercase_lexic` keys into the modern `glyphs_list` structure; `recode_mainlibfile.py` has absolute paths to someone's `/Users/alexander/...` layout.
+- `checkLanguageUFO.py` — cross-checks glyph sets against UFO font files; requires the `fontParts` third-party package.
+- `testPanCharSet.py`, `testSorting.py` — ad-hoc diagnostic dumps.
+- `PTLangLib.py` — an earlier helper module; most of it is commented out. The surviving `CharacherDescription` class is duplicated (and current) inside `compile_languages.py`.
+- `make_charlib.py` — obsolete sketch that imports a class commented out in `PTLangLib.py`; the import fails on run.
+- `notes.txt` — outdated glyph-marker cheat-sheet (superseded by CONTRIBUTING.md / CONTRIBUTING-RU.md).
+- `langdesc-eng.txt`, `langdesc-eng_e.txt`, `langdesc-eng_e-25.08.2022.txt`, `langdesc-rus.txt`, `langdesc-rus-latin.txt`, `langdesc-rus-latin_g.txt`, `latin_languages.txt` — historical text-dump inputs / outputs for the dump/reload scripts.
 
-One-shot migrations from earlier schema generations. Kept as reference for how the data reached its current shape; they are not part of any recurring workflow.
-
-- `recode_basejson.py` — split the old `uppercase_alphabet_adds` / `lowercase_alphabet_adds` blobs into separate `uppercase_dialect`, `uppercase_historic`, `uppercase_lexic` keys.
-- `recode_cyrlib.py` — migrated those flat keys into the modern `glyphs_list` structure. The two files still in `library/cyrillic/_legacy/` pre-date even this step and were never migrated.
-- `recode_mainlibfile.py` — set `enable: true` on every entry in `cyrillic_library.json`. Paths are hardcoded to `/Users/alexander/GitHub/PythonWorks/...`.
-
-If you need to run one of these, re-read it first — paths and assumptions rarely match the current layout.
-
-### `checkLanguageUFO.py`
-
-Cross-checks the glyph sets declared in the Cyrillic sources against actual UFO font files. Requires the `fontParts` third-party package (not installed by default). Outside the recurring pipeline; useful when validating a new font release against the language data.
-
-### `testPanCharSet.py`, `testSorting.py`
-
-Small diagnostic dumps — `testPanCharSet.py` lists all glyph types encountered across the generated site files; `testSorting.py` is a throwaway script that compares Python's default sort of a Dagestan-language alphabet against an expected order.
-
-### `make_charlib.py` — obsolete, do not run
-
-Early sketch that imports `CyrillicOrderSorter` from `PTLangLib`. That class is fully commented out in the current `PTLangLib.py`, so the import will fail. Kept for historical reference only.
-
-### `PTLangLib.py`
-
-A helper module. Most of it is commented out. The surviving `CharacherDescription` class is nearly identical to the one inlined in `compile_languages.py`; don't rely on this module for new code.
+If you ever need any of these, pull them out of `_legacy/`, adjust paths as required, and remember that they are no longer under version control.
 
 ## Dump / reload round-trip for language descriptions
 
@@ -376,7 +361,7 @@ Path: `cyrillic-languages/library/cyrillic/_legacy/`.
 
 Contents: three Russian historical-alphabet files that are not referenced by `cyrillic_library.json` and therefore not processed by the pipeline:
 
-- `Russian Ancient (XVIII).json` — legacy schema (flat `uppercase_alphabet` / `lowercase_alphabet` / `uppercase_dialect` / … keys; no `glyphs_list`). Would need migration through something like `recode_cyrlib.py` before it could be re-enabled.
+- `Russian Ancient (XVIII).json` — legacy schema (flat `uppercase_alphabet` / `lowercase_alphabet` / `uppercase_dialect` / … keys; no `glyphs_list`). Would need migration — the archived `scripts/_legacy/recode_cyrlib.py` is what originally turned the flat keys into the modern `glyphs_list` and is the nearest reference for a migrator — before it could be re-enabled.
 - `Russian Church (X-XVII).json` — same legacy schema.
 - `Russian Old (XIX).json` — modern schema (has `glyphs_list`), simply not registered in the index.
 
@@ -413,7 +398,7 @@ A running list of things that are known-imperfect and should be addressed when s
 
    Cleanup would mean trimming both tables and the `getCharInfo` loop. Done carefully, this would turn the footguns into explicit "unknown marker" errors.
 
-3. **Utility scripts with absolute user paths.** `dumpLangDescriptions.py` and `recode_mainlibfile.py` contain macOS-style absolute paths from an earlier developer setup. Any run starts with a mandatory path edit.
+3. **Utility scripts with absolute user paths.** `scripts/dumpLangDescriptions.py` and several archived one-shots under `scripts/_legacy/` contain macOS-style absolute paths from an earlier developer setup. Any run starts with a mandatory path edit.
 
 4. **No pre-merge validator.** PRs are reviewed by eye. A small validator script (`scripts/validate.py`) that checks schema completeness, filename/name_eng match, locale validity, and absence of dead/trap markers would remove most of the routine review work. **This is deferred pending scope agreement**; see project history for the outstanding decision.
 
@@ -421,7 +406,7 @@ A running list of things that are known-imperfect and should be addressed when s
 
 6. **Stale contact email in the compiled site bundle.** The React bundle served at <https://paratype.github.io/cyrillic-languages/> still contains `fonts@paratype.com` in the "About the project" panel. The new canonical contact is `info@paratype.net`. Fixing this means rebuilding the React app and committing the new bundle in the [paratype/paratype.github.io](https://github.com/paratype/paratype.github.io) repository — out of scope for routine data maintenance here, because the site engine is not tracked in this repository.
 
-7. **Production split.** This repository currently holds both the data and the site engine. Long-term, splitting into a data-only repository and a site-engine repository (with the site fetching JSON via `raw.githubusercontent.com` URLs, as it already does) would cleanly separate the contributor surface from the site surface. Until that split happens, the contributor/operator boundary is enforced only by the `README.md` map and `CONTRIBUTING.md` — there are no mechanical guards.
+7. **Production URLs in the compiled site bundle still point at the old data location.** The site bundle at `paratype/paratype.github.io` fetches per-language JSON from `raw.githubusercontent.com/paratype/paratype.github.io/main/cyrillic-languages/site/...`. After this repo (`paratype-git/cyrillic-languages`) became the data-only home, those URLs need to be updated in the React app and the bundle recommitted to the `paratype.github.io` repository. Until that happens, the production site is served from a stale copy of the data.
 
 8. **`glyphs_list_categories.json` includes `digraph` and `foreign`**, both currently unused in source data (`digraph` is handled inline via the `:` marker). Either remove them from the categories file, or adopt them in data, or document why they are reserved.
 

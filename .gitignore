@@ -13,3 +13,7 @@
 /cyrillic-languages/favicon.ico
 /cyrillic-languages/robots.txt
 
+# Legacy / one-shot migration scripts and historical txt snapshots.
+# Kept locally for reference; not part of the tracked toolchain.
+/cyrillic-languages/scripts/_legacy/
+
