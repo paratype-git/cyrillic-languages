@@ -406,8 +406,10 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
         if r["marker"] == "localized" and r["locale"] and r["codepoints"]:
             cp_hex = r["codepoints"][0].upper()
             stem = f"{cp_hex}.{r['locale']}"
+            # Variant diagrams are always 2 boxes (default → variant) with
+            # viewBox width 4040; rendered height ~100 at width 170.
             diagram_cell = (
-                f'<img src="svg/variants/{stem}.svg" height="100" '
+                f'<img src="svg/variants/{stem}.svg" width="170" '
                 f'alt="U+{cp_hex} .{r["locale"]}"> '
                 f"[txt](svg/variants/{stem}.txt)"
             )
@@ -506,16 +508,22 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
         description = entry.get("description", "")
         pua_flag = "yes" if any(is_pua(int(u, 16)) for u in unicodes) else ""
         locales = ", ".join(entry.get("locales", []))
-        # Diagram cell: embed the generated SVG inline (fixed height for
-        # vertically-aligned rows) with a link to the plotter source .txt
-        # next to it. Produced by generate_svgs.py; paths are relative so
-        # the embed works both on GitHub and in local preview.
+        # Diagram cell: embed the generated SVG inline with an explicit
+        # width so GitHub's table auto-sizing gives wide multi-box
+        # diagrams enough room. Width is derived from the deterministic
+        # viewBox of each diagram type (target rendered height ~100px).
         cp_hex = unicodes[0].upper() if unicodes else ""
-        diagram_cell = (
-            f'<img src="svg/{subdir}/{cp_hex}.svg" height="100" alt="U+{cp_hex}"> '
-            f"[txt](svg/{subdir}/{cp_hex}.txt)"
-            if cp_hex else ""
-        )
+        if cp_hex:
+            n_accents = decomp_cell.count("+") if decomp_cell else 0
+            # viewBox widths: 1 box=1440, 3 box=6640 (1 accent), 4 box=9240 (2 accents)
+            svg_width = 1440 if n_accents == 0 else (2600 * n_accents + 4040)
+            img_width = round(svg_width * 100 / 2380)
+            diagram_cell = (
+                f'<img src="svg/{subdir}/{cp_hex}.svg" width="{img_width}" alt="U+{cp_hex}"> '
+                f"[txt](svg/{subdir}/{cp_hex}.txt)"
+            )
+        else:
+            diagram_cell = ""
         out.append(
             f"| {i} | {sign} | {format_unicodes(unicodes)} | "
             f"{description} | {pua_flag} | {decomp_cell} | "
