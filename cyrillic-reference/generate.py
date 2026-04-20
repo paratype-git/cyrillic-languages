@@ -407,7 +407,9 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
             cp_hex = r["codepoints"][0].upper()
             stem = f"{cp_hex}.{r['locale']}"
             diagram_cell = (
-                f"[svg](svg/variants/{stem}.svg) / [txt](svg/variants/{stem}.txt)"
+                f'<img src="svg/variants/{stem}.svg" height="60" '
+                f'alt="U+{cp_hex} .{r["locale"]}"> '
+                f"[txt](svg/variants/{stem}.txt)"
             )
         out.append(
             f"| {i} | {format_unicodes(r['codepoints'])} | {r['case']} | "
@@ -508,12 +510,14 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
         description = entry.get("description", "")
         pua_flag = "yes" if any(is_pua(int(u, 16)) for u in unicodes) else ""
         locales = ", ".join(entry.get("locales", []))
-        # Diagram cell: links to the generated SVG + the plotter source .txt,
-        # side-by-side. Produced by generate_svgs.py; files are resolved as
-        # relative paths so the links work both on GitHub and locally.
+        # Diagram cell: embed the generated SVG inline (fixed height for
+        # vertically-aligned rows) with a link to the plotter source .txt
+        # next to it. Produced by generate_svgs.py; paths are relative so
+        # the embed works both on GitHub and in local preview.
         cp_hex = unicodes[0].upper() if unicodes else ""
         diagram_cell = (
-            f"[svg](svg/{subdir}/{cp_hex}.svg) / [txt](svg/{subdir}/{cp_hex}.txt)"
+            f'<img src="svg/{subdir}/{cp_hex}.svg" height="60" alt="U+{cp_hex}"> '
+            f"[txt](svg/{subdir}/{cp_hex}.txt)"
             if cp_hex else ""
         )
         out.append(
