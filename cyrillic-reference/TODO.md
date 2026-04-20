@@ -45,7 +45,7 @@ Sample code is in §4.13 of the spec. Required asset on disk:
 
 `generate.py` needs a function that takes a single character (or decomposed sequence) and emits a glyphplotter input file describing one diagram per letter. Diagram shape: `<char-box> { + <char-box> } --> <final-glyph>`. Then invoke the glyphplotter binary to rasterize to SVG.
 
-The `glyphplotter` tool lives at <https://bitbucket.org/LindenbergSW/fontdoctools/src/master/> — MIT-compatible. Clone adjacent to this repo.
+The `glyphplotter` tool lives at <https://bitbucket.org/Lontar/FontDocTools/src/master/> — MIT. Install from source (no PyPI release yet): `pip install git+https://bitbucket.org/Lontar/FontDocTools.git`. Requires Python ≥ 3.13 (our `.venv` is already on 3.14). The macOS-only tools in the package (`glyphshaper`, `glyphdump`, `roentgen`) are not needed and are skipped automatically on Linux via platform markers; the two we use (`glyphplotter`, `dottedcircleshaper`) are pure Python + fontTools.
 
 For the 82 variant forms in `glyph-variants.md`, SVGs need to activate the matching OpenType feature (`locl` with the right language tag, or the right stylistic set). That's a glyphplotter config question — worth a small experiment before committing to a design.
 
