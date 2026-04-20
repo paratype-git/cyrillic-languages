@@ -29,7 +29,7 @@ python3 generate.py
 
 By default `generate.py` reads from `../cyrillic-languages/` and writes alongside itself. Override with `--data` / `--out` if needed.
 
-Per-letter SVG illustrations are produced via [`glyphplotter`](https://bitbucket.org/LindenbergSW/fontdoctools/src/master/) — a separate open-source tool. Install it adjacent to this tree when the SVG stage is wired up.
+Per-letter SVG illustrations are produced via [`glyphplotter`](https://bitbucket.org/Lontar/FontDocTools/src/master/) (part of the FontDocTools package; MIT). Install it into a Python 3.13+ venv when the SVG stage is wired up: `pip install git+https://bitbucket.org/Lontar/FontDocTools.git`.
 
 ## Output
 
