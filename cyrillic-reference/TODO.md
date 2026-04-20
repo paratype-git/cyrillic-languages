@@ -50,12 +50,11 @@ For the 128 variant forms in `glyph-variants.md`, SVGs need to activate the matc
 
 No separate repo needed — this tree is already part of `paratype-git/cyrillic-languages`. When stages 1–3 produce usable output, commit the generated tables alongside the generator. The deliverable URL becomes `https://github.com/paratype-git/cyrillic-languages/tree/master/cyrillic-reference`.
 
-## Non-negotiables carried over from the engagement
+## Non-negotiables
 
-- **No mention of the contracting party anywhere** — not in READMEs, code, commit messages, PR bodies, issue templates, script names, CI config, or file names. See `.claude/.../memory/feedback_no_apple_mentions.md` in the source data repo.
-- **MIT license on every outbound artifact.**
-- **77-language scope** (the list is in `generate.py` as `LANGUAGES_IN_SCOPE`). Not 79 — `Kaitag` and `Uzbek` are in our data but out of scope here.
-- **PUA is a shared Unicode range** used by Paratype Expert fonts, not proprietary. See `.claude/.../memory/pua_terminology.md`.
+- **MIT license on every outbound artifact.** The whole repository is MIT (`/LICENSE`); this subproject inherits it.
+- **77-language scope** — the list is in `generate.py` as `LANGUAGES_IN_SCOPE`. Not 79: `Kaitag` and `Uzbek` are in our data but out of scope here.
+- **PUA is a shared Unicode range** used by Paratype Expert fonts, not proprietary to any one foundry. Frame it accordingly in any descriptive text.
 
 ## Useful references in the source data repo
 
