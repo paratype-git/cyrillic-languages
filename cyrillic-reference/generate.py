@@ -407,7 +407,7 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
             cp_hex = r["codepoints"][0].upper()
             stem = f"{cp_hex}.{r['locale']}"
             diagram_cell = (
-                f'<img src="svg/variants/{stem}.svg" height="60" '
+                f'<img src="svg/variants/{stem}.svg" height="100" '
                 f'alt="U+{cp_hex} .{r["locale"]}"> '
                 f"[txt](svg/variants/{stem}.txt)"
             )
@@ -432,7 +432,7 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
     )
     composed_count = 0
     decomposed_count = 0
-    row_cells: list[tuple[str, str]] = []  # (decomposition_cell, legacy_pua_cell)
+    row_cells: list[str] = []  # decomposition_cell per row
     for entry in entries:
         description = entry.get("description", "")
         unicodes = entry.get("unicodes", [])
@@ -443,14 +443,11 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
         if seq is not None:
             decomposed_count += 1
             decomp_cell = " + ".join(f"{cp:04X}" for cp in seq)
-            # For PUA rows that decomposed, keep the original PUA codepoint
-            # in its own column so the old encoding stays traceable.
-            is_pua_row = any(is_pua(int(u, 16)) for u in unicodes)
-            legacy_cell = unicodes[0].upper() if (is_pua_row and unicodes) else ""
             # Cross-validate against NFD for non-PUA rows: our decomposition
             # must match NFD except that BREVE uses F6D1/F6D4 where NFD
             # would use U+0306. Mismatch here means the accent table or
             # base-letter lookup is wrong.
+            is_pua_row = any(is_pua(int(u, 16)) for u in unicodes)
             if not is_pua_row and entry.get("sign"):
                 nfd = unicodedata.normalize("NFD", entry["sign"])
                 if len(nfd) > 1:
@@ -467,8 +464,7 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
                         )
         else:
             decomp_cell = ""
-            legacy_cell = ""
-        row_cells.append((decomp_cell, legacy_cell))
+        row_cells.append(decomp_cell)
 
     descriptive_count = composed_count - decomposed_count
 
@@ -501,10 +497,10 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
         "use `XXXX + XXXX + …` in reading order (base first)."
     )
     out.append("")
-    out.append("| # | Sign | Codepoint | Description | PUA | Decomposition | Legacy PUA | Diagram | Locales |")
-    out.append("| ---: | :---: | --- | --- | :---: | --- | --- | :---: | --- |")
+    out.append("| # | Sign | Codepoint | Description | PUA | Decomposition | Diagram | Locales |")
+    out.append("| ---: | :---: | --- | --- | :---: | --- | :---: | --- |")
     subdir = "uc" if side == "uppercase" else "lc"
-    for i, (entry, (decomp_cell, legacy_cell)) in enumerate(zip(entries, row_cells), start=1):
+    for i, (entry, decomp_cell) in enumerate(zip(entries, row_cells), start=1):
         sign = entry.get("sign", "")
         unicodes = entry.get("unicodes", [])
         description = entry.get("description", "")
@@ -516,14 +512,14 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
         # the embed works both on GitHub and in local preview.
         cp_hex = unicodes[0].upper() if unicodes else ""
         diagram_cell = (
-            f'<img src="svg/{subdir}/{cp_hex}.svg" height="60" alt="U+{cp_hex}"> '
+            f'<img src="svg/{subdir}/{cp_hex}.svg" height="100" alt="U+{cp_hex}"> '
             f"[txt](svg/{subdir}/{cp_hex}.txt)"
             if cp_hex else ""
         )
         out.append(
             f"| {i} | {sign} | {format_unicodes(unicodes)} | "
             f"{description} | {pua_flag} | {decomp_cell} | "
-            f"{legacy_cell} | {diagram_cell} | {locales} |"
+            f"{diagram_cell} | {locales} |"
         )
     out.append("")
     return "\n".join(out)

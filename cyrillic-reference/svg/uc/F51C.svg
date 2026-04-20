@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <svg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 6640 2380' >
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
+        <rect x='-20' y='-920' width='6640' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
         <path d='M53 350Q53 428 74.5 494.5Q96 561 136.5 609.5Q177 658 236.0 685.0Q295 712 370 712Q445 712 504.0 685.0Q563 658 603.5 609.5Q644 561 665.5 494.5Q687 428 687 350Q687 272 665.5 205.5Q644 139 603.5 90.5Q563 42 504.0 15.0Q445 -12 370 -12Q295 -12 236.0 15.0Q177 42 136.5 90.5Q96 139 74.5 205.5Q53 272 53 350ZM379 40Q428 40 464.5 62.5Q501 85 526.0 123.5Q551 162 564.5 214.5Q578 267 580 327H160Q162 267 176.5 214.5Q191 162 218.5 123.5Q246 85 286.0 62.5Q326 40 379 40ZM362 660Q311 660 274.0 639.0Q237 618 213.0 581.0Q189 544 176.0 494.0Q163 444 160 387H580Q576 444 561.0 494.0Q546 544 519.0 581.0Q492 618 453.0 639.0Q414 660 362 660Z'  transform='translate(330,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+04E8</text>

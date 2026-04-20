@@ -5,6 +5,9 @@
 
 fontSize 1100
 labelFontSize 200
+fillColor FFFFFF
+drawBackground
+fillColor 000000
 
 # ==== Box: U+04E0
 strokeWidth 20

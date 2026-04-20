@@ -213,9 +213,15 @@ def arrow_separator() -> list[str]:
 
 
 def preamble() -> list[str]:
+    # Paint an opaque white background first so the SVG doesn't show through
+    # when embedded in a Markdown viewer using a dark theme. Reset fillColor
+    # to black afterwards so glyphs render in their usual ink color.
     return [
         f"fontSize {FONT_SIZE}",
         f"labelFontSize {LABEL_FONT_SIZE}",
+        "fillColor FFFFFF",
+        "drawBackground",
+        "fillColor 000000",
         "",
     ]
 

@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <svg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 1440 2380' >
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
+        <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
         <path d='M372 89Q358 49 323.0 18.5Q288 -12 234 -12Q138 -12 89.5 51.5Q41 115 41 247Q41 377 105.5 443.0Q170 509 291 509Q345 509 394.0 499.0Q443 489 466 478V-151Q483 -154 499.0 -159.5Q515 -165 532 -175V-200H310V-175Q341 -159 376 -151V89ZM258 50Q307 50 335.5 81.0Q364 112 376 164V451Q358 457 333.5 461.0Q309 465 277 465Q210 465 173.5 413.0Q137 361 137 249Q137 207 143.0 171.0Q149 135 163.5 108.0Q178 81 201.0 65.5Q224 50 258 50Z'  transform='translate(426,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+051B</text>
