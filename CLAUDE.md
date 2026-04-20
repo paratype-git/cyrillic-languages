@@ -8,7 +8,7 @@ Paratype's multilingual Cyrillic alphabet reference. A static site whose per-lan
 
 Two pipelines share this tree:
 - `cyrillic-languages/` — the data repo proper: per-language JSONs, the Python pipeline that rolls them up, and the generated site artifacts.
-- `cyrillic-reference/` — a pan-Cyrillic Unicode reference set generated from the data above. Produces Markdown character tables, a glyph-variant catalog, and (in progress) SVG illustrations per letter. Own `generate.py`, own README.
+- `cyrillic-reference/` — a pan-Cyrillic Unicode reference set generated from the data above. Produces Markdown character tables, a glyph-variant catalog, and per-letter SVG decomposition diagrams. Two generators: `generate.py` (stdlib-only, emits tables) and `generate_svgs.py` (needs FontDocTools + fontTools, emits SVG diagrams). Own README.
 
 **Where to find the authoritative docs.** Before writing anything that will end up in a user-visible place, check these first — they are the source of truth and must stay in sync with whatever you produce:
 
@@ -87,12 +87,14 @@ The Unicode PUA (`E000`–`F8FF`) is a blank range the Unicode Consortium leaves
 │   └── unicode14.txt, PT_PUA_unicodes-descriptions.txt  ← reference tables
 └── cyrillic-reference/
     ├── LICENSE                                    ← MIT (redundant w/ root; explicit for this subtree)
-    ├── README.md                                  ← subproject docs
-    ├── TODO.md                                    ← in-progress notes: WITH-decomposition, SVG stage
-    ├── generate.py                                ← reads ../cyrillic-languages/, writes the tables below
+    ├── README.md                                  ← subproject docs — pipeline, calibration, manual re-render
+    ├── TODO.md                                    ← status notes; §1–§3 done, §4 (publish) + two follow-ups open
+    ├── generate.py                                ← stdlib; reads ../cyrillic-languages/, writes the tables below
+    ├── generate_svgs.py                           ← needs fontTools + FontDocTools; emits SVG diagrams
     ├── characters-uppercase.md                    ← generated; pan-Cyrillic uppercase codepoints
     ├── characters-lowercase.md                    ← generated; pan-Cyrillic lowercase codepoints
-    └── glyph-variants.md                          ← generated; locl / stylistic variants
+    ├── glyph-variants.md                          ← generated; locl variants
+    └── svg/{uc,lc,variants,_calibration}/         ← generated; per-row .svg + plotter .txt sources
 ```
 
 Two categories of files are **gitignored** here and kept only on the maintainer's machine:
