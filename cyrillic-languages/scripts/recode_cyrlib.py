@@ -30,7 +30,7 @@ signtypes = {
 }
 
 libraryMainFile = 'cyrillic_library.json'
-unicodeLibFiles = ['unicode14.txt', 'PT_PUA_unicodes-descritions.txt']
+unicodeLibFiles = ['unicode14.txt', 'PT_PUA_unicodes-descriptions.txt']
 
 
 def compileLagnuages(workPath, names = None): # names = ['Avar']

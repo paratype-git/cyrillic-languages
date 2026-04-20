@@ -7,7 +7,7 @@ import string
 
 libraryMainFile = 'cyrillic_library.json'
 libraryGlyphsList = 'glyphs_list_categories.json'
-unicodeLibFiles = ['unicode14.txt', 'PT_PUA_unicodes-descritions.txt']
+unicodeLibFiles = ['unicode14.txt', 'PT_PUA_unicodes-descriptions.txt']
 
 def checkType(unicodes_list, globaltypes, language):
 	for item in unicodes_list:
@@ -112,17 +112,17 @@ def testCharactersSet(workPath):
 
 	print ('All types:\n%s' % ('\n'.join(globaltypes)))
 	if emptydescriptions_upper or emptydescriptions_lower:
-		print ('Empty descritions Upper:')
+		print ('Empty descriptions Upper:')
 		for k,v in emptydescriptions_upper.items():
 			print ('%s = %s = CYRILLIC CAPITAL LETTER %s' % (v[0], k, v[1]))
-		print('Empty descritions Lower:')
+		print('Empty descriptions Lower:')
 		for k,v in emptydescriptions_lower.items():
 			print ('%s = %s = CYRILLIC SMALL LETTER %s' % (v[0], k, v[1]))
 
-		print ('Empty descritions Upper:')
+		print ('Empty descriptions Upper:')
 		for k,v in emptydescriptions_upper.items():
 			print ('%s\tCYRILLIC CAPITAL LETTER %s' % (k, v[0]))
-		print('Empty descritions Lower:')
+		print('Empty descriptions Lower:')
 		for k,v in emptydescriptions_lower.items():
 			print ('%s\tCYRILLIC SMALL LETTER %s' % (k, v[0]))
 

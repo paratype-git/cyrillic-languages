@@ -55,7 +55,7 @@ _libraryMainFile = 'cyrillic_library.json'
 _libraryGlyphsList = 'glyphs_list_categories.json'
 _sortOrderFile = 'sortorder_cyrillic.txt'
 _outputGeneralGlyphsList = 'cyrillic_characters_lib.json'
-unicodeLibFiles = ['unicode14.txt', 'PT_PUA_unicodes-descritions.txt']
+unicodeLibFiles = ['unicode14.txt', 'PT_PUA_unicodes-descriptions.txt']
 
 DEVELOPMENT = True
 

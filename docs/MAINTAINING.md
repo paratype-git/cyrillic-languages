@@ -125,7 +125,7 @@ Everything lives under `cyrillic-languages/`. The subtrees, grouped by role:
 **Reference tables (operator-only)**
 
 - `unicode14.txt` — upstream Unicode character descriptions. Bundled copy of the Unicode Character Database name list.
-- `PT_PUA_unicodes-descritions.txt` — descriptions for the Private Use Area codepoints that the Paratype fonts map to specific glyphs.
+- `PT_PUA_unicodes-descriptions.txt` — descriptions for the Private Use Area codepoints that the Paratype fonts map to specific glyphs.
 
 **Pipeline**
 
@@ -266,9 +266,9 @@ Find the right alphabetical position, add a single line. The pipeline picks it u
 Descriptions shown in the generated per-language JSONs come from two files, both loaded by `CharacherDescription.loadUnicodeDescriptionsFile()`:
 
 - `unicode14.txt` — a dump of the Unicode 14 character database name list. First tab-separated field is the codepoint, second is the name. Updating this file means dropping in a refreshed export from the Unicode Consortium.
-- `PT_PUA_unicodes-descritions.txt` — descriptions for Private Use Area codepoints that the Paratype fonts map to specific glyphs. Same format as `unicode14.txt`. This file is Paratype-curated — when a new PUA codepoint is assigned in the fonts, its description should be added here.
+- `PT_PUA_unicodes-descriptions.txt` — descriptions for Private Use Area codepoints that the Paratype fonts map to specific glyphs. Same format as `unicode14.txt`. This file is Paratype-curated — when a new PUA codepoint is assigned in the fonts, its description should be added here.
 
-When both files define the same codepoint, the pipeline prints `Unicodes overlap:` and keeps the first entry it saw. If you see this on a run, it means `PT_PUA_unicodes-descritions.txt` has drifted into an official Unicode range or vice versa — investigate rather than ignoring.
+When both files define the same codepoint, the pipeline prints `Unicodes overlap:` and keeps the first entry it saw. If you see this on a run, it means `PT_PUA_unicodes-descriptions.txt` has drifted into an official Unicode range or vice versa — investigate rather than ignoring.
 
 Description handling trims tabs and converts double quotes to single quotes (`CharacherDescription.dangersymbols`) and title-cases the result.
 
