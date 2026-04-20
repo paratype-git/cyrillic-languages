@@ -1,6 +1,6 @@
 # Pan-Cyrillic single characters — uppercase
 
-**177** unique uppercase characters across the 77 languages in scope. Of these, **54** are encoded in the Unicode Private Use Area (E000–F8FF). **105** have a composed description (`… WITH …`): **67** are decomposed below into a base character plus one or more combining marks, and **38** are structural modifications (Descender, Hook, Tail, Stroke, Bar, Tick, Upturn, Middle Hook, Vertical Stroke, or the Stroke+Hook pair) that have no standard combining-mark equivalent — those are kept as their codepoint plus the descriptive name.
+**177** unique uppercase characters across the 77 languages in scope. Of these, **54** are encoded in the Unicode Private Use Area (E000–F8FF). **73** decompose into a base character plus one or more combining marks — 67 via a `… WITH …` description and 6 via canonical Unicode NFD on precomposed letters whose name carries only the language label (Ё, Й, Ў, …). **38** are structural modifications (Descender, Hook, Tail, Stroke, Bar, Tick, Upturn, Middle Hook, Vertical Stroke, or the Stroke+Hook pair) with no standard combining-mark equivalent — kept as their codepoint plus the descriptive name.
 
 Decomposition note: the `BREVE` combining mark in Cyrillic rows resolves to `U+F6D1` (uppercase) / `U+F6D4` (lowercase) — the Cyrillic-shaped breve glyphs carried by Paratype Expert fonts — rather than the generic combining breve `U+0306`, whose shape does not match Cyrillic typography.
 
@@ -10,20 +10,20 @@ Codepoints are shown in uppercase hex. Multi-codepoint sequences use `XXXX + XXX
 | ---: | :---: | --- | --- | :---: | --- | :---: | --- |
 | 1 | ʼ | 02BC | Modifier Letter Apostrophe |  |  | <img src="svg/uc/02BC.svg" width="61" alt="U+02BC"> [txt](svg/uc/02BC.txt) | ru |
 | 2 | Ѐ | 0400 | Cyrillic Capital Letter Ie With Grave |  | 0415 + 0300 | <img src="svg/uc/0400.svg" width="279" alt="U+0400"> [txt](svg/uc/0400.txt) | ru |
-| 3 | Ё | 0401 | Cyrillic Capital Letter Io |  |  | <img src="svg/uc/0401.svg" width="61" alt="U+0401"> [txt](svg/uc/0401.txt) | ru |
+| 3 | Ё | 0401 | Cyrillic Capital Letter Io |  | 0415 + 0308 | <img src="svg/uc/0401.svg" width="279" alt="U+0401"> [txt](svg/uc/0401.txt) | ru |
 | 4 | Ђ | 0402 | Cyrillic Capital Letter Dje |  |  | <img src="svg/uc/0402.svg" width="61" alt="U+0402"> [txt](svg/uc/0402.txt) | ru |
-| 5 | Ѓ | 0403 | Cyrillic Capital Letter Gje |  |  | <img src="svg/uc/0403.svg" width="61" alt="U+0403"> [txt](svg/uc/0403.txt) | ru |
+| 5 | Ѓ | 0403 | Cyrillic Capital Letter Gje |  | 0413 + 0301 | <img src="svg/uc/0403.svg" width="279" alt="U+0403"> [txt](svg/uc/0403.txt) | ru |
 | 6 | Є | 0404 | Cyrillic Capital Letter Ukrainian Ie |  |  | <img src="svg/uc/0404.svg" width="61" alt="U+0404"> [txt](svg/uc/0404.txt) | ru |
 | 7 | Ѕ | 0405 | Cyrillic Capital Letter Dze |  |  | <img src="svg/uc/0405.svg" width="61" alt="U+0405"> [txt](svg/uc/0405.txt) | ru |
 | 8 | І | 0406 | Cyrillic Capital Letter Byelorussian-Ukrainian I |  |  | <img src="svg/uc/0406.svg" width="61" alt="U+0406"> [txt](svg/uc/0406.txt) | ru |
-| 9 | Ї | 0407 | Cyrillic Capital Letter Yi |  |  | <img src="svg/uc/0407.svg" width="61" alt="U+0407"> [txt](svg/uc/0407.txt) | ru |
+| 9 | Ї | 0407 | Cyrillic Capital Letter Yi |  | 0406 + 0308 | <img src="svg/uc/0407.svg" width="279" alt="U+0407"> [txt](svg/uc/0407.txt) | ru |
 | 10 | Ј | 0408 | Cyrillic Capital Letter Je |  |  | <img src="svg/uc/0408.svg" width="61" alt="U+0408"> [txt](svg/uc/0408.txt) | ru |
 | 11 | Љ | 0409 | Cyrillic Capital Letter Lje |  |  | <img src="svg/uc/0409.svg" width="61" alt="U+0409"> [txt](svg/uc/0409.txt) | ru |
 | 12 | Њ | 040A | Cyrillic Capital Letter Nje |  |  | <img src="svg/uc/040A.svg" width="61" alt="U+040A"> [txt](svg/uc/040A.txt) | ru |
 | 13 | Ћ | 040B | Cyrillic Capital Letter Tshe |  |  | <img src="svg/uc/040B.svg" width="61" alt="U+040B"> [txt](svg/uc/040B.txt) | ru |
-| 14 | Ќ | 040C | Cyrillic Capital Letter Kje |  |  | <img src="svg/uc/040C.svg" width="61" alt="U+040C"> [txt](svg/uc/040C.txt) | ru |
+| 14 | Ќ | 040C | Cyrillic Capital Letter Kje |  | 041A + 0301 | <img src="svg/uc/040C.svg" width="279" alt="U+040C"> [txt](svg/uc/040C.txt) | ru |
 | 15 | Ѝ | 040D | Cyrillic Capital Letter I With Grave |  | 0418 + 0300 | <img src="svg/uc/040D.svg" width="279" alt="U+040D"> [txt](svg/uc/040D.txt) | ru |
-| 16 | Ў | 040E | Cyrillic Capital Letter Short U |  |  | <img src="svg/uc/040E.svg" width="61" alt="U+040E"> [txt](svg/uc/040E.txt) | ru |
+| 16 | Ў | 040E | Cyrillic Capital Letter Short U |  | 0423 + F6D1 | <img src="svg/uc/040E.svg" width="279" alt="U+040E"> [txt](svg/uc/040E.txt) | ru |
 | 17 | Џ | 040F | Cyrillic Capital Letter Dzhe |  |  | <img src="svg/uc/040F.svg" width="61" alt="U+040F"> [txt](svg/uc/040F.txt) | ru |
 | 18 | А | 0410 | Cyrillic Capital Letter A |  |  | <img src="svg/uc/0410.svg" width="61" alt="U+0410"> [txt](svg/uc/0410.txt) | ru |
 | 19 | Б | 0411 | Cyrillic Capital Letter Be |  |  | <img src="svg/uc/0411.svg" width="61" alt="U+0411"> [txt](svg/uc/0411.txt) | ru |
@@ -34,7 +34,7 @@ Codepoints are shown in uppercase hex. Multi-codepoint sequences use `XXXX + XXX
 | 24 | Ж | 0416 | Cyrillic Capital Letter Zhe |  |  | <img src="svg/uc/0416.svg" width="61" alt="U+0416"> [txt](svg/uc/0416.txt) | bg, ru |
 | 25 | З | 0417 | Cyrillic Capital Letter Ze |  |  | <img src="svg/uc/0417.svg" width="61" alt="U+0417"> [txt](svg/uc/0417.txt) | ru |
 | 26 | И | 0418 | Cyrillic Capital Letter I |  |  | <img src="svg/uc/0418.svg" width="61" alt="U+0418"> [txt](svg/uc/0418.txt) | ru |
-| 27 | Й | 0419 | Cyrillic Capital Letter Short I |  |  | <img src="svg/uc/0419.svg" width="61" alt="U+0419"> [txt](svg/uc/0419.txt) | ru |
+| 27 | Й | 0419 | Cyrillic Capital Letter Short I |  | 0418 + F6D1 | <img src="svg/uc/0419.svg" width="279" alt="U+0419"> [txt](svg/uc/0419.txt) | ru |
 | 28 | К | 041A | Cyrillic Capital Letter Ka |  |  | <img src="svg/uc/041A.svg" width="61" alt="U+041A"> [txt](svg/uc/041A.txt) | bg, ru |
 | 29 | Л | 041B | Cyrillic Capital Letter El |  |  | <img src="svg/uc/041B.svg" width="61" alt="U+041B"> [txt](svg/uc/041B.txt) | bg, ru |
 | 30 | М | 041C | Cyrillic Capital Letter Em |  |  | <img src="svg/uc/041C.svg" width="61" alt="U+041C"> [txt](svg/uc/041C.txt) | ru |

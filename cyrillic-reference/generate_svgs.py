@@ -86,9 +86,16 @@ class FontMetrics:
         self.cmap = self.font.getBestCmap()
         self.hmtx = self.font["hmtx"]
         self.glyf = self.font["glyf"]
-        dc = self.glyf[self.cmap[0x25CC]]
-        self.dc_yMin = dc.yMin
-        self.dc_yMax = dc.yMax
+        # Dotted-circle metrics — only needed by mark-on-dotted-circle boxes
+        # (decomposable composites). Italic font has no U+25CC and that's
+        # fine because variant diagrams don't draw dotted circles.
+        if 0x25CC in self.cmap:
+            dc = self.glyf[self.cmap[0x25CC]]
+            self.dc_yMin = dc.yMin
+            self.dc_yMax = dc.yMax
+        else:
+            self.dc_yMin = None
+            self.dc_yMax = None
 
     def glyph_name(self, cp: int) -> str:
         return self.cmap[cp]
@@ -124,30 +131,47 @@ class FontMetrics:
 
 
 # ---------- decomposition (duplicated from generate.py to keep scripts standalone) ----------
-def decompose(description: str, case: str) -> list[int] | None:
+_KNOWN_COMBINING_MARK_CPS = {
+    0x0304, 0x0308, 0x0306, 0x0301, 0x0302,
+    0x0300, 0x030C, 0x030B, 0x0327, 0x0307,
+}
+
+
+def _swap_breve(cp: int, case: str) -> int:
+    if cp == 0x0306:
+        return CYRILLIC_BREVE_UC if case == "upper" else CYRILLIC_BREVE_LC
+    return cp
+
+
+def decompose(description: str, case: str, sign: str = "") -> list[int] | None:
+    """Same two-path logic as generate.py: WITH first, NFD fallback."""
     parts = _WITH_RE.split(description, maxsplit=1)
-    if len(parts) != 2:
-        return None
-    base_name, phrase = parts
-    tokens = [t.strip().upper() for t in _AND_RE.split(phrase)]
-    mapped: list[int] = []
-    for token in tokens:
-        mark = ACCENT_COMBINING_MARK.get(token)
-        if mark is None:
+    if len(parts) == 2:
+        base_name, phrase = parts
+        tokens = [t.strip().upper() for t in _AND_RE.split(phrase)]
+        mapped: list[int] = []
+        for token in tokens:
+            mark = ACCENT_COMBINING_MARK.get(token)
+            if mark is None:
+                return None
+            if mark is _ACCENT_SENTINEL:
+                mapped.append(_swap_breve(0x0306, case))
+            else:
+                mapped.append(mark)
+        try:
+            base_char = unicodedata.lookup(base_name.strip().upper())
+        except KeyError:
             return None
-        if mark is _ACCENT_SENTINEL:
-            mapped.append(CYRILLIC_BREVE_UC if case == "upper" else CYRILLIC_BREVE_LC)
-        else:
-            mapped.append(mark)
-    try:
-        base_char = unicodedata.lookup(base_name.strip().upper())
-    except KeyError:
-        return None
-    return [ord(base_char), *mapped]
+        return [ord(base_char), *mapped]
 
+    if sign:
+        nfd = unicodedata.normalize("NFD", sign)
+        if len(nfd) > 1:
+            cps = [ord(c) for c in nfd]
+            if all(cp in _KNOWN_COMBINING_MARK_CPS for cp in cps[1:]):
+                return [cps[0], *(_swap_breve(cp, case) for cp in cps[1:])]
 
-def has_with(description: str) -> bool:
-    return " with " in f" {description.lower()} "
+    return None
 
 
 # ---------- instruction emitters ----------
@@ -316,7 +340,8 @@ def process_main(fm: FontMetrics, pan: dict, font_hint: str, out_dir: Path, font
         for cp_hex, entry in seen.items():
             cp = int(cp_hex, 16)
             description = entry.get("description", "")
-            decomp = decompose(description, case) if has_with(description) else None
+            sign = entry.get("sign", "")
+            decomp = decompose(description, case, sign=sign)
             if decomp is not None:
                 lines = build_decomposable(fm, decomp[0], decomp[1:], cp)
                 stats[subdir]["decomposed"] += 1
@@ -331,19 +356,43 @@ def process_main(fm: FontMetrics, pan: dict, font_hint: str, out_dir: Path, font
     return stats
 
 
-def process_variants(fm: FontMetrics, data_root: Path, font_hint: str, out_dir: Path, font_path: Path) -> int:
-    """Emit .txt+.svg for every locl/style variant row in glyph-variants.md source.
+def process_variants(
+    fm_regular: FontMetrics,
+    fm_italic: FontMetrics | None,
+    data_root: Path,
+    font_regular: Path,
+    font_italic: Path | None,
+    out_dir: Path,
+) -> dict:
+    """Emit .txt+.svg for every locl/style variant row.
 
-    Re-derives the variant rows by calling a small classifier on the source
-    files — same logic as cyrillic-reference/generate.py uses.
+    Three variant shapes are handled:
+
+    * ``&letter`` — locl shape of a single Cyrillic letter. Variant
+      glyph is ``uni<cp>.<SUFFIX>`` in the regular font. E.g. ``&Д``
+      under Bulgarian locl ⇒ ``uni0414.BGR``.
+    * ``&letter.ita`` — locl shape that only exists in italic (Serbian
+      italic г, д, п, т, ш). Variant glyph is ``uni<cp>.SRB`` in the
+      italic font; the default is also drawn from the italic font so
+      the two side-by-side show the same italic context.
+    * ``&!FXXX`` — locl shape that is itself a PUA codepoint (Bashkir
+      and Chuvash). The diagram's left side is the paired ``+BASE``
+      token that immediately follows in the source; the right side is
+      the PUA glyph ``uniFXXX`` from the regular font.
     """
-    # Re-use generate.py's classifier by reading the generated glyph-variants.md
-    # is fragile; instead walk the source JSONs the same way generate.py does.
     locale_map = {"ba": "BSH", "bg": "BGR", "cv": "CHU", "sr": "SRB"}
     base_dir = data_root / "library" / "cyrillic" / "base"
-    seen: set[tuple[str, int, str]] = set()
-    count = 0
     pua_tok = re.compile(r"^!([0-9A-Fa-f]{4,5})$")
+    seen: set[tuple[str, int, str, str]] = set()
+    stats = {"regular": 0, "italic": 0, "pua_pair": 0,
+             "skipped_missing_pair": 0, "skipped_missing_variant": 0}
+
+    def _strip_style_suffix(rest: str) -> tuple[str, str]:
+        for sfx, label in ((".ita", "italic"), (".str", "straight"), (".alt", "alt")):
+            if rest.endswith(sfx):
+                return rest[:-len(sfx)], label
+        return rest, "any"
+
     for lang_file in sorted(base_dir.glob("*.json")):
         with lang_file.open(encoding="utf-8") as f:
             data = json.load(f)
@@ -352,40 +401,71 @@ def process_variants(fm: FontMetrics, data_root: Path, font_hint: str, out_dir: 
             continue
         for block in data.get("glyphs_list", []):
             for side in ("uppercase", "lowercase"):
-                for token in (block.get(side, "") or "").split():
+                tokens = (block.get(side, "") or "").split()
+                for i, token in enumerate(tokens):
                     if not token or token[0] != "&":
                         continue
-                    rest = token[1:]
-                    for suffix in (".ita", ".str", ".alt"):
-                        if rest.endswith(suffix):
-                            rest = rest[:-len(suffix)]
-                            break
+                    rest, style = _strip_style_suffix(token[1:])
                     if not rest:
                         continue
-                    m = pua_tok.match(rest)
-                    if m:
-                        cp = int(m.group(1), 16)
+
+                    pm = pua_tok.match(rest)
+                    if pm:
+                        # &!FXXX — PUA locl. Pair with the immediate +BASE.
+                        variant_cp = int(pm.group(1), 16)
+                        if i + 1 >= len(tokens) or not tokens[i + 1].startswith("+"):
+                            stats["skipped_missing_pair"] += 1
+                            continue
+                        pair_rest, _ = _strip_style_suffix(tokens[i + 1][1:])
+                        pair_pm = pua_tok.match(pair_rest)
+                        if pair_pm:
+                            base_cp = int(pair_pm.group(1), 16)
+                        elif len(pair_rest) == 1:
+                            base_cp = ord(pair_rest)
+                        else:
+                            stats["skipped_missing_pair"] += 1
+                            continue
+                        variant_name = fm_regular.glyph_name(variant_cp)
+                        fm_for_this = fm_regular
+                        font_for_this = font_regular
+                        file_cp = variant_cp
+                        category = "pua_pair"
                     else:
                         if len(rest) != 1:
                             continue
-                        cp = ord(rest)
-                    key = (locale, cp, side)
+                        base_cp = ord(rest)
+                        suffix = locale_map[locale]
+                        variant_name = f"uni{base_cp:04X}.{suffix}"
+                        if style == "italic" and fm_italic is not None:
+                            fm_for_this = fm_italic
+                            font_for_this = font_italic
+                            category = "italic"
+                        else:
+                            fm_for_this = fm_regular
+                            font_for_this = font_regular
+                            category = "regular"
+                        if variant_name not in fm_for_this.font.getGlyphOrder():
+                            stats["skipped_missing_variant"] += 1
+                            continue
+                        file_cp = base_cp
+
+                    key = (locale, file_cp, side, style)
                     if key in seen:
                         continue
                     seen.add(key)
-                    variant_name = find_locl_variant(fm, cp, locale)
-                    if not variant_name:
-                        continue
-                    cp_hex = f"{cp:04X}"
+
+                    cp_hex = f"{file_cp:04X}"
                     stem = f"{cp_hex}.{locale}"
                     txt_path = out_dir / "variants" / f"{stem}.txt"
                     svg_path = out_dir / "variants" / f"{stem}.svg"
-                    lines = build_variant(fm, cp, variant_name, locale)
-                    full_lines = header_comment(txt_path.name, svg_path.name, font_hint) + lines
+                    lines = build_variant(fm_for_this, base_cp, variant_name, locale)
+                    full_lines = header_comment(
+                        txt_path.name, svg_path.name, font_for_this.name
+                    ) + lines
                     write_txt(txt_path, full_lines)
-                    render_svg(txt_path, svg_path, font_path)
-                    count += 1
-    return count
+                    render_svg(txt_path, svg_path, font_for_this)
+                    stats[category] += 1
+    return stats
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -394,31 +474,45 @@ def main(argv: list[str] | None = None) -> int:
                         help="Path to the sibling cyrillic-languages repository")
     parser.add_argument("--font", type=Path, required=True,
                         help="Path to pt-serif-expert_regular.ttf")
+    parser.add_argument("--font-italic", type=Path, default=None,
+                        help="Path to pt-serif-expert_italic.ttf "
+                             "(needed to render Serbian italic locl variants)")
     parser.add_argument("--out", type=Path, default=Path("svg"),
                         help="Output root (default: svg/)")
     args = parser.parse_args(argv)
 
     if not args.font.exists():
         parser.error(f"Font not found: {args.font}")
+    if args.font_italic is not None and not args.font_italic.exists():
+        parser.error(f"Italic font not found: {args.font_italic}")
     if not (args.data / "site" / "cyrillic" / "cyrillic_characters_lib.json").exists():
         parser.error(f"pan-Cyrillic summary not found under {args.data}")
 
-    fm = FontMetrics(args.font)
+    fm_regular = FontMetrics(args.font)
+    fm_italic = FontMetrics(args.font_italic) if args.font_italic else None
+
     pan_path = args.data / "site" / "cyrillic" / "cyrillic_characters_lib.json"
     with pan_path.open(encoding="utf-8") as f:
         pan = json.load(f)
 
-    # The font_hint in header comments — just the basename, not absolute path.
-    font_hint = args.font.name
-
     print("Rendering main character SVGs (uc, lc)…")
-    stats = process_main(fm, pan, font_hint, args.out, args.font)
+    stats = process_main(fm_regular, pan, args.font.name, args.out, args.font)
     print(f"  uc: {stats['uc']['decomposed']} decomposed, {stats['uc']['single']} single")
     print(f"  lc: {stats['lc']['decomposed']} decomposed, {stats['lc']['single']} single")
 
     print("Rendering locl/style variants…")
-    n_variants = process_variants(fm, args.data, font_hint, args.out, args.font)
-    print(f"  variants: {n_variants}")
+    vstats = process_variants(
+        fm_regular, fm_italic, args.data,
+        args.font, args.font_italic,
+        args.out,
+    )
+    print(f"  regular:  {vstats['regular']}")
+    print(f"  italic:   {vstats['italic']}")
+    print(f"  PUA pair: {vstats['pua_pair']}")
+    if vstats["skipped_missing_variant"]:
+        print(f"  skipped (no named variant in font): {vstats['skipped_missing_variant']}")
+    if vstats["skipped_missing_pair"]:
+        print(f"  skipped (no +BASE pair for &!PUA):   {vstats['skipped_missing_pair']}")
 
     return 0
 

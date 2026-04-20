@@ -1,6 +1,6 @@
 # Pan-Cyrillic single characters — lowercase
 
-**176** unique lowercase characters across the 77 languages in scope. Of these, **54** are encoded in the Unicode Private Use Area (E000–F8FF). **105** have a composed description (`… WITH …`): **67** are decomposed below into a base character plus one or more combining marks, and **38** are structural modifications (Descender, Hook, Tail, Stroke, Bar, Tick, Upturn, Middle Hook, Vertical Stroke, or the Stroke+Hook pair) that have no standard combining-mark equivalent — those are kept as their codepoint plus the descriptive name.
+**176** unique lowercase characters across the 77 languages in scope. Of these, **54** are encoded in the Unicode Private Use Area (E000–F8FF). **73** decompose into a base character plus one or more combining marks — 67 via a `… WITH …` description and 6 via canonical Unicode NFD on precomposed letters whose name carries only the language label (Ё, Й, Ў, …). **38** are structural modifications (Descender, Hook, Tail, Stroke, Bar, Tick, Upturn, Middle Hook, Vertical Stroke, or the Stroke+Hook pair) with no standard combining-mark equivalent — kept as their codepoint plus the descriptive name.
 
 Decomposition note: the `BREVE` combining mark in Cyrillic rows resolves to `U+F6D1` (uppercase) / `U+F6D4` (lowercase) — the Cyrillic-shaped breve glyphs carried by Paratype Expert fonts — rather than the generic combining breve `U+0306`, whose shape does not match Cyrillic typography.
 
@@ -18,7 +18,7 @@ Codepoints are shown in uppercase hex. Multi-codepoint sequences use `XXXX + XXX
 | 8 | ж | 0436 | Cyrillic Small Letter Zhe |  |  | <img src="svg/lc/0436.svg" width="61" alt="U+0436"> [txt](svg/lc/0436.txt) | bg, ru |
 | 9 | з | 0437 | Cyrillic Small Letter Ze |  |  | <img src="svg/lc/0437.svg" width="61" alt="U+0437"> [txt](svg/lc/0437.txt) | bg, ru |
 | 10 | и | 0438 | Cyrillic Small Letter I |  |  | <img src="svg/lc/0438.svg" width="61" alt="U+0438"> [txt](svg/lc/0438.txt) | bg, ru |
-| 11 | й | 0439 | Cyrillic Small Letter Short I |  |  | <img src="svg/lc/0439.svg" width="61" alt="U+0439"> [txt](svg/lc/0439.txt) | bg, ru |
+| 11 | й | 0439 | Cyrillic Small Letter Short I |  | 0438 + F6D4 | <img src="svg/lc/0439.svg" width="279" alt="U+0439"> [txt](svg/lc/0439.txt) | bg, ru |
 | 12 | к | 043A | Cyrillic Small Letter Ka |  |  | <img src="svg/lc/043A.svg" width="61" alt="U+043A"> [txt](svg/lc/043A.txt) | bg, ru |
 | 13 | л | 043B | Cyrillic Small Letter El |  |  | <img src="svg/lc/043B.svg" width="61" alt="U+043B"> [txt](svg/lc/043B.txt) | bg, ru |
 | 14 | м | 043C | Cyrillic Small Letter Em |  |  | <img src="svg/lc/043C.svg" width="61" alt="U+043C"> [txt](svg/lc/043C.txt) | ru |
@@ -42,20 +42,20 @@ Codepoints are shown in uppercase hex. Multi-codepoint sequences use `XXXX + XXX
 | 32 | ю | 044E | Cyrillic Small Letter Yu |  |  | <img src="svg/lc/044E.svg" width="61" alt="U+044E"> [txt](svg/lc/044E.txt) | bg, ru |
 | 33 | я | 044F | Cyrillic Small Letter Ya |  |  | <img src="svg/lc/044F.svg" width="61" alt="U+044F"> [txt](svg/lc/044F.txt) | ru |
 | 34 | ѐ | 0450 | Cyrillic Small Letter Ie With Grave |  | 0435 + 0300 | <img src="svg/lc/0450.svg" width="279" alt="U+0450"> [txt](svg/lc/0450.txt) | ru |
-| 35 | ё | 0451 | Cyrillic Small Letter Io |  |  | <img src="svg/lc/0451.svg" width="61" alt="U+0451"> [txt](svg/lc/0451.txt) | ru |
+| 35 | ё | 0451 | Cyrillic Small Letter Io |  | 0435 + 0308 | <img src="svg/lc/0451.svg" width="279" alt="U+0451"> [txt](svg/lc/0451.txt) | ru |
 | 36 | ђ | 0452 | Cyrillic Small Letter Dje |  |  | <img src="svg/lc/0452.svg" width="61" alt="U+0452"> [txt](svg/lc/0452.txt) | ru |
-| 37 | ѓ | 0453 | Cyrillic Small Letter Gje |  |  | <img src="svg/lc/0453.svg" width="61" alt="U+0453"> [txt](svg/lc/0453.txt) | ru |
+| 37 | ѓ | 0453 | Cyrillic Small Letter Gje |  | 0433 + 0301 | <img src="svg/lc/0453.svg" width="279" alt="U+0453"> [txt](svg/lc/0453.txt) | ru |
 | 38 | є | 0454 | Cyrillic Small Letter Ukrainian Ie |  |  | <img src="svg/lc/0454.svg" width="61" alt="U+0454"> [txt](svg/lc/0454.txt) | ru |
 | 39 | ѕ | 0455 | Cyrillic Small Letter Dze |  |  | <img src="svg/lc/0455.svg" width="61" alt="U+0455"> [txt](svg/lc/0455.txt) | ru |
 | 40 | і | 0456 | Cyrillic Small Letter Byelorussian-Ukrainian I |  |  | <img src="svg/lc/0456.svg" width="61" alt="U+0456"> [txt](svg/lc/0456.txt) | ru |
-| 41 | ї | 0457 | Cyrillic Small Letter Yi |  |  | <img src="svg/lc/0457.svg" width="61" alt="U+0457"> [txt](svg/lc/0457.txt) | ru |
+| 41 | ї | 0457 | Cyrillic Small Letter Yi |  | 0456 + 0308 | <img src="svg/lc/0457.svg" width="279" alt="U+0457"> [txt](svg/lc/0457.txt) | ru |
 | 42 | ј | 0458 | Cyrillic Small Letter Je |  |  | <img src="svg/lc/0458.svg" width="61" alt="U+0458"> [txt](svg/lc/0458.txt) | ru |
 | 43 | љ | 0459 | Cyrillic Small Letter Lje |  |  | <img src="svg/lc/0459.svg" width="61" alt="U+0459"> [txt](svg/lc/0459.txt) | ru |
 | 44 | њ | 045A | Cyrillic Small Letter Nje |  |  | <img src="svg/lc/045A.svg" width="61" alt="U+045A"> [txt](svg/lc/045A.txt) | ru |
 | 45 | ћ | 045B | Cyrillic Small Letter Tshe |  |  | <img src="svg/lc/045B.svg" width="61" alt="U+045B"> [txt](svg/lc/045B.txt) | ru |
-| 46 | ќ | 045C | Cyrillic Small Letter Kje |  |  | <img src="svg/lc/045C.svg" width="61" alt="U+045C"> [txt](svg/lc/045C.txt) | ru |
+| 46 | ќ | 045C | Cyrillic Small Letter Kje |  | 043A + 0301 | <img src="svg/lc/045C.svg" width="279" alt="U+045C"> [txt](svg/lc/045C.txt) | ru |
 | 47 | ѝ | 045D | Cyrillic Small Letter I With Grave |  | 0438 + 0300 | <img src="svg/lc/045D.svg" width="279" alt="U+045D"> [txt](svg/lc/045D.txt) | ru |
-| 48 | ў | 045E | Cyrillic Small Letter Short U |  |  | <img src="svg/lc/045E.svg" width="61" alt="U+045E"> [txt](svg/lc/045E.txt) | ru |
+| 48 | ў | 045E | Cyrillic Small Letter Short U |  | 0443 + F6D4 | <img src="svg/lc/045E.svg" width="279" alt="U+045E"> [txt](svg/lc/045E.txt) | ru |
 | 49 | џ | 045F | Cyrillic Small Letter Dzhe |  |  | <img src="svg/lc/045F.svg" width="61" alt="U+045F"> [txt](svg/lc/045F.txt) | ru |
 | 50 | ѣ | 0463 | Cyrillic Small Letter Yat |  |  | <img src="svg/lc/0463.svg" width="61" alt="U+0463"> [txt](svg/lc/0463.txt) | bg, ru |
 | 51 | ѥ | 0465 | Cyrillic Small Letter Iotified E |  |  | <img src="svg/lc/0465.svg" width="61" alt="U+0465"> [txt](svg/lc/0465.txt) | bg, ru |

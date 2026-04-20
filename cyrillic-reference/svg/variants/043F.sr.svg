@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 4040 2380' >
+    <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
+        <rect x='-20' y='-920' width='4040' height='2380' fill='#FFFFFF'/>
+        <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <path d='M386 285Q393 316 398.5 342.5Q404 369 404 395Q404 418 393.5 434.0Q383 450 360 450Q333 450 305.0 428.0Q277 406 253.0 375.0Q229 344 209.5 310.5Q190 277 180 255L127 0H43L131 442L70 451L72 476Q86 483 103.5 489.5Q121 496 139.5 501.0Q158 506 175.5 509.0Q193 512 208 512L228 500L190 323H195Q214 363 238.5 397.5Q263 432 290.5 457.5Q318 483 348.0 497.5Q378 512 409 512Q451 512 470.5 485.5Q490 459 490 419Q490 397 485.0 364.0Q480 331 473 302L416 56H490V30Q470 14 441.5 4.0Q413 -6 386 -6Q357 -6 346.0 6.0Q335 18 335 32Q335 51 340.0 73.5Q345 96 350 119Z'  transform='translate(424,0) scale(1.1)'/>
+        <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+043F</text>
+        <defs >
+            <marker id='marker0' markerUnits='strokeWidth' refX='8.5' refY='5' markerWidth='10' markerHeight='10' orient='auto-start-reverse' >
+                <path d='M 5.669872981077806 2.5000000000000004 l 4.330127018922194 2.4999999999999996 l -4.330127018922194 2.4999999999999996 Z' fill='#9E9E9E' fill-opacity='1.0'/>
+            </marker>
+        </defs>
+        <line x1='1750' y1='250' x2='2280.0' y2='250.0' marker-end='url(#marker0)' stroke='#9E9E9E' stroke-width='80' stroke-dasharray='0 0'/>
+        <rect x='2600' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20' stroke-dasharray='0 0'/>
+        <path d='M488 55V30Q468 14 439.5 4.0Q411 -6 384 -6Q355 -6 342.5 6.0Q330 18 330 32Q330 50 335.0 92.5Q340 135 357 196H353Q340 168 320.5 132.0Q301 96 274.0 64.0Q247 32 212.5 10.0Q178 -12 136 -12Q101 -12 77.0 12.5Q53 37 53 82Q53 104 60.0 147.0Q67 190 77.0 241.0Q87 292 98.5 345.5Q110 399 119 442L58 451V476Q74 482 92.5 488.0Q111 494 129.5 499.0Q148 504 165.0 507.5Q182 511 196 512L218 500Q202 425 185.5 357.5Q169 290 155 215Q150 191 144.5 161.5Q139 132 139 97Q139 76 150.5 63.0Q162 50 177 50Q199 50 221.0 63.0Q243 76 262.5 97.0Q282 118 299.5 143.5Q317 169 331.0 194.0Q345 219 354.5 240.5Q364 262 369 275L413 500H496L414 55ZM207 598 217 650H471L460 598Z'  transform='translate(3029,0) scale(1.1)'/>
+        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+043F .sr</text>
+    </g>
+</svg>

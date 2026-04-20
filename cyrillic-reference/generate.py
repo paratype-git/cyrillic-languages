@@ -125,47 +125,80 @@ def has_decomposition_hint(description: str) -> bool:
     return " with " in f" {description.lower()} "
 
 
-def decompose(description: str, case: str) -> list[int] | None:
-    """Break a `'… WITH <accent>'` description into base + combining marks.
+_KNOWN_COMBINING_MARK_CPS = {
+    0x0304, 0x0308, 0x0306, 0x0301, 0x0302,
+    0x0300, 0x030C, 0x030B, 0x0327, 0x0307,
+}
 
-    Returns a list of codepoints (base first) for the ten decomposable
-    accents (MACRON, DIAERESIS, BREVE, ACUTE, CIRCUMFLEX, GRAVE, CARON,
-    DOUBLE ACUTE, CEDILLA, DOT ABOVE) or their AND-combinations. Returns
-    None for every other composite — structural modifications (DESCENDER,
-    HOOK, TAIL, STROKE, BAR, UPTURN, TICK, MIDDLE HOOK, VERTICAL STROKE,
-    STROKE AND HOOK) are kept as descriptive forms rather than decomposed.
 
-    `case` must be `"upper"` or `"lower"` — selects U+F6D1 or U+F6D4 for
-    the BREVE token (Paratype Expert's Cyrillic-specific breve, not the
-    generic combining U+0306).
+def _swap_breve(cp: int, case: str) -> int:
+    """Generic combining breve U+0306 → Cyrillic case-specific breve."""
+    if cp == 0x0306:
+        if case == "upper":
+            return CYRILLIC_BREVE_UC
+        if case == "lower":
+            return CYRILLIC_BREVE_LC
+        raise ValueError(f"_swap_breve: unknown case {case!r}")
+    return cp
+
+
+def decompose(description: str, case: str, sign: str = "") -> list[int] | None:
+    """Break a composed Cyrillic codepoint into base + combining marks.
+
+    Tries two paths in order:
+
+    1. **Description-based.** If the Unicode description contains
+       `... WITH <accent>[ AND <accent>]`, parse out the base letter
+       name and the accent tokens. Works for every Paratype composite
+       that spells out its accents (e.g. Ӑ, F50E).
+    2. **NFD fallback.** If the description has no `WITH` but the
+       character itself has a canonical Unicode decomposition into a
+       base plus combining marks from our known set (all of U+0300…
+       U+030C), use that. This picks up the common precomposed letters
+       whose Unicode names only carry a language name (Ё, Й, Ў, Ѓ, Ї, Ќ
+       and their lowercase forms) — roughly 12 additional rows.
+
+    Returns a list of codepoints (base first) or None if neither path
+    applies (structural composites like `WITH DESCENDER`, plain letters
+    without a composition, etc.).
+
+    `case` must be `"upper"` or `"lower"` — selects U+F6D1 or U+F6D4
+    for the BREVE token wherever it appears (Paratype Expert's Cyrillic-
+    shaped breve, not the generic combining U+0306).
     """
+    # Path 1: ... WITH <accent>
     parts = _WITH_RE.split(description, maxsplit=1)
-    if len(parts) != 2:
-        return None
-    base_name, phrase = parts
-    tokens = [t.strip().upper() for t in _AND_RE.split(phrase)]
-    mapped: list[int] = []
-    for token in tokens:
-        mark = ACCENT_COMBINING_MARK.get(token)
-        if mark is None:
-            return None
-        if mark is _CYRILLIC_BREVE:
-            if case == "upper":
-                mapped.append(CYRILLIC_BREVE_UC)
-            elif case == "lower":
-                mapped.append(CYRILLIC_BREVE_LC)
+    if len(parts) == 2:
+        base_name, phrase = parts
+        tokens = [t.strip().upper() for t in _AND_RE.split(phrase)]
+        mapped: list[int] = []
+        for token in tokens:
+            mark = ACCENT_COMBINING_MARK.get(token)
+            if mark is None:
+                return None
+            if mark is _CYRILLIC_BREVE:
+                mapped.append(_swap_breve(0x0306, case))
             else:
-                raise ValueError(f"decompose: unknown case {case!r}")
-        else:
-            mapped.append(mark)
-    try:
-        base_char = unicodedata.lookup(base_name.strip().upper())
-    except KeyError:
-        raise ValueError(
-            f"decompose: cannot resolve base letter {base_name!r} "
-            f"from description {description!r}"
-        )
-    return [ord(base_char), *mapped]
+                mapped.append(mark)
+        try:
+            base_char = unicodedata.lookup(base_name.strip().upper())
+        except KeyError:
+            raise ValueError(
+                f"decompose: cannot resolve base letter {base_name!r} "
+                f"from description {description!r}"
+            )
+        return [ord(base_char), *mapped]
+
+    # Path 2: NFD fallback for precomposed characters whose description
+    # does not spell out the accent.
+    if sign:
+        nfd = unicodedata.normalize("NFD", sign)
+        if len(nfd) > 1:
+            cps = [ord(c) for c in nfd]
+            if all(cp in _KNOWN_COMBINING_MARK_CPS for cp in cps[1:]):
+                return [cps[0], *(_swap_breve(cp, case) for cp in cps[1:])]
+
+    return None
 
 
 def dedupe_by_codepoints(entries: list[dict]) -> list[dict]:
@@ -238,11 +271,24 @@ def classify_variant_token(token: str) -> dict | None:
     }
 
 
+_FONT_GAPS_SUPPRESSED = {
+    # Variants whose `.<SUFFIX>` glyph is not present in PT Serif Expert
+    # Regular and so cannot be rendered. Suppressed from the table to avoid
+    # broken-image rows; tracked in TODO.md for the type-design team.
+    ("0416", "bg"),  # Ж — no uni0416.BGR
+    ("041A", "bg"),  # К — no uni041A.BGR
+}
+
+
 def collect_glyph_variants(data_root: Path, languages: list[str]) -> list[dict]:
     """Scan in-scope base JSONs and collect every token with a variant marker.
 
     One entry per (codepoints, case, locale, style, marker, language) tuple.
     Later aggregation merges rows that share everything except `language`.
+
+    Filters out variants that fall in `_FONT_GAPS_SUPPRESSED` — those rows
+    are real per the source data but cannot be rendered until the font's
+    glyph set is extended.
     """
     variants: list[dict] = []
     base_dir = data_root / "library" / "cyrillic" / "base"
@@ -267,6 +313,11 @@ def collect_glyph_variants(data_root: Path, languages: list[str]) -> list[dict]:
                     # not belong here. (`&` tokens never occur in ru-default
                     # sources anyway.)
                     if locale == "ru" and info["marker"] == "alternate":
+                        continue
+                    # Suppress font-gap rows (variant glyph missing from the
+                    # font). Drops both the `&` and the paired `+` for the
+                    # same (codepoint, locale).
+                    if info.get("codepoints") and (info["codepoints"][0], locale) in _FONT_GAPS_SUPPRESSED:
                         continue
                     variants.append({
                         **info,
@@ -432,26 +483,31 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
         for u in e.get("unicodes", [])
         if is_pua(int(u, 16))
     )
-    composed_count = 0
-    decomposed_count = 0
-    row_cells: list[str] = []  # decomposition_cell per row
+    with_count = 0          # rows whose description contains WITH
+    nfd_only_count = 0      # rows decomposed only via the NFD fallback path
+    decomposed_count = 0    # rows with any decomposition
+    row_cells: list[str] = []
     for entry in entries:
         description = entry.get("description", "")
+        sign = entry.get("sign", "")
         unicodes = entry.get("unicodes", [])
-        row_is_composed = has_decomposition_hint(description)
-        if row_is_composed:
-            composed_count += 1
-        seq = decompose(description, case) if row_is_composed else None
+        has_with = has_decomposition_hint(description)
+        if has_with:
+            with_count += 1
+        seq = decompose(description, case, sign=sign)
         if seq is not None:
             decomposed_count += 1
             decomp_cell = " + ".join(f"{cp:04X}" for cp in seq)
-            # Cross-validate against NFD for non-PUA rows: our decomposition
-            # must match NFD except that BREVE uses F6D1/F6D4 where NFD
-            # would use U+0306. Mismatch here means the accent table or
-            # base-letter lookup is wrong.
+            if not has_with:
+                nfd_only_count += 1
+            # Cross-validate the WITH-path result against NFD for non-PUA rows:
+            # our decomposition must match NFD except that BREVE uses F6D1/F6D4
+            # where NFD would use U+0306. Mismatch = accent table / base-letter
+            # lookup is wrong. (The NFD-fallback path is NFD-derived by
+            # construction, so no need to cross-check it.)
             is_pua_row = any(is_pua(int(u, 16)) for u in unicodes)
-            if not is_pua_row and entry.get("sign"):
-                nfd = unicodedata.normalize("NFD", entry["sign"])
+            if has_with and not is_pua_row and sign:
+                nfd = unicodedata.normalize("NFD", sign)
                 if len(nfd) > 1:
                     nfd_cps = [ord(c) for c in nfd]
                     expected = [
@@ -461,14 +517,13 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
                     ]
                     if seq != expected:
                         raise AssertionError(
-                            f"decompose mismatch for {entry['sign']!r} "
+                            f"decompose mismatch for {sign!r} "
                             f"({description!r}): got {seq}, expected {expected}"
                         )
         else:
             decomp_cell = ""
         row_cells.append(decomp_cell)
-
-    descriptive_count = composed_count - decomposed_count
+    descriptive_count = with_count - (decomposed_count - nfd_only_count)
 
     out: list[str] = []
     out.append(f"# Pan-Cyrillic single characters — {side}")
@@ -476,14 +531,16 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
     out.append(
         f"**{len(entries)}** unique {side} characters across the 77 "
         f"languages in scope. Of these, **{pua_count}** are encoded in "
-        f"the Unicode Private Use Area (E000–F8FF). **{composed_count}** "
-        f"have a composed description (`… WITH …`): **{decomposed_count}** "
-        f"are decomposed below into a base character plus one or more "
-        f"combining marks, and **{descriptive_count}** are structural "
-        f"modifications (Descender, Hook, Tail, Stroke, Bar, Tick, "
-        f"Upturn, Middle Hook, Vertical Stroke, or the Stroke+Hook pair) "
-        f"that have no standard combining-mark equivalent — those are "
-        f"kept as their codepoint plus the descriptive name."
+        f"the Unicode Private Use Area (E000–F8FF). "
+        f"**{decomposed_count}** decompose into a base character plus "
+        f"one or more combining marks — {decomposed_count - nfd_only_count} "
+        f"via a `… WITH …` description and {nfd_only_count} via canonical "
+        f"Unicode NFD on precomposed letters whose name carries only the "
+        f"language label (Ё, Й, Ў, …). **{descriptive_count}** are "
+        f"structural modifications (Descender, Hook, Tail, Stroke, Bar, "
+        f"Tick, Upturn, Middle Hook, Vertical Stroke, or the Stroke+Hook "
+        f"pair) with no standard combining-mark equivalent — kept as "
+        f"their codepoint plus the descriptive name."
     )
     out.append("")
     out.append(

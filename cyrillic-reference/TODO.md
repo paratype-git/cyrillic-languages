@@ -47,9 +47,10 @@ The main tables now have two new columns: `Decomposition` (`XXXX + XXXX + …` f
 
 `generate_svgs.py` emits one SVG per row in the master tables plus their matching `.txt` plotter sources. Layout: decomposable composites render as `base + mark(s) → composed` with each mark in its own dotted-circle box; structural composites and plain letters render as a single centred glyph; locl variants render as `default → variant` via the TTF's suffixed glyph names (`.BGR`, `.BSH`, `.CHU`, `.SRB`). Service elements (rectangles, `+`, `→`, labels) are drawn with glyphplotter primitives, not saved from a second font. Vertical placement lifts above-marks by `GAP=150` above `dc.yMax` and drops below-marks (cedilla) the same distance below `dc.yMin`; horizontal placement uses the glyph's bbox centre plus per-mark `X_NUDGE_EXTRA` / `Y_NUDGE_EXTRA` overrides calibrated on the `svg/_calibration/accents.svg` reference sheet. Full layout, calibration constants, and manual re-rendering instructions are in `README.md`.
 
-**Remaining SVG-stage TODOs** (not blocking release):
-- 15 of 41 `&` locl rows in `glyph-variants.md` are driven purely by GSUB lookups (no suffixed glyph name in PT Serif Expert) and stay unrendered. Adding `uharfbuzz` would allow rendering them.
-- `.ita` / `.str` style alternates in `glyph-variants.md` are not rendered yet — they would need their own template.
+**Remaining SVG-stage TODOs:**
+
+- **Font gap (designers):** PT Serif Expert Regular has no `uni0416.BGR` (Ж) and no `uni041A.BGR` (К). The two Bulgarian-locl rows for these letters are suppressed from `glyph-variants.md` via `_FONT_GAPS_SUPPRESSED` in `generate.py` until the font's glyph set is extended. To restore them: add the two `.BGR` glyphs to PT-Serif-Expert_Regular.ufo (and Italic, if applicable), rebuild the TTF, and remove the entry from `_FONT_GAPS_SUPPRESSED`.
+- **`.str` style variants** are not rendered yet. They would need a parallel branch in `generate_svgs.py`'s `process_variants` pointing at the upright weight (similar to how `.ita` variants now load `PT-Serif-Expert_Italic.ttf`).
 
 ### 4. Publish
 

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 4040 2380' >
+    <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
+        <rect x='-20' y='-920' width='4040' height='2380' fill='#FFFFFF'/>
+        <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <path d='M16 94Q16 128 35.0 156.0Q54 184 82.5 208.5Q111 233 144.0 254.5Q177 276 205.5 297.0Q234 318 253.0 340.0Q272 362 272 386Q272 412 261.5 431.0Q251 450 216 450Q181 450 149.5 431.5Q118 413 99 394L84 411Q92 426 108.0 443.5Q124 461 146.5 476.5Q169 492 195.5 502.0Q222 512 251 512Q309 512 337.5 483.5Q366 455 366 418Q366 381 347.0 352.0Q328 323 299.5 298.5Q271 274 238.0 252.5Q205 231 176.5 209.5Q148 188 129.0 164.5Q110 141 110 114Q110 88 127.0 69.0Q144 50 186 50Q223 50 255.5 66.5Q288 83 313 103L327 88Q314 70 294.5 52.0Q275 34 249.5 19.5Q224 5 194.0 -3.5Q164 -12 131 -12Q108 -12 87.0 -4.0Q66 4 50.0 18.0Q34 32 25.0 51.5Q16 71 16 94Z'  transform='translate(505,0) scale(1.1)'/>
+        <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0433</text>
+        <defs >
+            <marker id='marker0' markerUnits='strokeWidth' refX='8.5' refY='5' markerWidth='10' markerHeight='10' orient='auto-start-reverse' >
+                <path d='M 5.669872981077806 2.5000000000000004 l 4.330127018922194 2.4999999999999996 l -4.330127018922194 2.4999999999999996 Z' fill='#9E9E9E' fill-opacity='1.0'/>
+            </marker>
+        </defs>
+        <line x1='1750' y1='250' x2='2280.0' y2='250.0' marker-end='url(#marker0)' stroke='#9E9E9E' stroke-width='80' stroke-dasharray='0 0'/>
+        <rect x='2600' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20' stroke-dasharray='0 0'/>
+        <path d='M70 451V476Q85 482 104.0 488.5Q123 495 143.0 500.0Q163 505 181.0 508.5Q199 512 213 512L231 500L137 56H211V30Q190 14 162.0 4.0Q134 -6 107 -6Q78 -6 65.5 7.0Q53 20 53 37Q53 57 56.0 76.0Q59 95 64 118L134 441ZM84 598 94 650H348L337 598Z'  transform='translate(3162,0) scale(1.1)'/>
+        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0433 .sr</text>
+    </g>
+</svg>
