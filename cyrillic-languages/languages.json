@@ -14,7 +14,7 @@
         "script": "latin",
         "name_eng": "Latin",
         "name_rus": "Латиница",
-        "enable": false,
+        "enable": true,
         "local_default": "en",
         "list_of_languages": "latin_library.json",
         "sort_order": "sortorder_latin.txt",
