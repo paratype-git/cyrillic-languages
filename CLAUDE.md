@@ -78,7 +78,7 @@ The Unicode PUA (`E000`–`F8FF`) is a blank range the Unicode Consortium leaves
     ├── scripts/compile_languages.py               ← the pipeline
     ├── scripts/<other .py>                        ← helpers / one-shot migrations; most have absolute paths
     ├── {languages,locales,glyphs_list_categories}.json
-    └── unicode14.txt, PT_PUA_unicodes*.txt        ← reference tables
+    └── unicode14.txt, PT_PUA_unicodes-descritions.txt  ← reference tables
 ```
 
 Site-engine files (`static/`, `fonts/`, `index.html`, `asset-manifest.json`, `favicon.ico`, `robots.txt`) are **gitignored** here and live in [paratype/paratype.github.io](https://github.com/paratype/paratype.github.io/tree/main/cyrillic-languages). They may be present locally for site preview but are not part of this repository.

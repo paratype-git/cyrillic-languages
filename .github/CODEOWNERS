@@ -18,7 +18,6 @@ cyrillic-languages/library/cyrillic/sortorder_cyrillic.txt       @typedev
 cyrillic-languages/library/cyrillic/_legacy/**                   @typedev
 cyrillic-languages/library/latin/**                              @typedev
 cyrillic-languages/unicode14.txt                                 @typedev
-cyrillic-languages/PT_PUA_unicodes.txt                           @typedev
 cyrillic-languages/PT_PUA_unicodes-descritions.txt               @typedev
 /.github/**                                                      @typedev
 /docs/**                                                         @typedev

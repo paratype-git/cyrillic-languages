@@ -125,7 +125,7 @@ Everything lives under `cyrillic-languages/`. The subtrees, grouped by role:
 **Reference tables (operator-only)**
 
 - `unicode14.txt` — upstream Unicode character descriptions. Bundled copy of the Unicode Character Database name list.
-- `PT_PUA_unicodes.txt`, `PT_PUA_unicodes-descritions.txt` — descriptions for the Private Use Area codepoints that the Paratype fonts map to specific glyphs.
+- `PT_PUA_unicodes-descritions.txt` — descriptions for the Private Use Area codepoints that the Paratype fonts map to specific glyphs.
 
 **Pipeline**
 
@@ -267,8 +267,6 @@ Descriptions shown in the generated per-language JSONs come from two files, both
 
 - `unicode14.txt` — a dump of the Unicode 14 character database name list. First tab-separated field is the codepoint, second is the name. Updating this file means dropping in a refreshed export from the Unicode Consortium.
 - `PT_PUA_unicodes-descritions.txt` — descriptions for Private Use Area codepoints that the Paratype fonts map to specific glyphs. Same format as `unicode14.txt`. This file is Paratype-curated — when a new PUA codepoint is assigned in the fonts, its description should be added here.
-
-The supplementary `PT_PUA_unicodes.txt` is not read by `compile_languages.py` and appears to be kept for reference.
 
 When both files define the same codepoint, the pipeline prints `Unicodes overlap:` and keeps the first entry it saw. If you see this on a run, it means `PT_PUA_unicodes-descritions.txt` has drifted into an official Unicode range or vice versa — investigate rather than ignoring.
 
