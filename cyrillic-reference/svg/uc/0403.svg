@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 1440 2380' >
+    <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
+        <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <path d='M207 53Q256 45 303 29V0H29V29Q69 45 111 53V646Q91 650 70.0 656.5Q49 663 29 671V700H497Q497 680 496.0 654.0Q495 628 494.0 600.0Q493 572 491.0 545.5Q489 519 486 498H460L408 648H207ZM369 893Q378 894 392.0 892.0Q406 890 420.5 885.5Q435 881 447.5 874.5Q460 868 466 861V841L240 750L223 769Z'  transform='translate(446,0) scale(1.1)'/>
+        <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0403</text>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 4040 2380' >
+    <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
+        <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <path d='M39 0V25Q67 41 105 49V450Q85 454 69.0 460.0Q53 466 39 474V500H249V474Q239 467 225.5 461.0Q212 455 195 450V44H371V450Q356 454 340.5 460.0Q325 466 311 474V500H515V474Q504 466 490.0 460.0Q476 454 461 450V44H637V450Q605 459 583 474V500H793V474Q779 466 763.0 460.5Q747 455 727 450V44H816Q815 -4 811.5 -52.5Q808 -101 805 -148H779L734 0Z'  transform='translate(278,0) scale(1.1)'/>
+        <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0449</text>
+        <defs >
+            <marker id='marker0' markerUnits='strokeWidth' refX='8.5' refY='5' markerWidth='10' markerHeight='10' orient='auto-start-reverse' >
+                <path d='M 5.669872981077806 2.5000000000000004 l 4.330127018922194 2.4999999999999996 l -4.330127018922194 2.4999999999999996 Z' fill='#9E9E9E' fill-opacity='1.0'/>
+            </marker>
+        </defs>
+        <line x1='1750' y1='250' x2='2280.0' y2='250.0' marker-end='url(#marker0)' stroke='#9E9E9E' stroke-width='80' stroke-dasharray='0 0'/>
+        <rect x='2600' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20' stroke-dasharray='0 0'/>
+        <path d='M789 -158 746 0H678L672 109H668Q654 57 620.5 22.5Q587 -12 519 -12Q401 -12 379 108H375Q342 -12 220 -12Q168 -12 137.0 11.0Q106 34 91.5 85.0Q77 136 77 221Q77 261 80 322Q83 399 83 442L17 450V476Q80 499 148 512H173Q173 456 170 363Q167 290 167 242Q167 170 173.5 130.0Q180 90 199.0 70.0Q218 50 255 50Q302 50 328.0 78.5Q354 107 373 165Q372 170 372 181V198Q372 245 375 322Q378 399 378 442L312 450V476Q375 499 443 512H468Q468 456 465 363Q462 290 462 243Q462 171 468.5 130.5Q475 90 494.5 70.0Q514 50 551 50Q597 50 622.0 78.5Q647 107 668 167V442L603 450V476Q661 499 733 512H758V57L828 49Q820 -89 814 -158Z'  transform='translate(2876,0) scale(1.1)'/>
+        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0449 .bg</text>
+    </g>
+</svg>

@@ -16,3 +16,4 @@
 # Kept locally for reference; not part of the tracked toolchain.
 /cyrillic-languages/scripts/_legacy/
 
+*.ufo

@@ -394,13 +394,26 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
     out.append("")
     out.append("## Variants")
     out.append("")
-    out.append("| # | Codepoint | Case | Locale | Style | Marker | Token(s) | Languages |")
-    out.append("| ---: | --- | --- | --- | --- | --- | --- | --- |")
+    out.append("| # | Codepoint | Case | Locale | Style | Marker | Token(s) | Diagram | Languages |")
+    out.append("| ---: | --- | --- | --- | --- | --- | --- | :---: | --- |")
     for i, r in enumerate(rows, start=1):
+        # Diagram cell: links to the svg/variants/<cp>.<locale>.{svg,txt} files
+        # emitted by generate_svgs.py. Only localized rows have a named variant
+        # in the TTF, and only a subset of those (~26 of 41) are currently
+        # rendered — rows without a file get an empty cell and the Markdown
+        # link simply doesn't resolve. This is acceptable.
+        diagram_cell = ""
+        if r["marker"] == "localized" and r["locale"] and r["codepoints"]:
+            cp_hex = r["codepoints"][0].upper()
+            stem = f"{cp_hex}.{r['locale']}"
+            diagram_cell = (
+                f"[svg](svg/variants/{stem}.svg) / [txt](svg/variants/{stem}.txt)"
+            )
         out.append(
             f"| {i} | {format_unicodes(r['codepoints'])} | {r['case']} | "
             f"{r['locale']} | {r['style']} | {r['marker']} | "
-            f"`{'`, `'.join(r['tokens'])}` | {', '.join(r['languages'])} |"
+            f"`{'`, `'.join(r['tokens'])}` | {diagram_cell} | "
+            f"{', '.join(r['languages'])} |"
         )
     out.append("")
     return "\n".join(out)
@@ -486,18 +499,27 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
         "use `XXXX + XXXX + …` in reading order (base first)."
     )
     out.append("")
-    out.append("| # | Sign | Codepoint | Description | PUA | Decomposition | Legacy PUA | Locales |")
-    out.append("| ---: | :---: | --- | --- | :---: | --- | --- | --- |")
+    out.append("| # | Sign | Codepoint | Description | PUA | Decomposition | Legacy PUA | Diagram | Locales |")
+    out.append("| ---: | :---: | --- | --- | :---: | --- | --- | :---: | --- |")
+    subdir = "uc" if side == "uppercase" else "lc"
     for i, (entry, (decomp_cell, legacy_cell)) in enumerate(zip(entries, row_cells), start=1):
         sign = entry.get("sign", "")
         unicodes = entry.get("unicodes", [])
         description = entry.get("description", "")
         pua_flag = "yes" if any(is_pua(int(u, 16)) for u in unicodes) else ""
         locales = ", ".join(entry.get("locales", []))
+        # Diagram cell: links to the generated SVG + the plotter source .txt,
+        # side-by-side. Produced by generate_svgs.py; files are resolved as
+        # relative paths so the links work both on GitHub and locally.
+        cp_hex = unicodes[0].upper() if unicodes else ""
+        diagram_cell = (
+            f"[svg](svg/{subdir}/{cp_hex}.svg) / [txt](svg/{subdir}/{cp_hex}.txt)"
+            if cp_hex else ""
+        )
         out.append(
             f"| {i} | {sign} | {format_unicodes(unicodes)} | "
             f"{description} | {pua_flag} | {decomp_cell} | "
-            f"{legacy_cell} | {locales} |"
+            f"{legacy_cell} | {diagram_cell} | {locales} |"
         )
     out.append("")
     return "\n".join(out)
