@@ -24,11 +24,36 @@ import argparse
 import json
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 
 PUA_RANGE = (0xE000, 0xF8FF)
 PUA_TOKEN = re.compile(r"^!([0-9A-Fa-f]{4,5})$")
+
+# Sentinel for the Cyrillic-specific breve — resolved per case in decompose().
+# The generic combining breve U+0306 is NOT used here: Paratype Expert fonts
+# carry a distinct Cyrillic breve at U+F6D1 (uppercase) and U+F6D4 (lowercase)
+# that is the shape typographers expect on top of a Cyrillic base.
+_CYRILLIC_BREVE = object()
+CYRILLIC_BREVE_UC = 0xF6D1
+CYRILLIC_BREVE_LC = 0xF6D4
+
+ACCENT_COMBINING_MARK = {
+    "MACRON":       0x0304,
+    "DIAERESIS":    0x0308,
+    "BREVE":        _CYRILLIC_BREVE,
+    "ACUTE":        0x0301,
+    "CIRCUMFLEX":   0x0302,
+    "GRAVE":        0x0300,
+    "CARON":        0x030C,
+    "DOUBLE ACUTE": 0x030B,
+    "CEDILLA":      0x0327,
+    "DOT ABOVE":    0x0307,
+}
+
+_WITH_RE = re.compile(r"\s+WITH\s+", re.IGNORECASE)
+_AND_RE = re.compile(r"\s+AND\s+", re.IGNORECASE)
 
 # The 77 Cyrillic-based languages this project covers. Values match JSON
 # file stems under `<data>/library/cyrillic/base/`.
@@ -94,10 +119,53 @@ def format_unicodes(unicodes: list[str]) -> str:
 def has_decomposition_hint(description: str) -> bool:
     """Return True for descriptions like '… WITH MACRON' / '… WITH DIAERESIS AND BREVE'.
 
-    These are the entries that will need a base + combining-mark sequence
-    in the next pipeline stage (§4.1 / §4.9 of the spec).
+    Covers both decomposable and structural composites (e.g. `… WITH HOOK`);
+    `decompose()` is the actual gate that separates the two.
     """
     return " with " in f" {description.lower()} "
+
+
+def decompose(description: str, case: str) -> list[int] | None:
+    """Break a `'… WITH <accent>'` description into base + combining marks.
+
+    Returns a list of codepoints (base first) for the ten decomposable
+    accents (MACRON, DIAERESIS, BREVE, ACUTE, CIRCUMFLEX, GRAVE, CARON,
+    DOUBLE ACUTE, CEDILLA, DOT ABOVE) or their AND-combinations. Returns
+    None for every other composite — structural modifications (DESCENDER,
+    HOOK, TAIL, STROKE, BAR, UPTURN, TICK, MIDDLE HOOK, VERTICAL STROKE,
+    STROKE AND HOOK) are kept as descriptive forms rather than decomposed.
+
+    `case` must be `"upper"` or `"lower"` — selects U+F6D1 or U+F6D4 for
+    the BREVE token (Paratype Expert's Cyrillic-specific breve, not the
+    generic combining U+0306).
+    """
+    parts = _WITH_RE.split(description, maxsplit=1)
+    if len(parts) != 2:
+        return None
+    base_name, phrase = parts
+    tokens = [t.strip().upper() for t in _AND_RE.split(phrase)]
+    mapped: list[int] = []
+    for token in tokens:
+        mark = ACCENT_COMBINING_MARK.get(token)
+        if mark is None:
+            return None
+        if mark is _CYRILLIC_BREVE:
+            if case == "upper":
+                mapped.append(CYRILLIC_BREVE_UC)
+            elif case == "lower":
+                mapped.append(CYRILLIC_BREVE_LC)
+            else:
+                raise ValueError(f"decompose: unknown case {case!r}")
+        else:
+            mapped.append(mark)
+    try:
+        base_char = unicodedata.lookup(base_name.strip().upper())
+    except KeyError:
+        raise ValueError(
+            f"decompose: cannot resolve base letter {base_name!r} "
+            f"from description {description!r}"
+        )
+    return [ord(base_char), *mapped]
 
 
 def dedupe_by_codepoints(entries: list[dict]) -> list[dict]:
@@ -340,38 +408,96 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
 
 def render_characters_md(side: str, entries: list[dict]) -> str:
     """Render the master table for either uppercase or lowercase characters."""
+    case = "upper" if side == "uppercase" else "lower"
+
     pua_count = sum(
         1 for e in entries
         for u in e.get("unicodes", [])
         if is_pua(int(u, 16))
     )
-    composed_count = sum(1 for e in entries if has_decomposition_hint(e.get("description", "")))
+    composed_count = 0
+    decomposed_count = 0
+    row_cells: list[tuple[str, str]] = []  # (decomposition_cell, legacy_pua_cell)
+    for entry in entries:
+        description = entry.get("description", "")
+        unicodes = entry.get("unicodes", [])
+        row_is_composed = has_decomposition_hint(description)
+        if row_is_composed:
+            composed_count += 1
+        seq = decompose(description, case) if row_is_composed else None
+        if seq is not None:
+            decomposed_count += 1
+            decomp_cell = " + ".join(f"{cp:04X}" for cp in seq)
+            # For PUA rows that decomposed, keep the original PUA codepoint
+            # in its own column so the old encoding stays traceable.
+            is_pua_row = any(is_pua(int(u, 16)) for u in unicodes)
+            legacy_cell = unicodes[0].upper() if (is_pua_row and unicodes) else ""
+            # Cross-validate against NFD for non-PUA rows: our decomposition
+            # must match NFD except that BREVE uses F6D1/F6D4 where NFD
+            # would use U+0306. Mismatch here means the accent table or
+            # base-letter lookup is wrong.
+            if not is_pua_row and entry.get("sign"):
+                nfd = unicodedata.normalize("NFD", entry["sign"])
+                if len(nfd) > 1:
+                    nfd_cps = [ord(c) for c in nfd]
+                    expected = [
+                        (CYRILLIC_BREVE_UC if case == "upper" else CYRILLIC_BREVE_LC)
+                        if cp == 0x0306 else cp
+                        for cp in nfd_cps
+                    ]
+                    if seq != expected:
+                        raise AssertionError(
+                            f"decompose mismatch for {entry['sign']!r} "
+                            f"({description!r}): got {seq}, expected {expected}"
+                        )
+        else:
+            decomp_cell = ""
+            legacy_cell = ""
+        row_cells.append((decomp_cell, legacy_cell))
+
+    descriptive_count = composed_count - decomposed_count
 
     out: list[str] = []
     out.append(f"# Pan-Cyrillic single characters — {side}")
     out.append("")
-    out.append(f"**{len(entries)}** unique {side} characters across the 77 "
-               f"languages in scope. Of these, **{pua_count}** are encoded in "
-               f"the Unicode Private Use Area (E000–F8FF), and **{composed_count}** "
-               f"have a composed description (`… WITH …`) that will be decomposed "
-               f"into a base character plus one or more combining marks in the "
-               f"next pipeline stage.")
+    out.append(
+        f"**{len(entries)}** unique {side} characters across the 77 "
+        f"languages in scope. Of these, **{pua_count}** are encoded in "
+        f"the Unicode Private Use Area (E000–F8FF). **{composed_count}** "
+        f"have a composed description (`… WITH …`): **{decomposed_count}** "
+        f"are decomposed below into a base character plus one or more "
+        f"combining marks, and **{descriptive_count}** are structural "
+        f"modifications (Descender, Hook, Tail, Stroke, Bar, Tick, "
+        f"Upturn, Middle Hook, Vertical Stroke, or the Stroke+Hook pair) "
+        f"that have no standard combining-mark equivalent — those are "
+        f"kept as their codepoint plus the descriptive name."
+    )
     out.append("")
-    out.append("Codepoints are shown in uppercase hex. Multi-codepoint rows use "
-               "`XXXX + XXXX + …` ordering.")
+    out.append(
+        "Decomposition note: the `BREVE` combining mark in Cyrillic rows "
+        "resolves to `U+F6D1` (uppercase) / `U+F6D4` (lowercase) — the "
+        "Cyrillic-shaped breve glyphs carried by Paratype Expert fonts — "
+        "rather than the generic combining breve `U+0306`, whose shape "
+        "does not match Cyrillic typography."
+    )
     out.append("")
-    out.append("| # | Sign | Codepoint | Description | PUA | Composed | Locales |")
-    out.append("| ---: | :---: | --- | --- | :---: | :---: | --- |")
-    for i, entry in enumerate(entries, start=1):
+    out.append(
+        "Codepoints are shown in uppercase hex. Multi-codepoint sequences "
+        "use `XXXX + XXXX + …` in reading order (base first)."
+    )
+    out.append("")
+    out.append("| # | Sign | Codepoint | Description | PUA | Decomposition | Legacy PUA | Locales |")
+    out.append("| ---: | :---: | --- | --- | :---: | --- | --- | --- |")
+    for i, (entry, (decomp_cell, legacy_cell)) in enumerate(zip(entries, row_cells), start=1):
         sign = entry.get("sign", "")
         unicodes = entry.get("unicodes", [])
         description = entry.get("description", "")
         pua_flag = "yes" if any(is_pua(int(u, 16)) for u in unicodes) else ""
-        composed_flag = "yes" if has_decomposition_hint(description) else ""
         locales = ", ".join(entry.get("locales", []))
         out.append(
             f"| {i} | {sign} | {format_unicodes(unicodes)} | "
-            f"{description} | {pua_flag} | {composed_flag} | {locales} |"
+            f"{description} | {pua_flag} | {decomp_cell} | "
+            f"{legacy_cell} | {locales} |"
         )
     out.append("")
     return "\n".join(out)
