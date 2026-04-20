@@ -33,6 +33,7 @@ The repository mixes two different things: the **data** (open to contributors) a
 - `cyrillic-languages/scripts/**` — the Python pipeline.
 - `cyrillic-languages/languages.json`, `cyrillic-languages/locales.json`, `cyrillic-languages/glyphs_list_categories.json`, `cyrillic-languages/library/cyrillic/cyrillic_library.json`, `cyrillic-languages/library/cyrillic/sortorder_cyrillic.txt`, `cyrillic-languages/unicode14.txt`, `cyrillic-languages/PT_PUA_unicodes-descriptions.txt` — shared configuration and reference tables. If you think one of these needs to change for your contribution, open an issue describing the need instead of a PR.
 - `cyrillic-languages/library/cyrillic/_legacy/**` — archived historical language files; see the README inside that folder.
+- `cyrillic-reference/**` — a pan-Cyrillic Unicode reference set (character tables, glyph-variant catalog, and — in progress — SVG illustrations) generated from the data above. See [`cyrillic-reference/README.md`](cyrillic-reference/README.md).
 
 The compiled React site bundle (`cyrillic-languages/static/`, `cyrillic-languages/fonts/`, `index.html` files, `asset-manifest.json`, `favicon.ico`, `robots.txt`) is **not tracked in this repository** — it is gitignored and lives upstream in the [paratype/paratype.github.io](https://github.com/paratype/paratype.github.io/tree/main/cyrillic-languages) repository, from which the public site is served. You can keep a local copy alongside this tree for offline site preview; contributor PRs never touch it.
 
@@ -48,9 +49,13 @@ Full instructions, the JSON schema reference, the glyph-marker catalog, and a pr
 
 Maintainer / operator notes — how the pipeline is run, how to add a new language, how to maintain the sort order and Unicode description tables — are in **[docs/MAINTAINING.md](docs/MAINTAINING.md)**.
 
-## Fonts and license
+## License
 
-The site uses a special version of **PT Sans Expert** and **PT Serif Expert** (Paratype, 2022), distributed under the SIL Open Font License (OFL). The fonts are available at <https://github.com/paratype/paratype.github.io/tree/main/cyrillic-languages/fonts/web>.
+This repository — the per-language JSON data, the Python pipeline, the contributor documentation, and the generated documentation set under `cyrillic-reference/` — is released under the **MIT License**. See [LICENSE](LICENSE).
+
+## Fonts
+
+The Paratype site served from <https://paratype.github.io/cyrillic-languages/> renders its samples with **PT Sans Expert** and **PT Serif Expert** (Paratype, 2022), distributed under the SIL Open Font License (OFL). The fonts are not part of this repository; they live at <https://github.com/paratype/paratype.github.io/tree/main/cyrillic-languages/fonts/web>.
 
 ## Contact
 

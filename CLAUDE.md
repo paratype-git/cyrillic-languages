@@ -4,7 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project at a glance
 
-Paratype's multilingual Cyrillic alphabet reference. A static site whose per-language JSON data is **generated** by a Python pipeline from hand-edited source JSONs. There is no package manager, no test suite, no build tool beyond Python 3 stdlib.
+Paratype's multilingual Cyrillic alphabet reference. A static site whose per-language JSON data is **generated** by a Python pipeline from hand-edited source JSONs. There is no package manager, no test suite, no build tool beyond Python 3 stdlib. The whole repository is released under the **MIT License** (`LICENSE` at repo root).
+
+Two pipelines share this tree:
+- `cyrillic-languages/` — the data repo proper: per-language JSONs, the Python pipeline that rolls them up, and the generated site artifacts.
+- `cyrillic-reference/` — a pan-Cyrillic Unicode reference set generated from the data above. Produces Markdown character tables, a glyph-variant catalog, and (in progress) SVG illustrations per letter. Own `generate.py`, own README.
 
 **Where to find the authoritative docs.** Before writing anything that will end up in a user-visible place, check these first — they are the source of truth and must stay in sync with whatever you produce:
 
@@ -69,17 +73,26 @@ The Unicode PUA (`E000`–`F8FF`) is a blank range the Unicode Consortium leaves
 │   ├── CODEOWNERS                                 ← auto-requests @typedev on operator-only paths
 │   └── PULL_REQUEST_TEMPLATE.md                   ← auto-filled PR body with checklist
 ├── .gitignore                                     ← excludes site-engine files kept only for local dev
-└── cyrillic-languages/
-    ├── library/cyrillic/base/<Language>.json      ← contributor surface
-    ├── library/cyrillic/cyrillic_library.json     ← language registry (enable, code_pt)
-    ├── library/cyrillic/sortorder_cyrillic.txt    ← pan-Cyrillic sort order
-    ├── library/cyrillic/_legacy/                  ← archived legacy-schema files, not processed
-    ├── library/latin/**                           ← WIP, not open for contributions
-    ├── site/{cyrillic,latin}/**                   ← generated, operator-only
-    ├── scripts/compile_languages.py               ← the pipeline (the only script needed for builds)
-    ├── scripts/{dumpLangDescriptions,reloadDescriptions}.py   ← bulk description dump/reload round-trip
-    ├── {languages,locales,glyphs_list_categories}.json
-    └── unicode14.txt, PT_PUA_unicodes-descriptions.txt  ← reference tables
+├── LICENSE                                        ← MIT, covers the whole repository
+├── cyrillic-languages/
+│   ├── library/cyrillic/base/<Language>.json      ← contributor surface
+│   ├── library/cyrillic/cyrillic_library.json     ← language registry (enable, code_pt)
+│   ├── library/cyrillic/sortorder_cyrillic.txt    ← pan-Cyrillic sort order
+│   ├── library/cyrillic/_legacy/                  ← archived legacy-schema files, not processed
+│   ├── library/latin/**                           ← WIP, not open for contributions
+│   ├── site/{cyrillic,latin}/**                   ← generated, operator-only
+│   ├── scripts/compile_languages.py               ← the pipeline (the only script needed for builds)
+│   ├── scripts/{dumpLangDescriptions,reloadDescriptions}.py   ← bulk description dump/reload round-trip
+│   ├── {languages,locales,glyphs_list_categories}.json
+│   └── unicode14.txt, PT_PUA_unicodes-descriptions.txt  ← reference tables
+└── cyrillic-reference/
+    ├── LICENSE                                    ← MIT (redundant w/ root; explicit for this subtree)
+    ├── README.md                                  ← subproject docs
+    ├── TODO.md                                    ← in-progress notes: WITH-decomposition, SVG stage
+    ├── generate.py                                ← reads ../cyrillic-languages/, writes the tables below
+    ├── characters-uppercase.md                    ← generated; pan-Cyrillic uppercase codepoints
+    ├── characters-lowercase.md                    ← generated; pan-Cyrillic lowercase codepoints
+    └── glyph-variants.md                          ← generated; locl / stylistic variants
 ```
 
 Two categories of files are **gitignored** here and kept only on the maintainer's machine:

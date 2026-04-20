@@ -19,6 +19,8 @@ cyrillic-languages/library/cyrillic/_legacy/**                   @typedev
 cyrillic-languages/library/latin/**                              @typedev
 cyrillic-languages/unicode14.txt                                 @typedev
 cyrillic-languages/PT_PUA_unicodes-descriptions.txt              @typedev
+cyrillic-reference/**                                            @typedev
 /.github/**                                                      @typedev
 /docs/**                                                         @typedev
 /.gitignore                                                      @typedev
+/LICENSE                                                         @typedev
