@@ -2,3 +2,14 @@
 .DS_Store
 .venv
 
+# Site engine (compiled React bundle + fonts + landing pages).
+# Production lives in the paratype/paratype.github.io repository;
+# these files are kept locally only for running the site in dev.
+/index.html
+/cyrillic-languages/index.html
+/cyrillic-languages/static/
+/cyrillic-languages/fonts/
+/cyrillic-languages/asset-manifest.json
+/cyrillic-languages/favicon.ico
+/cyrillic-languages/robots.txt
+

@@ -18,7 +18,7 @@
 ## Checklist
 
 - [ ] I only edited files under `cyrillic-languages/library/cyrillic/base/`.
-- [ ] I did **not** touch anything under `cyrillic-languages/site/`, `static/`, `scripts/`, `fonts/`, or any shared configuration file.
+- [ ] I did **not** touch anything under `cyrillic-languages/site/`, `scripts/`, or any shared configuration file.
 - [ ] The filename matches the `name_eng` field exactly.
 - [ ] All required fields are present (`name_eng`, `name_rus`, `local`, `language_group_rus`, `alt_names_eng`, `description_rus`, `glyphs_list`).
 - [ ] `local` is one of `ru`, `ba`, `bg`, `cv`, `sr`.

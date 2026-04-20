@@ -18,7 +18,7 @@ Contributors should only ever change files inside:
 cyrillic-languages/library/cyrillic/base/
 ```
 
-Every other directory — including `site/`, `static/`, `scripts/`, and the shared configuration files next to them — is maintained by the project operators and should not be touched in a contributor PR. See the **Repository map** in the root [README.md](README.md) for the full list.
+Every other directory — including `site/`, `scripts/`, and the shared configuration files next to them — is maintained by the project operators and should not be touched in a contributor PR. See the **Repository map** in the root [README.md](README.md) for the full list.
 
 The rule of thumb: if you are editing a single per-language JSON file, you are doing it right.
 
@@ -205,7 +205,7 @@ Contributors do not need to (and should not) edit `sortorder_cyrillic.txt` thems
 Before opening a PR, please verify:
 
 - [ ] You edited only files under `cyrillic-languages/library/cyrillic/base/`.
-- [ ] You did **not** modify anything under `site/`, `static/`, `scripts/`, `fonts/`, or any shared configuration file.
+- [ ] You did **not** modify anything under `site/`, `scripts/`, or any shared configuration file.
 - [ ] The filename matches the `name_eng` field exactly.
 - [ ] All required fields are present and non-empty.
 - [ ] `local` is one of the allowed values (`ru`, `ba`, `bg`, `cv`, `sr`).

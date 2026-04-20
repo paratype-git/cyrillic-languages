@@ -67,7 +67,7 @@ The Unicode PUA (`E000`–`F8FF`) is a blank range the Unicode Consortium leaves
 ├── .github/
 │   ├── CODEOWNERS                                 ← auto-requests @typedev on operator-only paths
 │   └── PULL_REQUEST_TEMPLATE.md                   ← auto-filled PR body with checklist
-├── index.html                                     ← root landing page (site engine)
+├── .gitignore                                     ← excludes site-engine files kept only for local dev
 └── cyrillic-languages/
     ├── library/cyrillic/base/<Language>.json      ← contributor surface
     ├── library/cyrillic/cyrillic_library.json     ← language registry (enable, code_pt)
@@ -78,10 +78,10 @@ The Unicode PUA (`E000`–`F8FF`) is a blank range the Unicode Consortium leaves
     ├── scripts/compile_languages.py               ← the pipeline
     ├── scripts/<other .py>                        ← helpers / one-shot migrations; most have absolute paths
     ├── {languages,locales,glyphs_list_categories}.json
-    ├── unicode14.txt, PT_PUA_unicodes*.txt        ← reference tables
-    ├── static/, fonts/, index.html, asset-manifest.json, favicon.ico, robots.txt   ← site engine
-    └── ...
+    └── unicode14.txt, PT_PUA_unicodes*.txt        ← reference tables
 ```
+
+Site-engine files (`static/`, `fonts/`, `index.html`, `asset-manifest.json`, `favicon.ico`, `robots.txt`) are **gitignored** here and live in [paratype/paratype.github.io](https://github.com/paratype/paratype.github.io/tree/main/cyrillic-languages). They may be present locally for site preview but are not part of this repository.
 
 ## Things that will bite
 

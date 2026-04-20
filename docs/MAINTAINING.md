@@ -137,9 +137,9 @@ Everything lives under `cyrillic-languages/`. The subtrees, grouped by role:
 - `site/cyrillic/base/<Language>.json` — generated from the source files
 - `site/cyrillic/cyrillic_characters_lib.json` — pan-script summary
 
-**Site engine (operator-only; separate concern)**
+**Site engine — not tracked here**
 
-- `static/`, `fonts/`, `index.html`, `asset-manifest.json`, `favicon.ico`, `robots.txt` — the compiled React site bundle that is served at <https://paratype.github.io/cyrillic-languages/>. The site fetches JSON from the `site/` tree above via `raw.githubusercontent.com` URLs; those URLs are baked into the compiled bundle and will need updating if this repository ever moves.
+- `static/`, `fonts/`, `index.html` (root and under `cyrillic-languages/`), `asset-manifest.json`, `favicon.ico`, `robots.txt` — the compiled React site bundle. These paths are **gitignored** in this repository; the canonical copy lives in the [paratype/paratype.github.io](https://github.com/paratype/paratype.github.io/tree/main/cyrillic-languages) repository and is served at <https://paratype.github.io/cyrillic-languages/>. You may keep a local copy alongside the tree for site preview, but nothing in this repository is responsible for serving, rebuilding, or versioning those assets.
 
 **Legacy**
 
@@ -421,7 +421,7 @@ A running list of things that are known-imperfect and should be addressed when s
 
 5. **Legacy files not migrated.** See [The legacy folder](#the-legacy-folder).
 
-6. **Stale contact email in the compiled site bundle.** The React bundle at `cyrillic-languages/static/js/main.9d864c58.js` still contains `fonts@paratype.com` in the "About the project" panel. The new canonical contact is `info@paratype.net`. This requires a site-engine rebuild, which is out of scope for routine data maintenance.
+6. **Stale contact email in the compiled site bundle.** The React bundle served at <https://paratype.github.io/cyrillic-languages/> still contains `fonts@paratype.com` in the "About the project" panel. The new canonical contact is `info@paratype.net`. Fixing this means rebuilding the React app and committing the new bundle in the [paratype/paratype.github.io](https://github.com/paratype/paratype.github.io) repository — out of scope for routine data maintenance here, because the site engine is not tracked in this repository.
 
 7. **Production split.** This repository currently holds both the data and the site engine. Long-term, splitting into a data-only repository and a site-engine repository (with the site fetching JSON via `raw.githubusercontent.com` URLs, as it already does) would cleanly separate the contributor surface from the site surface. Until that split happens, the contributor/operator boundary is enforced only by the `README.md` map and `CONTRIBUTING.md` — there are no mechanical guards.
 
