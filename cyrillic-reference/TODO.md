@@ -8,16 +8,25 @@ This subproject lives as a subdirectory of `paratype-git/cyrillic-languages` —
 
 Files present:
 - `LICENSE` — MIT, Paratype, 2026
-- `README.md` — project framing, repo map, regeneration instructions, PUA explanation, license matrix
-- `generate.py` — Python 3 stdlib only; reads the sibling `cyrillic-languages` repo and writes the tables below
+- `README.md` — project framing, data pipeline, SVG layout + calibration, manual re-render instructions, known limitations, license matrix
+- `generate.py` — Python 3 stdlib only; reads the sibling `cyrillic-languages` repo and writes the three Markdown tables
+- `generate_svgs.py` — needs fontTools + FontDocTools; reads the same sources plus PT Serif Expert Regular and produces one SVG diagram per row
 - `characters-uppercase.md` — **177** unique uppercase codepoints (54 PUA). 105 have composed descriptions: 67 decomposed into base + combining marks, 38 kept as structural composites
 - `characters-lowercase.md` — **176** unique lowercase codepoints (54 PUA). 105 composed: 67 decomposed, 38 structural
 - `glyph-variants.md` — **82** variant forms that share a codepoint with a base letter but render differently under `locl` or `.str`/`.ita` stylistic alternates. Locales: ba, bg, cv, sr (ru-default languages do not produce locl variants)
+- `svg/uc/*.{svg,txt}` — 177 SVG diagrams + plotter sources for uppercase codepoints
+- `svg/lc/*.{svg,txt}` — 176 for lowercase
+- `svg/variants/*.{svg,txt}` — 26 for locl-named variants (15 GSUB-only rows stay unrendered)
+- `svg/_calibration/accents.{svg,txt}` — reference sheet for the 10 combining marks + Cyrillic breves
 
 Regeneration:
 ```bash
-cd cyrillic-reference/
-python3 generate.py
+# Markdown tables (Python stdlib only)
+cd cyrillic-reference/ && python3 generate.py
+
+# SVG diagrams (needs Python 3.13+, fontTools, FontDocTools)
+python3 generate_svgs.py \
+    --font ../cyrillic-languages/fonts/web/PT-Serif-Expert_Regular/pt-serif-expert_regular.ttf
 ```
 
 ## Done in this pass
@@ -34,20 +43,13 @@ Numbers: 134 decomposed (67 UC + 67 LC), 76 structural (38 UC + 38 LC), sum 210 
 
 The main tables now have two new columns: `Decomposition` (`XXXX + XXXX + …` for decomposable rows, empty for structural and non-composite rows) and `Legacy PUA` (`FXXX` for PUA rows that have a decomposition; empty otherwise). The original `Codepoint` column is unchanged in all rows — "Variant 1" symmetric layout, chosen over the spec's suggestion of rewriting `Codepoint` to the sequence on PUA rows.
 
-## Still to do
+### 3. SVG illustrations via `glyphplotter` — **done**
 
-### 3. SVG illustrations via `glyphplotter` (§4.2)
+`generate_svgs.py` emits one SVG per row in the master tables plus their matching `.txt` plotter sources. Layout: decomposable composites render as `base + mark(s) → composed` with each mark in its own dotted-circle box; structural composites and plain letters render as a single centred glyph; locl variants render as `default → variant` via the TTF's suffixed glyph names (`.BGR`, `.BSH`, `.CHU`, `.SRB`). Service elements (rectangles, `+`, `→`, labels) are drawn with glyphplotter primitives, not saved from a second font. Vertical placement lifts above-marks by `GAP=150` above `dc.yMax` and drops below-marks (cedilla) the same distance below `dc.yMin`; horizontal placement uses the glyph's bbox centre plus per-mark `X_NUDGE_EXTRA` / `Y_NUDGE_EXTRA` overrides calibrated on the `svg/_calibration/accents.svg` reference sheet. Full layout, calibration constants, and manual re-rendering instructions are in `README.md`.
 
-Sample code is in §4.13 of the spec. Required asset on disk:
-- `cyrillic-languages/fonts/web/PT-Serif-Expert_Regular/pt-serif-expert_regular.ttf` — already in the repo tree (gitignored). Covers every combining mark we emit, the Cyrillic-specific breve glyphs, and `U+25CC` DOTTED CIRCLE. Use it as the single SVG-rendering font.
-
-`Noto Serif Balinese` is **no longer needed** — `U+25CC` is present in PT Serif Expert, so isolated combining-mark diagrams can use it as the carrier without a second font.
-
-`generate.py` needs a function that takes a single character (or decomposed sequence) and emits a glyphplotter input file describing one diagram per letter. Diagram shape: `<char-box> { + <char-box> } --> <final-glyph>`. Then invoke the glyphplotter binary to rasterize to SVG.
-
-The `glyphplotter` tool lives at <https://bitbucket.org/Lontar/FontDocTools/src/master/> — MIT. Install from source (no PyPI release yet): `pip install git+https://bitbucket.org/Lontar/FontDocTools.git`. Requires Python ≥ 3.13 (our `.venv` is already on 3.14). The macOS-only tools in the package (`glyphshaper`, `glyphdump`, `roentgen`) are not needed and are skipped automatically on Linux via platform markers; the two we use (`glyphplotter`, `dottedcircleshaper`) are pure Python + fontTools.
-
-For the 82 variant forms in `glyph-variants.md`, SVGs need to activate the matching OpenType feature (`locl` with the right language tag, or the right stylistic set). That's a glyphplotter config question — worth a small experiment before committing to a design.
+**Remaining SVG-stage TODOs** (not blocking release):
+- 15 of 41 `&` locl rows in `glyph-variants.md` are driven purely by GSUB lookups (no suffixed glyph name in PT Serif Expert) and stay unrendered. Adding `uharfbuzz` would allow rendering them.
+- `.ita` / `.str` style alternates in `glyph-variants.md` are not rendered yet — they would need their own template.
 
 ### 4. Publish
 
