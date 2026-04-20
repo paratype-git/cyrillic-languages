@@ -527,8 +527,10 @@ def main(argv: list[str] | None = None) -> int:
     pan = load_pan_cyrillic(data_root)
     args.out.mkdir(parents=True, exist_ok=True)
 
-    upper = dedupe_by_codepoints(pan.get("uppercase_unicodes_list", []))
-    lower = dedupe_by_codepoints(pan.get("lowercase_unicodes_list", []))
+    # Read the codepoint-sorted view rather than the Paratype sort order so
+    # PUA entries naturally group at the end of each table.
+    upper = dedupe_by_codepoints(pan.get("uppercase_sorted_by_unicodes", []))
+    lower = dedupe_by_codepoints(pan.get("lowercase_sorted_by_unicodes", []))
 
     (args.out / "characters-uppercase.md").write_text(
         render_characters_md("uppercase", upper), encoding="utf-8"
