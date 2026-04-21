@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 4040 2380' >
+    <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
+        <rect x='-20' y='-920' width='4040' height='2380' fill='#FFFFFF'/>
+        <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <path d='M27 120Q27 168 48.0 198.0Q69 228 101.0 248.0Q133 268 170.0 281.0Q207 294 239.0 307.5Q271 321 292.0 338.5Q313 356 313 385Q313 417 295.5 430.0Q278 443 235 443Q197 443 169.5 434.5Q142 426 120 415L105 474Q137 491 175.0 499.0Q213 507 255 507Q295 507 321.5 498.0Q348 489 364.0 474.0Q380 459 386.5 439.0Q393 419 393 397Q393 349 372.0 319.5Q351 290 319.0 271.5Q287 253 250.0 241.0Q213 229 181.0 215.0Q149 201 128.0 181.5Q107 162 107 129Q107 94 129.5 73.0Q152 52 189 52Q226 52 262.0 65.0Q298 78 318 92L338 43Q307 17 263.5 2.5Q220 -12 184 -12Q135 -12 104.5 1.5Q74 15 56.5 35.0Q39 55 33.0 78.0Q27 101 27 120Z'  transform='translate(494,0) scale(1.1)'/>
+        <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0433</text>
+        <defs >
+            <marker id='marker0' markerUnits='strokeWidth' refX='8.5' refY='5' markerWidth='10' markerHeight='10' orient='auto-start-reverse' >
+                <path d='M 5.669872981077806 2.5000000000000004 l 4.330127018922194 2.4999999999999996 l -4.330127018922194 2.4999999999999996 Z' fill='#9E9E9E' fill-opacity='1.0'/>
+            </marker>
+        </defs>
+        <line x1='1750' y1='250' x2='2280.0' y2='250.0' marker-end='url(#marker0)' stroke='#9E9E9E' stroke-width='80' stroke-dasharray='0 0'/>
+        <rect x='2600' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20' stroke-dasharray='0 0'/>
+        <path d='M160 500H235L129 0H54ZM89 643H370L357 581H75Z'  transform='translate(3170,0) scale(1.1)'/>
+        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0433 .sr</text>
+    </g>
+</svg>

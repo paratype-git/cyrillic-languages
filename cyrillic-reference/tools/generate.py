@@ -116,6 +116,14 @@ def format_unicodes(unicodes: list[str]) -> str:
     return " + ".join(u.upper() for u in unicodes)
 
 
+def _diagram_cell(family: str, subdir: str, cp_hex: str, img_width: int) -> str:
+    """<img>+txt cell pointing at svg/<family>/<subdir>/<cp>.{svg,txt}."""
+    return (
+        f'<img src="svg/{family}/{subdir}/{cp_hex}.svg" width="{img_width}" '
+        f'alt="{family} U+{cp_hex}"> [txt](svg/{family}/{subdir}/{cp_hex}.txt)'
+    )
+
+
 def has_decomposition_hint(description: str) -> bool:
     """Return True for descriptions like '… WITH MACRON' / '… WITH DIAERESIS AND BREVE'.
 
@@ -444,25 +452,28 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
     out.append("")
     out.append("## Variants")
     out.append("")
-    out.append("| # | Codepoint | Case | Locale | Style | Diagram | Languages |")
-    out.append("| ---: | --- | --- | --- | --- | :---: | --- |")
+    out.append("| # | Codepoint | Case | Locale | Style | Sans | Serif | Languages |")
+    out.append("| ---: | --- | --- | --- | --- | :---: | :---: | --- |")
     for i, r in enumerate(rows, start=1):
-        # Diagram cell: links to svg/variants/<cp>.<locale>.{svg,txt}.
-        # All rows here are localized (`&`) since alternates were dropped.
-        diagram_cell = ""
+        # Variant diagrams are always 2 boxes (default → variant), viewBox
+        # width 4040 → rendered width 170 at height ~100.
+        sans_cell = serif_cell = ""
         if r["locale"] and r["codepoints"]:
             cp_hex = r["codepoints"][0].upper()
             stem = f"{cp_hex}.{r['locale']}"
-            # Variant diagrams are always 2 boxes (default → variant) with
-            # viewBox width 4040; rendered height ~100 at width 170.
-            diagram_cell = (
-                f'<img src="svg/variants/{stem}.svg" width="170" '
-                f'alt="U+{cp_hex} .{r["locale"]}"> '
-                f"[txt](svg/variants/{stem}.txt)"
+            sans_cell = (
+                f'<img src="svg/Sans/variants/{stem}.svg" width="170" '
+                f'alt="Sans U+{cp_hex} .{r["locale"]}"> '
+                f"[txt](svg/Sans/variants/{stem}.txt)"
+            )
+            serif_cell = (
+                f'<img src="svg/Serif/variants/{stem}.svg" width="170" '
+                f'alt="Serif U+{cp_hex} .{r["locale"]}"> '
+                f"[txt](svg/Serif/variants/{stem}.txt)"
             )
         out.append(
             f"| {i} | {format_unicodes(r['codepoints'])} | {r['case']} | "
-            f"{r['locale']} | {r['style']} | {diagram_cell} | "
+            f"{r['locale']} | {r['style']} | {sans_cell} | {serif_cell} | "
             f"{', '.join(r['languages'])} |"
         )
     out.append("")
@@ -551,8 +562,8 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
         "use `XXXX + XXXX + …` in reading order (base first)."
     )
     out.append("")
-    out.append("| # | Sign | Codepoint | Description | PUA | Decomposition | Diagram | Locales |")
-    out.append("| ---: | :---: | --- | --- | :---: | --- | :---: | --- |")
+    out.append("| # | Sign | Codepoint | Description | PUA | Decomposition | Sans | Serif | Locales |")
+    out.append("| ---: | :---: | --- | --- | :---: | --- | :---: | :---: | --- |")
     subdir = "uc" if side == "uppercase" else "lc"
     for i, (entry, decomp_cell) in enumerate(zip(entries, row_cells), start=1):
         sign = entry.get("sign", "")
@@ -560,26 +571,24 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
         description = entry.get("description", "")
         pua_flag = "yes" if any(is_pua(int(u, 16)) for u in unicodes) else ""
         locales = ", ".join(entry.get("locales", []))
-        # Diagram cell: embed the generated SVG inline with an explicit
-        # width so GitHub's table auto-sizing gives wide multi-box
-        # diagrams enough room. Width is derived from the deterministic
-        # viewBox of each diagram type (target rendered height ~100px).
+        # Sans / Serif diagram cells: embed the generated SVG inline with
+        # an explicit width (target rendered height ~100px) and a link to
+        # the glyphplotter source. Widths come from the deterministic
+        # viewBox per diagram type: 1440 (single), 6640 (1 accent),
+        # 9240 (2 accents).
         cp_hex = unicodes[0].upper() if unicodes else ""
         if cp_hex:
             n_accents = decomp_cell.count("+") if decomp_cell else 0
-            # viewBox widths: 1 box=1440, 3 box=6640 (1 accent), 4 box=9240 (2 accents)
             svg_width = 1440 if n_accents == 0 else (2600 * n_accents + 4040)
             img_width = round(svg_width * 100 / 2380)
-            diagram_cell = (
-                f'<img src="svg/{subdir}/{cp_hex}.svg" width="{img_width}" alt="U+{cp_hex}"> '
-                f"[txt](svg/{subdir}/{cp_hex}.txt)"
-            )
+            sans_cell = _diagram_cell("Sans", subdir, cp_hex, img_width)
+            serif_cell = _diagram_cell("Serif", subdir, cp_hex, img_width)
         else:
-            diagram_cell = ""
+            sans_cell = serif_cell = ""
         out.append(
             f"| {i} | {sign} | {format_unicodes(unicodes)} | "
             f"{description} | {pua_flag} | {decomp_cell} | "
-            f"{diagram_cell} | {locales} |"
+            f"{sans_cell} | {serif_cell} | {locales} |"
         )
     out.append("")
     return "\n".join(out)

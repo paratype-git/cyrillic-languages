@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 4040 2380' >
+    <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
+        <rect x='-20' y='-920' width='4040' height='2380' fill='#FFFFFF'/>
+        <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <path d='M526 -127H472L457 0H77V500H157V70H374V500H454V70H526Z'  transform='translate(426,0) scale(1.1)'/>
+        <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0446</text>
+        <defs >
+            <marker id='marker0' markerUnits='strokeWidth' refX='8.5' refY='5' markerWidth='10' markerHeight='10' orient='auto-start-reverse' >
+                <path d='M 5.669872981077806 2.5000000000000004 l 4.330127018922194 2.4999999999999996 l -4.330127018922194 2.4999999999999996 Z' fill='#9E9E9E' fill-opacity='1.0'/>
+            </marker>
+        </defs>
+        <line x1='1750' y1='250' x2='2280.0' y2='250.0' marker-end='url(#marker0)' stroke='#9E9E9E' stroke-width='80' stroke-dasharray='0 0'/>
+        <rect x='2600' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20' stroke-dasharray='0 0'/>
+        <path d='M226 -12Q147 -12 108.0 34.5Q69 81 69 198V500H149V215Q149 133 170.5 95.5Q192 58 247 58Q343 58 382 166V500H462V145Q462 108 475.0 89.0Q488 70 513 70H534V-127H480L465 0H462Q441 0 422.0 23.5Q403 47 398 79H393Q365 35 327.0 11.5Q289 -12 226 -12Z'  transform='translate(3022,0) scale(1.1)'/>
+        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0446 .bg</text>
+    </g>
+</svg>

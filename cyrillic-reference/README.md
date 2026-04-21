@@ -26,11 +26,10 @@ Part of the Paratype Cyrillic Languages project; released under the **MIT Licens
 ../cyrillic-languages/                               (source repo)
 ├── library/cyrillic/base/*.json         hand-edited per-language alphabets
 ├── site/cyrillic/cyrillic_characters_lib.json   pan-Cyrillic aggregated set
-└── fonts/web/PT-Serif-Expert_Regular/
-    └── pt-serif-expert_regular.ttf             rendering font (gitignored)
+└── fonts/web/PT-{Sans,Serif}-Expert_{Regular,Italic}/*.ttf    rendering fonts
                          │
                          ▼
-                    generate.py               (Python 3 stdlib only)
+              tools/generate.py                (Python 3 stdlib only)
                          │
        ┌─────────────────┼─────────────────┐
        ▼                 ▼                 ▼
@@ -38,12 +37,15 @@ Part of the Paratype Cyrillic Languages project; released under the **MIT Licens
   uppercase.md        lowercase.md
                          │
                          ▼
-                generate_svgs.py         (needs fontTools + FontDocTools)
+           tools/generate_svgs.py        (needs fontTools + FontDocTools)
                          │
-       ┌─────────────────┼─────────────────┐
-       ▼                 ▼                 ▼
-   svg/uc/*.svg     svg/lc/*.svg     svg/variants/*.svg
-   svg/uc/*.txt     svg/lc/*.txt     svg/variants/*.txt
+       ┌────────┴────────┐
+       ▼                 ▼
+   svg/Sans/          svg/Serif/
+   ├── uc/*.{svg,txt} ├── uc/*.{svg,txt}
+   ├── lc/*.{svg,txt} ├── lc/*.{svg,txt}
+   └── variants/*.{svg,txt}
+                      └── variants/*.{svg,txt}
 ```
 
 Two stages, two scripts:
@@ -82,7 +84,7 @@ Python 3 stdlib only.
 
 ```bash
 cd cyrillic-reference/
-python3 generate.py
+python3 tools/generate.py
 ```
 
 Reads `../cyrillic-languages/` by default; override with `--data` / `--out`.
@@ -95,14 +97,23 @@ Requires Python 3.13+ with `fontTools` and FontDocTools:
 # One-time setup (into the active venv):
 pip install git+https://bitbucket.org/Lontar/FontDocTools.git
 
-# Each regeneration:
+# Regenerate both families (runs back-to-back, ~35s each):
 cd cyrillic-reference/
-python3 generate_svgs.py \
+
+python3 tools/generate_svgs.py \
     --data ../cyrillic-languages \
-    --font ../cyrillic-languages/fonts/web/PT-Serif-Expert_Regular/pt-serif-expert_regular.ttf
+    --font        ../cyrillic-languages/fonts/web/PT-Sans-Expert_Regular/pt-sans-expert_regular.ttf \
+    --font-italic ../cyrillic-languages/fonts/web/PT-Sans-Expert_Italic/PT-Sans-Expert_Italic.ttf \
+    --out svg/Sans
+
+python3 tools/generate_svgs.py \
+    --data ../cyrillic-languages \
+    --font        ../cyrillic-languages/fonts/web/PT-Serif-Expert_Regular/pt-serif-expert_regular.ttf \
+    --font-italic ../cyrillic-languages/fonts/web/PT-Serif-Expert_Italic/PT-Serif-Expert_Italic.ttf \
+    --out svg/Serif
 ```
 
-Takes ~35 seconds for the full 350+-row set. Invokes `glyphplotter` via subprocess for each row. The macOS-only tools in the FontDocTools package (`glyphshaper`, `glyphdump`, `roentgen`) are not needed and are skipped automatically on Linux via platform markers.
+Each invocation renders one font family. The italic TTF is used only for locl variants whose source token carries a `.ita` suffix (Serbian italic). Invokes `glyphplotter` via subprocess per row. The macOS-only tools in the FontDocTools package (`glyphshaper`, `glyphdump`, `roentgen`) are not needed and are skipped automatically on Linux via platform markers.
 
 ## Diagram layout
 
@@ -114,7 +125,7 @@ Each decomposable composite is rendered as a horizontal sequence of boxes:
 
 Single-accent rows have three boxes (base + mark + composed); double-accent rows have four. Structural composites and plain letters render as a single box. Locl/style variants render as `[ default ] → [ variant ]`.
 
-**Service elements** (rectangles, `+`, `→`, labels) are drawn with glyphplotter primitives — `drawRectangle`, `drawCross`, `drawArrow`, `drawLabel` — **not** by saving glyphs from a second font. The only rendering font is PT Serif Expert Regular; the dotted circle `U+25CC` is native to it, so no Noto Serif Balinese fallback is needed.
+**Service elements** (rectangles, `+`, `→`, labels) are drawn with glyphplotter primitives — `drawRectangle`, `drawCross`, `drawArrow`, `drawLabel` — **not** by saving glyphs from a second font. The rendering font is either PT Sans Expert or PT Serif Expert, both of which carry `U+25CC` natively, so no Noto Serif Balinese fallback is needed. The main tables show Sans and Serif side by side in two columns so the same letter can be compared across families.
 
 ### Calibration constants
 
@@ -132,7 +143,7 @@ Combining marks in OpenType fonts are designed with GPOS anchor attachments that
 
 Above-marks are lifted so their `yMin` sits at `dc_yMax + GAP`; below-marks (cedilla) are dropped so their `yMax` sits at `dc_yMin - GAP`. Classification is by the mark's bbox y-centre sign.
 
-To add a new per-mark tweak, append to `X_NUDGE_EXTRA` or `Y_NUDGE_EXTRA` in `generate_svgs.py`. The calibration sheet at `svg/_calibration/accents.svg` shows all 10 + 1 marks side-by-side on a dotted circle; regenerating it after a constants change gives immediate feedback.
+To add a new per-mark tweak, append to `X_NUDGE_EXTRA` or `Y_NUDGE_EXTRA` in `tools/generate_svgs.py`. The calibration sheet at `svg/Serif/_calibration/accents.svg` shows all 10 + 1 marks side-by-side on a dotted circle in PT Serif Expert; regenerating it after a constants change gives immediate feedback.
 
 ## Re-rendering one diagram manually
 

@@ -49,7 +49,8 @@ The main tables now have two new columns: `Decomposition` (`XXXX + XXXX + …` f
 
 **Remaining SVG-stage TODOs:**
 
-- **Font gap (designers):** PT Serif Expert Regular has no `uni0416.BGR` (Ж) and no `uni041A.BGR` (К). The two Bulgarian-locl rows for these letters are suppressed from `glyph-variants.md` via `_FONT_GAPS_SUPPRESSED` in `generate.py` until the font's glyph set is extended. To restore them: add the two `.BGR` glyphs to PT-Serif-Expert_Regular.ufo (and Italic, if applicable), rebuild the TTF, and remove the entry from `_FONT_GAPS_SUPPRESSED`.
+- **Font gap — BGR missing in both families (designers):** `uni0416.BGR` (Ж) and `uni041A.BGR` (К) are absent from both PT Sans Expert Regular and PT Serif Expert Regular. Suppressed from `glyph-variants.md` via `_FONT_GAPS_SUPPRESSED` in `tools/generate.py`. To restore: add the glyphs to the relevant `.ufo` source(s), rebuild the TTF pair, and remove the entry from `_FONT_GAPS_SUPPRESSED`.
+- **Font gap — BGR missing in Sans only (designers):** `uni043D.BGR` (н) and `uni0447.BGR` (ч) exist in PT Serif Expert Regular but not in PT Sans Expert Regular. The Sans column of `glyph-variants.md` currently shows a broken image for these two rows (the Serif column renders fine). Either add the missing `.BGR` glyphs to the Sans font, or add a per-family suppression branch.
 - **`.str` style variants** are not rendered yet. They would need a parallel branch in `generate_svgs.py`'s `process_variants` pointing at the upright weight (similar to how `.ita` variants now load `PT-Serif-Expert_Italic.ttf`).
 
 ### 4. Publish

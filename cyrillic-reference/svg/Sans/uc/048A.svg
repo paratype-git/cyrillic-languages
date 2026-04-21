@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 1440 2380' >
+    <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
+        <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
+        <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <path d='M513 474 519 554H515L472 472L134 0H85V700H168V220L161 141H165L209 223L547 700H596V70H700V48L609 -130H555L600 0H513ZM256 870Q260 833 284.0 813.0Q308 793 348 793Q388 793 411.5 813.0Q435 833 440 869L511 852Q500 798 460.5 766.5Q421 735 347 735Q276 735 230.5 762.5Q185 790 177 850Z'  transform='translate(355,0) scale(1.1)'/>
+        <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+048A</text>
+    </g>
+</svg>
