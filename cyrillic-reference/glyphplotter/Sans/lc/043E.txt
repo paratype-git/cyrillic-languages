@@ -10,11 +10,14 @@ fillColor FFFFFF
 drawBackground
 fillColor 000000
 
-# ==== Box: U+043E
-strokeWidth 20
-strokeColor 9E9E9E
+# ------- unicode box
+strokeWidth 20 # for unicode box
+strokeColor 9E9E9E # gray
 drawRectangle pen 0 1440 1400 -900 stroke
+# ------- glyph: о
+comment "Cyrillic Small Letter O uni043E"
 glyphMode fill
 drawGlyph pen 432 0 /uni043E
+# ------- unicode label
 drawLabel pen 700 -800 center "U+043E"
 move 1400

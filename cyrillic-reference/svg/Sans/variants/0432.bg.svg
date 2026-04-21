@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='4040' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Small Letter Ve uni0432 -->
         <path d='M77 499Q112 501 150.5 504.0Q189 507 246 507Q345 507 388.0 476.5Q431 446 431 384Q431 349 410.5 315.5Q390 282 343 266V262Q402 251 426.0 221.0Q450 191 450 141Q450 63 394.0 28.0Q338 -7 226 -7Q184 -7 148.0 -4.5Q112 -2 77 1ZM157 67Q176 65 194.5 64.0Q213 63 238 63Q305 63 337.5 82.0Q370 101 370 147Q370 183 342.5 205.5Q315 228 245 228H157ZM255 289Q273 289 290.0 295.0Q307 301 320.5 311.5Q334 322 342.5 336.0Q351 350 351 366Q351 406 327.0 421.5Q303 437 243 437Q211 437 192.5 436.0Q174 435 157 434V289Z'  transform='translate(450,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0432</text>
         <defs >
@@ -12,7 +13,8 @@
         </defs>
         <line x1='1750' y1='250' x2='2280.0' y2='250.0' marker-end='url(#marker0)' stroke='#9E9E9E' stroke-width='80' stroke-dasharray='0 0'/>
         <rect x='2600' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20' stroke-dasharray='0 0'/>
+        <!-- Cyrillic Small Letter Ve uni0432 variant uni0432.BGR -->
         <path d='M246 -9Q194 -9 148.5 2.0Q103 13 77 29V523Q77 616 126.5 661.0Q176 706 264 706Q352 706 403.0 665.0Q454 624 454 551Q454 503 430.0 463.5Q406 424 355 402V398Q425 383 458.0 341.5Q491 300 491 223Q491 112 427.0 51.5Q363 -9 246 -9ZM255 61Q327 61 367.5 101.0Q408 141 408 213Q408 281 368.0 315.0Q328 349 240 349H157V83Q175 72 201.5 66.5Q228 61 255 61ZM157 413H224Q268 413 302.5 430.0Q337 447 355.5 476.0Q374 505 374 540Q374 582 346.0 609.0Q318 636 263 636Q208 636 182.5 603.5Q157 571 157 498Z'  transform='translate(3030,0) scale(1.1)'/>
-        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0432 .bg</text>
+        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0432</text>
     </g>
 </svg>

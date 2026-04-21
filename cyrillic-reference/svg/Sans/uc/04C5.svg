@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Capital Letter El With Tail uni04C5 -->
         <path d='M456 626H247Q237 426 220.5 293.5Q204 161 171 87Q149 39 119.0 17.0Q89 -5 54 -5Q36 -5 23.0 -2.5Q10 0 -2 5L9 77Q19 74 30 74Q47 74 63.5 85.0Q80 96 96 126Q110 153 122.5 198.0Q135 243 144.5 312.0Q154 381 160.0 476.5Q166 572 169 700H539V70H632V48L541 -130H487L532 0H456Z'  transform='translate(389,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+04C5</text>
     </g>

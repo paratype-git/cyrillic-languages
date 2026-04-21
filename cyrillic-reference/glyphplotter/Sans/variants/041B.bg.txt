@@ -10,27 +10,33 @@ fillColor FFFFFF
 drawBackground
 fillColor 000000
 
-# ==== Box: U+041B
-strokeWidth 20
-strokeColor 9E9E9E
+# ------- unicode box
+strokeWidth 20 # for unicode box
+strokeColor 9E9E9E # gray
 drawRectangle pen 0 1440 1400 -900 stroke
+# ------- glyph: Л
+comment "Cyrillic Capital Letter El uni041B"
 glyphMode fill
 drawGlyph pen 388 0 /uni041B
+# ------- unicode label
 drawLabel pen 700 -800 center "U+041B"
 move 1400
 
-# ==== Arrow
+# ------- Arrow sign
 strokeDash 0 0
-strokeWidth 80
-strokeColor 9E9E9E
+strokeWidth 80 # for plus and arrow signs
+strokeColor 9E9E9E # gray
 drawArrow pen 350 250 1000 250 closed60
 move 1200
 
-# ==== Box: U+041B .bg
-strokeWidth 20
-strokeColor 9E9E9E
+# ------- unicode box
+strokeWidth 20 # for unicode box
+strokeColor 9E9E9E # gray
 drawRectangle pen 0 1440 1400 -900 stroke
+# ------- glyph: Л (variant uni041B.BGR)
+comment "Cyrillic Capital Letter El uni041B variant uni041B.BGR"
 glyphMode fill
 drawGlyph pen 408 0 /uni041B.BGR
-drawLabel pen 700 -800 center "U+041B .bg"
+# ------- unicode label
+drawLabel pen 700 -800 center "U+041B"
 move 1400

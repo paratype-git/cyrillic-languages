@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='4040' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Small Letter Pe uni043F -->
         <path d='M321 0 388 316Q392 334 395.0 351.5Q398 369 398 383Q398 412 384.5 430.0Q371 448 334 448Q308 448 283.0 436.0Q258 424 236.0 405.5Q214 387 196.5 364.5Q179 342 167 320L101 0H26L132 500H184L180 414H184Q197 430 215.0 447.5Q233 465 255.5 479.0Q278 493 306.0 502.5Q334 512 368 512Q418 512 447.0 488.0Q476 464 476 404Q476 374 467 332L396 0Z'  transform='translate(439,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+043F</text>
         <defs >
@@ -12,7 +13,8 @@
         </defs>
         <line x1='1750' y1='250' x2='2280.0' y2='250.0' marker-end='url(#marker0)' stroke='#9E9E9E' stroke-width='80' stroke-dasharray='0 0'/>
         <rect x='2600' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20' stroke-dasharray='0 0'/>
+        <!-- Cyrillic Small Letter Pe uni043F variant uni043F.SRB -->
         <path d='M213 500 143 167Q137 140 137 117Q137 89 148.0 70.5Q159 52 188 52Q212 52 236.5 64.0Q261 76 283.5 95.0Q306 114 324.5 137.0Q343 160 355 182L422 500H497L434 203Q430 186 426.0 161.5Q422 137 418.5 110.0Q415 83 413.0 57.5Q411 32 411 13V0H352V95H348Q333 75 313.5 56.0Q294 37 270.5 22.0Q247 7 220.0 -2.5Q193 -12 163 -12Q141 -12 122.5 -7.0Q104 -2 90.0 10.5Q76 23 68.0 43.5Q60 64 60 96Q60 131 70 175L138 500ZM204 643H485L472 581H190Z'  transform='translate(3044,0) scale(1.1)'/>
-        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+043F .sr</text>
+        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+043F</text>
     </g>
 </svg>

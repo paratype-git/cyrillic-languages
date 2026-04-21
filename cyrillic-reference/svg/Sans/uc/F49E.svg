@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Capital Letter Shha With Bar uniF49E -->
         <path d='M-3 589H85V700H168V589H387V523H168V398Q195 413 239.5 428.0Q284 443 340 443Q382 443 417.5 433.5Q453 424 478.0 401.5Q503 379 517.0 341.0Q531 303 531 247V0H448V232Q448 369 324 369Q276 369 235.0 356.5Q194 344 168 323V0H85V523H-3Z'  transform='translate(398,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+F49E</text>
     </g>

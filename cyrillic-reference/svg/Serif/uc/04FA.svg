@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Capital Letter Ghe With Stroke And Hook uni04FA -->
         <path d='M39 382H128V646Q108 650 87.0 656.5Q66 663 46 671V700H514Q514 680 513.0 654.0Q512 628 511.0 600.0Q510 572 508.0 545.5Q506 519 503 498H477L425 648H224V382H374V330H224V53Q273 45 320 29V0Q320 -67 303.0 -107.0Q286 -147 261.5 -169.0Q237 -191 207.5 -200.5Q178 -210 152 -215Q141 -196 132.5 -173.0Q124 -150 118 -129L131 -105H235Q242 -100 248.0 -93.0Q254 -86 258.0 -74.0Q262 -62 264.5 -44.0Q267 -26 267 0H46V29Q86 45 128 53V330H39Z'  transform='translate(428,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+04FA</text>
     </g>

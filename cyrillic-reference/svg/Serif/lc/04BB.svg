@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Small Letter Shha uni04BB -->
         <path d='M570 0H354V25Q378 38 414 49V283Q414 361 392.0 405.5Q370 450 312 450Q286 450 265.0 440.5Q244 431 227.0 416.0Q210 401 198.0 381.5Q186 362 180 341V49Q196 45 210.5 40.0Q225 35 239 25V0H24V25Q55 41 90 49V682L14 690V716Q43 728 81.5 737.0Q120 746 155 752H180V399H181Q202 446 241.5 479.0Q281 512 337 512Q377 512 408.5 502.5Q440 493 461.0 469.0Q482 445 493.0 404.5Q504 364 504 302V49Q521 45 538.0 40.0Q555 35 570 25Z'  transform='translate(406,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+04BB</text>
     </g>

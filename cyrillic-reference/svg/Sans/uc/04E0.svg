@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Capital Letter Abkhasian Dze uni04E0 -->
         <path d='M230 62Q269 62 303.5 72.0Q338 82 363.5 100.5Q389 119 403.5 145.5Q418 172 418 205Q418 275 364.5 308.0Q311 341 217 341H129V368L315 592L359 635L297 626H57V700H472V670L272 431L237 402V398L271 407Q321 407 363.0 393.5Q405 380 435.0 355.0Q465 330 481.5 294.0Q498 258 498 213Q498 159 477.5 117.5Q457 76 421.0 47.0Q385 18 336.0 3.0Q287 -12 229 -12Q207 -12 182.0 -9.5Q157 -7 133.0 -2.0Q109 3 88.5 9.0Q68 15 55 23L76 96Q87 90 105.0 83.5Q123 77 144.5 72.5Q166 68 188.0 65.0Q210 62 230 62Z'  transform='translate(418,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+04E0</text>
     </g>

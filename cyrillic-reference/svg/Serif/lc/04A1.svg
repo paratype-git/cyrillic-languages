@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Small Letter Bashkir Ka uni04A1 -->
         <path d='M315 500V474Q295 460 265 450V263L311 273Q349 313 386.5 356.0Q424 399 455 446Q438 453 423.0 459.5Q408 466 395 474V500H588V474Q578 466 562.0 460.0Q546 454 522 446Q488 405 449.5 363.0Q411 321 369 279Q391 255 415.5 226.0Q440 197 465.5 166.0Q491 135 516.0 105.0Q541 75 565 49L611 25V0H495L463 23Q418 77 380.5 131.0Q343 185 305 237H265V49Q306 40 330 25V0H109V25Q136 41 175 49V456H96L52 346H27Q22 384 19.0 423.0Q16 462 15 500Z'  transform='translate(394,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+04A1</text>
     </g>

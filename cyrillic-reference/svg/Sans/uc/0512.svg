@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Capital Letter El With Hook uni0512 -->
         <path d='M541 -27Q541 -120 509.0 -166.0Q477 -212 407 -212Q399 -212 392.0 -211.5Q385 -211 377 -210V-142Q405 -142 421.5 -134.5Q438 -127 446.0 -110.0Q454 -93 456.0 -66.0Q458 -39 458 0V626H249Q239 426 222.5 293.5Q206 161 172 87Q150 39 120.5 17.0Q91 -5 56 -5Q21 -5 -2 5L11 77Q21 74 32 74Q49 74 66.0 85.0Q83 96 99 126Q113 153 125.0 198.0Q137 243 146.5 312.0Q156 381 162.0 476.5Q168 572 171 700H541Z'  transform='translate(387,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0512</text>
     </g>

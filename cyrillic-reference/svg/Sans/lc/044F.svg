@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Small Letter Ya uni044F -->
         <path d='M326 207 249 195 117 0H20L140 171L180 208Q128 216 91.5 250.0Q55 284 55 342Q55 387 70.5 419.0Q86 451 115.0 472.0Q144 493 184.0 502.5Q224 512 274 512Q311 512 343.0 507.0Q375 502 406 496V0H326ZM326 432Q313 437 297.0 439.5Q281 442 269 442Q205 442 171.5 419.0Q138 396 138 346Q138 301 173.5 276.5Q209 252 267 252Q268 252 270.0 252.0Q272 252 278.0 252.0Q284 252 295.0 252.5Q306 253 326 254Z'  transform='translate(462,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+044F</text>
     </g>

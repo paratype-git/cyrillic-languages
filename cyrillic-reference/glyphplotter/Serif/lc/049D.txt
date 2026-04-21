@@ -10,11 +10,14 @@ fillColor FFFFFF
 drawBackground
 fillColor 000000
 
-# ==== Box: U+049D
-strokeWidth 20
-strokeColor 9E9E9E
+# ------- unicode box
+strokeWidth 20 # for unicode box
+strokeColor 9E9E9E # gray
 drawRectangle pen 0 1440 1400 -900 stroke
+# ------- glyph: ҝ
+comment "Cyrillic Small Letter Ka With Vertical Stroke uni049D"
 glyphMode fill
 drawGlyph pen 384 0 /uni049D
+# ------- unicode label
 drawLabel pen 700 -800 center "U+049D"
 move 1400

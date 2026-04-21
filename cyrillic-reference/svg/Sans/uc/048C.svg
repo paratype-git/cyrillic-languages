@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Capital Letter Semisoft Sign uni048C -->
         <path d='M0 620H149V721H232V620H439V550H232V427Q237 428 249.0 429.5Q261 431 275.0 432.0Q289 433 304.0 434.0Q319 435 331 435Q379 435 424.5 425.5Q470 416 505.5 392.5Q541 369 563.0 328.5Q585 288 585 226Q585 166 564.0 122.0Q543 78 506.0 49.0Q469 20 419.5 6.0Q370 -8 312 -8Q298 -8 278.0 -7.5Q258 -7 235.5 -5.5Q213 -4 190.5 -1.0Q168 2 149 7V550H0ZM323 64Q359 64 390.5 73.5Q422 83 446.0 102.5Q470 122 483.5 151.5Q497 181 497 220Q497 262 482.0 290.0Q467 318 442.5 334.0Q418 350 386.0 356.5Q354 363 320 363Q311 363 298.0 362.0Q285 361 272.0 360.0Q259 359 248.0 357.0Q237 355 232 354V70Q246 67 272.0 65.5Q298 64 323 64Z'  transform='translate(390,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+048C</text>
     </g>

@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Small Letter Ha With Descender uni04B3 -->
         <path d='M208 256 40 500H138L233 362L261 305L290 362L387 500H477L308 260L439 70H515V-127H461L446 0H392L286 152L256 212L225 152L117 0H28Z'  transform='translate(438,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+04B3</text>
     </g>

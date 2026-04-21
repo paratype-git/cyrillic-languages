@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Capital Letter Ka With Stroke uni049E -->
         <path d='M10 581H134V646Q87 652 52 671V700H305V671Q289 664 270.0 657.5Q251 651 230 646V581H340V533H230V369L295 383L481 646Q461 651 443.5 657.0Q426 663 409 671V700H630V671Q610 662 590.5 656.0Q571 650 553 646L354 381Q379 348 410.5 307.0Q442 266 476.5 222.0Q511 178 547.5 133.5Q584 89 620 49L668 25V0H543L509 24Q450 93 394.0 173.0Q338 253 284 335H230V53Q276 45 305 29V0H52V29Q92 45 134 53V533H10Z'  transform='translate(366,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+049E</text>
     </g>

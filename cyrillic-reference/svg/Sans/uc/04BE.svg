@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Capital Letter Abkhasian Che With Descender uni04BE -->
         <path d='M274 318Q282 187 339.0 124.5Q396 62 505 63Q550 63 588.5 76.0Q627 89 652 104L674 37Q645 19 605.0 5.0Q565 -9 511 -11L497 -179H445L426 -7Q321 9 258.5 87.5Q196 166 190 318H153Q69 318 35.0 352.5Q1 387 1 441Q1 470 8.5 487.5Q16 505 29 518H107Q91 505 85.0 485.0Q79 465 79 450Q79 438 82.0 426.5Q85 415 94.0 406.0Q103 397 120.0 391.5Q137 386 165 386Q171 386 177.0 386.0Q183 386 190 387Q197 543 267.0 627.5Q337 712 465 712Q590 712 654.0 637.0Q718 562 718 425Q718 375 709 318ZM631 388Q633 402 634.0 415.0Q635 428 635 441Q635 481 625.0 517.0Q615 553 594.5 581.0Q574 609 542.0 625.5Q510 642 466 642Q373 642 325.5 575.0Q278 508 273 388Z'  transform='translate(313,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+04BE</text>
     </g>

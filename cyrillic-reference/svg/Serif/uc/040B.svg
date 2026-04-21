@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Capital Letter Tshe uni040B -->
         <path d='M348 648V389Q375 404 415.0 419.0Q455 434 512 434Q554 434 587.5 425.5Q621 417 644.5 396.0Q668 375 680.5 339.0Q693 303 693 247V53Q729 47 765 29V0H597V229Q597 264 591.5 292.0Q586 320 573.5 340.0Q561 360 539.0 371.0Q517 382 484 382Q442 382 409.0 369.5Q376 357 348 340V53Q367 48 384.5 42.0Q402 36 419 29V0H160V29Q181 37 203.5 43.0Q226 49 252 53V648H99L47 505H21Q18 525 16.5 550.5Q15 576 13.5 602.5Q12 629 11.0 654.5Q10 680 10 700H590Q590 680 589.0 655.5Q588 631 586.5 605.0Q585 579 583.5 554.0Q582 529 579 509H553L501 648Z'  transform='translate(312,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+040B</text>
     </g>

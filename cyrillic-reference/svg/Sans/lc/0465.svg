@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Small Letter Iotified E uni0465 -->
         <path d='M650 33Q620 11 577.0 -0.5Q534 -12 489 -12Q431 -12 388.5 6.5Q346 25 317.5 59.5Q289 94 275 142Q264 179 261 221H157V0H77V500H157V286H262Q266 327 278 362Q295 411 325.5 444.0Q356 477 399.0 494.5Q442 512 494 512Q542 512 578.0 504.5Q614 497 641 483L618 414Q595 427 564.5 434.5Q534 442 502 442Q433 443 391.5 403.5Q350 364 342 286H578V220H341Q344 187 355.5 157.0Q367 127 387.5 105.0Q408 83 438.0 70.5Q468 58 510 58Q545 58 575.5 69.0Q606 80 624 94Z'  transform='translate(358,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0465</text>
     </g>

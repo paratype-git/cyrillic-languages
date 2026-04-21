@@ -10,11 +10,14 @@ fillColor FFFFFF
 drawBackground
 fillColor 000000
 
-# ==== Box: U+0429
-strokeWidth 20
-strokeColor 9E9E9E
+# ------- unicode box
+strokeWidth 20 # for unicode box
+strokeColor 9E9E9E # gray
 drawRectangle pen 0 1440 1400 -900 stroke
+# ------- glyph: Щ
+comment "Cyrillic Capital Letter Shcha uni0429"
 glyphMode fill
 drawGlyph pen 244 0 /uni0429
+# ------- unicode label
 drawLabel pen 700 -800 center "U+0429"
 move 1400

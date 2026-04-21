@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Small Letter Je uni0458 -->
         <path d='M93 500H173V-27Q173 -120 141.0 -166.0Q109 -212 39 -212Q31 -212 24.0 -211.5Q17 -211 9 -210V-142Q37 -142 53.5 -133.5Q70 -125 79.0 -107.0Q88 -89 90.5 -61.5Q93 -34 93 3ZM76 652Q76 675 91.5 691.5Q107 708 131 708Q155 708 172.0 691.5Q189 675 189 652Q189 629 172.0 614.0Q155 599 131 599Q107 599 91.5 614.0Q76 629 76 652Z'  transform='translate(566,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0458</text>
     </g>

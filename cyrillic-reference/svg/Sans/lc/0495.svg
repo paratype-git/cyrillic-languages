@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Small Letter Ghe With Middle Hook uni0495 -->
         <path d='M157 0H77V500H368V430H157V252Q168 257 198.0 265.0Q228 273 282 273Q322 273 358.0 261.5Q394 250 421.0 223.5Q448 197 464.0 153.5Q480 110 480 45Q480 -86 427.5 -147.5Q375 -209 263 -209Q230 -209 215.5 -208.5Q201 -208 193 -206V-136Q206 -138 221.5 -138.5Q237 -139 266 -139Q336 -139 368.0 -93.5Q400 -48 400 35Q400 124 361.0 163.5Q322 203 260 203Q224 203 196.0 195.0Q168 187 157 182Z'  transform='translate(432,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0495</text>
     </g>

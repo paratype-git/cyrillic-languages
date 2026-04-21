@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='4040' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Small Letter De uni0434 -->
         <path d='M305 505Q339 505 358.5 498.5Q378 492 392 482H397Q392 558 341.5 603.0Q291 648 204 648L218 712Q291 712 340.0 690.0Q389 668 419.0 630.0Q449 592 461.5 541.0Q474 490 474 432Q474 327 453.5 244.5Q433 162 397.0 105.0Q361 48 312.5 18.0Q264 -12 208 -12Q127 -12 89.0 38.0Q51 88 51 176Q51 239 68.5 298.0Q86 357 119.0 403.0Q152 449 199.0 477.0Q246 505 305 505ZM299 441Q267 441 237.0 421.0Q207 401 183.5 365.0Q160 329 145.5 278.5Q131 228 131 168Q131 119 151.0 85.5Q171 52 216 52Q265 52 299.0 87.0Q333 122 354.0 174.5Q375 227 384.5 288.5Q394 350 394 403Q377 423 355.5 432.0Q334 441 299 441Z'  transform='translate(452,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0434</text>
         <defs >
@@ -12,7 +13,8 @@
         </defs>
         <line x1='1750' y1='250' x2='2280.0' y2='250.0' marker-end='url(#marker0)' stroke='#9E9E9E' stroke-width='80' stroke-dasharray='0 0'/>
         <rect x='2600' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20' stroke-dasharray='0 0'/>
+        <!-- Cyrillic Small Letter De uni0434 variant uni0434.SRB -->
         <path d='M385 -23Q364 -121 312.5 -166.5Q261 -212 176 -212Q111 -212 69.0 -195.5Q27 -179 5 -167L38 -111Q46 -115 57.5 -121.5Q69 -128 85.5 -134.0Q102 -140 125.5 -144.0Q149 -148 181 -148Q231 -148 265.0 -112.0Q299 -76 316 1L334 85H330Q316 66 299.5 49.0Q283 32 263.0 18.5Q243 5 219.5 -3.0Q196 -11 168 -11Q114 -11 81.0 28.0Q48 67 48 139Q48 206 66.5 272.0Q85 338 121.5 390.5Q158 443 211.5 476.0Q265 509 335 509Q389 509 426.0 500.0Q463 491 491 478ZM196 53Q221 53 245.5 66.0Q270 79 290.5 99.5Q311 120 327.5 144.0Q344 168 355 189L406 430Q390 439 367.0 442.0Q344 445 320 445Q279 445 244.0 421.0Q209 397 183.5 356.5Q158 316 143.0 263.0Q128 210 128 152Q128 106 146.5 79.5Q165 53 196 53Z'  transform='translate(3048,0) scale(1.1)'/>
-        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0434 .sr</text>
+        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0434</text>
     </g>
 </svg>

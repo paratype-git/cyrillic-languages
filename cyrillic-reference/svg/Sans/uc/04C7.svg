@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Capital Letter En With Hook uni04C7 -->
         <path d='M587 -27Q587 -120 555.5 -166.0Q524 -212 454 -212Q446 -212 438.5 -212.0Q431 -212 423 -210V-140Q451 -140 467.5 -131.5Q484 -123 492.0 -106.5Q500 -90 502.0 -63.0Q504 -36 504 0V321H168V0H85V700H168V395H504V700H587Z'  transform='translate(364,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+04C7</text>
     </g>

@@ -10,11 +10,14 @@ fillColor FFFFFF
 drawBackground
 fillColor 000000
 
-# ==== Box: U+04BF
-strokeWidth 20
-strokeColor 9E9E9E
+# ------- unicode box
+strokeWidth 20 # for unicode box
+strokeColor 9E9E9E # gray
 drawRectangle pen 0 1440 1400 -900 stroke
+# ------- glyph: ҿ
+comment "Cyrillic Small Letter Abkhasian Che With Descender uni04BF"
 glyphMode fill
 drawGlyph pen 398 0 /uni04BF
+# ------- unicode label
 drawLabel pen 700 -800 center "U+04BF"
 move 1400

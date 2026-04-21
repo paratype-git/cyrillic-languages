@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Capital Ligature A Ie uni04D4 -->
         <path d='M391 600 357 497 224 268H395V600ZM395 198H181L69 0H-22L393 700H776V626H478V397H751V323H478V74H781V0H395Z'  transform='translate(277,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+04D4</text>
     </g>

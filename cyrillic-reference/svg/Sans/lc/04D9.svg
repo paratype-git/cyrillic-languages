@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Small Letter Schwa uni04D9 -->
         <path d='M65 460Q95 484 140.5 498.0Q186 512 237 512Q294 512 336.0 493.5Q378 475 405.0 440.5Q432 406 445.0 357.5Q458 309 458 250Q458 123 402.0 55.5Q346 -12 246 -12Q213 -12 178.0 -2.0Q143 8 114.5 33.0Q86 58 67.5 100.5Q49 143 49 208Q49 224 50.5 240.5Q52 257 54 276H380Q375 361 338.5 401.5Q302 442 214 442Q180 442 146.5 430.0Q113 418 95 402ZM248 58Q303 58 340.5 97.0Q378 136 378 213H127V198Q127 128 161.5 93.0Q196 58 248 58Z'  transform='translate(446,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+04D9</text>
     </g>

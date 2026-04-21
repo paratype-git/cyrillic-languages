@@ -10,11 +10,14 @@ fillColor FFFFFF
 drawBackground
 fillColor 000000
 
-# ==== Box: U+052E
-strokeWidth 20
-strokeColor 9E9E9E
+# ------- unicode box
+strokeWidth 20 # for unicode box
+strokeColor 9E9E9E # gray
 drawRectangle pen 0 1440 1400 -900 stroke
+# ------- glyph: Ԯ
+comment "Cyrillic Capital Letter El With Descender uni052E"
 glyphMode fill
 drawGlyph pen 372 0 /uni052E
+# ------- unicode label
 drawLabel pen 700 -800 center "U+052E"
 move 1400

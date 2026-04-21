@@ -10,11 +10,14 @@ fillColor FFFFFF
 drawBackground
 fillColor 000000
 
-# ==== Box: U+04FD
-strokeWidth 20
-strokeColor 9E9E9E
+# ------- unicode box
+strokeWidth 20 # for unicode box
+strokeColor 9E9E9E # gray
 drawRectangle pen 0 1440 1400 -900 stroke
+# ------- glyph: ӽ
+comment "Cyrillic Small Letter Ha With Hook uni04FD"
 glyphMode fill
 drawGlyph pen 440 0 /uni04FD
+# ------- unicode label
 drawLabel pen 700 -800 center "U+04FD"
 move 1400

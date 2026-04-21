@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Capital Letter Zhe With Descender uni0496 -->
         <path d='M358 700H438V374L481 388L684 700H776L574 396L534 364L584 323L756 74H814V-129H756L741 0H705L484 324H438V0H358V336L316 322L95 0H-1L220 313L268 351L222 386L13 700H110L313 386H358Z'  transform='translate(290,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0496</text>
     </g>

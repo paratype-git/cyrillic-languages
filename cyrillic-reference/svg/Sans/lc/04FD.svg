@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Small Letter Ha With Hook uni04FD -->
         <path d='M404 126Q433 84 450.5 43.0Q468 2 468 -36Q468 -123 430.5 -167.5Q393 -212 321 -212Q313 -212 305.0 -211.5Q297 -211 290 -210V-142Q347 -142 367.5 -120.0Q388 -98 388 -53Q388 -12 370.5 24.0Q353 60 333 89L286 152L254 208L225 152L117 0H28L208 256L40 500H138L233 362L261 305L290 362L387 500H477L308 260Z'  transform='translate(443,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+04FD</text>
     </g>

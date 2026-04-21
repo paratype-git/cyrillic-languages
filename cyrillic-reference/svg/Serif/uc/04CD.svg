@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Capital Letter Em With Tail uni04CD -->
         <path d='M762 52H871L879 45Q875 26 864.5 0.5Q854 -25 839.5 -52.0Q825 -79 809.0 -105.0Q793 -131 779 -150H752L781 0H589V29Q609 37 629.0 42.5Q649 48 670 53V503L674 620H666L633 513L428 0H402L207 513L171 630H162L163 503V53Q182 49 201.0 43.0Q220 37 239 29V0H30V29Q49 37 69.5 43.5Q90 50 111 54V646Q90 650 69.5 656.5Q49 663 29 671V700H234L408 243L442 140H443L477 245L657 700H838V671Q820 663 801.0 656.5Q782 650 762 646Z'  transform='translate(265,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+04CD</text>
     </g>

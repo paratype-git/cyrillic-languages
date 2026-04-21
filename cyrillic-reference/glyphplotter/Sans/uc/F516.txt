@@ -10,43 +10,54 @@ fillColor FFFFFF
 drawBackground
 fillColor 000000
 
-# ==== Box: U+0417
-strokeWidth 20
-strokeColor 9E9E9E
+# ------- unicode box
+strokeWidth 20 # for unicode box
+strokeColor 9E9E9E # gray
 drawRectangle pen 0 1440 1400 -900 stroke
+# ------- glyph: З
+comment "Cyrillic Capital Letter Ze uni0417"
 glyphMode fill
 drawGlyph pen 430 0 /uni0417
+# ------- unicode label
 drawLabel pen 700 -800 center "U+0417"
 move 1400
 
-# ==== Plus
+# ------- Plus sign
 strokeDash 0 0
-strokeWidth 80
-strokeColor 9E9E9E
+strokeWidth 80 # for plus and arrow signs
+strokeColor 9E9E9E # gray
 drawCross pen 600 200 200
 move 1200
 
-# ==== Box: U+030C on dotted circle
-strokeWidth 20
-strokeColor 9E9E9E
+# ------- unicode box
+strokeWidth 20 # for unicode box
+strokeColor 9E9E9E # gray
 drawRectangle pen 0 1440 1400 -900 stroke
+# ------- dotted circle
+comment "dotted circle uni25CC"
 drawGlyph pen 244 0 /uni25CC
+# ------- caron
+comment "caron uni030C"
 drawGlyph pen 972 308 /uni030C
+# ------- unicode label
 drawLabel pen 700 -800 center "U+030C"
 move 1400
 
-# ==== Arrow
+# ------- Arrow sign
 strokeDash 0 0
-strokeWidth 80
-strokeColor 9E9E9E
+strokeWidth 80 # for plus and arrow signs
+strokeColor 9E9E9E # gray
 drawArrow pen 350 250 1000 250 closed60
 move 1200
 
-# ==== Box: U+F516
-strokeWidth 20
-strokeColor 9E9E9E
+# ------- unicode box
+strokeWidth 20 # for unicode box
+strokeColor 9E9E9E # gray
 drawRectangle pen 0 1440 1400 -900 stroke
+# ------- glyph: 
+comment "Cyrillic Capital Letter Ze With Caron uniF516"
 glyphMode fill
 drawGlyph pen 430 0 /uniF516
+# ------- unicode label
 drawLabel pen 700 -800 center "U+F516"
 move 1400

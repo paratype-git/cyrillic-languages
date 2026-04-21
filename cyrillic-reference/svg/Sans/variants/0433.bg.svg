@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='4040' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Small Letter Ghe uni0433 -->
         <path d='M369 430H157V0H77V500H369Z'  transform='translate(516,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0433</text>
         <defs >
@@ -12,7 +13,8 @@
         </defs>
         <line x1='1750' y1='250' x2='2280.0' y2='250.0' marker-end='url(#marker0)' stroke='#9E9E9E' stroke-width='80' stroke-dasharray='0 0'/>
         <rect x='2600' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20' stroke-dasharray='0 0'/>
+        <!-- Cyrillic Small Letter Ghe uni0433 variant uni0433.BGR -->
         <path d='M211 -12Q119 -12 72.5 27.0Q26 66 26 131Q26 176 47.0 205.0Q68 234 98.0 250.0Q128 266 177 285Q235 306 263.0 326.0Q291 346 291 383Q291 413 269.0 427.5Q247 442 200 442Q132 442 74 414L55 480Q123 512 201 512Q284 512 327.5 479.0Q371 446 371 382Q371 336 349.5 306.5Q328 277 298.0 260.5Q268 244 220 226Q162 204 134.0 184.0Q106 164 106 127Q106 91 134.5 74.5Q163 58 209 58Q285 58 365 107L393 41Q312 -12 211 -12Z'  transform='translate(3089,0) scale(1.1)'/>
-        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0433 .bg</text>
+        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0433</text>
     </g>
 </svg>

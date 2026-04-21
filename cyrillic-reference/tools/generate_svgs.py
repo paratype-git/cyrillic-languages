@@ -191,41 +191,124 @@ def header_comment(txt_path: Path, svg_path: Path, font_hint: str) -> list[str]:
     ]
 
 
-def box_for_letter(fm: FontMetrics, name: str, label: str) -> list[str]:
+# Readable names for codepoints that don't have a pan-Cyrillic description
+# handy (combining marks, Cyrillic breves, dotted circle). Used for the
+# `comment "..."` directive emitted next to each drawGlyph.
+_GLYPH_READABLE_NAME = {
+    0x0300: "grave",
+    0x0301: "acute",
+    0x0302: "circumflex",
+    0x0304: "macron",
+    0x0306: "breve",
+    0x0307: "dot above",
+    0x0308: "diaeresis",
+    0x030B: "double acute",
+    0x030C: "caron",
+    0x0327: "cedilla",
+    0xF6D1: "Cyrillic breve (uppercase)",
+    0xF6D4: "Cyrillic breve (lowercase)",
+    0x25CC: "dotted circle",
+}
+
+
+def _readable_name(cp: int) -> str:
+    """Human-readable one-liner for a codepoint, used in comment directives."""
+    if cp in _GLYPH_READABLE_NAME:
+        return _GLYPH_READABLE_NAME[cp]
+    try:
+        import unicodedata
+        name = unicodedata.name(chr(cp))
+        return name.title()
+    except ValueError:
+        return f"U+{cp:04X}"
+
+
+def box_for_letter(fm: FontMetrics, cp: int, sign: str = "", description: str = "") -> list[str]:
+    """Framed box with a single glyph and its `U+XXXX` label underneath.
+
+    `cp` is the codepoint; `sign` (if given) is the visual character used in
+    the section divider, and `description` (if given) is a human-readable
+    name included in the glyphplotter `comment` directive.
+    """
+    name = fm.glyph_name(cp)
     pen_x = fm.pen_for_letter(name)
+    cp_hex = f"{cp:04X}"
+    section_label = sign if sign else f"U+{cp_hex}"
+    desc = description or _readable_name(cp)
     return [
-        f"# ==== Box: {label}",
-        f"strokeWidth {STROKE_BOX}",
-        f"strokeColor {STROKE_COLOR}",
+        "# ------- unicode box",
+        f"strokeWidth {STROKE_BOX} # for unicode box",
+        f"strokeColor {STROKE_COLOR} # gray",
         f"drawRectangle pen 0 {BOX_TOP} {BOX_W} {BOX_BOTTOM} stroke",
+        f"# ------- glyph: {section_label}",
+        f'comment "{desc} uni{cp_hex}"',
         "glyphMode fill",
         f"drawGlyph pen {pen_x} 0 /{name}",
-        f'drawLabel pen {BOX_CENTER} {LABEL_Y} center "{label}"',
+        "# ------- unicode label",
+        f'drawLabel pen {BOX_CENTER} {LABEL_Y} center "U+{cp_hex}"',
+        f"move {BOX_W}",
+    ]
+
+
+def box_for_named_glyph(fm: FontMetrics, name: str, sign: str, cp: int, description: str = "") -> list[str]:
+    """Box drawing a named glyph (e.g. locl variant `uni0414.BGR`). The label
+    under the box still shows the base codepoint; `sign` is a best-effort
+    visual cue in the section divider.
+    """
+    aw = fm.advance(name)
+    pen_x = int(round((BOX_W - aw) / 2))
+    cp_hex = f"{cp:04X}"
+    section_label = sign or name
+    desc = description or _readable_name(cp)
+    return [
+        "# ------- unicode box",
+        f"strokeWidth {STROKE_BOX} # for unicode box",
+        f"strokeColor {STROKE_COLOR} # gray",
+        f"drawRectangle pen 0 {BOX_TOP} {BOX_W} {BOX_BOTTOM} stroke",
+        f"# ------- glyph: {section_label} (variant {name})",
+        f'comment "{desc} uni{cp_hex} variant {name}"',
+        "glyphMode fill",
+        f"drawGlyph pen {pen_x} 0 /{name}",
+        "# ------- unicode label",
+        f'drawLabel pen {BOX_CENTER} {LABEL_Y} center "U+{cp_hex}"',
         f"move {BOX_W}",
     ]
 
 
 def box_for_mark(fm: FontMetrics, mark_cp: int) -> list[str]:
+    """Framed box with a dotted circle + a combining mark centred above it.
+
+    Emits two drawGlyph commands for the two glyphs, each preceded by a
+    `# -------` section header and (for the mark) a `comment "..."` that
+    names the accent.
+    """
     mark_name = fm.glyph_name(mark_cp)
     pen_x, pen_y = fm.pen_for_mark(mark_cp)
+    mark_readable = _readable_name(mark_cp)
+    cp_hex = f"{mark_cp:04X}"
     return [
-        f"# ==== Box: U+{mark_cp:04X} on dotted circle",
-        f"strokeWidth {STROKE_BOX}",
-        f"strokeColor {STROKE_COLOR}",
+        "# ------- unicode box",
+        f"strokeWidth {STROKE_BOX} # for unicode box",
+        f"strokeColor {STROKE_COLOR} # gray",
         f"drawRectangle pen 0 {BOX_TOP} {BOX_W} {BOX_BOTTOM} stroke",
+        "# ------- dotted circle",
+        'comment "dotted circle uni25CC"',
         f"drawGlyph pen {DC_PEN_X} 0 /uni25CC",
+        f"# ------- {mark_readable}",
+        f'comment "{mark_readable} uni{cp_hex}"',
         f"drawGlyph pen {pen_x} {pen_y} /{mark_name}",
-        f'drawLabel pen {BOX_CENTER} {LABEL_Y} center "U+{mark_cp:04X}"',
+        "# ------- unicode label",
+        f'drawLabel pen {BOX_CENTER} {LABEL_Y} center "U+{cp_hex}"',
         f"move {BOX_W}",
     ]
 
 
 def plus_separator() -> list[str]:
     return [
-        "# ==== Plus",
+        "# ------- Plus sign",
         "strokeDash 0 0",
-        f"strokeWidth {STROKE_PLUS}",
-        f"strokeColor {STROKE_COLOR}",
+        f"strokeWidth {STROKE_PLUS} # for plus and arrow signs",
+        f"strokeColor {STROKE_COLOR} # gray",
         f"drawCross pen {PLUS_CX} {PLUS_CY} {PLUS_R}",
         f"move {PLUS_GAP}",
     ]
@@ -233,10 +316,10 @@ def plus_separator() -> list[str]:
 
 def arrow_separator() -> list[str]:
     return [
-        "# ==== Arrow",
+        "# ------- Arrow sign",
         "strokeDash 0 0",
-        f"strokeWidth {STROKE_ARROW}",
-        f"strokeColor {STROKE_COLOR}",
+        f"strokeWidth {STROKE_ARROW} # for plus and arrow signs",
+        f"strokeColor {STROKE_COLOR} # gray",
         f"drawArrow pen {ARROW_X1} {ARROW_Y} {ARROW_X2} {ARROW_Y} {ARROW_STYLE}",
         f"move {ARROW_GAP}",
     ]
@@ -257,9 +340,17 @@ def preamble() -> list[str]:
 
 
 # ---------- row builders ----------
-def build_decomposable(fm: FontMetrics, base_cp: int, marks: list[int], composed_cp: int) -> list[str]:
+def build_decomposable(
+    fm: FontMetrics,
+    base_cp: int,
+    marks: list[int],
+    composed_cp: int,
+    composed_sign: str = "",
+    composed_description: str = "",
+) -> list[str]:
     lines: list[str] = preamble()
-    lines += box_for_letter(fm, fm.glyph_name(base_cp), f"U+{base_cp:04X}")
+    base_sign = chr(base_cp) if 0x20 <= base_cp <= 0x10FFFF and base_cp < 0xE000 else ""
+    lines += box_for_letter(fm, base_cp, sign=base_sign)
     for mark_cp in marks:
         lines.append("")
         lines += plus_separator()
@@ -268,24 +359,31 @@ def build_decomposable(fm: FontMetrics, base_cp: int, marks: list[int], composed
     lines.append("")
     lines += arrow_separator()
     lines.append("")
-    lines += box_for_letter(fm, fm.glyph_name(composed_cp), f"U+{composed_cp:04X}")
+    lines += box_for_letter(fm, composed_cp, sign=composed_sign, description=composed_description)
     return lines
 
 
-def build_single(fm: FontMetrics, cp: int) -> list[str]:
+def build_single(fm: FontMetrics, cp: int, sign: str = "", description: str = "") -> list[str]:
     lines: list[str] = preamble()
-    lines += box_for_letter(fm, fm.glyph_name(cp), f"U+{cp:04X}")
+    lines += box_for_letter(fm, cp, sign=sign, description=description)
     return lines
 
 
-def build_variant(fm: FontMetrics, cp: int, variant_name: str, locale: str) -> list[str]:
+def build_variant(
+    fm: FontMetrics,
+    cp: int,
+    variant_name: str,
+    locale: str,
+    sign: str = "",
+    description: str = "",
+) -> list[str]:
     """default shape -> variant shape."""
     lines: list[str] = preamble()
-    lines += box_for_letter(fm, fm.glyph_name(cp), f"U+{cp:04X}")
+    lines += box_for_letter(fm, cp, sign=sign, description=description)
     lines.append("")
     lines += arrow_separator()
     lines.append("")
-    lines += box_for_letter(fm, variant_name, f"U+{cp:04X} .{locale}")
+    lines += box_for_named_glyph(fm, variant_name, sign=sign, cp=cp, description=description)
     return lines
 
 
@@ -357,10 +455,13 @@ def process_main(
             sign = entry.get("sign", "")
             decomp = decompose(description, case, sign=sign)
             if decomp is not None:
-                lines = build_decomposable(fm, decomp[0], decomp[1:], cp)
+                lines = build_decomposable(
+                    fm, decomp[0], decomp[1:], cp,
+                    composed_sign=sign, composed_description=description,
+                )
                 stats[subdir]["decomposed"] += 1
             else:
-                lines = build_single(fm, cp)
+                lines = build_single(fm, cp, sign=sign, description=description)
                 stats[subdir]["single"] += 1
             txt_path = txt_root / subdir / f"{cp_hex}.txt"
             svg_path = svg_root / subdir / f"{cp_hex}.svg"
@@ -473,7 +574,11 @@ def process_variants(
                     stem = f"{cp_hex}.{locale}"
                     txt_path = txt_root / "variants" / f"{stem}.txt"
                     svg_path = svg_root / "variants" / f"{stem}.svg"
-                    lines = build_variant(fm_for_this, base_cp, variant_name, locale)
+                    base_sign = chr(base_cp) if 0x20 <= base_cp < 0xE000 else ""
+                    lines = build_variant(
+                        fm_for_this, base_cp, variant_name, locale,
+                        sign=base_sign,
+                    )
                     full_lines = header_comment(
                         txt_path, svg_path, font_for_this.name
                     ) + lines

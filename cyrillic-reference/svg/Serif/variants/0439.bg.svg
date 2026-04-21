@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='4040' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Small Letter Short I uni0439 -->
         <path d='M39 500H251V474Q240 468 225.5 462.0Q211 456 191 450V176L180 83H185L224 158L438 500H573V474Q541 456 507 450V49Q526 44 543.0 38.5Q560 33 573 25V0H361V25Q389 41 421 49V335L431 414H426L388 339L176 0H39V25Q56 33 72.0 38.5Q88 44 105 49V450Q66 456 39 474ZM316 560Q266 560 234.0 570.5Q202 581 183.0 598.0Q164 615 156.5 637.5Q149 660 149 683Q165 696 184.0 702.0Q203 708 224 710L249 697V608Q263 602 282.0 599.5Q301 597 317 597Q327 597 349.0 599.0Q371 601 385 605V697L410 710Q431 708 449.5 701.0Q468 694 480 683Q480 660 472.0 637.5Q464 615 445.5 598.0Q427 581 395.5 570.5Q364 560 316 560Z'  transform='translate(394,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0439</text>
         <defs >
@@ -12,7 +13,8 @@
         </defs>
         <line x1='1750' y1='250' x2='2280.0' y2='250.0' marker-end='url(#marker0)' stroke='#9E9E9E' stroke-width='80' stroke-dasharray='0 0'/>
         <rect x='2600' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20' stroke-dasharray='0 0'/>
+        <!-- Cyrillic Small Letter Short I uni0439 variant uni0439.BGR -->
         <path d='M77 198Q77 261 80.0 321.5Q83 382 83 442L17 450V476Q49 488 82.5 497.0Q116 506 148 512H173Q173 437 170.0 363.0Q167 289 167 216Q167 177 171.5 146.0Q176 115 187.5 94.0Q199 73 219.0 61.5Q239 50 270 50Q315 50 345.5 82.5Q376 115 393 167V442L328 450V476Q359 488 392.5 497.0Q426 506 458 512H483V57L549 49V28Q520 15 490.5 5.0Q461 -5 429 -10H404L397 109H393Q388 88 375.5 66.5Q363 45 343.0 27.5Q323 10 297.5 -1.0Q272 -12 242 -12Q202 -12 171.5 -2.5Q141 7 120.0 31.0Q99 55 88.0 95.5Q77 136 77 198ZM285 560Q235 560 203.0 570.5Q171 581 152.0 598.0Q133 615 125.5 637.5Q118 660 118 683Q134 696 153.0 702.0Q172 708 193 710L218 697V608Q232 602 251.0 599.5Q270 597 286 597Q296 597 318.0 599.0Q340 601 354 605V697L379 710Q400 708 418.5 701.0Q437 694 449 683Q449 660 441.0 637.5Q433 615 414.5 598.0Q396 581 364.5 570.5Q333 560 285 560Z'  transform='translate(3013,0) scale(1.1)'/>
-        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0439 .bg</text>
+        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+0439</text>
     </g>
 </svg>

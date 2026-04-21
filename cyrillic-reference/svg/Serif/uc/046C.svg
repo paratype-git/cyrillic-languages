@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Capital Letter Iotified Big Yus uni046C -->
         <path d='M638 372H644L807 648H476ZM29 0V29Q69 45 111 53V646Q64 653 29 671V700H282V671Q265 662 246.0 656.0Q227 650 207 646V385H567L367 700H910L711 384Q848 384 914.0 328.5Q980 273 980 156V53Q1003 49 1024.0 43.0Q1045 37 1062 29V0H809V29Q845 45 884 53V141Q884 195 872.5 229.5Q861 264 839.0 285.5Q817 307 784.5 316.5Q752 326 687 326V53Q707 49 726.0 43.0Q745 37 762 29V0H516V29Q556 45 591 53V326Q527 326 494.5 316.5Q462 307 440.0 285.5Q418 264 406.5 229.5Q395 195 395 141V53Q415 49 434.0 43.0Q453 37 470 29V0ZM207 28Q257 45 299 53V156Q299 216 316.5 259.0Q334 302 370 333H207Z'  transform='translate(196,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+046C</text>
     </g>

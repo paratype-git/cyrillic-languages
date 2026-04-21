@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Small Letter Che With Vertical Stroke uni04B9 -->
         <path d='M282 170Q274 169 267.5 169.0Q261 169 254 169Q205 169 172.0 179.0Q139 189 118.5 207.5Q98 226 89.5 252.0Q81 278 81 310V450Q43 457 15 474V500H230V474Q220 467 205.0 460.5Q190 454 171 450V330Q171 284 195.0 256.0Q219 228 282 226V386H329V229Q355 233 381.5 240.0Q408 247 425 257V450Q393 456 365 474V500H581V474Q554 457 515 450V49Q535 44 551.0 38.5Q567 33 581 25V0H345V25Q386 42 425 49V228Q409 211 384.0 199.0Q359 187 329 179V92H282Z'  transform='translate(390,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+04B9</text>
     </g>

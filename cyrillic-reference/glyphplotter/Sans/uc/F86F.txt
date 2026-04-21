@@ -10,43 +10,54 @@ fillColor FFFFFF
 drawBackground
 fillColor 000000
 
-# ==== Box: U+041A
-strokeWidth 20
-strokeColor 9E9E9E
+# ------- unicode box
+strokeWidth 20 # for unicode box
+strokeColor 9E9E9E # gray
 drawRectangle pen 0 1440 1400 -900 stroke
+# ------- glyph: К
+comment "Cyrillic Capital Letter Ka uni041A"
 glyphMode fill
 drawGlyph pen 395 0 /uni041A
+# ------- unicode label
 drawLabel pen 700 -800 center "U+041A"
 move 1400
 
-# ==== Plus
+# ------- Plus sign
 strokeDash 0 0
-strokeWidth 80
-strokeColor 9E9E9E
+strokeWidth 80 # for plus and arrow signs
+strokeColor 9E9E9E # gray
 drawCross pen 600 200 200
 move 1200
 
-# ==== Box: U+0304 on dotted circle
-strokeWidth 20
-strokeColor 9E9E9E
+# ------- unicode box
+strokeWidth 20 # for unicode box
+strokeColor 9E9E9E # gray
 drawRectangle pen 0 1440 1400 -900 stroke
+# ------- dotted circle
+comment "dotted circle uni25CC"
 drawGlyph pen 244 0 /uni25CC
+# ------- macron
+comment "macron uni0304"
 drawGlyph pen 977 277 /uni0304
+# ------- unicode label
 drawLabel pen 700 -800 center "U+0304"
 move 1400
 
-# ==== Arrow
+# ------- Arrow sign
 strokeDash 0 0
-strokeWidth 80
-strokeColor 9E9E9E
+strokeWidth 80 # for plus and arrow signs
+strokeColor 9E9E9E # gray
 drawArrow pen 350 250 1000 250 closed60
 move 1200
 
-# ==== Box: U+F86F
-strokeWidth 20
-strokeColor 9E9E9E
+# ------- unicode box
+strokeWidth 20 # for unicode box
+strokeColor 9E9E9E # gray
 drawRectangle pen 0 1440 1400 -900 stroke
+# ------- glyph: 
+comment "Cyrillic Capital Letter Ka With Macron uniF86F"
 glyphMode fill
 drawGlyph pen 395 0 /uniF86F
+# ------- unicode label
 drawLabel pen 700 -800 center "U+F86F"
 move 1400

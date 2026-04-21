@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='4040' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Small Letter Pe uni043F -->
         <path d='M378 430H157V0H77V500H458V0H378Z'  transform='translate(432,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+043F</text>
         <defs >
@@ -12,7 +13,8 @@
         </defs>
         <line x1='1750' y1='250' x2='2280.0' y2='250.0' marker-end='url(#marker0)' stroke='#9E9E9E' stroke-width='80' stroke-dasharray='0 0'/>
         <rect x='2600' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20' stroke-dasharray='0 0'/>
+        <!-- Cyrillic Small Letter Pe uni043F variant uni043F.BGR -->
         <path d='M398 0V285Q398 363 375.5 402.5Q353 442 293 442Q240 442 205.5 413.5Q171 385 157 342V0H77V500H133L148 439H152Q176 471 216.5 491.5Q257 512 313 512Q354 512 385.0 502.5Q416 493 436.5 469.0Q457 445 467.5 404.5Q478 364 478 302V0Z'  transform='translate(3026,0) scale(1.1)'/>
-        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+043F .bg</text>
+        <text x='3300' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+043F</text>
     </g>
 </svg>

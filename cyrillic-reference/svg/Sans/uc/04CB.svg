@@ -3,6 +3,7 @@
     <g transform='translate(0, 2380), scale(1, -1), translate(20, 920)'>
         <rect x='-20' y='-920' width='1440' height='2380' fill='#FFFFFF'/>
         <rect x='0' y='-900' width='1400' height='2340' fill='none' stroke='#9E9E9E' stroke-width='20'/>
+        <!-- Cyrillic Capital Letter Khakassian Che uni04CB -->
         <path d='M158 700V468Q158 331 282 331Q329 331 370.0 343.5Q411 356 437 377V700H520V0H418L403 -129H345V74H437V302Q410 287 366.0 272.0Q322 257 265 257Q223 257 188.0 266.5Q153 276 128.0 298.5Q103 321 89.0 359.0Q75 397 75 453V700Z'  transform='translate(398,0) scale(1.1)'/>
         <text x='700' y='800' font-family='Helvetica' font-size='200' transform='scale(1, -1)' text-anchor='middle' >U+04CB</text>
     </g>
