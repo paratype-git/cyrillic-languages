@@ -32,13 +32,17 @@ import json
 from pathlib import Path
 
 
-KNOWN_FIELDS_TODO = ("iso639_1", "iso639_3", "bcp47", "ot_lang")
+ENRICHMENT_FIELDS = ("iso639_1", "iso639_3", "bcp47", "ot_lang", "confidence", "note")
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--data", type=Path, default=Path("../cyrillic-languages"),
                         help="Path to the sibling cyrillic-languages repository")
+    parser.add_argument("--enrichment", type=Path,
+                        default=Path("tools/language_tags_enrichment.json"),
+                        help="Per-language external tag data to merge in "
+                             "(ISO 639-1/-3, BCP 47, OpenType language tag)")
     parser.add_argument("--out-json", type=Path, default=Path("language-tags.json"))
     parser.add_argument("--out-md", type=Path, default=Path("language-tags.md"))
     args = parser.parse_args(argv)
@@ -48,6 +52,11 @@ def main(argv: list[str] | None = None) -> int:
     if not library.exists():
         parser.error(f"library not found: {library}")
     langs = json.loads(library.read_text(encoding="utf-8"))
+
+    enrichment: dict[str, dict] = {}
+    if args.enrichment.exists():
+        for rec in json.loads(args.enrichment.read_text(encoding="utf-8")):
+            enrichment[rec["name_eng"]] = rec
 
     rows: list[dict] = []
     for entry in langs:
@@ -66,8 +75,9 @@ def main(argv: list[str] | None = None) -> int:
                     row["local"] = json.load(f).get("local", "")
                 except json.JSONDecodeError:
                     pass
-        for field in KNOWN_FIELDS_TODO:
-            row[field] = "TBD"
+        enriched = enrichment.get(name_eng, {})
+        for field in ENRICHMENT_FIELDS:
+            row[field] = enriched.get(field)
         rows.append(row)
 
     args.out_json.write_text(
@@ -95,16 +105,23 @@ def main(argv: list[str] | None = None) -> int:
     md.append("- **local** — OT `locl` tag used as the source file's default "
               "(blank = inherits script default, which is `ru` for this library).")
     md.append("- **iso639_1 / iso639_3 / bcp47 / ot_lang** — external tag systems. "
-              "`TBD` placeholders mean this row still needs a human-verified value; "
-              "many of these languages have obscure ISO codes or none at all.")
+              "Values come from `tools/language_tags_enrichment.json`; `null`/`—` "
+              "means the system has no code for this language.")
+    md.append("- **confidence** — `high` = standard well-known codes; "
+              "`medium` / `low` flag rows where the pick involved a judgement "
+              "call (macrolanguages, dialect variants, provisional codes). "
+              "See the `note` field in the JSON for per-row rationale.")
     md.append("")
-    md.append("| # | name_eng | name_rus | code_pt | enable | local | iso639_1 | iso639_3 | bcp47 | ot_lang |")
-    md.append("| ---: | --- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |")
+    md.append("| # | name_eng | name_rus | code_pt | enable | local | iso639_1 | iso639_3 | bcp47 | ot_lang | conf |")
+    md.append("| ---: | --- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |")
+    def fmt(v):
+        return "—" if v is None else v
     for i, r in enumerate(rows, start=1):
         md.append(
             f"| {i} | {r['name_eng']} | {r['name_rus']} | {r['code_pt']} | "
             f"{'yes' if r['enable'] else 'no'} | {r['local'] or '—'} | "
-            f"{r['iso639_1']} | {r['iso639_3']} | {r['bcp47']} | {r['ot_lang']} |"
+            f"{fmt(r['iso639_1'])} | {fmt(r['iso639_3'])} | {fmt(r['bcp47'])} | "
+            f"`{fmt(r['ot_lang'])}` | {fmt(r['confidence'])} |"
         )
     md.append("")
     args.out_md.write_text("\n".join(md) + "\n", encoding="utf-8")

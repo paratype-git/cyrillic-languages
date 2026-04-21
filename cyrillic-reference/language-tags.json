@@ -5,10 +5,12 @@
     "code_pt": "1",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "abq",
+    "bcp47": "abq",
+    "ot_lang": "ABA ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Abkhazian",
@@ -16,10 +18,12 @@
     "code_pt": "90",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "ab",
+    "iso639_3": "abk",
+    "bcp47": "ab",
+    "ot_lang": "ABK ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Avar",
@@ -27,10 +31,12 @@
     "code_pt": "5",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "av",
+    "iso639_3": "ava",
+    "bcp47": "av",
+    "ot_lang": "AVR ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Aghul",
@@ -38,10 +44,12 @@
     "code_pt": "147",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "agx",
+    "bcp47": "agx",
+    "ot_lang": "AGU ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Adyge",
@@ -49,10 +57,12 @@
     "code_pt": "2",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "ady",
+    "bcp47": "ady",
+    "ot_lang": "ADY ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Azeri",
@@ -60,10 +70,12 @@
     "code_pt": "6",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "az",
+    "iso639_3": "aze",
+    "bcp47": "az",
+    "ot_lang": "AZE ",
+    "confidence": "high",
+    "note": "Macrolanguage; Cyrillic-script Azeri corresponds to 'azb'/'azj' variants but OT uses AZE."
   },
   {
     "name_eng": "Altaic (Oirot)",
@@ -71,10 +83,12 @@
     "code_pt": "92",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "alt",
+    "bcp47": "alt",
+    "ot_lang": "ALT ",
+    "confidence": "high",
+    "note": "Southern Altai (alt); Oirot is the historical Soviet name."
   },
   {
     "name_eng": "Bashkir",
@@ -82,10 +96,12 @@
     "code_pt": "8",
     "enable": true,
     "local": "ba",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "ba",
+    "iso639_3": "bak",
+    "bcp47": "ba",
+    "ot_lang": "BSH ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Belarusian",
@@ -93,10 +109,12 @@
     "code_pt": "9",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "be",
+    "iso639_3": "bel",
+    "bcp47": "be",
+    "ot_lang": "BEL ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Bulgarian",
@@ -104,10 +122,12 @@
     "code_pt": "11",
     "enable": true,
     "local": "bg",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "bg",
+    "iso639_3": "bul",
+    "bcp47": "bg",
+    "ot_lang": "BGR ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Buryat",
@@ -115,10 +135,12 @@
     "code_pt": "12",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "bua",
+    "bcp47": "bua",
+    "ot_lang": "BUR ",
+    "confidence": "medium",
+    "note": "Microsoft OT tag for Buryat is BUR (not BGR, which is Bulgarian). ISO 'bua' is a macrolanguage; sub-codes bxr/bxu/bxm exist for the three Buryat dialects."
   },
   {
     "name_eng": "Gagauz",
@@ -126,10 +148,12 @@
     "code_pt": "105",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "gag",
+    "bcp47": "gag",
+    "ot_lang": "GAG ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Dargwa",
@@ -137,10 +161,12 @@
     "code_pt": "18",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "dar",
+    "bcp47": "dar",
+    "ot_lang": "DAR ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Dolgan",
@@ -148,10 +174,12 @@
     "code_pt": "148",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "dlg",
+    "bcp47": "dlg",
+    "ot_lang": null,
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Dungan",
@@ -159,10 +187,12 @@
     "code_pt": "20",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "dng",
+    "bcp47": "dng",
+    "ot_lang": null,
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Ingush",
@@ -170,10 +200,12 @@
     "code_pt": "34",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "inh",
+    "bcp47": "inh",
+    "ot_lang": "ING ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Itelmen",
@@ -181,10 +213,12 @@
     "code_pt": "146",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "itl",
+    "bcp47": "itl",
+    "ot_lang": null,
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Kabardino-Cirkassian",
@@ -192,10 +226,12 @@
     "code_pt": "37",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "kbd",
+    "bcp47": "kbd",
+    "ot_lang": "KAB ",
+    "confidence": "medium",
+    "note": "Kabardian and Circassian are often unified under kbd; OT KAB covers Kabardian."
   },
   {
     "name_eng": "Kabardian",
@@ -203,10 +239,12 @@
     "code_pt": "136",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "kbd",
+    "bcp47": "kbd",
+    "ot_lang": "KAB ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Kazakh",
@@ -214,10 +252,12 @@
     "code_pt": "40",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "kk",
+    "iso639_3": "kaz",
+    "bcp47": "kk",
+    "ot_lang": "KAZ ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Kaitag",
@@ -225,10 +265,12 @@
     "code_pt": "161",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "xdq",
+    "bcp47": "xdq",
+    "ot_lang": null,
+    "confidence": "low",
+    "note": "Kaitag (Qaitaq) is often treated as a dialect of Dargwa; 'xdq' is the provisional ISO 639-3 code sometimes cited, but many registries list it only under 'dar'. No OT tag."
   },
   {
     "name_eng": "Kalmyk",
@@ -236,10 +278,12 @@
     "code_pt": "38",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "xal",
+    "bcp47": "xal",
+    "ot_lang": "KLM ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Karakalpak",
@@ -247,10 +291,12 @@
     "code_pt": "39",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "kaa",
+    "bcp47": "kaa",
+    "ot_lang": "KRK ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Karachay-Balkar",
@@ -258,10 +304,12 @@
     "code_pt": "114",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "krc",
+    "bcp47": "krc",
+    "ot_lang": "KAR ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Saami Kildin",
@@ -269,10 +317,12 @@
     "code_pt": "116",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "sjd",
+    "bcp47": "sjd",
+    "ot_lang": "KSM ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Kirghiz",
@@ -280,10 +330,12 @@
     "code_pt": "41",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "ky",
+    "iso639_3": "kir",
+    "bcp47": "ky",
+    "ot_lang": "KIR ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Komi-Zyrian",
@@ -291,10 +343,12 @@
     "code_pt": "112",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "kpv",
+    "bcp47": "kpv",
+    "ot_lang": "KOZ ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Komi-Permyak",
@@ -302,10 +356,12 @@
     "code_pt": "111",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "koi",
+    "bcp47": "koi",
+    "ot_lang": "KOP ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Koryak",
@@ -313,10 +369,12 @@
     "code_pt": "113",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "kpy",
+    "bcp47": "kpy",
+    "ot_lang": null,
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Kryashen Tatar",
@@ -324,10 +382,12 @@
     "code_pt": "135",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "tat",
+    "bcp47": "tat",
+    "ot_lang": "TAT ",
+    "confidence": "low",
+    "note": "Kryashen has no separate ISO code; it is a confessional variant of Tatar (tat). Falls under OT TAT."
   },
   {
     "name_eng": "Kumyk",
@@ -335,10 +395,12 @@
     "code_pt": "42",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "kum",
+    "bcp47": "kum",
+    "ot_lang": "KUM ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Kurdish",
@@ -346,10 +408,12 @@
     "code_pt": "142",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "ku",
+    "iso639_3": "kur",
+    "bcp47": "ku",
+    "ot_lang": "KUR ",
+    "confidence": "medium",
+    "note": "Cyrillic Kurdish is historically Kurmanji (kmr) used in the former USSR; macrolanguage code retained."
   },
   {
     "name_eng": "Lak",
@@ -357,10 +421,12 @@
     "code_pt": "44",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "lbe",
+    "bcp47": "lbe",
+    "ot_lang": "LAK ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Lezgin",
@@ -368,10 +434,12 @@
     "code_pt": "46",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "lez",
+    "bcp47": "lez",
+    "ot_lang": "LEZ ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Macedonian",
@@ -379,10 +447,12 @@
     "code_pt": "48",
     "enable": true,
     "local": "sr",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "mk",
+    "iso639_3": "mkd",
+    "bcp47": "mk",
+    "ot_lang": "MKD ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Manci",
@@ -390,10 +460,12 @@
     "code_pt": "121",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "mns",
+    "bcp47": "mns",
+    "ot_lang": "MAN ",
+    "confidence": "high",
+    "note": "Mansi."
   },
   {
     "name_eng": "Mari-high",
@@ -401,10 +473,12 @@
     "code_pt": "122",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "mrj",
+    "bcp47": "mrj",
+    "ot_lang": "HMA ",
+    "confidence": "high",
+    "note": "Hill Mari (горный)."
   },
   {
     "name_eng": "Mari-low",
@@ -412,10 +486,12 @@
     "code_pt": "118",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "mhr",
+    "bcp47": "mhr",
+    "ot_lang": "LMA ",
+    "confidence": "high",
+    "note": "Meadow Mari (луговой)."
   },
   {
     "name_eng": "Moldavian",
@@ -423,10 +499,12 @@
     "code_pt": "50",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "ro",
+    "iso639_3": "ron",
+    "bcp47": "ro-MD",
+    "ot_lang": "MOL ",
+    "confidence": "high",
+    "note": "ISO 639 deprecated 'mo' in favour of 'ro'; MD regional tag used for the Cyrillic Moldavian tradition."
   },
   {
     "name_eng": "Mongolian",
@@ -434,10 +512,12 @@
     "code_pt": "51",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "mn",
+    "iso639_3": "mon",
+    "bcp47": "mn",
+    "ot_lang": "MNG ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Mordvin-Moksha",
@@ -445,10 +525,12 @@
     "code_pt": "53",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "mdf",
+    "bcp47": "mdf",
+    "ot_lang": "MOK ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Mordvin-Erzya",
@@ -456,10 +538,12 @@
     "code_pt": "52",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "myv",
+    "bcp47": "myv",
+    "ot_lang": "ERZ ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Nanai",
@@ -467,10 +551,12 @@
     "code_pt": "54",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "gld",
+    "bcp47": "gld",
+    "ot_lang": null,
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Nganasan",
@@ -478,10 +564,12 @@
     "code_pt": "149",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "nio",
+    "bcp47": "nio",
+    "ot_lang": null,
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Negidal",
@@ -489,10 +577,12 @@
     "code_pt": "159",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "neg",
+    "bcp47": "neg",
+    "ot_lang": null,
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Nenets (Yurak)",
@@ -500,10 +590,12 @@
     "code_pt": "55",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "yrk",
+    "bcp47": "yrk",
+    "ot_lang": null,
+    "confidence": "high",
+    "note": "Tundra Nenets (yrk); Forest Nenets is 'yrl'. Ненецкий without qualifier = Tundra."
   },
   {
     "name_eng": "Nivkh",
@@ -511,10 +603,12 @@
     "code_pt": "56",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "niv",
+    "bcp47": "niv",
+    "ot_lang": null,
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Nogai",
@@ -522,10 +616,12 @@
     "code_pt": "57",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "nog",
+    "bcp47": "nog",
+    "ot_lang": "NOG ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Ossetic",
@@ -533,10 +629,12 @@
     "code_pt": "123",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "os",
+    "iso639_3": "oss",
+    "bcp47": "os",
+    "ot_lang": "OSS ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Russian",
@@ -544,10 +642,12 @@
     "code_pt": "64",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "ru",
+    "iso639_3": "rus",
+    "bcp47": "ru",
+    "ot_lang": "RUS ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Rutul",
@@ -555,10 +655,12 @@
     "code_pt": "151",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "rut",
+    "bcp47": "rut",
+    "ot_lang": null,
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Selkup",
@@ -566,10 +668,12 @@
     "code_pt": "65",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "sel",
+    "bcp47": "sel",
+    "ot_lang": null,
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Serbian",
@@ -577,10 +681,12 @@
     "code_pt": "66",
     "enable": true,
     "local": "sr",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "sr",
+    "iso639_3": "srp",
+    "bcp47": "sr",
+    "ot_lang": "SRB ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Tabasaran",
@@ -588,10 +694,12 @@
     "code_pt": "73",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "tab",
+    "bcp47": "tab",
+    "ot_lang": "TAB ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Tadzhik",
@@ -599,10 +707,12 @@
     "code_pt": "85",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "tg",
+    "iso639_3": "tgk",
+    "bcp47": "tg",
+    "ot_lang": "TAJ ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Talysh",
@@ -610,10 +720,12 @@
     "code_pt": "137",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "tly",
+    "bcp47": "tly",
+    "ot_lang": null,
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Tatar",
@@ -621,10 +733,12 @@
     "code_pt": "74",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "tt",
+    "iso639_3": "tat",
+    "bcp47": "tt",
+    "ot_lang": "TAT ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Tat",
@@ -632,10 +746,12 @@
     "code_pt": "144",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "ttt",
+    "bcp47": "ttt",
+    "ot_lang": null,
+    "confidence": "medium",
+    "note": "Muslim Tat / Judeo-Tat share 'ttt' in ISO 639-3; the Cyrillic tradition here is Muslim Tat."
   },
   {
     "name_eng": "Tofalar",
@@ -643,10 +759,12 @@
     "code_pt": "134",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "kim",
+    "bcp47": "kim",
+    "ot_lang": null,
+    "confidence": "medium",
+    "note": "'kim' is Karagas/Tofa in ISO 639-3."
   },
   {
     "name_eng": "Touva (Soyot)",
@@ -654,10 +772,12 @@
     "code_pt": "77",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "tyv",
+    "bcp47": "tyv",
+    "ot_lang": "TUV ",
+    "confidence": "high",
+    "note": "Tuvan/Tuvinian; Soyot is the older ethnonym."
   },
   {
     "name_eng": "Turkmen",
@@ -665,10 +785,12 @@
     "code_pt": "76",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "tk",
+    "iso639_3": "tuk",
+    "bcp47": "tk",
+    "ot_lang": "TKM ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Udmurt",
@@ -676,10 +798,12 @@
     "code_pt": "129",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "udm",
+    "bcp47": "udm",
+    "ot_lang": "UDM ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Uzbek",
@@ -687,10 +811,12 @@
     "code_pt": "81",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "uz",
+    "iso639_3": "uzb",
+    "bcp47": "uz",
+    "ot_lang": "UZB ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Uighur",
@@ -698,10 +824,12 @@
     "code_pt": "78",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "ug",
+    "iso639_3": "uig",
+    "bcp47": "ug",
+    "ot_lang": "UYG ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Ukrainian",
@@ -709,10 +837,12 @@
     "code_pt": "79",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "uk",
+    "iso639_3": "ukr",
+    "bcp47": "uk",
+    "ot_lang": "UKR ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Ulch",
@@ -720,10 +850,12 @@
     "code_pt": "160",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "ulc",
+    "bcp47": "ulc",
+    "ot_lang": null,
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Khakass",
@@ -731,10 +863,12 @@
     "code_pt": "110",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "kjh",
+    "bcp47": "kjh",
+    "ot_lang": "KHK ",
+    "confidence": "medium",
+    "note": "OT tag uncertain; verify against current Microsoft table before shipping."
   },
   {
     "name_eng": "Khanty",
@@ -742,10 +876,12 @@
     "code_pt": "109",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "kca",
+    "bcp47": "kca",
+    "ot_lang": null,
+    "confidence": "low",
+    "note": "No confirmed OT tag in Microsoft's table."
   },
   {
     "name_eng": "Tsakhur",
@@ -753,10 +889,12 @@
     "code_pt": "152",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "tkr",
+    "bcp47": "tkr",
+    "ot_lang": null,
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Chechen",
@@ -764,10 +902,12 @@
     "code_pt": "14",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "ce",
+    "iso639_3": "che",
+    "bcp47": "ce",
+    "ot_lang": "CHE ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Chuvash",
@@ -775,10 +915,12 @@
     "code_pt": "97",
     "enable": true,
     "local": "cv",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": "cv",
+    "iso639_3": "chv",
+    "bcp47": "cv",
+    "ot_lang": "CHU ",
+    "confidence": "high",
+    "note": "OT 'CHU ' is Chuvash, NOT Church Slavonic (OT uses 'CSL ' for Church Slavonic)."
   },
   {
     "name_eng": "Chukchi",
@@ -786,10 +928,12 @@
     "code_pt": "98",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "ckt",
+    "bcp47": "ckt",
+    "ot_lang": "CHK ",
+    "confidence": "medium",
+    "note": "OT 'CHK ' is Chukchi per Microsoft's table; confirm against current revision."
   },
   {
     "name_eng": "Shor",
@@ -797,10 +941,12 @@
     "code_pt": "133",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "cjs",
+    "bcp47": "cjs",
+    "ot_lang": null,
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Evenki (Tungus)",
@@ -808,10 +954,12 @@
     "code_pt": "102",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "evn",
+    "bcp47": "evn",
+    "ot_lang": "EVK ",
+    "confidence": "high",
+    "note": null
   },
   {
     "name_eng": "Even (Lamut)",
@@ -819,10 +967,12 @@
     "code_pt": "101",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "eve",
+    "bcp47": "eve",
+    "ot_lang": "EVN ",
+    "confidence": "high",
+    "note": "Note OT tag distinction: 'EVN ' = Even, 'EVK ' = Evenki."
   },
   {
     "name_eng": "Enets",
@@ -830,10 +980,12 @@
     "code_pt": "150",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "enf",
+    "bcp47": "enf",
+    "ot_lang": null,
+    "confidence": "medium",
+    "note": "Forest Enets (enf); Tundra Enets is 'enh'. Энецкий without qualifier — usually Forest."
   },
   {
     "name_eng": "Eskimo (Yupik)",
@@ -841,10 +993,12 @@
     "code_pt": "100",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "ess",
+    "bcp47": "ess",
+    "ot_lang": null,
+    "confidence": "high",
+    "note": "Central Siberian Yupik (ess) — the Russian-territory Yupik variant."
   },
   {
     "name_eng": "Yukagir",
@@ -852,10 +1006,12 @@
     "code_pt": "158",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "ykg",
+    "bcp47": "ykg",
+    "ot_lang": null,
+    "confidence": "medium",
+    "note": "Tundra Yukaghir (ykg); Kolyma Yukaghir is 'yux'."
   },
   {
     "name_eng": "Yakut",
@@ -863,9 +1019,11 @@
     "code_pt": "130",
     "enable": true,
     "local": "ru",
-    "iso639_1": "TBD",
-    "iso639_3": "TBD",
-    "bcp47": "TBD",
-    "ot_lang": "TBD"
+    "iso639_1": null,
+    "iso639_3": "sah",
+    "bcp47": "sah",
+    "ot_lang": "YAK ",
+    "confidence": "high",
+    "note": null
   }
 ]
