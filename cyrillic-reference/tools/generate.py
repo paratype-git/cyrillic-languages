@@ -116,6 +116,14 @@ def format_unicodes(unicodes: list[str]) -> str:
     return " + ".join(u.upper() for u in unicodes)
 
 
+# Target rendered height for inline SVG thumbnails in the Markdown tables.
+# Widths per row are derived from this: img_width = svg_viewbox_w * HEIGHT / svg_viewbox_h.
+# viewBox is always 2380 tall; raising this constant enlarges every thumbnail
+# proportionally.
+INLINE_DIAGRAM_HEIGHT = 130
+VARIANT_DIAGRAM_WIDTH = round(4040 * INLINE_DIAGRAM_HEIGHT / 2380)
+
+
 def _diagram_img(family: str, subdir: str, cp_hex: str, img_width: int) -> str:
     """Inline <img> tag for one family's diagram."""
     return (
@@ -487,11 +495,11 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
             cp_hex = r["codepoints"][0].upper()
             stem = f"{cp_hex}.{r['locale']}"
             sans_img = (
-                f'<img src="svg/Sans/variants/{stem}.svg" width="170" '
+                f'<img src="svg/Sans/variants/{stem}.svg" width="{VARIANT_DIAGRAM_WIDTH}" '
                 f'alt="Sans U+{cp_hex} .{r["locale"]}">'
             )
             serif_img = (
-                f'<img src="svg/Serif/variants/{stem}.svg" width="170" '
+                f'<img src="svg/Serif/variants/{stem}.svg" width="{VARIANT_DIAGRAM_WIDTH}" '
                 f'alt="Serif U+{cp_hex} .{r["locale"]}">'
             )
             txt_links = (
@@ -608,7 +616,7 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
             n_accents = decomp_cell.count("+") if decomp_cell else 0
             # viewBox widths: 1440 (single), 6640 (1 accent), 9240 (2 accents)
             svg_width = 1440 if n_accents == 0 else (2600 * n_accents + 4040)
-            img_width = round(svg_width * 100 / 2380)
+            img_width = round(svg_width * INLINE_DIAGRAM_HEIGHT / 2380)
             diagram_cell = _diagram_cell_both(
                 subdir, cp_hex, img_width, stacked=(n_accents > 0)
             )
