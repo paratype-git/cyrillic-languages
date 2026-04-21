@@ -306,17 +306,19 @@ def collect_glyph_variants(data_root: Path, languages: list[str]) -> list[dict]:
                     info = classify_variant_token(token)
                     if info is None:
                         continue
-                    # `+` alternates in ru-default languages are stylistic
-                    # alternates for letters that already have their own
-                    # codepoint and their own row in the main character
-                    # table — they are not locl shape variants, so they do
-                    # not belong here. (`&` tokens never occur in ru-default
-                    # sources anyway.)
-                    if locale == "ru" and info["marker"] == "alternate":
+                    # `alternate` rows describe the default (pre-locl) shape
+                    # that pairs with each `&`-marker row. The paired
+                    # localized row's Diagram cell already renders both
+                    # shapes side-by-side (default → variant), so the alt
+                    # row carries no information the reader doesn't already
+                    # see. Drop it. (Side effect: the old ru-default filter
+                    # is subsumed — ru sources only ever emit `+` tokens,
+                    # never `&`, so they disappear from the table either
+                    # way.)
+                    if info["marker"] == "alternate":
                         continue
                     # Suppress font-gap rows (variant glyph missing from the
-                    # font). Drops both the `&` and the paired `+` for the
-                    # same (codepoint, locale).
+                    # font).
                     if info.get("codepoints") and (info["codepoints"][0], locale) in _FONT_GAPS_SUPPRESSED:
                         continue
                     variants.append({
@@ -374,12 +376,15 @@ def aggregate_variants(variants: list[dict]) -> list[dict]:
 
 
 def render_glyph_variants_md(rows: list[dict]) -> str:
-    """Render the variants table — glyphs that share a Unicode codepoint
-    with a base letter but differ visually (locl forms, style alternates)."""
-    by_marker = {"localized": 0, "alternate": 0}
+    """Render the variants table — locl (`&`) shape variants only.
+
+    `+`-marker rows were dropped during collection: they described the
+    default (pre-locl) shape that each `&` row swaps out, but the
+    paired localized row's Diagram cell already renders both shapes
+    side-by-side, so the alternate row was redundant information.
+    """
     by_style = {"any": 0, "straight": 0, "italic": 0, "alt": 0}
     for r in rows:
-        by_marker[r["marker"]] = by_marker.get(r["marker"], 0) + 1
         by_style[r["style"]] = by_style.get(r["style"], 0) + 1
     locales = sorted({r["locale"] for r in rows if r["locale"]})
 
@@ -389,9 +394,10 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
     out.append(
         "Glyphs that do **not** have their own Unicode codepoint: they "
         "share a codepoint with a base letter, but render as a different "
-        "shape under an OpenType feature — typically `locl` (localized "
-        "form, selected by the active language) or a stylistic alternate "
-        "tied to upright (`.str`) or italic (`.ita`) shaping."
+        "shape under an OpenType `locl` feature (a localized form "
+        "selected by the active language), sometimes with a style "
+        "qualifier tying the swap to upright (`.str`) or italic (`.ita`) "
+        "shaping."
     )
     out.append("")
     out.append(
@@ -402,10 +408,8 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
     )
     out.append("")
     out.append(
-        f"**{len(rows)}** variant forms — "
-        f"{by_marker['localized']} localized (`&`), "
-        f"{by_marker['alternate']} alternate (`+`). "
-        f"Style breakdown: any={by_style['any']}, "
+        f"**{len(rows)}** locl variants — "
+        f"styles: any={by_style['any']}, "
         f"straight={by_style.get('straight', 0)}, "
         f"italic={by_style.get('italic', 0)}. "
         f"Locales represented: {', '.join(locales) if locales else '—'}."
@@ -414,30 +418,25 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
     out.append("## Columns")
     out.append("")
     out.append(
-        "- **Codepoint** — the Unicode codepoint this variant maps to. "
-        "Same as the base letter in the main table."
+        "- **Codepoint** — the Unicode codepoint the variant swaps shape for "
+        "(same as the base letter in the main table), except for the Bashkir "
+        "and Chuvash PUA-locl rows where it is the target PUA codepoint."
     )
     out.append(
         "- **Case** — uppercase / lowercase."
     )
     out.append(
-        "- **Locale** — the source language's `local` field. Only "
-        "non-default locales (`bg` Bulgarian, `sr` Serbian, `ba` Bashkir, "
-        "`cv` Chuvash) appear here, because ru-default languages do not "
-        "produce locl shape variants — their `+` alternates are stylistic "
-        "forms of letters that already have their own Unicode codepoint, "
-        "listed in the main character table instead."
+        "- **Locale** — `bg` Bulgarian, `sr` Serbian, `ba` Bashkir, or "
+        "`cv` Chuvash. These are the four non-default (non-ru) locl tags "
+        "for which PT Serif Expert carries named variant glyphs."
     )
     out.append(
         "- **Style** — `straight` or `italic` when the source token has "
         "a `.str` / `.ita` suffix; `any` otherwise."
     )
     out.append(
-        "- **Marker** — `localized` (source token started with `&`) or "
-        "`alternate` (source token started with `+`)."
-    )
-    out.append(
-        "- **Token(s)** — verbatim source token(s) from `library/cyrillic/base/*.json`."
+        "- **Diagram** — an inline SVG showing `default shape → variant "
+        "shape` plus a `[txt]` link to the glyphplotter source."
     )
     out.append(
         "- **Languages** — language files that declare this variant."
@@ -445,16 +444,13 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
     out.append("")
     out.append("## Variants")
     out.append("")
-    out.append("| # | Codepoint | Case | Locale | Style | Marker | Token(s) | Diagram | Languages |")
-    out.append("| ---: | --- | --- | --- | --- | --- | --- | :---: | --- |")
+    out.append("| # | Codepoint | Case | Locale | Style | Diagram | Languages |")
+    out.append("| ---: | --- | --- | --- | --- | :---: | --- |")
     for i, r in enumerate(rows, start=1):
-        # Diagram cell: links to the svg/variants/<cp>.<locale>.{svg,txt} files
-        # emitted by generate_svgs.py. Only localized rows have a named variant
-        # in the TTF, and only a subset of those (~26 of 41) are currently
-        # rendered — rows without a file get an empty cell and the Markdown
-        # link simply doesn't resolve. This is acceptable.
+        # Diagram cell: links to svg/variants/<cp>.<locale>.{svg,txt}.
+        # All rows here are localized (`&`) since alternates were dropped.
         diagram_cell = ""
-        if r["marker"] == "localized" and r["locale"] and r["codepoints"]:
+        if r["locale"] and r["codepoints"]:
             cp_hex = r["codepoints"][0].upper()
             stem = f"{cp_hex}.{r['locale']}"
             # Variant diagrams are always 2 boxes (default → variant) with
@@ -466,8 +462,7 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
             )
         out.append(
             f"| {i} | {format_unicodes(r['codepoints'])} | {r['case']} | "
-            f"{r['locale']} | {r['style']} | {r['marker']} | "
-            f"`{'`, `'.join(r['tokens'])}` | {diagram_cell} | "
+            f"{r['locale']} | {r['style']} | {diagram_cell} | "
             f"{', '.join(r['languages'])} |"
         )
     out.append("")
