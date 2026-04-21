@@ -18,7 +18,7 @@ Part of the Paratype Cyrillic Languages project; released under the **MIT Licens
 | [`svg/uc/XXXX.{svg,txt}`](svg/uc/) | One SVG decomposition diagram per uppercase codepoint, plus its glyphplotter source. |
 | [`svg/lc/XXXX.{svg,txt}`](svg/lc/) | Same for lowercase. |
 | [`svg/variants/XXXX.LANG.{svg,txt}`](svg/variants/) | `default → variant` diagrams for locl-named glyph variants. |
-| [`svg/_calibration/accents.{svg,txt}`](svg/_calibration/) | Reference sheet of all 10 combining marks + Cyrillic breve UC/LC on a dotted circle, using the calibration constants. |
+| [`svg/{Sans,Serif}/_calibration/accents.svg`](svg/Serif/_calibration/) (+ `glyphplotter/{Sans,Serif}/_calibration/accents.txt`) | Reference sheet per family — all 10 combining marks + Cyrillic breve UC/LC on a dotted circle, using the calibration constants. |
 
 ## Data pipeline
 

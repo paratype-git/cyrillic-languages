@@ -17,7 +17,7 @@ Files present:
 - `svg/uc/*.{svg,txt}` — 177 SVG diagrams + plotter sources for uppercase codepoints
 - `svg/lc/*.{svg,txt}` — 176 for lowercase
 - `svg/variants/*.{svg,txt}` — 26 for locl-named variants (15 GSUB-only rows stay unrendered)
-- `svg/_calibration/accents.{svg,txt}` — reference sheet for the 10 combining marks + Cyrillic breves
+- `svg/{Sans,Serif}/_calibration/accents.svg` + `glyphplotter/{Sans,Serif}/_calibration/accents.txt` — reference sheet per family for the 10 combining marks + Cyrillic breves
 
 Regeneration:
 ```bash
@@ -45,7 +45,7 @@ The main tables now have two new columns: `Decomposition` (`XXXX + XXXX + …` f
 
 ### 3. SVG illustrations via `glyphplotter` — **done**
 
-`generate_svgs.py` emits one SVG per row in the master tables plus their matching `.txt` plotter sources. Layout: decomposable composites render as `base + mark(s) → composed` with each mark in its own dotted-circle box; structural composites and plain letters render as a single centred glyph; locl variants render as `default → variant` via the TTF's suffixed glyph names (`.BGR`, `.BSH`, `.CHU`, `.SRB`). Service elements (rectangles, `+`, `→`, labels) are drawn with glyphplotter primitives, not saved from a second font. Vertical placement lifts above-marks by `GAP=150` above `dc.yMax` and drops below-marks (cedilla) the same distance below `dc.yMin`; horizontal placement uses the glyph's bbox centre plus per-mark `X_NUDGE_EXTRA` / `Y_NUDGE_EXTRA` overrides calibrated on the `svg/_calibration/accents.svg` reference sheet. Full layout, calibration constants, and manual re-rendering instructions are in `README.md`.
+`generate_svgs.py` emits one SVG per row in the master tables plus their matching `.txt` plotter sources. Layout: decomposable composites render as `base + mark(s) → composed` with each mark in its own dotted-circle box; structural composites and plain letters render as a single centred glyph; locl variants render as `default → variant` via the TTF's suffixed glyph names (`.BGR`, `.BSH`, `.CHU`, `.SRB`). Service elements (rectangles, `+`, `→`, labels) are drawn with glyphplotter primitives, not saved from a second font. Vertical placement lifts above-marks by `GAP=150` above `dc.yMax` and drops below-marks (cedilla) the same distance below `dc.yMin`; horizontal placement uses the glyph's bbox centre plus per-mark `X_NUDGE_EXTRA` / `Y_NUDGE_EXTRA` overrides calibrated on the `svg/_calibration/accents.svg` reference sheet. Per-family calibration sheets at `svg/{Sans,Serif}/_calibration/accents.svg` show the current placement for all 11 marks on a dotted circle. Full layout, calibration constants, and manual re-rendering instructions are in `README.md`.
 
 **Remaining SVG-stage TODOs:**
 
