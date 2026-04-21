@@ -39,14 +39,20 @@ Part of the Paratype Cyrillic Languages project; released under the **MIT Licens
                          ▼
            tools/generate_svgs.py        (needs fontTools + FontDocTools)
                          │
-       ┌────────┴────────┐
-       ▼                 ▼
-   svg/Sans/          svg/Serif/
-   ├── uc/*.{svg,txt} ├── uc/*.{svg,txt}
-   ├── lc/*.{svg,txt} ├── lc/*.{svg,txt}
-   └── variants/*.{svg,txt}
-                      └── variants/*.{svg,txt}
+       ┌─────────────────┴──────────────────┐
+       ▼                                    ▼
+   svg/{Sans,Serif}/                  glyphplotter/{Sans,Serif}/
+   ├── uc/*.svg                       ├── uc/*.txt
+   ├── lc/*.svg                       ├── lc/*.txt
+   └── variants/*.svg                 └── variants/*.txt
 ```
+
+Rendered SVGs and the glyphplotter `.txt` sources that produce them
+live in separate parallel trees: `svg/<family>/` for artefacts,
+`glyphplotter/<family>/` for sources. `.txt` files are per-family —
+pen positions are derived from each font's metrics, so Sans and
+Serif sources differ in coordinates even though they describe the
+same diagram.
 
 Two stages, two scripts:
 
@@ -100,18 +106,20 @@ pip install git+https://bitbucket.org/Lontar/FontDocTools.git
 # Regenerate both families (runs back-to-back, ~35s each):
 cd cyrillic-reference/
 
-python3 tools/generate_svgs.py \
+python3 tools/generate_svgs.py --family Sans \
     --data ../cyrillic-languages \
     --font        ../cyrillic-languages/fonts/web/PT-Sans-Expert_Regular/pt-sans-expert_regular.ttf \
-    --font-italic ../cyrillic-languages/fonts/web/PT-Sans-Expert_Italic/PT-Sans-Expert_Italic.ttf \
-    --out svg/Sans
+    --font-italic ../cyrillic-languages/fonts/web/PT-Sans-Expert_Italic/PT-Sans-Expert_Italic.ttf
 
-python3 tools/generate_svgs.py \
+python3 tools/generate_svgs.py --family Serif \
     --data ../cyrillic-languages \
     --font        ../cyrillic-languages/fonts/web/PT-Serif-Expert_Regular/pt-serif-expert_regular.ttf \
-    --font-italic ../cyrillic-languages/fonts/web/PT-Serif-Expert_Italic/PT-Serif-Expert_Italic.ttf \
-    --out svg/Serif
+    --font-italic ../cyrillic-languages/fonts/web/PT-Serif-Expert_Italic/PT-Serif-Expert_Italic.ttf
 ```
+
+`--family` names the output subtree. Each run writes SVGs to
+`svg/<Family>/{uc,lc,variants}/` and matching `.txt` plotter sources
+to `glyphplotter/<Family>/{uc,lc,variants}/`.
 
 Each invocation renders one font family. The italic TTF is used only for locl variants whose source token carries a `.ita` suffix (Serbian italic). Invokes `glyphplotter` via subprocess per row. The macOS-only tools in the FontDocTools package (`glyphshaper`, `glyphdump`, `roentgen`) are not needed and are skipped automatically on Linux via platform markers.
 

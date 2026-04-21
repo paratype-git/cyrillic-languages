@@ -116,12 +116,36 @@ def format_unicodes(unicodes: list[str]) -> str:
     return " + ".join(u.upper() for u in unicodes)
 
 
-def _diagram_cell(family: str, subdir: str, cp_hex: str, img_width: int) -> str:
-    """<img>+txt cell pointing at svg/<family>/<subdir>/<cp>.{svg,txt}."""
+def _diagram_img(family: str, subdir: str, cp_hex: str, img_width: int) -> str:
+    """Inline <img> tag for one family's diagram."""
     return (
         f'<img src="svg/{family}/{subdir}/{cp_hex}.svg" width="{img_width}" '
-        f'alt="{family} U+{cp_hex}"> [txt](svg/{family}/{subdir}/{cp_hex}.txt)'
+        f'alt="{family} U+{cp_hex}">'
     )
+
+
+def _txt_link(family: str, subdir: str, cp_hex: str, label: str) -> str:
+    """Markdown link to a plotter source .txt file."""
+    return f"[{label}](glyphplotter/{family}/{subdir}/{cp_hex}.txt)"
+
+
+def _diagram_cell_both(subdir: str, cp_hex: str, img_width: int, stacked: bool) -> str:
+    """Sans + Serif thumbnails together in one cell.
+
+    * ``stacked=False`` → side-by-side (compact single-glyph rows).
+    * ``stacked=True``  → Sans on top, Serif below (wide multi-box rows
+      where side-by-side would overflow the column).
+
+    Two `[txt]` links for the two plotter sources follow the images.
+    """
+    sans_img = _diagram_img("Sans", subdir, cp_hex, img_width)
+    serif_img = _diagram_img("Serif", subdir, cp_hex, img_width)
+    separator = "<br>" if stacked else " "
+    txt_links = (
+        f'{_txt_link("Sans", subdir, cp_hex, "txt sans")} '
+        f'{_txt_link("Serif", subdir, cp_hex, "txt serif")}'
+    )
+    return f"{sans_img}{separator}{serif_img}<br>{txt_links}"
 
 
 def has_decomposition_hint(description: str) -> bool:
@@ -452,28 +476,32 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
     out.append("")
     out.append("## Variants")
     out.append("")
-    out.append("| # | Codepoint | Case | Locale | Style | Sans | Serif | Languages |")
-    out.append("| ---: | --- | --- | --- | --- | :---: | :---: | --- |")
+    out.append("| # | Codepoint | Case | Locale | Style | Diagram (Sans / Serif) | Languages |")
+    out.append("| ---: | --- | --- | --- | --- | :---: | --- |")
     for i, r in enumerate(rows, start=1):
-        # Variant diagrams are always 2 boxes (default → variant), viewBox
-        # width 4040 → rendered width 170 at height ~100.
-        sans_cell = serif_cell = ""
+        # Variant diagrams are always 2 boxes (default → variant): the row
+        # IS a shape transformation, so stack Sans above Serif the same
+        # way we stack multi-box decompositions in the main tables.
+        diagram_cell = ""
         if r["locale"] and r["codepoints"]:
             cp_hex = r["codepoints"][0].upper()
             stem = f"{cp_hex}.{r['locale']}"
-            sans_cell = (
+            sans_img = (
                 f'<img src="svg/Sans/variants/{stem}.svg" width="170" '
-                f'alt="Sans U+{cp_hex} .{r["locale"]}"> '
-                f"[txt](svg/Sans/variants/{stem}.txt)"
+                f'alt="Sans U+{cp_hex} .{r["locale"]}">'
             )
-            serif_cell = (
+            serif_img = (
                 f'<img src="svg/Serif/variants/{stem}.svg" width="170" '
-                f'alt="Serif U+{cp_hex} .{r["locale"]}"> '
-                f"[txt](svg/Serif/variants/{stem}.txt)"
+                f'alt="Serif U+{cp_hex} .{r["locale"]}">'
             )
+            txt_links = (
+                f"[txt sans](glyphplotter/Sans/variants/{stem}.txt) "
+                f"[txt serif](glyphplotter/Serif/variants/{stem}.txt)"
+            )
+            diagram_cell = f"{sans_img}<br>{serif_img}<br>{txt_links}"
         out.append(
             f"| {i} | {format_unicodes(r['codepoints'])} | {r['case']} | "
-            f"{r['locale']} | {r['style']} | {sans_cell} | {serif_cell} | "
+            f"{r['locale']} | {r['style']} | {diagram_cell} | "
             f"{', '.join(r['languages'])} |"
         )
     out.append("")
@@ -562,8 +590,8 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
         "use `XXXX + XXXX + …` in reading order (base first)."
     )
     out.append("")
-    out.append("| # | Sign | Codepoint | Description | PUA | Decomposition | Sans | Serif | Locales |")
-    out.append("| ---: | :---: | --- | --- | :---: | --- | :---: | :---: | --- |")
+    out.append("| # | Sign | Codepoint | Description | PUA | Decomposition | Diagram (Sans / Serif) | Locales |")
+    out.append("| ---: | :---: | --- | --- | :---: | --- | :---: | --- |")
     subdir = "uc" if side == "uppercase" else "lc"
     for i, (entry, decomp_cell) in enumerate(zip(entries, row_cells), start=1):
         sign = entry.get("sign", "")
@@ -571,24 +599,25 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
         description = entry.get("description", "")
         pua_flag = "yes" if any(is_pua(int(u, 16)) for u in unicodes) else ""
         locales = ", ".join(entry.get("locales", []))
-        # Sans / Serif diagram cells: embed the generated SVG inline with
-        # an explicit width (target rendered height ~100px) and a link to
-        # the glyphplotter source. Widths come from the deterministic
-        # viewBox per diagram type: 1440 (single), 6640 (1 accent),
-        # 9240 (2 accents).
+        # Diagram cell: show Sans + Serif together. Layout depends on the
+        # diagram's natural width — single-glyph rows fit side-by-side,
+        # multi-box rows are stacked vertically so the column doesn't blow
+        # up past the table width.
         cp_hex = unicodes[0].upper() if unicodes else ""
         if cp_hex:
             n_accents = decomp_cell.count("+") if decomp_cell else 0
+            # viewBox widths: 1440 (single), 6640 (1 accent), 9240 (2 accents)
             svg_width = 1440 if n_accents == 0 else (2600 * n_accents + 4040)
             img_width = round(svg_width * 100 / 2380)
-            sans_cell = _diagram_cell("Sans", subdir, cp_hex, img_width)
-            serif_cell = _diagram_cell("Serif", subdir, cp_hex, img_width)
+            diagram_cell = _diagram_cell_both(
+                subdir, cp_hex, img_width, stacked=(n_accents > 0)
+            )
         else:
-            sans_cell = serif_cell = ""
+            diagram_cell = ""
         out.append(
             f"| {i} | {sign} | {format_unicodes(unicodes)} | "
             f"{description} | {pua_flag} | {decomp_cell} | "
-            f"{sans_cell} | {serif_cell} | {locales} |"
+            f"{diagram_cell} | {locales} |"
         )
     out.append("")
     return "\n".join(out)
