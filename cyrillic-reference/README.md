@@ -6,13 +6,13 @@ Part of the Paratype Cyrillic Languages project; released under the **MIT Licens
 
 ## Scope
 
-77 Cyrillic-based languages. The full list lives in [`generate.py`](generate.py) as `LANGUAGES_IN_SCOPE`. `Kaitag` and `Uzbek` exist in the source data repository but are out of scope here.
+77 Cyrillic-based languages. The full list lives in [`tools/_catalog.py`](tools/_catalog.py) as `LANGUAGES_IN_SCOPE`. `Kaitag` and `Uzbek` exist in the source data repository but are out of scope here.
 
 ## Outputs
 
 | File | Description |
 | --- | --- |
-| [`characters-uppercase.md`](characters-uppercase.md) | Master table of every unique uppercase codepoint, deduplicated. Columns: `Sign`, `Codepoint`, `Description`, `PUA`, `Decomposition`, `Legacy PUA`, `Diagram`, `Locales`. Sorted by codepoint so PUA entries cluster at the end. |
+| [`characters-uppercase.md`](characters-uppercase.md) | Master table of every unique uppercase codepoint, deduplicated. Columns: `Sign`, `Codepoint`, `Description`, `PUA`, `Decomposition`, `Diagram`, `Locales`. Sorted by codepoint so PUA entries cluster at the end. |
 | [`characters-lowercase.md`](characters-lowercase.md) | Same shape for lowercase codepoints. |
 | [`glyph-variants.md`](glyph-variants.md) | Rows for glyphs that share a codepoint with a base letter but render differently under `locl` or stylistic-alternate features (Bulgarian `Д`, Serbian italic `г`, …). |
 | [`svg/uc/XXXX.{svg,txt}`](svg/uc/) | One SVG decomposition diagram per uppercase codepoint, plus its glyphplotter source. |
@@ -78,12 +78,12 @@ The `Description` field in the pan-Cyrillic summary follows Unicode naming: e.g.
 
 ### Locl/style variants
 
-82 rows in `glyph-variants.md` cover glyphs that share a codepoint with a base letter but render as a different shape under an OpenType feature:
+39 rows in `glyph-variants.md` cover glyphs that share a codepoint with a base letter but render as a different shape under an OpenType feature:
 
 - `&`-marked tokens in the per-language source files correspond to `locl` forms selected by the language's tag (`BGR`, `SRB`, `BSH`, `CHU` — Bulgarian, Serbian, Bashkir, Chuvash).
 - `+`-marked tokens pair with the `&` tokens and provide the default shape.
 
-PT Serif Expert Regular exposes locl variants by **suffixed glyph name** — `uni0492.BSH` (Bashkir Ghe-with-Stroke), `uni0433.BGR` (Bulgarian ge), etc. `generate_svgs.py` queries the font's `post` table for `<base_name>.<locale_tag>` and, if found, renders a `default → variant` diagram. 26 of the 41 `&` rows currently have a matching named variant in the font; the remaining 15 are driven purely by GSUB lookups (no standalone name) and would require a shaper (`uharfbuzz` or CoreText) to render — they are listed in `glyph-variants.md` with a `Diagram` column pointing to a non-existent file.
+PT Expert fonts expose locl variants by **suffixed glyph name** — `uni0492.BSH` (Bashkir Ghe-with-Stroke), `uni0433.BGR` (Bulgarian ge), etc. `generate_svgs.py` queries the font's `post` table for `<base_name>.<locale_tag>` and, if found, renders a `default → variant` diagram. Serif currently renders all 39 rows; Sans renders 37 (the BGR `Ж`/`К` glyphs are missing from PT Sans Expert — see [Known limitations](#known-limitations)).
 
 ## Machine-readable JSON (`data/`)
 
@@ -197,31 +197,21 @@ Run the shown command (supplying your own path to the TTF) to get a fresh SVG. H
 
 ## Private Use Area
 
-Paratype's PT Sans Expert / PT Serif Expert fonts historically used Unicode Private Use Area codepoints (`E000`–`F8FF`) for glyphs that had no official Unicode assignment at the time. Where a PUA codepoint can be expressed as a sequence of standard Unicode characters, the master tables show the decomposition in the `Decomposition` column AND keep the old PUA codepoint in the `Legacy PUA` column for backwards compatibility with older documents.
+Paratype's PT Sans Expert / PT Serif Expert fonts historically used Unicode Private Use Area codepoints (`E000`–`F8FF`) for glyphs that had no official Unicode assignment at the time. Where a PUA codepoint can be expressed as a sequence of standard Unicode characters (e.g. `F510` → `0415 + 0304`), the master tables show the decomposition in the `Decomposition` column; the original PUA hex remains in the `Codepoint` column so older references stay resolvable.
 
-Where no standard sequence exists (the 76 structural composites), the PUA codepoint is listed with its descriptive name and an empty `Decomposition` cell.
+Where no standard sequence exists, the row keeps its codepoint and descriptive name with an empty `Decomposition` cell — see [Structural composites](#structural-composites-not-decomposed) above.
 
 The PUA is a shared range in the Unicode standard — no organisation owns specific codepoints within it. `!FXXX` notation in Paratype's source data means "this glyph at this codepoint *in the Paratype Expert fonts*".
 
 ## Known limitations
 
-- **15 locl rows unrendered.** `glyph-variants.md` has 41 localized entries, but only 26 have a suffixed glyph name (`uni0492.BSH` etc.) in PT Serif Expert Regular. The remaining 15 are reached purely through GSUB lookups without a standalone name, so they cannot be referenced by glyphplotter and stay unrendered. Adding `uharfbuzz` would allow rendering these.
+- **Two BGR variants missing from PT Sans Expert.** `uni0416.BGR` (Ж) and `uni041A.BGR` (К) are absent from PT Sans Expert Regular (they exist in PT Serif Expert). Suppressed from `glyph-variants.md` via `_FONT_GAPS_SUPPRESSED` in `tools/_catalog.py`. To restore: add the glyphs to the Sans `.ufo` source, rebuild the TTF, and remove the entry from the suppression set.
 - **No GPOS anchor positioning.** Glyphplotter does not apply GPOS mark-attachment anchors. Combining marks are placed by bbox centering plus hand-tuned nudges, not by the designer-intended anchor points. For the standard combining set this is close enough; unfamiliar marks may need their own `X_NUDGE_EXTRA` / `Y_NUDGE_EXTRA` override.
-- **Italic / straight variants (`.ita` / `.str`) not rendered.** The `Style` column of `glyph-variants.md` distinguishes these but the generator currently only handles the default + locl shape pair. Style alternates would need their own template.
 - **Python 3.13+ required for SVG stage.** FontDocTools itself requires ≥ 3.13. The stdlib-only generators (`generate.py` and `generate_json.py`) run on any Python 3.
 
 ## License
 
-MIT. Inbound contributions must be compatible with the licenses listed below:
-
-| License | URL |
-| --- | --- |
-| Apache 2.0 | <https://www.apache.org/licenses/LICENSE-2.0> |
-| MIT | <https://opensource.org/licenses/MIT> |
-| BSD 3-Clause | <https://opensource.org/licenses/BSD-3-Clause> |
-| BSD 2-Clause | <https://opensource.org/licenses/BSD-2-Clause> |
-| PSF License Agreement | <https://docs.python.org/3/license.html> |
-| Unicode, Inc. License Agreement — Data Files and Software | <https://www.unicode.org/license.html> |
+[MIT](https://opensource.org/licenses/MIT). See [`LICENSE`](LICENSE).
 
 ## Contact
 

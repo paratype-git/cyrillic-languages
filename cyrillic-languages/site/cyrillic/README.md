@@ -16,7 +16,7 @@ The schema described below is **de-facto stable** — it has not changed in the 
 
 Two output shapes you can rely on for now:
 
-- every per-language file under `base/` has a root `name_eng` (string) and `glyphs_list` (array);
+- every per-language file under `base/` has a root `name_eng` (string), `language_tag` (BCP 47 string), and `glyphs_list` (array);
 - `cyrillic_characters_lib.json` has eight top-level list keys listed further down.
 
 ## Layout
@@ -38,6 +38,7 @@ Three of the files under `base/` are **legacy-schema** and do not follow the sch
 ```jsonc
 {
   "name_eng": "Russian",
+  "language_tag": "ru",            // BCP 47 tag (since 2026-04)
   "glyphs_list": [
     { /* block */ },
     { /* block */ },
@@ -165,17 +166,17 @@ The four “reserved” keys exist so that the site engine can parse the file wi
   "description": "Cyrillic Capital Letter A",
   "hide": "",                                // "", "italic", or "straight"
   "languages": [
-    { "name": "Abazin",      "types": ["alphabet"] },
-    { "name": "Abkhazian",   "types": ["alphabet"] },
+    { "name": "Abazin",      "types": ["alphabet"], "language_tag": "abq" },
+    { "name": "Abkhazian",   "types": ["alphabet"], "language_tag": "ab" },
     …
-    { "name": "All",         "types": ["alphabet"] }   // only if every language uses it
+    { "name": "All",         "types": ["alphabet"], "language_tag": null }  // only if every language uses it
   ],
   "id": "idWAA6PTVA"
 }
 ```
 
 - `hide` is a rendering hint: `"straight"` means “this glyph has an italic-only form; hide it when rendering in upright style,” and vice versa. Empty string means no restriction.
-- `languages` lists every language whose charset contains this codepoint. If all enabled languages contain it, an extra `{"name": "All"}` sentinel is appended.
+- `languages` lists every language whose charset contains this codepoint, plus each language's BCP 47 `language_tag`. If all enabled languages contain it, an extra `{"name": "All"}` sentinel is appended.
 - **`id` is regenerated on every build** (random 8-char suffix after `id`). Do not use it as a stable key across regenerations — use `(unicodes, local)` instead. It is intended for DOM keys in the site's React bundle.
 
 ## Unicode Private Use Area

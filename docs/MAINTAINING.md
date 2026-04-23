@@ -391,14 +391,13 @@ A running list of things that are known-imperfect and should be addressed when s
 
 1. **Hardcoded locale list in `compile_languages.py`.** `locales = ['', '.ru', '.ba', '.bg', '.cv', '.sr', '.en']` should be auto-derived from the data (walk all enabled base files, collect unique render-tag values that appear on `&`-marked tokens) instead of being hand-maintained. Part of the Phase 2 initiative below.
 
-2. **BCP47 rollout Phase 2 — migrate `&`-token render source from `local` to `language_tag`.** Phase 1 (additive) shipped the `language_tag` field at the top level of each `site/<Language>.json` and on every `languages[i]` entry in `cyrillic_characters_lib.json`. Phase 2 is the semantic switch:
+2. **BCP47 rollout Phase 2 — migrate `&`-token render source from `local` to `language_tag`.** Phase 1 (additive) shipped the `language_tag` field at the top level of each `site/<Language>.json` and on every `languages[i]` entry in `cyrillic_characters_lib.json`. Phase 2 is the semantic switch, still pending:
    - In `compile_languages.py`, feed `data['language_tag']` into `cascadeAltsChar` and `filterCharacters` in place of `data['local']` for the `&`-branches (the plain / `+` branches keep using `local_default` from `languages.json`).
    - Remove `local` from all 79 base JSONs and from `reloadDescriptions.py`.
    - Auto-derive the hardcoded `locales` list (closes item 1 above).
    - Update `MAINTAINING.md` (this file) and `CONTRIBUTING*.md` to drop the `local` field from the schema description; `language_tag` becomes the required per-file identity tag.
-   - **Product cost:** Macedonian is the one file where `local != language_tag` AND uses `&`-tokens (`local: "sr"`, `language_tag: "mk"`). Today it renders `&б` via a borrowed Serbian `locl`; after Phase 2, `<span lang="mk">` falls back to default because PT Expert has no MKD `locl` yet, so the `&б` / `+б` pair visually collapses until Paratype ships MKD support.
 
-   Phase 2 therefore waits for either (a) font-side MKD support, or (b) an explicit product decision to accept the Macedonian regression.
+   **Macedonian workaround applied (2026-04-23):** Macedonian was the one file where `local != language_tag` AND uses `&`-tokens (`local: "sr"`, `language_tag: "mk"`), which would have made it fall back to default under `<span lang="mk">` once Phase 2 shipped (PT Expert has no `MKD` locl). Its `language_tag` has been flipped to `"sr"` in `library/cyrillic/base/Macedonian.json` and `cyrillic_library.json` so Phase 2 can proceed without a visual regression. Revert to `"mk"` once PT Expert ships `MKD` support.
 
 3. **Dead marker code in `compile_languages.py`.** The `marks` list contains `*`, `$`, `#`, `@`, `(`, `)`, `[`, `]`, `<`, `.alt` — none of which are used in any current source file:
    - `*`, `$`, `#`, `@`, `<` → their function was migrated to the `type` field in `glyphs_list`.

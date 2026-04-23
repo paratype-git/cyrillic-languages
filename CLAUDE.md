@@ -88,7 +88,7 @@ The Unicode PUA (`E000`–`F8FF`) is a blank range the Unicode Consortium leaves
 └── cyrillic-reference/
     ├── LICENSE                                    ← MIT (redundant w/ root; explicit for this subtree)
     ├── README.md                                  ← subproject docs — pipeline, calibration, manual re-render
-    ├── TODO.md                                    ← status notes; §1–§3 done, §4 (publish) + two follow-ups open
+    ├── TODO.md                                    ← status notes; stages 1–4 done, one BGR font gap open
     ├── tools/_catalog.py                          ← shared core: decompose, variants, language catalog (stdlib)
     ├── tools/generate.py                          ← stdlib; emits the MD tables below
     ├── tools/generate_svgs.py                     ← needs fontTools + FontDocTools; emits SVG diagrams

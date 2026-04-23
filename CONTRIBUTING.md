@@ -42,17 +42,13 @@ One file per language, named after the English name of the language, e.g. `Avar.
 | `name_eng` | string | English name of the language. Must match the filename (without `.json`). |
 | `name_rus` | string | Russian name of the language. |
 | `local` | string | OpenType locale tag used to switch on localized glyph forms for this language. Allowed values today: `ru` (default), `ba` (Bashkir), `bg` (Bulgarian), `cv` (Chuvash), `sr` (Serbian). If your language needs a new locale, open an issue — adding one requires code changes. |
+| `language_tag` | string | BCP 47 language tag identifying this language (ISO 639-1 or -3, sometimes with a region subtag — e.g. `ab`, `bg`, `bua`, `ro-MD`). Every current file has one; consult `cyrillic-reference/language-tags.json` for the established values. |
 | `language_group_rus` | array of strings | Language-family classification in Russian, from broadest to narrowest. Example: `["Индоевропейские языки", "Славянские языки"]`. |
+| `language_group_eng` | array of strings | English counterpart of `language_group_rus`. |
 | `alt_names_eng` | array of strings | English alternative / historical names of the language. Always a list, even if there is only one name. |
 | `description_rus` | string | Plain-text description of the language and its alphabet, in Russian. |
+| `description_eng` | string | Plain-text description in English. |
 | `glyphs_list` | array | The alphabet and related character sets. See [Glyph blocks](#glyph-blocks) below. |
-
-### Recommended fields
-
-| Field | Type | Description |
-|---|---|---|
-| `description_eng` | string | Plain-text description in English. About two-fifths of the existing files are still missing this — new contributions should fill it in. |
-| `language_group_eng` | array of strings | English counterpart of `language_group_rus`. |
 
 ### Text formatting
 
