@@ -169,87 +169,87 @@ Variants in `pan-cyrillic.json` carry `used_by[]`; the same variants in `languag
 
 ## Languages
 
-77 in-scope languages, sorted alphabetically by `name_eng`. Columns match the `meta` block of each per-language JSON (minus `code_pt`, `url`, `iso639_*`, `note`).
+77 in-scope languages, sorted alphabetically by `name_eng`. `default_language_tag` and `confidence` are omitted here to keep the table narrow — both live on every per-language JSON's `meta` block.
 
-| # | name_eng | name_rus | `language_tag` | `default_language_tag` | `feature_locl_tag` | `confidence` | chars | variants | file |
-| ---: | --- | --- | :---: | :---: | :---: | :---: | ---: | ---: | --- |
-| 1 | Abazin | Абазинский | `abq` | `ru` | `ABA` | high | 68 | 0 | [`Abazin.json`](languages/Abazin.json) |
-| 2 | Abkhazian | Абхазский | `ab` | `ru` | `ABK` | high | 92 | 0 | [`Abkhazian.json`](languages/Abkhazian.json) |
-| 3 | Adyge | Адыгейский | `ady` | `ru` | `ADY` | high | 68 | 0 | [`Adyge.json`](languages/Adyge.json) |
-| 4 | Aghul | Агульский | `agx` | `ru` | `AGU` | high | 68 | 0 | [`Aghul.json`](languages/Aghul.json) |
-| 5 | Altaic (Oirot) | Алтайский | `alt` | `ru` | `ALT` | high | 74 | 0 | [`Altaic_(Oirot).json`](<languages/Altaic_(Oirot).json>) |
-| 6 | Avar | Аварский | `av` | `ru` | `AVR` | high | 100 | 0 | [`Avar.json`](languages/Avar.json) |
-| 7 | Azeri | Азербайджанский | `az` | `ru` | `AZE` | high | 65 | 0 | [`Azeri.json`](languages/Azeri.json) |
-| 8 | Bashkir | Башкирский | `ba` | `ba` | `BSH` | high | 92 | 6 | [`Bashkir.json`](languages/Bashkir.json) |
-| 9 | Belarusian | Белорусский | `be` | `ru` | `BEL` | high | 67 | 0 | [`Belarusian.json`](languages/Belarusian.json) |
-| 10 | Bulgarian | Болгарский | `bg` | `bg` | `BGR` | high | 79 | 25 | [`Bulgarian.json`](languages/Bulgarian.json) |
-| 11 | Buryat | Бурятский | `bua` | `ru` | `BUR` | medium | 72 | 0 | [`Buryat.json`](languages/Buryat.json) |
-| 12 | Chechen | Чеченский | `ce` | `ru` | `CHE` | high | 82 | 0 | [`Chechen.json`](languages/Chechen.json) |
-| 13 | Chukchi | Чукотский | `ckt` | `ru` | `CHK` | medium | 73 | 0 | [`Chukchi.json`](languages/Chukchi.json) |
-| 14 | Chuvash | Чувашский | `cv` | `cv` | `CHU` | high | 82 | 2 | [`Chuvash.json`](languages/Chuvash.json) |
-| 15 | Dargwa | Даргинский | `dar` | `ru` | `DAR` | high | 68 | 0 | [`Dargwa.json`](languages/Dargwa.json) |
-| 16 | Dolgan | Долганский | `dlg` | `ru` | `—` | high | 74 | 0 | [`Dolgan.json`](languages/Dolgan.json) |
-| 17 | Dungan | Дунганский | `dng` | `ru` | `—` | high | 76 | 0 | [`Dungan.json`](languages/Dungan.json) |
-| 18 | Enets | Энецкий | `enf` | `ru` | `—` | medium | 75 | 0 | [`Enets.json`](languages/Enets.json) |
-| 19 | Eskimo (Yupik) | Эскимосский | `ess` | `ru` | `—` | high | 76 | 0 | [`Eskimo_(Yupik).json`](<languages/Eskimo_(Yupik).json>) |
-| 20 | Even (Lamut) | Эвенский | `eve` | `ru` | `EVN` | high | 106 | 0 | [`Even_(Lamut).json`](<languages/Even_(Lamut).json>) |
-| 21 | Evenki (Tungus) | Эвенкийский | `evn` | `ru` | `EVK` | high | 88 | 0 | [`Evenki_(Tungus).json`](<languages/Evenki_(Tungus).json>) |
-| 22 | Gagauz | Гагаузский | `gag` | `ru` | `GAG` | high | 78 | 0 | [`Gagauz.json`](languages/Gagauz.json) |
-| 23 | Ingush | Ингушский | `inh` | `ru` | `ING` | high | 72 | 0 | [`Ingush.json`](languages/Ingush.json) |
-| 24 | Itelmen | Ительменский | `itl` | `ru` | `—` | high | 86 | 0 | [`Itelmen.json`](languages/Itelmen.json) |
-| 25 | Kabardian | Кабардинский | `kbd` | `ru` | `KAB` | high | 68 | 0 | [`Kabardian.json`](languages/Kabardian.json) |
-| 26 | Kabardino-Cirkassian | Кабардино-Черкесский | `kbd` | `ru` | `KAB` | medium | 68 | 0 | [`Kabardino-Cirkassian.json`](languages/Kabardino-Cirkassian.json) |
-| 27 | Kalmyk | Калмыцкий | `xal` | `ru` | `KLM` | high | 84 | 0 | [`Kalmyk.json`](languages/Kalmyk.json) |
-| 28 | Karachay-Balkar | Карачаево-Балкарский | `krc` | `ru` | `KAR` | high | 82 | 0 | [`Karachay-Balkar.json`](languages/Karachay-Balkar.json) |
-| 29 | Karakalpak | Каракалпакский | `kaa` | `ru` | `KRK` | high | 82 | 0 | [`Karakalpak.json`](languages/Karakalpak.json) |
-| 30 | Kazakh | Казахский | `kk` | `ru` | `KAZ` | high | 84 | 0 | [`Kazakh.json`](languages/Kazakh.json) |
-| 31 | Khakass | Хакасский | `kjh` | `ru` | `KHK` | medium | 78 | 0 | [`Khakass.json`](languages/Khakass.json) |
-| 32 | Khanty | Хантыйский | `kca` | `ru` | `—` | low | 120 | 0 | [`Khanty.json`](languages/Khanty.json) |
-| 33 | Kirghiz | Киргизский | `ky` | `ru` | `KIR` | high | 78 | 0 | [`Kirghiz.json`](languages/Kirghiz.json) |
-| 34 | Komi-Permyak | Коми-пермяцкий | `koi` | `ru` | `KOP` | high | 74 | 0 | [`Komi-Permyak.json`](languages/Komi-Permyak.json) |
-| 35 | Komi-Zyrian | Коми-зырянский | `kpv` | `ru` | `KOZ` | high | 74 | 0 | [`Komi-Zyrian.json`](languages/Komi-Zyrian.json) |
-| 36 | Koryak | Корякский | `kpy` | `ru` | `—` | high | 70 | 0 | [`Koryak.json`](languages/Koryak.json) |
-| 37 | Kryashen Tatar | Кряшенский | `tat` | `ru` | `TAT` | low | 82 | 0 | [`Kryashen_Tatar.json`](languages/Kryashen_Tatar.json) |
-| 38 | Kumyk | Кумыкский | `kum` | `ru` | `KUM` | high | 83 | 0 | [`Kumyk.json`](languages/Kumyk.json) |
-| 39 | Kurdish | Курдский | `ku` | `ru` | `KUR` | medium | 62 | 0 | [`Kurdish.json`](languages/Kurdish.json) |
-| 40 | Lak | Лакский | `lbe` | `ru` | `LAK` | high | 68 | 0 | [`Lak.json`](languages/Lak.json) |
-| 41 | Lezgin | Лезгинский | `lez` | `ru` | `LEZ` | high | 68 | 0 | [`Lezgin.json`](languages/Lezgin.json) |
-| 42 | Macedonian | Македонский | `sr` | `sr` | `MKD` | high | 68 | 1 | [`Macedonian.json`](languages/Macedonian.json) |
-| 43 | Manci | Мансийский | `mns` | `ru` | `MAN` | high | 86 | 0 | [`Manci.json`](languages/Manci.json) |
-| 44 | Mari-high | Марийский (горный) | `mrj` | `ru` | `HMA` | high | 80 | 0 | [`Mari-high.json`](languages/Mari-high.json) |
-| 45 | Mari-low | Марийский (луговой) | `mhr` | `ru` | `LMA` | high | 82 | 0 | [`Mari-low.json`](languages/Mari-low.json) |
-| 46 | Moldavian | Молдавский | `ro-MD` | `ru` | `MOL` | high | 62 | 0 | [`Moldavian.json`](languages/Moldavian.json) |
-| 47 | Mongolian | Монгольский | `mn` | `ru` | `MNG` | high | 70 | 0 | [`Mongolian.json`](languages/Mongolian.json) |
-| 48 | Mordvin-Erzya | Мордовско-Эрзянский | `myv` | `ru` | `ERZ` | high | 66 | 0 | [`Mordvin-Erzya.json`](languages/Mordvin-Erzya.json) |
-| 49 | Mordvin-Moksha | Мордовско-Мокшанский | `mdf` | `ru` | `MOK` | high | 66 | 0 | [`Mordvin-Moksha.json`](languages/Mordvin-Moksha.json) |
-| 50 | Nanai | Нанайский | `gld` | `ru` | `—` | high | 90 | 0 | [`Nanai.json`](languages/Nanai.json) |
-| 51 | Negidal | Негидальский | `neg` | `ru` | `—` | high | 96 | 0 | [`Negidal.json`](languages/Negidal.json) |
-| 52 | Nenets (Yurak) | Ненецкий | `yrk` | `ru` | `—` | high | 75 | 0 | [`Nenets_(Yurak).json`](<languages/Nenets_(Yurak).json>) |
-| 53 | Nganasan | Нганасанский | `nio` | `ru` | `—` | high | 83 | 0 | [`Nganasan.json`](languages/Nganasan.json) |
-| 54 | Nivkh | Нивхский | `niv` | `ru` | `—` | high | 82 | 0 | [`Nivkh.json`](languages/Nivkh.json) |
-| 55 | Nogai | Ногайский | `nog` | `ru` | `NOG` | high | 66 | 0 | [`Nogai.json`](languages/Nogai.json) |
-| 56 | Ossetic | Осетинский | `os` | `ru` | `OSS` | high | 68 | 0 | [`Ossetic.json`](languages/Ossetic.json) |
-| 57 | Russian | Русский | `ru` | `ru` | `RUS` | high | 86 | 0 | [`Russian.json`](languages/Russian.json) |
-| 58 | Rutul | Рутульский | `rut` | `ru` | `—` | high | 68 | 0 | [`Rutul.json`](languages/Rutul.json) |
-| 59 | Saami Kildin | Кильдинский | `sjd` | `ru` | `KSM` | high | 107 | 0 | [`Saami_Kildin.json`](languages/Saami_Kildin.json) |
-| 60 | Selkup | Селькупский | `sel` | `ru` | `—` | high | 120 | 0 | [`Selkup.json`](languages/Selkup.json) |
-| 61 | Serbian | Сербский | `sr` | `sr` | `SRB` | high | 68 | 6 | [`Serbian.json`](languages/Serbian.json) |
-| 62 | Shor | Шорский | `cjs` | `ru` | `—` | high | 76 | 0 | [`Shor.json`](languages/Shor.json) |
-| 63 | Tabasaran | Табасаранский | `tab` | `ru` | `TAB` | high | 68 | 0 | [`Tabasaran.json`](languages/Tabasaran.json) |
-| 64 | Tadzhik | Таджикский | `tg` | `ru` | `TAJ` | high | 70 | 0 | [`Tadzhik.json`](languages/Tadzhik.json) |
-| 65 | Talysh | Талышский | `tly` | `ru` | `—` | high | 62 | 0 | [`Talysh.json`](languages/Talysh.json) |
-| 66 | Tat | Татский | `ttt` | `ru` | `—` | medium | 72 | 0 | [`Tat.json`](languages/Tat.json) |
-| 67 | Tatar | Татарский | `tt` | `ru` | `TAT` | high | 84 | 0 | [`Tatar.json`](languages/Tatar.json) |
-| 68 | Tofalar | Тофаларский | `kim` | `ru` | `—` | medium | 84 | 0 | [`Tofalar.json`](languages/Tofalar.json) |
-| 69 | Touva (Soyot) | Тувинский | `tyv` | `ru` | `TUV` | high | 72 | 0 | [`Touva_(Soyot).json`](<languages/Touva_(Soyot).json>) |
-| 70 | Tsakhur | Цахурский | `tkr` | `ru` | `—` | high | 68 | 0 | [`Tsakhur.json`](languages/Tsakhur.json) |
-| 71 | Turkmen | Туркменский | `tk` | `ru` | `TKM` | high | 76 | 0 | [`Turkmen.json`](languages/Turkmen.json) |
-| 72 | Udmurt | Удмуртский | `udm` | `ru` | `UDM` | high | 76 | 0 | [`Udmurt.json`](languages/Udmurt.json) |
-| 73 | Uighur | Уйгурский | `ug` | `ru` | `UYG` | high | 82 | 0 | [`Uighur.json`](languages/Uighur.json) |
-| 74 | Ukrainian | Украинский | `uk` | `ru` | `UKR` | high | 67 | 0 | [`Ukrainian.json`](languages/Ukrainian.json) |
-| 75 | Ulch | Ульчский | `ulc` | `ru` | `—` | high | 90 | 0 | [`Ulch.json`](languages/Ulch.json) |
-| 76 | Yakut | Якутский | `sah` | `ru` | `YAK` | high | 78 | 0 | [`Yakut.json`](languages/Yakut.json) |
-| 77 | Yukagir | Юкагирский | `ykg` | `ru` | `—` | medium | 87 | 0 | [`Yukagir.json`](languages/Yukagir.json) |
+| # | name_eng | name_rus | `language_tag` | `feature_locl_tag` | chars | variants | file |
+| ---: | --- | --- | :---: | :---: | ---: | ---: | --- |
+| 1 | Abazin | Абазинский | `abq` | `ABA` | 68 | 0 | [`Abazin.json`](languages/Abazin.json) |
+| 2 | Abkhazian | Абхазский | `ab` | `ABK` | 92 | 0 | [`Abkhazian.json`](languages/Abkhazian.json) |
+| 3 | Adyge | Адыгейский | `ady` | `ADY` | 68 | 0 | [`Adyge.json`](languages/Adyge.json) |
+| 4 | Aghul | Агульский | `agx` | `AGU` | 68 | 0 | [`Aghul.json`](languages/Aghul.json) |
+| 5 | Altaic (Oirot) | Алтайский | `alt` | `ALT` | 74 | 0 | [`Altaic_(Oirot).json`](<languages/Altaic_(Oirot).json>) |
+| 6 | Avar | Аварский | `av` | `AVR` | 100 | 0 | [`Avar.json`](languages/Avar.json) |
+| 7 | Azeri | Азербайджанский | `az` | `AZE` | 65 | 0 | [`Azeri.json`](languages/Azeri.json) |
+| 8 | Bashkir | Башкирский | `ba` | `BSH` | 92 | 6 | [`Bashkir.json`](languages/Bashkir.json) |
+| 9 | Belarusian | Белорусский | `be` | `BEL` | 67 | 0 | [`Belarusian.json`](languages/Belarusian.json) |
+| 10 | Bulgarian | Болгарский | `bg` | `BGR` | 79 | 25 | [`Bulgarian.json`](languages/Bulgarian.json) |
+| 11 | Buryat | Бурятский | `bua` | `BUR` | 72 | 0 | [`Buryat.json`](languages/Buryat.json) |
+| 12 | Chechen | Чеченский | `ce` | `CHE` | 82 | 0 | [`Chechen.json`](languages/Chechen.json) |
+| 13 | Chukchi | Чукотский | `ckt` | `CHK` | 73 | 0 | [`Chukchi.json`](languages/Chukchi.json) |
+| 14 | Chuvash | Чувашский | `cv` | `CHU` | 82 | 2 | [`Chuvash.json`](languages/Chuvash.json) |
+| 15 | Dargwa | Даргинский | `dar` | `DAR` | 68 | 0 | [`Dargwa.json`](languages/Dargwa.json) |
+| 16 | Dolgan | Долганский | `dlg` | `—` | 74 | 0 | [`Dolgan.json`](languages/Dolgan.json) |
+| 17 | Dungan | Дунганский | `dng` | `—` | 76 | 0 | [`Dungan.json`](languages/Dungan.json) |
+| 18 | Enets | Энецкий | `enf` | `—` | 75 | 0 | [`Enets.json`](languages/Enets.json) |
+| 19 | Eskimo (Yupik) | Эскимосский | `ess` | `—` | 76 | 0 | [`Eskimo_(Yupik).json`](<languages/Eskimo_(Yupik).json>) |
+| 20 | Even (Lamut) | Эвенский | `eve` | `EVN` | 106 | 0 | [`Even_(Lamut).json`](<languages/Even_(Lamut).json>) |
+| 21 | Evenki (Tungus) | Эвенкийский | `evn` | `EVK` | 88 | 0 | [`Evenki_(Tungus).json`](<languages/Evenki_(Tungus).json>) |
+| 22 | Gagauz | Гагаузский | `gag` | `GAG` | 78 | 0 | [`Gagauz.json`](languages/Gagauz.json) |
+| 23 | Ingush | Ингушский | `inh` | `ING` | 72 | 0 | [`Ingush.json`](languages/Ingush.json) |
+| 24 | Itelmen | Ительменский | `itl` | `—` | 86 | 0 | [`Itelmen.json`](languages/Itelmen.json) |
+| 25 | Kabardian | Кабардинский | `kbd` | `KAB` | 68 | 0 | [`Kabardian.json`](languages/Kabardian.json) |
+| 26 | Kabardino-Cirkassian | Кабардино-Черкесский | `kbd` | `KAB` | 68 | 0 | [`Kabardino-Cirkassian.json`](languages/Kabardino-Cirkassian.json) |
+| 27 | Kalmyk | Калмыцкий | `xal` | `KLM` | 84 | 0 | [`Kalmyk.json`](languages/Kalmyk.json) |
+| 28 | Karachay-Balkar | Карачаево-Балкарский | `krc` | `KAR` | 82 | 0 | [`Karachay-Balkar.json`](languages/Karachay-Balkar.json) |
+| 29 | Karakalpak | Каракалпакский | `kaa` | `KRK` | 82 | 0 | [`Karakalpak.json`](languages/Karakalpak.json) |
+| 30 | Kazakh | Казахский | `kk` | `KAZ` | 84 | 0 | [`Kazakh.json`](languages/Kazakh.json) |
+| 31 | Khakass | Хакасский | `kjh` | `KHK` | 78 | 0 | [`Khakass.json`](languages/Khakass.json) |
+| 32 | Khanty | Хантыйский | `kca` | `—` | 120 | 0 | [`Khanty.json`](languages/Khanty.json) |
+| 33 | Kirghiz | Киргизский | `ky` | `KIR` | 78 | 0 | [`Kirghiz.json`](languages/Kirghiz.json) |
+| 34 | Komi-Permyak | Коми-пермяцкий | `koi` | `KOP` | 74 | 0 | [`Komi-Permyak.json`](languages/Komi-Permyak.json) |
+| 35 | Komi-Zyrian | Коми-зырянский | `kpv` | `KOZ` | 74 | 0 | [`Komi-Zyrian.json`](languages/Komi-Zyrian.json) |
+| 36 | Koryak | Корякский | `kpy` | `—` | 70 | 0 | [`Koryak.json`](languages/Koryak.json) |
+| 37 | Kryashen Tatar | Кряшенский | `tat` | `TAT` | 82 | 0 | [`Kryashen_Tatar.json`](languages/Kryashen_Tatar.json) |
+| 38 | Kumyk | Кумыкский | `kum` | `KUM` | 83 | 0 | [`Kumyk.json`](languages/Kumyk.json) |
+| 39 | Kurdish | Курдский | `ku` | `KUR` | 62 | 0 | [`Kurdish.json`](languages/Kurdish.json) |
+| 40 | Lak | Лакский | `lbe` | `LAK` | 68 | 0 | [`Lak.json`](languages/Lak.json) |
+| 41 | Lezgin | Лезгинский | `lez` | `LEZ` | 68 | 0 | [`Lezgin.json`](languages/Lezgin.json) |
+| 42 | Macedonian | Македонский | `sr` | `MKD` | 68 | 1 | [`Macedonian.json`](languages/Macedonian.json) |
+| 43 | Manci | Мансийский | `mns` | `MAN` | 86 | 0 | [`Manci.json`](languages/Manci.json) |
+| 44 | Mari-high | Марийский (горный) | `mrj` | `HMA` | 80 | 0 | [`Mari-high.json`](languages/Mari-high.json) |
+| 45 | Mari-low | Марийский (луговой) | `mhr` | `LMA` | 82 | 0 | [`Mari-low.json`](languages/Mari-low.json) |
+| 46 | Moldavian | Молдавский | `ro-MD` | `MOL` | 62 | 0 | [`Moldavian.json`](languages/Moldavian.json) |
+| 47 | Mongolian | Монгольский | `mn` | `MNG` | 70 | 0 | [`Mongolian.json`](languages/Mongolian.json) |
+| 48 | Mordvin-Erzya | Мордовско-Эрзянский | `myv` | `ERZ` | 66 | 0 | [`Mordvin-Erzya.json`](languages/Mordvin-Erzya.json) |
+| 49 | Mordvin-Moksha | Мордовско-Мокшанский | `mdf` | `MOK` | 66 | 0 | [`Mordvin-Moksha.json`](languages/Mordvin-Moksha.json) |
+| 50 | Nanai | Нанайский | `gld` | `—` | 90 | 0 | [`Nanai.json`](languages/Nanai.json) |
+| 51 | Negidal | Негидальский | `neg` | `—` | 96 | 0 | [`Negidal.json`](languages/Negidal.json) |
+| 52 | Nenets (Yurak) | Ненецкий | `yrk` | `—` | 75 | 0 | [`Nenets_(Yurak).json`](<languages/Nenets_(Yurak).json>) |
+| 53 | Nganasan | Нганасанский | `nio` | `—` | 83 | 0 | [`Nganasan.json`](languages/Nganasan.json) |
+| 54 | Nivkh | Нивхский | `niv` | `—` | 82 | 0 | [`Nivkh.json`](languages/Nivkh.json) |
+| 55 | Nogai | Ногайский | `nog` | `NOG` | 66 | 0 | [`Nogai.json`](languages/Nogai.json) |
+| 56 | Ossetic | Осетинский | `os` | `OSS` | 68 | 0 | [`Ossetic.json`](languages/Ossetic.json) |
+| 57 | Russian | Русский | `ru` | `RUS` | 86 | 0 | [`Russian.json`](languages/Russian.json) |
+| 58 | Rutul | Рутульский | `rut` | `—` | 68 | 0 | [`Rutul.json`](languages/Rutul.json) |
+| 59 | Saami Kildin | Кильдинский | `sjd` | `KSM` | 107 | 0 | [`Saami_Kildin.json`](languages/Saami_Kildin.json) |
+| 60 | Selkup | Селькупский | `sel` | `—` | 120 | 0 | [`Selkup.json`](languages/Selkup.json) |
+| 61 | Serbian | Сербский | `sr` | `SRB` | 68 | 6 | [`Serbian.json`](languages/Serbian.json) |
+| 62 | Shor | Шорский | `cjs` | `—` | 76 | 0 | [`Shor.json`](languages/Shor.json) |
+| 63 | Tabasaran | Табасаранский | `tab` | `TAB` | 68 | 0 | [`Tabasaran.json`](languages/Tabasaran.json) |
+| 64 | Tadzhik | Таджикский | `tg` | `TAJ` | 70 | 0 | [`Tadzhik.json`](languages/Tadzhik.json) |
+| 65 | Talysh | Талышский | `tly` | `—` | 62 | 0 | [`Talysh.json`](languages/Talysh.json) |
+| 66 | Tat | Татский | `ttt` | `—` | 72 | 0 | [`Tat.json`](languages/Tat.json) |
+| 67 | Tatar | Татарский | `tt` | `TAT` | 84 | 0 | [`Tatar.json`](languages/Tatar.json) |
+| 68 | Tofalar | Тофаларский | `kim` | `—` | 84 | 0 | [`Tofalar.json`](languages/Tofalar.json) |
+| 69 | Touva (Soyot) | Тувинский | `tyv` | `TUV` | 72 | 0 | [`Touva_(Soyot).json`](<languages/Touva_(Soyot).json>) |
+| 70 | Tsakhur | Цахурский | `tkr` | `—` | 68 | 0 | [`Tsakhur.json`](languages/Tsakhur.json) |
+| 71 | Turkmen | Туркменский | `tk` | `TKM` | 76 | 0 | [`Turkmen.json`](languages/Turkmen.json) |
+| 72 | Udmurt | Удмуртский | `udm` | `UDM` | 76 | 0 | [`Udmurt.json`](languages/Udmurt.json) |
+| 73 | Uighur | Уйгурский | `ug` | `UYG` | 82 | 0 | [`Uighur.json`](languages/Uighur.json) |
+| 74 | Ukrainian | Украинский | `uk` | `UKR` | 67 | 0 | [`Ukrainian.json`](languages/Ukrainian.json) |
+| 75 | Ulch | Ульчский | `ulc` | `—` | 90 | 0 | [`Ulch.json`](languages/Ulch.json) |
+| 76 | Yakut | Якутский | `sah` | `YAK` | 78 | 0 | [`Yakut.json`](languages/Yakut.json) |
+| 77 | Yukagir | Юкагирский | `ykg` | `—` | 87 | 0 | [`Yukagir.json`](languages/Yukagir.json) |
 
 ## Generator inputs and invariants
 
