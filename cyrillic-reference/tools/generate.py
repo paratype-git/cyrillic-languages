@@ -86,6 +86,19 @@ def _diagram_cell_both(subdir: str, cp_hex: str, img_width: int, stacked: bool) 
     return f"{sans_img}{separator}{serif_img}<br>{txt_links}"
 
 
+def _codepoint_anchor(cp_hex: str) -> str:
+    return f'<a id="cp-{cp_hex}"></a>'
+
+
+def _variants_file_link(cp_hex: str) -> str:
+    return f'[↗](glyph-variants.md#cp-{cp_hex} "locl variants")'
+
+
+def _characters_file_link(cp_hex: str, side: str) -> str:
+    target = "characters-uppercase.md" if side == "uppercase" else "characters-lowercase.md"
+    return f"[{cp_hex}]({target}#cp-{cp_hex})"
+
+
 def render_glyph_variants_md(rows: list[dict]) -> str:
     """Render the variants table — locl (`&`) shape variants only.
 
@@ -157,13 +170,16 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
     out.append("")
     out.append("| # | Codepoint | Case | Locale | Style | Diagram (Sans / Serif) | Languages |")
     out.append("| ---: | --- | --- | --- | --- | :---: | --- |")
+    # Anchor the first variant row for each codepoint; later rows for the
+    # same codepoint keep the back-link but don't duplicate the anchor id.
+    anchored: set[str] = set()
     for i, r in enumerate(rows, start=1):
         # Variant diagrams are always 2 boxes (default → variant): the row
         # IS a shape transformation, so stack Sans above Serif the same
         # way we stack multi-box decompositions in the main tables.
         diagram_cell = ""
-        if r["locale"] and r["codepoints"]:
-            cp_hex = r["codepoints"][0].upper()
+        cp_hex = r["codepoints"][0].upper() if r["codepoints"] else ""
+        if r["locale"] and cp_hex:
             stem = f"{cp_hex}.{r['locale']}"
             sans_img = (
                 f'<img src="svg/Sans/variants/{stem}.svg" width="{VARIANT_DIAGRAM_WIDTH}" '
@@ -178,8 +194,18 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
                 f"[txt serif](glyphplotter/Serif/variants/{stem}.txt)"
             )
             diagram_cell = f"{sans_img}<br>{serif_img}<br>{txt_links}"
+        # Codepoint cell links back to the matching row in characters-*.md,
+        # anchored the first time each codepoint appears so the character
+        # table's ↗ link lands on that row.
+        cp_cell = format_unicodes(r["codepoints"])
+        if cp_hex:
+            anchor = ""
+            if cp_hex not in anchored:
+                anchor = _codepoint_anchor(cp_hex)
+                anchored.add(cp_hex)
+            cp_cell = f"{anchor}{_characters_file_link(cp_hex, r['case'])}"
         out.append(
-            f"| {i} | {format_unicodes(r['codepoints'])} | {r['case']} | "
+            f"| {i} | {cp_cell} | {r['case']} | "
             f"{r['locale']} | {r['style']} | {diagram_cell} | "
             f"{', '.join(r['languages'])} |"
         )
@@ -187,9 +213,16 @@ def render_glyph_variants_md(rows: list[dict]) -> str:
     return "\n".join(out)
 
 
-def render_characters_md(side: str, entries: list[dict]) -> str:
-    """Render the master table for either uppercase or lowercase characters."""
+def render_characters_md(side: str, entries: list[dict],
+                          variant_codepoints: set[str] | None = None) -> str:
+    """Render the master table for either uppercase or lowercase characters.
+
+    `variant_codepoints` is the set of codepoint hex strings (for this side)
+    that have at least one locl variant — used to add a `↗` link to
+    `glyph-variants.md` from the Codepoint cell.
+    """
     case = "upper" if side == "uppercase" else "lower"
+    variant_codepoints = variant_codepoints or set()
 
     pua_count = sum(
         1 for e in entries
@@ -293,8 +326,17 @@ def render_characters_md(side: str, entries: list[dict]) -> str:
             )
         else:
             diagram_cell = ""
+        # Codepoint cell: anchor for inbound links from glyph-variants.md,
+        # plus a small ↗ link to the variants table when this codepoint has
+        # at least one locl variant.
+        cp_hex_main = unicodes[0].upper() if unicodes else ""
+        cp_cell = format_unicodes(unicodes)
+        if cp_hex_main:
+            cp_cell = f"{_codepoint_anchor(cp_hex_main)}{cp_cell}"
+            if cp_hex_main in variant_codepoints:
+                cp_cell = f"{cp_cell} {_variants_file_link(cp_hex_main)}"
         out.append(
-            f"| {i} | {sign} | {format_unicodes(unicodes)} | "
+            f"| {i} | {sign} | {cp_cell} | "
             f"{description} | {pua_flag} | {decomp_cell} | "
             f"{diagram_cell} | {locales} |"
         )
@@ -331,14 +373,19 @@ def main(argv: list[str] | None = None) -> int:
     upper = dedupe_by_codepoints(pan.get("uppercase_sorted_by_unicodes", []))
     lower = dedupe_by_codepoints(pan.get("lowercase_sorted_by_unicodes", []))
 
+    variants = aggregate_variants(collect_glyph_variants(data_root, LANGUAGES_IN_SCOPE))
+    variant_cps_uc = {v["codepoints"][0].upper() for v in variants
+                      if v["codepoints"] and v["case"] == "uppercase"}
+    variant_cps_lc = {v["codepoints"][0].upper() for v in variants
+                      if v["codepoints"] and v["case"] == "lowercase"}
+
     (args.out / "characters-uppercase.md").write_text(
-        render_characters_md("uppercase", upper), encoding="utf-8"
+        render_characters_md("uppercase", upper, variant_cps_uc), encoding="utf-8"
     )
     (args.out / "characters-lowercase.md").write_text(
-        render_characters_md("lowercase", lower), encoding="utf-8"
+        render_characters_md("lowercase", lower, variant_cps_lc), encoding="utf-8"
     )
 
-    variants = aggregate_variants(collect_glyph_variants(data_root, LANGUAGES_IN_SCOPE))
     (args.out / "glyph-variants.md").write_text(
         render_glyph_variants_md(variants), encoding="utf-8"
     )
