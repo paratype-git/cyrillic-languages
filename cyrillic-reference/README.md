@@ -76,6 +76,14 @@ The `Description` field in the pan-Cyrillic summary follows Unicode naming: e.g.
 
 76 out of 210 composed codepoints have accents with no standard combining-mark equivalent: **DESCENDER**, **HOOK**, **TAIL**, **STROKE**, **BAR**, **TICK**, **UPTURN**, **MIDDLE HOOK**, **VERTICAL STROKE**, and the **STROKE AND HOOK** pair on Ӻ/ӻ. These are structural outline modifications, not combining marks — no standard Unicode sequence expresses them. They render as a single glyph with the original codepoint preserved and are distinguished in the tables by an empty `Decomposition` cell.
 
+### Soft_Dotted bases (lowercase `ї`)
+
+Canonical NFD for lowercase `ї` (U+0457) yields `U+0456 + U+0308` — Cyrillic small letter Byelorussian-Ukrainian `і` plus combining diaeresis. `U+0456` carries the Unicode [`Soft_Dotted`](https://www.unicode.org/reports/tr44/#Soft_Dotted) property: a conforming shaper drops the letter's inherent dot when a combining mark above is attached, so the pair is supposed to render as a dotless `ı` with the diaeresis on top. PT Expert ships a dotless-i glyph at `U+0131` (glyph name `dotlessi`) for renderers that do not honour `Soft_Dotted` automatically — substitute `U+0131` for `U+0456` in that one case when rendering without a shaper.
+
+The `Decomposition` column (and the `decomposition` field in the machine-readable JSON) carries the canonical Unicode pair — that is the interchange form. Any dotless-i substitution is a rendering concern, not a data concern.
+
+Capital `Ї` (U+0407) decomposes to `U+0406 + U+0308` and has no such issue: `U+0406` (І) is visually dotless by design.
+
 ### Locl/style variants
 
 39 rows in `glyph-variants.md` cover glyphs that share a codepoint with a base letter but render as a different shape under an OpenType feature:
