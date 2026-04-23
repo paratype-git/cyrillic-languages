@@ -1,6 +1,7 @@
 .idea
 .DS_Store
 .venv
+__pycache__/
 
 # Site engine (compiled React bundle + fonts + landing pages).
 # Production lives in the paratype/paratype.github.io repository;

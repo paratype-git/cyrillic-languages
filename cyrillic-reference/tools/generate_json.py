@@ -1,241 +1,173 @@
 #!/usr/bin/env python3
 """Emit per-language JSON deliverables + pan-Cyrillic reference JSON.
 
-Reads:
-  cyrillic-reference/characters-uppercase.md   ← pan character catalog (source of truth for descriptions, decomposition, svg paths)
-  cyrillic-reference/characters-lowercase.md
-  cyrillic-reference/glyph-variants.md         ← locl-variant catalog
-  cyrillic-reference/language-tags.json        ← BCP47 / OT / ISO enrichment
-  cyrillic-languages/library/cyrillic/cyrillic_library.json
-  cyrillic-languages/library/cyrillic/base/<Language>.json (×79)
+Reads (all via _catalog):
+  cyrillic-languages/site/cyrillic/cyrillic_characters_lib.json     pan catalog
+  cyrillic-languages/library/cyrillic/base/<Language>.json         per-language tokens
+  cyrillic-languages/library/cyrillic/cyrillic_library.json         registry
+  cyrillic-reference/language-tags.json                             BCP 47 / OT / ISO
 
 Writes:
   cyrillic-reference/data/pan-cyrillic.json
-  cyrillic-reference/data/languages/<Language>.json (×77 — Kaitag, Uzbek skipped)
+  cyrillic-reference/data/languages/<Name>.json (×77 — Kaitag, Uzbek skipped)
+
+Independent of the Markdown tables — produces JSON directly from the compile
+pipeline's output plus the raw base files for variant markers.
 """
 
 from __future__ import annotations
 
 import json
-import re
 import sys
 import urllib.parse
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))  # noqa: E402
+
+from _catalog import (
+    LANGUAGES_IN_SCOPE,
+    LOCL_FEATURE,
+    SKIP_LANGUAGES,
+    aggregate_variants,
+    collect_glyph_variants,
+    decompose,
+    dedupe_by_codepoints,
+    extract_language_codepoints,
+    load_pan_cyrillic,
+    resolve_data_root,
+)
+
 ROOT = Path(__file__).resolve().parents[1]
 REPO = ROOT.parent
-REF = ROOT
 LANGS_REPO = REPO / "cyrillic-languages"
 BASE_DIR = LANGS_REPO / "library" / "cyrillic" / "base"
 LIBRARY_JSON = LANGS_REPO / "library" / "cyrillic" / "cyrillic_library.json"
-TAGS_JSON = REF / "language-tags.json"
+TAGS_JSON = ROOT / "language-tags.json"
 
-UC_MD = REF / "characters-uppercase.md"
-LC_MD = REF / "characters-lowercase.md"
-VAR_MD = REF / "glyph-variants.md"
-
-OUT_DIR = REF / "data"
+OUT_DIR = ROOT / "data"
 OUT_LANGS_DIR = OUT_DIR / "languages"
 OUT_PAN = OUT_DIR / "pan-cyrillic.json"
 
-SKIP_LANGUAGES = {"Kaitag", "Uzbek"}
 
-# 4-letter OT feature tags for the 4 locl-bearing locales. The font exposes
-# locl substitutions keyed by these OT tags. Macedonian is patched to sr
-# (see memory: macedonian_language_tag_patch); MKD locl does not exist.
-LOCL_FEATURE = {
-    "bg": "BGR ",
-    "sr": "SRB ",
-    "ba": "BSH ",
-    "cv": "CHU ",
-}
+# ─── diagram paths ─────────────────────────────────────────────────────────
 
-
-# ─── MD parsing ────────────────────────────────────────────────────────────
-
-def parse_md_table(path: Path, columns: list[str]) -> list[dict]:
-    rows: list[dict] = []
-    header: list[str] | None = None
-    for line in path.read_text(encoding="utf-8").splitlines():
-        if not line.startswith("|"):
-            continue
-        cells = [c.strip() for c in line.strip().strip("|").split("|")]
-        if header is None:
-            if cells and cells[0] == "#":
-                header = cells
-            continue
-        if set("".join(cells)) <= {"-", ":", " "}:
-            continue
-        row = dict(zip(header, cells))
-        rows.append({col: row.get(col, "") for col in columns})
-    return rows
-
-
-def parse_decomposition(s: str) -> list[str]:
-    if not s.strip():
-        return []
-    return [p.strip().upper() for p in s.split("+") if p.strip()]
-
-
-def case_dir(case: str) -> str:
+def _case_dir(case: str) -> str:
     if case == "uppercase":
         return "uc"
     if case == "lowercase":
         return "lc"
-    return "lc"  # common / caseless share the lc SVG path in current repo
+    return "lc"  # common (U+02BC) shares the lc SVG/plotter files
 
 
-def build_pan_catalog() -> dict[str, dict]:
-    """{codepoint: {character, codepoint, decomposition, case, description, diagram}}"""
+def diagram_for_character(cp: str, case: str) -> dict:
+    cdir = _case_dir(case)
+    return {
+        "svg":     {"sans":  f"svg/Sans/{cdir}/{cp}.svg",
+                    "serif": f"svg/Serif/{cdir}/{cp}.svg"},
+        "plotter": {"sans":  f"glyphplotter/Sans/{cdir}/{cp}.txt",
+                    "serif": f"glyphplotter/Serif/{cdir}/{cp}.txt"},
+    }
+
+
+def diagram_for_variant(cp: str, locale: str) -> dict:
+    stem = f"{cp}.{locale}"
+    return {
+        "svg":     {"sans":  f"svg/Sans/variants/{stem}.svg",
+                    "serif": f"svg/Serif/variants/{stem}.svg"},
+        "plotter": {"sans":  f"glyphplotter/Sans/variants/{stem}.txt",
+                    "serif": f"glyphplotter/Serif/variants/{stem}.txt"},
+    }
+
+
+# ─── pan catalog (codepoint → base record) ─────────────────────────────────
+
+def build_pan_by_cp(pan: dict) -> dict[str, dict]:
+    """Build {codepoint_hex: base_record} from the pan-script summary.
+
+    base_record fields: character, codepoint, decomposition, case,
+    description, diagram. Decomposition runs through the _catalog.decompose
+    (Paratype-aware NFD); structural composites and plain letters get `[]`.
+
+    U+02BC (modifier apostrophe) appears in both uc and lc lists; we keep
+    the first emission and mark it case="common".
+    """
     catalog: dict[str, dict] = {}
-    cols = ["Sign", "Codepoint", "Description", "PUA", "Decomposition", "Locales"]
-
-    for md_path, case in [(UC_MD, "uppercase"), (LC_MD, "lowercase")]:
-        for r in parse_md_table(md_path, cols):
-            cp = r["Codepoint"].upper().strip()
-            if not cp:
+    for list_key, case in [
+        ("uppercase_sorted_by_unicodes", "uppercase"),
+        ("lowercase_sorted_by_unicodes", "lowercase"),
+    ]:
+        for entry in dedupe_by_codepoints(pan.get(list_key, [])):
+            unicodes = entry.get("unicodes") or []
+            if not unicodes:
                 continue
-            effective_case = "common" if cp == "02BC" else case
-            # apostrophe shows up in both files; keep the first emitted entry
+            cp = unicodes[0].upper()
             if cp in catalog:
                 continue
-            cdir = case_dir(effective_case)
+            effective_case = "common" if cp == "02BC" else case
+            decomp_case = "upper" if case == "uppercase" else "lower"
+            seq = decompose(
+                entry.get("description", ""),
+                decomp_case,
+                sign=entry.get("sign", ""),
+            )
+            decomposition = [f"{c:04X}" for c in seq] if seq else []
             catalog[cp] = {
-                "character": r["Sign"],
+                "character": entry.get("sign", ""),
                 "codepoint": cp,
-                "decomposition": parse_decomposition(r["Decomposition"]),
+                "decomposition": decomposition,
                 "case": effective_case,
-                "description": r["Description"],
-                "diagram": {
-                    "svg": {
-                        "sans":  f"svg/Sans/{cdir}/{cp}.svg",
-                        "serif": f"svg/Serif/{cdir}/{cp}.svg",
-                    },
-                    "plotter": {
-                        "sans":  f"glyphplotter/Sans/{cdir}/{cp}.txt",
-                        "serif": f"glyphplotter/Serif/{cdir}/{cp}.txt",
-                    },
-                },
+                "description": entry.get("description", ""),
+                "diagram": diagram_for_character(cp, effective_case),
             }
     return catalog
 
 
-def build_variants_catalog() -> dict[str, list[dict]]:
-    """{codepoint: [variant_dict, ...]} from glyph-variants.md."""
-    cols = ["Codepoint", "Case", "Locale", "Style", "Languages"]
+def reverse_index_from_per_lang(
+        per_lang_codepoints: dict[str, dict[str, dict]]) -> dict[str, list[str]]:
+    """{codepoint_hex: sorted list of language names that hold this codepoint
+    as a standalone character in their `characters[]` list}.
+
+    Derived from the same extract as per-language output so the inverse
+    invariant holds: cp ∈ lang.characters[] ↔ lang ∈ pan[cp].used_by[].
+    Languages that reference a codepoint only inside a multi-char digraph
+    token (e.g. Abkhazian's `Ӡʼ` → 02BC) don't count here — the codepoint
+    is filtered out of their per-language characters[].
+    """
+    out: dict[str, set[str]] = {}
+    for lang, cps in per_lang_codepoints.items():
+        for cp in cps:
+            out.setdefault(cp, set()).add(lang)
+    return {cp: sorted(names) for cp, names in out.items()}
+
+
+# ─── variants ──────────────────────────────────────────────────────────────
+
+def build_variants_by_cp(data_root: Path, in_scope: list[str],
+                          case_by_cp: dict[str, str]) -> dict[str, list[dict]]:
+    """{codepoint_hex: [variant_entry, ...]}.
+
+    Aggregates `&` marker tokens from in-scope base files. Each entry
+    carries kind, language_tag (BCP 47 == the OT locale trigger after the
+    Macedonian patch), feature_locl_tag, style, diagram, used_by.
+    """
+    raw = aggregate_variants(collect_glyph_variants(data_root, in_scope))
     out: dict[str, list[dict]] = {}
-    for r in parse_md_table(VAR_MD, cols):
-        cp = r["Codepoint"].upper().strip()
-        locale = r["Locale"].strip()
-        style = r["Style"].strip() or "any"
-        langs = [x.strip() for x in r["Languages"].split(",") if x.strip()]
-        variant_base = f"{cp}.{locale}"
+    for v in raw:
+        cp = v["codepoints"][0].upper()
         out.setdefault(cp, []).append({
             "kind": "locl",
-            "language_tag": locale,
-            "feature_locl_tag": LOCL_FEATURE.get(locale, ""),
-            "style": style,
-            "diagram": {
-                "svg": {
-                    "sans":  f"svg/Sans/variants/{variant_base}.svg",
-                    "serif": f"svg/Serif/variants/{variant_base}.svg",
-                },
-                "plotter": {
-                    "sans":  f"glyphplotter/Sans/variants/{variant_base}.txt",
-                    "serif": f"glyphplotter/Serif/variants/{variant_base}.txt",
-                },
-            },
-            "used_by": langs,
+            "language_tag": v["locale"],
+            "feature_locl_tag": LOCL_FEATURE.get(v["locale"], ""),
+            "style": v["style"],
+            "diagram": diagram_for_variant(cp, v["locale"]),
+            "used_by": list(v["languages"]),  # already sorted by aggregate_variants
         })
     return out
 
 
-# ─── per-language codepoint extraction ─────────────────────────────────────
+# ─── per-language & pan output assembly ────────────────────────────────────
 
-_ESCAPE_RE = re.compile(r"^!([0-9A-Fa-f]{4,6})$")
-
-
-def token_to_codepoint(tok: str) -> str | None:
-    """Resolve a glyphs_list token (already stripped of leading +/&/: markers)
-    to a single-codepoint hex, or None if it's a digraph / unparseable.
-
-    Accepts:
-      - single Unicode character  → ord → 4-hex
-      - escape form "!FXXX" / "!FXXXX"
-      - style-qualified single char "г.ita" / "Д.str"
-    Rejects multi-char tokens without the style suffix (digraphs).
-    """
-    if not tok:
-        return None
-    m = _ESCAPE_RE.match(tok)
-    if m:
-        return m.group(1).upper().zfill(4)
-    # strip known style suffix
-    base = tok
-    if "." in tok:
-        head, sep, suffix = tok.partition(".")
-        if suffix in ("ita", "str"):
-            base = head
-        else:
-            return None  # unknown suffix → skip
-    if len(base) == 1:
-        return f"{ord(base):04X}"
-    return None
-
-
-def extract_language_codepoints(base: dict) -> dict[str, dict]:
-    """{codepoint: {case, categories: set[str]}} for this language."""
-    out: dict[str, dict] = {}
-    for block in base.get("glyphs_list", []):
-        block_type = block.get("type", "alphabet")
-        for field, case_name in [("uppercase", "uppercase"), ("lowercase", "lowercase")]:
-            s = block.get(field, "") or ""
-            for tok in s.split():
-                if not tok:
-                    continue
-                if tok[0] == ":":
-                    continue  # explicit digraph marker
-                if tok[0] in "+&":
-                    rest = tok[1:]
-                else:
-                    rest = tok
-                cp = token_to_codepoint(rest)
-                if cp is None:
-                    continue
-                entry = out.setdefault(cp, {"case": case_name, "categories": set()})
-                entry["categories"].add(block_type)
-    return out
-
-
-# ─── output assembly ───────────────────────────────────────────────────────
-
-def char_entry_for_language(cp: str, cat_info: dict, pan_entry: dict,
-                             variants_for_cp: list[dict],
-                             language_name: str) -> dict:
-    out = {
-        "character": pan_entry["character"],
-        "codepoint": pan_entry["codepoint"],
-        "decomposition": list(pan_entry["decomposition"]),
-        "case": pan_entry["case"],
-        "description": pan_entry["description"],
-        "categories": sorted(cat_info["categories"]),
-        "diagram": pan_entry["diagram"],
-        "variants": [],
-    }
-    for v in variants_for_cp:
-        if language_name in v["used_by"]:
-            out["variants"].append({
-                "kind": v["kind"],
-                "language_tag": v["language_tag"],
-                "feature_locl_tag": v["feature_locl_tag"],
-                "style": v["style"],
-                "diagram": v["diagram"],
-            })
-    return out
-
-
-def char_entry_for_pan(cp: str, pan_entry: dict,
-                        variants_for_cp: list[dict],
+def char_entry_for_pan(pan_entry: dict, variants: list[dict],
                         used_by: list[str]) -> dict:
     return {
         "character": pan_entry["character"],
@@ -244,18 +176,34 @@ def char_entry_for_pan(cp: str, pan_entry: dict,
         "case": pan_entry["case"],
         "description": pan_entry["description"],
         "diagram": pan_entry["diagram"],
-        "variants": [
-            {
-                "kind": v["kind"],
-                "language_tag": v["language_tag"],
-                "feature_locl_tag": v["feature_locl_tag"],
-                "style": v["style"],
-                "diagram": v["diagram"],
-                "used_by": sorted(v["used_by"]),
-            }
-            for v in variants_for_cp
-        ],
-        "used_by": sorted(used_by),
+        "variants": variants,
+        "used_by": used_by,
+    }
+
+
+def char_entry_for_language(pan_entry: dict, categories: list[str],
+                             language_name: str,
+                             cp_variants: list[dict]) -> dict:
+    """Per-language entry: pan base + `categories` + variants filtered to this lang."""
+    my_variants = [
+        {
+            "kind": v["kind"],
+            "language_tag": v["language_tag"],
+            "feature_locl_tag": v["feature_locl_tag"],
+            "style": v["style"],
+            "diagram": v["diagram"],
+        }
+        for v in cp_variants if language_name in v["used_by"]
+    ]
+    return {
+        "character": pan_entry["character"],
+        "codepoint": pan_entry["codepoint"],
+        "decomposition": list(pan_entry["decomposition"]),
+        "case": pan_entry["case"],
+        "description": pan_entry["description"],
+        "categories": categories,
+        "diagram": pan_entry["diagram"],
+        "variants": my_variants,
     }
 
 
@@ -274,43 +222,45 @@ def coerce_code_pt(v) -> int | str | None:
 # ─── main ──────────────────────────────────────────────────────────────────
 
 def main() -> int:
+    data_root = resolve_data_root(LANGS_REPO)
+
     library_list = json.loads(LIBRARY_JSON.read_text(encoding="utf-8"))
     tags_list = json.loads(TAGS_JSON.read_text(encoding="utf-8"))
     registry = {x["name_eng"]: x for x in library_list}
     tags = {x["name_eng"]: x for x in tags_list}
 
-    pan_catalog = build_pan_catalog()
-    variants_by_cp = build_variants_catalog()
+    pan = load_pan_cyrillic(data_root)
+    pan_by_cp = build_pan_by_cp(pan)
 
-    # Pass 1: per-language codepoint extraction + reverse index
-    enabled_in_scope = [x for x in library_list
-                        if x.get("enable") and x["name_eng"] not in SKIP_LANGUAGES]
+    in_scope = [n for n in LANGUAGES_IN_SCOPE if n not in SKIP_LANGUAGES]
 
+    # First pass: per-language codepoint extraction. Results are reused for
+    # both per-language files and the pan used_by[] reverse index.
     per_lang_codepoints: dict[str, dict[str, dict]] = {}
-    cp_to_langs: dict[str, list[str]] = {}
-    for reg in enabled_in_scope:
-        name = reg["name_eng"]
+    for name in in_scope:
         base_path = BASE_DIR / f"{name}.json"
         if not base_path.exists():
             print(f"warning: missing base file {base_path}", file=sys.stderr)
             continue
         base = json.loads(base_path.read_text(encoding="utf-8"))
-        codepoints = extract_language_codepoints(base)
-        per_lang_codepoints[name] = codepoints
-        for cp in codepoints:
-            cp_to_langs.setdefault(cp, []).append(name)
+        per_lang_codepoints[name] = extract_language_codepoints(base)
 
-    # Pass 2: write pan-cyrillic
+    pan_used_by = reverse_index_from_per_lang(per_lang_codepoints)
+
+    case_by_cp = {cp: rec["case"] for cp, rec in pan_by_cp.items()}
+    variants_by_cp = build_variants_by_cp(data_root, in_scope, case_by_cp)
+
     OUT_DIR.mkdir(exist_ok=True)
     OUT_LANGS_DIR.mkdir(exist_ok=True)
 
+    # ─── pan-cyrillic.json ────────────────────────────────────────────────
     pan_characters = []
-    for cp in sorted(pan_catalog.keys(), key=lambda x: int(x, 16)):
-        used_by = cp_to_langs.get(cp, [])
+    for cp in sorted(pan_by_cp.keys(), key=lambda x: int(x, 16)):
+        used_by = pan_used_by.get(cp, [])
         if not used_by:
-            continue  # codepoint in MD but not used by any in-scope language
+            continue  # codepoint present in pan but not used by any in-scope language
         pan_characters.append(char_entry_for_pan(
-            cp, pan_catalog[cp], variants_by_cp.get(cp, []), used_by
+            pan_by_cp[cp], variants_by_cp.get(cp, []), used_by,
         ))
 
     pan_out = {
@@ -318,7 +268,7 @@ def main() -> int:
             "description": "Pan-Cyrillic character reference across 77 languages. "
                            "Sorted by Unicode codepoint (ascending hex). "
                            "Variants nested under the base character.",
-            "languages_in_scope": len(enabled_in_scope),
+            "languages_in_scope": len(in_scope),
             "generated_by": "cyrillic-reference/tools/generate_json.py",
         },
         "characters": pan_characters,
@@ -327,12 +277,18 @@ def main() -> int:
                        encoding="utf-8")
     print(f"wrote {len(pan_characters)} characters → {OUT_PAN.relative_to(REPO)}")
 
-    # Pass 3: write per-language files
+    # ─── per-language files ───────────────────────────────────────────────
     written = 0
     warnings: list[str] = []
-    for reg in enabled_in_scope:
+    for reg in library_list:
+        if not reg.get("enable"):
+            continue
         name = reg["name_eng"]
-        codepoints = per_lang_codepoints.get(name, {})
+        if name in SKIP_LANGUAGES:
+            continue
+        if name not in per_lang_codepoints:
+            continue  # missing base file already warned
+        codepoints = per_lang_codepoints[name]
         if not codepoints:
             continue
         base = json.loads((BASE_DIR / f"{name}.json").read_text(encoding="utf-8"))
@@ -357,12 +313,13 @@ def main() -> int:
 
         chars = []
         for cp in sorted(codepoints.keys(), key=lambda x: int(x, 16)):
-            if cp not in pan_catalog:
-                warnings.append(f"{name}: codepoint {cp} not in pan catalog (from base)")
+            if cp not in pan_by_cp:
+                warnings.append(f"{name}: codepoint {cp} not in pan catalog")
                 continue
+            categories = sorted(codepoints[cp]["categories"])
             chars.append(char_entry_for_language(
-                cp, codepoints[cp], pan_catalog[cp],
-                variants_by_cp.get(cp, []), name,
+                pan_by_cp[cp], categories, name,
+                variants_by_cp.get(cp, []),
             ))
 
         out = {"meta": meta, "characters": chars}

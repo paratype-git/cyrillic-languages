@@ -24,50 +24,43 @@ Part of the Paratype Cyrillic Languages project; released under the **MIT Licens
 
 ## Data pipeline
 
+Three independent generators, all reading `cyrillic-languages/` directly. None consumes another's output — `generate_json.py` and `generate.py` are siblings, not a chain.
+
 ```
 ../cyrillic-languages/                               (source repo)
 ├── library/cyrillic/base/*.json         hand-edited per-language alphabets
-├── site/cyrillic/cyrillic_characters_lib.json   pan-Cyrillic aggregated set
+├── library/cyrillic/cyrillic_library.json     language registry
+├── site/cyrillic/cyrillic_characters_lib.json  pan-Cyrillic aggregate (from compile_languages.py)
 └── fonts/web/PT-{Sans,Serif}-Expert_{Regular,Italic}/*.ttf    rendering fonts
-                         │
-                         ▼
-              tools/generate.py                (Python 3 stdlib only)
-                         │
-       ┌─────────────────┼─────────────────┐
-       ▼                 ▼                 ▼
-  characters-         characters-     glyph-variants.md
-  uppercase.md        lowercase.md
-                         │
-                         ▼
-           tools/generate_svgs.py        (needs fontTools + FontDocTools)
-                         │
-       ┌─────────────────┴──────────────────┐
-       ▼                                    ▼
-   svg/{Sans,Serif}/                  glyphplotter/{Sans,Serif}/
-   ├── uc/*.svg                       ├── uc/*.txt
-   ├── lc/*.svg                       ├── lc/*.txt
-   └── variants/*.svg                 └── variants/*.txt
-                         │
-                         ▼
-              tools/generate_json.py        (Python 3 stdlib only)
-                         │
-       ┌─────────────────┴──────────────────┐
-       ▼                                    ▼
-   data/pan-cyrillic.json           data/languages/<Name>.json (×77)
+                                    │ read by all three
+                                    ▼
+                         ┌─────────────────────┐
+                         │   tools/_catalog.py │   shared core
+                         │  (decompose,        │   (stdlib)
+                         │   classify_variant, │
+                         │   extract_lang…,    │
+                         │   collect_variants, │
+                         │   load_pan_cyrillic)│
+                         └──────────┬──────────┘
+               ┌────────────────────┼────────────────────┐
+               ▼                    ▼                    ▼
+      tools/generate.py    tools/generate_svgs.py   tools/generate_json.py
+         (stdlib)            (fontTools +              (stdlib)
+                              FontDocTools)
+               │                    │                    │
+               ▼                    ▼                    ▼
+       characters-*.md     svg/{Sans,Serif}/       data/pan-cyrillic.json
+       glyph-variants.md   glyphplotter/           data/languages/*.json
 ```
 
-Rendered SVGs and the glyphplotter `.txt` sources that produce them
-live in separate parallel trees: `svg/<family>/` for artefacts,
-`glyphplotter/<family>/` for sources. `.txt` files are per-family —
-pen positions are derived from each font's metrics, so Sans and
-Serif sources differ in coordinates even though they describe the
-same diagram.
+Rendered SVGs and the glyphplotter `.txt` sources that produce them live in separate parallel trees: `svg/<family>/` for artefacts, `glyphplotter/<family>/` for sources. `.txt` files are per-family — pen positions are derived from each font's metrics, so Sans and Serif sources differ in coordinates even though they describe the same diagram.
 
-Three stages, three scripts:
+Three generators, one shared core:
 
-1. **`generate.py`** reads the pan-Cyrillic JSON and the per-language source JSONs, dedupes by codepoint, decomposes `… WITH <mark>` descriptions into base + combining marks, and emits the three Markdown tables. Pure Python 3 stdlib — no third-party dependencies.
-2. **`generate_svgs.py`** reads the same sources plus the PT Serif Expert Regular TTF, and renders one SVG diagram per row via `glyphplotter` (a command-line tool from the [FontDocTools](https://bitbucket.org/Lontar/FontDocTools/src/master/) package). Requires Python ≥ 3.13, `fontTools`, and FontDocTools installed in the active venv.
-3. **`generate_json.py`** re-reads the Markdown tables plus the per-language base files and writes `data/pan-cyrillic.json` and one `data/languages/<Name>.json` per in-scope language. The Markdown tables are the source of truth for shared fields (description, decomposition, SVG paths); the base files contribute which codepoints each language uses and any `&`/`+` marker context. Pure Python 3 stdlib.
+- **[`tools/_catalog.py`](tools/_catalog.py)** — single source of truth for the 77-language scope, the Paratype-aware NFD (`… WITH <mark>` parsing + BREVE → U+F6D1/U+F6D4 swap + structural-composite detection), variant-token classification, and per-language codepoint extraction. All three generators import from here; none duplicate the logic.
+- **`generate.py`** reads the pan-Cyrillic summary plus the per-language base files and emits the three Markdown tables. Pure Python 3 stdlib.
+- **`generate_svgs.py`** reads the same sources plus the PT Expert TTFs, and renders one SVG diagram per row via `glyphplotter` (a command-line tool from the [FontDocTools](https://bitbucket.org/Lontar/FontDocTools/src/master/) package). Requires Python ≥ 3.13, `fontTools`, and FontDocTools installed in the active venv.
+- **`generate_json.py`** reads the same sources and emits `data/pan-cyrillic.json` and one `data/languages/<Name>.json` per in-scope language. Pure Python 3 stdlib.
 
 ### Decomposition logic
 
@@ -141,14 +134,14 @@ Each invocation renders one font family. The italic TTF is used only for locl va
 
 ### Step 3 — Machine-readable JSON
 
-Python 3 stdlib only. Must run **after** Step 1 — it re-reads the Markdown tables as its canonical source.
+Python 3 stdlib only. Independent of Steps 1 and 2 — reads `cyrillic-languages/` directly via the shared `_catalog.py` core, same as `generate.py`. Run in any order.
 
 ```bash
 cd cyrillic-reference/
 python3 tools/generate_json.py
 ```
 
-Writes `data/pan-cyrillic.json` and 77 `data/languages/<Name>.json`. No arguments; all paths are resolved relative to the script's location. Independent of Step 2 — the generator only reads the SVG/plotter filenames it will emit into JSON, not their content, so it runs cleanly even before SVGs are rendered.
+Writes `data/pan-cyrillic.json` and 77 `data/languages/<Name>.json`. No arguments; all paths are resolved relative to the script's location.
 
 ## Diagram layout
 

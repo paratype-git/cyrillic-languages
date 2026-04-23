@@ -253,23 +253,26 @@ Variants in `pan-cyrillic.json` carry `used_by[]`; the same variants in `languag
 
 ## Generator inputs and invariants
 
-[`../tools/generate_json.py`](../tools/generate_json.py) derives the JSON from already-committed artefacts — it does **not** read the font or call the shaper:
+[`../tools/generate_json.py`](../tools/generate_json.py) reads `cyrillic-languages/` directly via the shared [`../tools/_catalog.py`](../tools/_catalog.py) core. It is **independent** of the Markdown tables and the SVG stage — all three generators are siblings and can run in any order.
 
 | Input | Authoritative for |
 | --- | --- |
-| [`../characters-uppercase.md`](../characters-uppercase.md), [`../characters-lowercase.md`](../characters-lowercase.md) | `character`, `codepoint`, `description`, `decomposition`, and the catalog of codepoints from which the pan file is built. |
-| [`../glyph-variants.md`](../glyph-variants.md) | Which languages declare which locl variant (via the `Languages` column). |
-| `../../cyrillic-languages/library/cyrillic/base/<Name>.json` | Which codepoints a given language uses (via the tokenised `glyphs_list` blocks and their `type`) and its `alt_names_eng`, `name_rus`, `local`. |
+| `../../cyrillic-languages/site/cyrillic/cyrillic_characters_lib.json` | Pan-Cyrillic deduplicated codepoint list: `character`, `codepoint`, `description`. Produced by `compile_languages.py` in the source repo. |
+| `../../cyrillic-languages/library/cyrillic/base/<Name>.json` | Which codepoints a given language uses (via the tokenised `glyphs_list` blocks and their `type`); `alt_names_eng`, `name_rus`, `local`. Also the source for `&` / `+` variant markers. |
 | `../../cyrillic-languages/library/cyrillic/cyrillic_library.json` | Registry of enabled languages, `code_pt`, `language_tag`. |
 | [`../language-tags.json`](../language-tags.json) | BCP 47 / ISO / OT enrichment, `confidence`, `note`. |
 
-Token filtering in `glyphs_list` (per `extract_language_codepoints`):
+`decomposition` is computed live per row by `_catalog.decompose`, which applies the Paratype-aware NFD (`… WITH <mark>` parsing → base + combining mark sequence, with the BREVE swap to U+F6D1 / U+F6D4). Structural composites (DESCENDER, HOOK, STROKE, …) return `[]` — their shape has no standard Unicode sequence.
+
+Token filtering in `glyphs_list` (per `_catalog.extract_language_codepoints`):
 
 - Tokens prefixed with `:` (explicit digraph marker) are dropped.
 - Multi-character tokens without a known style suffix (`Гь`, `Ӷә`, `Ҭә`, …) are dropped — they represent digraphs/trigraphs that don't have their own codepoint.
 - `!FXXX` / `!FXXXX` escape tokens resolve to the literal PUA codepoint.
 - Style-qualified tokens (`г.ita`, `Д.str`) resolve to the base character's codepoint; the suffix becomes the variant's `style`.
 - `+`-prefixed tokens introduce distinct codepoints into the language's `characters[]` (e.g. Bashkir's `Ғ ғ Ҙ ҙ Ҫ ҫ`). They do **not** currently become `variants[]` entries — only `&`-marker tokens do.
-- `&`-prefixed tokens whose codepoint appears in `glyph-variants.md` for this language become `variants[]` entries.
+- `&`-prefixed tokens become `variants[]` entries on the codepoint they carry (`_catalog.aggregate_variants` collapses duplicates across languages into one row per (codepoint, locale, style) with a merged `used_by[]`).
 
-Because the MDs are the source of truth for the shared fields, **the JSONs stay in sync only if the MDs are regenerated first.** Pipeline order: `generate.py` → `generate_svgs.py` → `generate_json.py`. See [the parent `README.md`](../README.md#regenerating) for regeneration commands.
+**Invariant:** `codepoint ∈ lang.characters[].codepoint` ⇔ `lang ∈ pan[codepoint].used_by[]`. `used_by[]` at the pan level is computed from the same per-language extraction as the per-language output, so the two views agree by construction. A language that references a codepoint only inside a multi-char digraph token (e.g. Abkhazian's `Ӡʼ` → U+02BC) does **not** appear in `pan[02BC].used_by[]`.
+
+See [the parent `README.md`](../README.md#regenerating) for regeneration commands.

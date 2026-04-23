@@ -33,6 +33,10 @@ from pathlib import Path
 
 from fontTools.ttLib import TTFont
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))  # noqa: E402
+
+from _catalog import decompose
+
 
 # ---------- calibration constants ----------
 BOX_W = 1400
@@ -57,26 +61,6 @@ CYR_BREVES = {0xF6D1, 0xF6D4}
 H_NUDGE_CYR_BREVE = -40
 X_NUDGE_EXTRA = {0x030B: +20}      # DOUBLE ACUTE
 Y_NUDGE_EXTRA = {0xF6D4: -30}      # Cyrillic lowercase breve
-
-# Decomposition accent table — must match cyrillic-reference/generate.py.
-CYRILLIC_BREVE_UC = 0xF6D1
-CYRILLIC_BREVE_LC = 0xF6D4
-_ACCENT_SENTINEL = object()
-ACCENT_COMBINING_MARK = {
-    "MACRON":       0x0304,
-    "DIAERESIS":    0x0308,
-    "BREVE":        _ACCENT_SENTINEL,
-    "ACUTE":        0x0301,
-    "CIRCUMFLEX":   0x0302,
-    "GRAVE":        0x0300,
-    "CARON":        0x030C,
-    "DOUBLE ACUTE": 0x030B,
-    "CEDILLA":      0x0327,
-    "DOT ABOVE":    0x0307,
-}
-_WITH_RE = re.compile(r"\s+WITH\s+", re.IGNORECASE)
-_AND_RE = re.compile(r"\s+AND\s+", re.IGNORECASE)
-
 
 # ---------- font metrics ----------
 class FontMetrics:
@@ -128,50 +112,6 @@ class FontMetrics:
 
     def pen_for_letter(self, name: str) -> int:
         return int(round((BOX_W - self.advance(name)) / 2))
-
-
-# ---------- decomposition (duplicated from generate.py to keep scripts standalone) ----------
-_KNOWN_COMBINING_MARK_CPS = {
-    0x0304, 0x0308, 0x0306, 0x0301, 0x0302,
-    0x0300, 0x030C, 0x030B, 0x0327, 0x0307,
-}
-
-
-def _swap_breve(cp: int, case: str) -> int:
-    if cp == 0x0306:
-        return CYRILLIC_BREVE_UC if case == "upper" else CYRILLIC_BREVE_LC
-    return cp
-
-
-def decompose(description: str, case: str, sign: str = "") -> list[int] | None:
-    """Same two-path logic as generate.py: WITH first, NFD fallback."""
-    parts = _WITH_RE.split(description, maxsplit=1)
-    if len(parts) == 2:
-        base_name, phrase = parts
-        tokens = [t.strip().upper() for t in _AND_RE.split(phrase)]
-        mapped: list[int] = []
-        for token in tokens:
-            mark = ACCENT_COMBINING_MARK.get(token)
-            if mark is None:
-                return None
-            if mark is _ACCENT_SENTINEL:
-                mapped.append(_swap_breve(0x0306, case))
-            else:
-                mapped.append(mark)
-        try:
-            base_char = unicodedata.lookup(base_name.strip().upper())
-        except KeyError:
-            return None
-        return [ord(base_char), *mapped]
-
-    if sign:
-        nfd = unicodedata.normalize("NFD", sign)
-        if len(nfd) > 1:
-            cps = [ord(c) for c in nfd]
-            if all(cp in _KNOWN_COMBINING_MARK_CPS for cp in cps[1:]):
-                return [cps[0], *(_swap_breve(cp, case) for cp in cps[1:])]
-
-    return None
 
 
 # ---------- instruction emitters ----------
