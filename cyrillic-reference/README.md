@@ -19,6 +19,8 @@ Part of the Paratype Cyrillic Languages project; released under the **MIT Licens
 | [`svg/lc/XXXX.{svg,txt}`](svg/lc/) | Same for lowercase. |
 | [`svg/variants/XXXX.LANG.{svg,txt}`](svg/variants/) | `default → variant` diagrams for locl-named glyph variants. |
 | [`svg/{Sans,Serif}/_calibration/accents.svg`](svg/Serif/_calibration/) (+ `glyphplotter/{Sans,Serif}/_calibration/accents.txt`) | Reference sheet per family — all 10 combining marks + Cyrillic breve UC/LC on a dotted circle, using the calibration constants. |
+| [`data/pan-cyrillic.json`](data/pan-cyrillic.json) | Machine-readable pan-Cyrillic JSON. One entry per in-scope codepoint (sorted by Unicode value), with description, decomposition, SVG/plotter paths, nested locl variants, and a `used_by[]` list of languages. |
+| [`data/languages/<Name>.json`](data/languages/) | One JSON per in-scope language (77 files — `Kaitag` and `Uzbek` skipped). Meta block (BCP 47 / ISO / OT tags, Paratype identifiers, confidence grade) plus `characters[]` filtered to this language's codepoints, with locl variants attached where the language declares them. |
 
 ## Data pipeline
 
@@ -45,6 +47,13 @@ Part of the Paratype Cyrillic Languages project; released under the **MIT Licens
    ├── uc/*.svg                       ├── uc/*.txt
    ├── lc/*.svg                       ├── lc/*.txt
    └── variants/*.svg                 └── variants/*.txt
+                         │
+                         ▼
+              tools/generate_json.py        (Python 3 stdlib only)
+                         │
+       ┌─────────────────┴──────────────────┐
+       ▼                                    ▼
+   data/pan-cyrillic.json           data/languages/<Name>.json (×77)
 ```
 
 Rendered SVGs and the glyphplotter `.txt` sources that produce them
@@ -54,10 +63,11 @@ pen positions are derived from each font's metrics, so Sans and
 Serif sources differ in coordinates even though they describe the
 same diagram.
 
-Two stages, two scripts:
+Three stages, three scripts:
 
 1. **`generate.py`** reads the pan-Cyrillic JSON and the per-language source JSONs, dedupes by codepoint, decomposes `… WITH <mark>` descriptions into base + combining marks, and emits the three Markdown tables. Pure Python 3 stdlib — no third-party dependencies.
 2. **`generate_svgs.py`** reads the same sources plus the PT Serif Expert Regular TTF, and renders one SVG diagram per row via `glyphplotter` (a command-line tool from the [FontDocTools](https://bitbucket.org/Lontar/FontDocTools/src/master/) package). Requires Python ≥ 3.13, `fontTools`, and FontDocTools installed in the active venv.
+3. **`generate_json.py`** re-reads the Markdown tables plus the per-language base files and writes `data/pan-cyrillic.json` and one `data/languages/<Name>.json` per in-scope language. The Markdown tables are the source of truth for shared fields (description, decomposition, SVG paths); the base files contribute which codepoints each language uses and any `&`/`+` marker context. Pure Python 3 stdlib.
 
 ### Decomposition logic
 
@@ -81,6 +91,12 @@ The `Description` field in the pan-Cyrillic summary follows Unicode naming: e.g.
 - `+`-marked tokens pair with the `&` tokens and provide the default shape.
 
 PT Serif Expert Regular exposes locl variants by **suffixed glyph name** — `uni0492.BSH` (Bashkir Ghe-with-Stroke), `uni0433.BGR` (Bulgarian ge), etc. `generate_svgs.py` queries the font's `post` table for `<base_name>.<locale_tag>` and, if found, renders a `default → variant` diagram. 26 of the 41 `&` rows currently have a matching named variant in the font; the remaining 15 are driven purely by GSUB lookups (no standalone name) and would require a shaper (`uharfbuzz` or CoreText) to render — they are listed in `glyph-variants.md` with a `Diagram` column pointing to a non-existent file.
+
+## Machine-readable JSON (`data/`)
+
+`tools/generate_json.py` consumes the three Markdown tables plus the per-language base files and emits a machine-readable mirror under [`data/`](data/): a pan-Cyrillic codepoint catalog (`data/pan-cyrillic.json`) and one JSON per in-scope language under `data/languages/`.
+
+See [`data/README.md`](data/README.md) for the full schema — field reference, path convention, the 77-language index with tag columns, and generator inputs.
 
 ## Regenerating
 
@@ -122,6 +138,17 @@ python3 tools/generate_svgs.py --family Serif \
 to `glyphplotter/<Family>/{uc,lc,variants}/`.
 
 Each invocation renders one font family. The italic TTF is used only for locl variants whose source token carries a `.ita` suffix (Serbian italic). Invokes `glyphplotter` via subprocess per row. The macOS-only tools in the FontDocTools package (`glyphshaper`, `glyphdump`, `roentgen`) are not needed and are skipped automatically on Linux via platform markers.
+
+### Step 3 — Machine-readable JSON
+
+Python 3 stdlib only. Must run **after** Step 1 — it re-reads the Markdown tables as its canonical source.
+
+```bash
+cd cyrillic-reference/
+python3 tools/generate_json.py
+```
+
+Writes `data/pan-cyrillic.json` and 77 `data/languages/<Name>.json`. No arguments; all paths are resolved relative to the script's location. Independent of Step 2 — the generator only reads the SVG/plotter filenames it will emit into JSON, not their content, so it runs cleanly even before SVGs are rendered.
 
 ## Diagram layout
 

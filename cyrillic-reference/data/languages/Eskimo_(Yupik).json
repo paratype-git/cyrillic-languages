@@ -1,0 +1,1636 @@
+{
+    "meta": {
+        "name_eng": "Eskimo (Yupik)",
+        "name_rus": "Эскимосский",
+        "alternative_names": [
+            "Yoit",
+            "Yuit",
+            "Yuk"
+        ],
+        "code_pt": 100,
+        "url": "https://paratype.github.io/cyrillic-languages/index.html?lang=Eskimo%20(Yupik)&group=cyrillic&ui=en&pg=2",
+        "language_tag": "ess",
+        "default_language_tag": "ru",
+        "feature_locl_tag": null,
+        "iso639_1": null,
+        "iso639_3": "ess",
+        "confidence": "high",
+        "note": "Central Siberian Yupik (ess) — the Russian-territory Yupik variant."
+    },
+    "characters": [
+        {
+            "character": "Ё",
+            "codepoint": "0401",
+            "decomposition": [
+                "0415",
+                "0308"
+            ],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Io",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0401.svg",
+                    "serif": "svg/Serif/uc/0401.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0401.txt",
+                    "serif": "glyphplotter/Serif/uc/0401.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Ў",
+            "codepoint": "040E",
+            "decomposition": [
+                "0423",
+                "F6D1"
+            ],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Short U",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/040E.svg",
+                    "serif": "svg/Serif/uc/040E.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/040E.txt",
+                    "serif": "glyphplotter/Serif/uc/040E.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "А",
+            "codepoint": "0410",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter A",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0410.svg",
+                    "serif": "svg/Serif/uc/0410.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0410.txt",
+                    "serif": "glyphplotter/Serif/uc/0410.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Б",
+            "codepoint": "0411",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Be",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0411.svg",
+                    "serif": "svg/Serif/uc/0411.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0411.txt",
+                    "serif": "glyphplotter/Serif/uc/0411.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "В",
+            "codepoint": "0412",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Ve",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0412.svg",
+                    "serif": "svg/Serif/uc/0412.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0412.txt",
+                    "serif": "glyphplotter/Serif/uc/0412.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Г",
+            "codepoint": "0413",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Ghe",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0413.svg",
+                    "serif": "svg/Serif/uc/0413.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0413.txt",
+                    "serif": "glyphplotter/Serif/uc/0413.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Д",
+            "codepoint": "0414",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter De",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0414.svg",
+                    "serif": "svg/Serif/uc/0414.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0414.txt",
+                    "serif": "glyphplotter/Serif/uc/0414.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Е",
+            "codepoint": "0415",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Ie",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0415.svg",
+                    "serif": "svg/Serif/uc/0415.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0415.txt",
+                    "serif": "glyphplotter/Serif/uc/0415.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Ж",
+            "codepoint": "0416",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Zhe",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0416.svg",
+                    "serif": "svg/Serif/uc/0416.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0416.txt",
+                    "serif": "glyphplotter/Serif/uc/0416.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "З",
+            "codepoint": "0417",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Ze",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0417.svg",
+                    "serif": "svg/Serif/uc/0417.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0417.txt",
+                    "serif": "glyphplotter/Serif/uc/0417.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "И",
+            "codepoint": "0418",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter I",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0418.svg",
+                    "serif": "svg/Serif/uc/0418.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0418.txt",
+                    "serif": "glyphplotter/Serif/uc/0418.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Й",
+            "codepoint": "0419",
+            "decomposition": [
+                "0418",
+                "F6D1"
+            ],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Short I",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0419.svg",
+                    "serif": "svg/Serif/uc/0419.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0419.txt",
+                    "serif": "glyphplotter/Serif/uc/0419.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "К",
+            "codepoint": "041A",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Ka",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/041A.svg",
+                    "serif": "svg/Serif/uc/041A.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/041A.txt",
+                    "serif": "glyphplotter/Serif/uc/041A.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Л",
+            "codepoint": "041B",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter El",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/041B.svg",
+                    "serif": "svg/Serif/uc/041B.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/041B.txt",
+                    "serif": "glyphplotter/Serif/uc/041B.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "М",
+            "codepoint": "041C",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Em",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/041C.svg",
+                    "serif": "svg/Serif/uc/041C.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/041C.txt",
+                    "serif": "glyphplotter/Serif/uc/041C.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Н",
+            "codepoint": "041D",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter En",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/041D.svg",
+                    "serif": "svg/Serif/uc/041D.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/041D.txt",
+                    "serif": "glyphplotter/Serif/uc/041D.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "О",
+            "codepoint": "041E",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter O",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/041E.svg",
+                    "serif": "svg/Serif/uc/041E.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/041E.txt",
+                    "serif": "glyphplotter/Serif/uc/041E.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "П",
+            "codepoint": "041F",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Pe",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/041F.svg",
+                    "serif": "svg/Serif/uc/041F.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/041F.txt",
+                    "serif": "glyphplotter/Serif/uc/041F.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Р",
+            "codepoint": "0420",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Er",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0420.svg",
+                    "serif": "svg/Serif/uc/0420.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0420.txt",
+                    "serif": "glyphplotter/Serif/uc/0420.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "С",
+            "codepoint": "0421",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Es",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0421.svg",
+                    "serif": "svg/Serif/uc/0421.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0421.txt",
+                    "serif": "glyphplotter/Serif/uc/0421.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Т",
+            "codepoint": "0422",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Te",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0422.svg",
+                    "serif": "svg/Serif/uc/0422.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0422.txt",
+                    "serif": "glyphplotter/Serif/uc/0422.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "У",
+            "codepoint": "0423",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter U",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0423.svg",
+                    "serif": "svg/Serif/uc/0423.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0423.txt",
+                    "serif": "glyphplotter/Serif/uc/0423.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Ф",
+            "codepoint": "0424",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Ef",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0424.svg",
+                    "serif": "svg/Serif/uc/0424.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0424.txt",
+                    "serif": "glyphplotter/Serif/uc/0424.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Х",
+            "codepoint": "0425",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Ha",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0425.svg",
+                    "serif": "svg/Serif/uc/0425.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0425.txt",
+                    "serif": "glyphplotter/Serif/uc/0425.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Ц",
+            "codepoint": "0426",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Tse",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0426.svg",
+                    "serif": "svg/Serif/uc/0426.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0426.txt",
+                    "serif": "glyphplotter/Serif/uc/0426.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Ч",
+            "codepoint": "0427",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Che",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0427.svg",
+                    "serif": "svg/Serif/uc/0427.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0427.txt",
+                    "serif": "glyphplotter/Serif/uc/0427.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Ш",
+            "codepoint": "0428",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Sha",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0428.svg",
+                    "serif": "svg/Serif/uc/0428.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0428.txt",
+                    "serif": "glyphplotter/Serif/uc/0428.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Щ",
+            "codepoint": "0429",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Shcha",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/0429.svg",
+                    "serif": "svg/Serif/uc/0429.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/0429.txt",
+                    "serif": "glyphplotter/Serif/uc/0429.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Ъ",
+            "codepoint": "042A",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Hard Sign",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/042A.svg",
+                    "serif": "svg/Serif/uc/042A.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/042A.txt",
+                    "serif": "glyphplotter/Serif/uc/042A.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Ы",
+            "codepoint": "042B",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Yeru",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/042B.svg",
+                    "serif": "svg/Serif/uc/042B.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/042B.txt",
+                    "serif": "glyphplotter/Serif/uc/042B.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Ь",
+            "codepoint": "042C",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Soft Sign",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/042C.svg",
+                    "serif": "svg/Serif/uc/042C.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/042C.txt",
+                    "serif": "glyphplotter/Serif/uc/042C.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Э",
+            "codepoint": "042D",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter E",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/042D.svg",
+                    "serif": "svg/Serif/uc/042D.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/042D.txt",
+                    "serif": "glyphplotter/Serif/uc/042D.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Ю",
+            "codepoint": "042E",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Yu",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/042E.svg",
+                    "serif": "svg/Serif/uc/042E.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/042E.txt",
+                    "serif": "glyphplotter/Serif/uc/042E.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Я",
+            "codepoint": "042F",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Ya",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/042F.svg",
+                    "serif": "svg/Serif/uc/042F.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/042F.txt",
+                    "serif": "glyphplotter/Serif/uc/042F.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "а",
+            "codepoint": "0430",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter A",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0430.svg",
+                    "serif": "svg/Serif/lc/0430.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0430.txt",
+                    "serif": "glyphplotter/Serif/lc/0430.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "б",
+            "codepoint": "0431",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Be",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0431.svg",
+                    "serif": "svg/Serif/lc/0431.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0431.txt",
+                    "serif": "glyphplotter/Serif/lc/0431.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "в",
+            "codepoint": "0432",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Ve",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0432.svg",
+                    "serif": "svg/Serif/lc/0432.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0432.txt",
+                    "serif": "glyphplotter/Serif/lc/0432.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "г",
+            "codepoint": "0433",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Ghe",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0433.svg",
+                    "serif": "svg/Serif/lc/0433.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0433.txt",
+                    "serif": "glyphplotter/Serif/lc/0433.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "д",
+            "codepoint": "0434",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter De",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0434.svg",
+                    "serif": "svg/Serif/lc/0434.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0434.txt",
+                    "serif": "glyphplotter/Serif/lc/0434.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "е",
+            "codepoint": "0435",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Ie",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0435.svg",
+                    "serif": "svg/Serif/lc/0435.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0435.txt",
+                    "serif": "glyphplotter/Serif/lc/0435.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "ж",
+            "codepoint": "0436",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Zhe",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0436.svg",
+                    "serif": "svg/Serif/lc/0436.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0436.txt",
+                    "serif": "glyphplotter/Serif/lc/0436.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "з",
+            "codepoint": "0437",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Ze",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0437.svg",
+                    "serif": "svg/Serif/lc/0437.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0437.txt",
+                    "serif": "glyphplotter/Serif/lc/0437.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "и",
+            "codepoint": "0438",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter I",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0438.svg",
+                    "serif": "svg/Serif/lc/0438.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0438.txt",
+                    "serif": "glyphplotter/Serif/lc/0438.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "й",
+            "codepoint": "0439",
+            "decomposition": [
+                "0438",
+                "F6D4"
+            ],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Short I",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0439.svg",
+                    "serif": "svg/Serif/lc/0439.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0439.txt",
+                    "serif": "glyphplotter/Serif/lc/0439.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "к",
+            "codepoint": "043A",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Ka",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/043A.svg",
+                    "serif": "svg/Serif/lc/043A.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/043A.txt",
+                    "serif": "glyphplotter/Serif/lc/043A.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "л",
+            "codepoint": "043B",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter El",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/043B.svg",
+                    "serif": "svg/Serif/lc/043B.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/043B.txt",
+                    "serif": "glyphplotter/Serif/lc/043B.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "м",
+            "codepoint": "043C",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Em",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/043C.svg",
+                    "serif": "svg/Serif/lc/043C.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/043C.txt",
+                    "serif": "glyphplotter/Serif/lc/043C.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "н",
+            "codepoint": "043D",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter En",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/043D.svg",
+                    "serif": "svg/Serif/lc/043D.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/043D.txt",
+                    "serif": "glyphplotter/Serif/lc/043D.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "о",
+            "codepoint": "043E",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter O",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/043E.svg",
+                    "serif": "svg/Serif/lc/043E.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/043E.txt",
+                    "serif": "glyphplotter/Serif/lc/043E.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "п",
+            "codepoint": "043F",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Pe",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/043F.svg",
+                    "serif": "svg/Serif/lc/043F.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/043F.txt",
+                    "serif": "glyphplotter/Serif/lc/043F.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "р",
+            "codepoint": "0440",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Er",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0440.svg",
+                    "serif": "svg/Serif/lc/0440.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0440.txt",
+                    "serif": "glyphplotter/Serif/lc/0440.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "с",
+            "codepoint": "0441",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Es",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0441.svg",
+                    "serif": "svg/Serif/lc/0441.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0441.txt",
+                    "serif": "glyphplotter/Serif/lc/0441.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "т",
+            "codepoint": "0442",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Te",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0442.svg",
+                    "serif": "svg/Serif/lc/0442.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0442.txt",
+                    "serif": "glyphplotter/Serif/lc/0442.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "у",
+            "codepoint": "0443",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter U",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0443.svg",
+                    "serif": "svg/Serif/lc/0443.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0443.txt",
+                    "serif": "glyphplotter/Serif/lc/0443.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "ф",
+            "codepoint": "0444",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Ef",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0444.svg",
+                    "serif": "svg/Serif/lc/0444.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0444.txt",
+                    "serif": "glyphplotter/Serif/lc/0444.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "х",
+            "codepoint": "0445",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Ha",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0445.svg",
+                    "serif": "svg/Serif/lc/0445.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0445.txt",
+                    "serif": "glyphplotter/Serif/lc/0445.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "ц",
+            "codepoint": "0446",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Tse",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0446.svg",
+                    "serif": "svg/Serif/lc/0446.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0446.txt",
+                    "serif": "glyphplotter/Serif/lc/0446.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "ч",
+            "codepoint": "0447",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Che",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0447.svg",
+                    "serif": "svg/Serif/lc/0447.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0447.txt",
+                    "serif": "glyphplotter/Serif/lc/0447.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "ш",
+            "codepoint": "0448",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Sha",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0448.svg",
+                    "serif": "svg/Serif/lc/0448.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0448.txt",
+                    "serif": "glyphplotter/Serif/lc/0448.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "щ",
+            "codepoint": "0449",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Shcha",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0449.svg",
+                    "serif": "svg/Serif/lc/0449.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0449.txt",
+                    "serif": "glyphplotter/Serif/lc/0449.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "ъ",
+            "codepoint": "044A",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Hard Sign",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/044A.svg",
+                    "serif": "svg/Serif/lc/044A.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/044A.txt",
+                    "serif": "glyphplotter/Serif/lc/044A.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "ы",
+            "codepoint": "044B",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Yeru",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/044B.svg",
+                    "serif": "svg/Serif/lc/044B.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/044B.txt",
+                    "serif": "glyphplotter/Serif/lc/044B.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "ь",
+            "codepoint": "044C",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Soft Sign",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/044C.svg",
+                    "serif": "svg/Serif/lc/044C.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/044C.txt",
+                    "serif": "glyphplotter/Serif/lc/044C.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "э",
+            "codepoint": "044D",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter E",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/044D.svg",
+                    "serif": "svg/Serif/lc/044D.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/044D.txt",
+                    "serif": "glyphplotter/Serif/lc/044D.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "ю",
+            "codepoint": "044E",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Yu",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/044E.svg",
+                    "serif": "svg/Serif/lc/044E.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/044E.txt",
+                    "serif": "glyphplotter/Serif/lc/044E.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "я",
+            "codepoint": "044F",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Ya",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/044F.svg",
+                    "serif": "svg/Serif/lc/044F.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/044F.txt",
+                    "serif": "glyphplotter/Serif/lc/044F.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "ё",
+            "codepoint": "0451",
+            "decomposition": [
+                "0435",
+                "0308"
+            ],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Io",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/0451.svg",
+                    "serif": "svg/Serif/lc/0451.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/0451.txt",
+                    "serif": "glyphplotter/Serif/lc/0451.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "ў",
+            "codepoint": "045E",
+            "decomposition": [
+                "0443",
+                "F6D4"
+            ],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Short U",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/045E.svg",
+                    "serif": "svg/Serif/lc/045E.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/045E.txt",
+                    "serif": "glyphplotter/Serif/lc/045E.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Ӄ",
+            "codepoint": "04C3",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Ka With Hook",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/04C3.svg",
+                    "serif": "svg/Serif/uc/04C3.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/04C3.txt",
+                    "serif": "glyphplotter/Serif/uc/04C3.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "ӄ",
+            "codepoint": "04C4",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Ka With Hook",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/04C4.svg",
+                    "serif": "svg/Serif/lc/04C4.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/04C4.txt",
+                    "serif": "glyphplotter/Serif/lc/04C4.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Ӈ",
+            "codepoint": "04C7",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter En With Hook",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/04C7.svg",
+                    "serif": "svg/Serif/uc/04C7.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/04C7.txt",
+                    "serif": "glyphplotter/Serif/uc/04C7.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "ӈ",
+            "codepoint": "04C8",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter En With Hook",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/04C8.svg",
+                    "serif": "svg/Serif/lc/04C8.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/04C8.txt",
+                    "serif": "glyphplotter/Serif/lc/04C8.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Ӷ",
+            "codepoint": "04F6",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Ghe With Descender",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/04F6.svg",
+                    "serif": "svg/Serif/uc/04F6.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/04F6.txt",
+                    "serif": "glyphplotter/Serif/uc/04F6.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "ӷ",
+            "codepoint": "04F7",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Ghe With Descender",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/04F7.svg",
+                    "serif": "svg/Serif/lc/04F7.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/04F7.txt",
+                    "serif": "glyphplotter/Serif/lc/04F7.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "Ӽ",
+            "codepoint": "04FC",
+            "decomposition": [],
+            "case": "uppercase",
+            "description": "Cyrillic Capital Letter Ha With Hook",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/uc/04FC.svg",
+                    "serif": "svg/Serif/uc/04FC.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/uc/04FC.txt",
+                    "serif": "glyphplotter/Serif/uc/04FC.txt"
+                }
+            },
+            "variants": []
+        },
+        {
+            "character": "ӽ",
+            "codepoint": "04FD",
+            "decomposition": [],
+            "case": "lowercase",
+            "description": "Cyrillic Small Letter Ha With Hook",
+            "categories": [
+                "alphabet"
+            ],
+            "diagram": {
+                "svg": {
+                    "sans": "svg/Sans/lc/04FD.svg",
+                    "serif": "svg/Serif/lc/04FD.svg"
+                },
+                "plotter": {
+                    "sans": "glyphplotter/Sans/lc/04FD.txt",
+                    "serif": "glyphplotter/Serif/lc/04FD.txt"
+                }
+            },
+            "variants": []
+        }
+    ]
+}
