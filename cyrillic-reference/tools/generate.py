@@ -326,19 +326,22 @@ def render_characters_md(side: str, entries: list[dict],
             )
         else:
             diagram_cell = ""
-        # Codepoint cell: anchor for inbound links from glyph-variants.md,
-        # plus a small ↗ link to the variants table when this codepoint has
-        # at least one locl variant.
+        # Codepoint cell carries the anchor for inbound links from
+        # glyph-variants.md. The outbound ↗ link to that file (when this
+        # codepoint has a locl variant) lives in the Locales cell next to
+        # the locale set it qualifies.
         cp_hex_main = unicodes[0].upper() if unicodes else ""
         cp_cell = format_unicodes(unicodes)
         if cp_hex_main:
             cp_cell = f"{_codepoint_anchor(cp_hex_main)}{cp_cell}"
-            if cp_hex_main in variant_codepoints:
-                cp_cell = f"{cp_cell} {_variants_file_link(cp_hex_main)}"
+        locales_cell = locales
+        if cp_hex_main and cp_hex_main in variant_codepoints:
+            link = _variants_file_link(cp_hex_main)
+            locales_cell = f"{locales} {link}" if locales else link
         out.append(
             f"| {i} | {sign} | {cp_cell} | "
             f"{description} | {pua_flag} | {decomp_cell} | "
-            f"{diagram_cell} | {locales} |"
+            f"{diagram_cell} | {locales_cell} |"
         )
     out.append("")
     return "\n".join(out)
