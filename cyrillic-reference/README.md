@@ -87,7 +87,7 @@ PT Serif Expert Regular exposes locl variants by **suffixed glyph name** — `un
 
 ## Machine-readable JSON (`data/`)
 
-`tools/generate_json.py` consumes the three Markdown tables plus the per-language base files and emits a machine-readable mirror under [`data/`](data/): a pan-Cyrillic codepoint catalog (`data/pan-cyrillic.json`) and one JSON per in-scope language under `data/languages/`.
+`tools/generate_json.py` reads `cyrillic-languages/` directly via the shared `_catalog.py` core — independent of `generate.py` and `generate_svgs.py` — and emits a machine-readable mirror under [`data/`](data/): a pan-Cyrillic codepoint catalog (`data/pan-cyrillic.json`) and one JSON per in-scope language under `data/languages/`.
 
 See [`data/README.md`](data/README.md) for the full schema — field reference, path convention, the 77-language index with tag columns, and generator inputs.
 
@@ -208,7 +208,7 @@ The PUA is a shared range in the Unicode standard — no organisation owns speci
 - **15 locl rows unrendered.** `glyph-variants.md` has 41 localized entries, but only 26 have a suffixed glyph name (`uni0492.BSH` etc.) in PT Serif Expert Regular. The remaining 15 are reached purely through GSUB lookups without a standalone name, so they cannot be referenced by glyphplotter and stay unrendered. Adding `uharfbuzz` would allow rendering these.
 - **No GPOS anchor positioning.** Glyphplotter does not apply GPOS mark-attachment anchors. Combining marks are placed by bbox centering plus hand-tuned nudges, not by the designer-intended anchor points. For the standard combining set this is close enough; unfamiliar marks may need their own `X_NUDGE_EXTRA` / `Y_NUDGE_EXTRA` override.
 - **Italic / straight variants (`.ita` / `.str`) not rendered.** The `Style` column of `glyph-variants.md` distinguishes these but the generator currently only handles the default + locl shape pair. Style alternates would need their own template.
-- **Python 3.13+ required for SVG stage.** FontDocTools itself requires ≥ 3.13. The Markdown-only pipeline (`generate.py`) is stdlib and runs on any Python 3.
+- **Python 3.13+ required for SVG stage.** FontDocTools itself requires ≥ 3.13. The stdlib-only generators (`generate.py` and `generate_json.py`) run on any Python 3.
 
 ## License
 

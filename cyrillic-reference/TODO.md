@@ -9,8 +9,10 @@ This subproject lives as a subdirectory of `paratype-git/cyrillic-languages` —
 Files present:
 - `LICENSE` — MIT, Paratype, 2026
 - `README.md` — project framing, data pipeline, SVG layout + calibration, manual re-render instructions, known limitations, license matrix
-- `generate.py` — Python 3 stdlib only; reads the sibling `cyrillic-languages` repo and writes the three Markdown tables
-- `generate_svgs.py` — needs fontTools + FontDocTools; reads the same sources plus PT Serif Expert Regular and produces one SVG diagram per row
+- `tools/_catalog.py` — Python 3 stdlib; shared core (decompose, variants, language catalog) imported by all three generators
+- `tools/generate.py` — Python 3 stdlib only; reads the sibling `cyrillic-languages` repo and writes the three Markdown tables
+- `tools/generate_svgs.py` — needs fontTools + FontDocTools; reads the same sources plus PT Serif Expert Regular and produces one SVG diagram per row
+- `tools/generate_json.py` — Python 3 stdlib only; emits `data/pan-cyrillic.json` and `data/languages/*.json` — machine-readable mirror of the Markdown tables (see `data/README.md`)
 - `characters-uppercase.md` — **177** unique uppercase codepoints (54 PUA). 105 have composed descriptions: 67 decomposed into base + combining marks, 38 kept as structural composites
 - `characters-lowercase.md` — **176** unique lowercase codepoints (54 PUA). 105 composed: 67 decomposed, 38 structural
 - `glyph-variants.md` — **82** variant forms that share a codepoint with a base letter but render differently under `locl` or `.str`/`.ita` stylistic alternates. Locales: ba, bg, cv, sr (ru-default languages do not produce locl variants)
@@ -49,7 +51,7 @@ The main tables now have two new columns: `Decomposition` (`XXXX + XXXX + …` f
 
 **Remaining SVG-stage TODOs:**
 
-- **Font gap — BGR missing in both families (designers):** `uni0416.BGR` (Ж) and `uni041A.BGR` (К) are absent from both PT Sans Expert Regular and PT Serif Expert Regular. Suppressed from `glyph-variants.md` via `_FONT_GAPS_SUPPRESSED` in `tools/generate.py`. To restore: add the glyphs to the relevant `.ufo` source(s), rebuild the TTF pair, and remove the entry from `_FONT_GAPS_SUPPRESSED`.
+- **Font gap — BGR missing in both families (designers):** `uni0416.BGR` (Ж) and `uni041A.BGR` (К) are absent from both PT Sans Expert Regular and PT Serif Expert Regular. Suppressed from `glyph-variants.md` via `_FONT_GAPS_SUPPRESSED` in `tools/_catalog.py`. To restore: add the glyphs to the relevant `.ufo` source(s), rebuild the TTF pair, and remove the entry from `_FONT_GAPS_SUPPRESSED`.
 - **Font gap — BGR missing in Sans only (designers):** `uni043D.BGR` (н) and `uni0447.BGR` (ч) exist in PT Serif Expert Regular but not in PT Sans Expert Regular. The Sans column of `glyph-variants.md` currently shows a broken image for these two rows (the Serif column renders fine). Either add the missing `.BGR` glyphs to the Sans font, or add a per-family suppression branch.
 - **`.str` style variants** are not rendered yet. They would need a parallel branch in `generate_svgs.py`'s `process_variants` pointing at the upright weight (similar to how `.ita` variants now load `PT-Serif-Expert_Italic.ttf`).
 
@@ -60,7 +62,7 @@ No separate repo needed — this tree is already part of `paratype-git/cyrillic-
 ## Non-negotiables
 
 - **MIT license on every outbound artifact.** The whole repository is MIT (`/LICENSE`); this subproject inherits it.
-- **77-language scope** — the list is in `generate.py` as `LANGUAGES_IN_SCOPE`. Not 79: `Kaitag` and `Uzbek` are in our data but out of scope here.
+- **77-language scope** — the list is in `tools/_catalog.py` as `LANGUAGES_IN_SCOPE`. Not 79: `Kaitag` and `Uzbek` are in our data (`SKIP_LANGUAGES`) but out of scope for deliverables.
 - **PUA is a shared Unicode range** used by Paratype Expert fonts, not proprietary to any one foundry. Frame it accordingly in any descriptive text.
 
 ## Useful references in the source data repo

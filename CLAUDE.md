@@ -8,7 +8,7 @@ Paratype's multilingual Cyrillic alphabet reference. A static site whose per-lan
 
 Two pipelines share this tree:
 - `cyrillic-languages/` — the data repo proper: per-language JSONs, the Python pipeline that rolls them up, and the generated site artifacts.
-- `cyrillic-reference/` — a pan-Cyrillic Unicode reference set generated from the data above. Produces Markdown character tables, a glyph-variant catalog, and per-letter SVG decomposition diagrams rendered in both PT Sans Expert and PT Serif Expert. Two generators live under `tools/`: `tools/generate.py` (stdlib-only, emits tables) and `tools/generate_svgs.py` (needs FontDocTools + fontTools, emits SVG diagrams). Own README.
+- `cyrillic-reference/` — a pan-Cyrillic Unicode reference set generated from the data above. Produces Markdown character tables, a glyph-variant catalog, per-letter SVG decomposition diagrams in both PT Sans Expert and PT Serif Expert, and machine-readable per-language + pan-Cyrillic JSON under `data/`. Three independent generators share a `tools/_catalog.py` core: `tools/generate.py` (stdlib, emits MD tables), `tools/generate_svgs.py` (fontTools + FontDocTools, emits SVG diagrams), `tools/generate_json.py` (stdlib, emits `data/`). Own README + `data/README.md`.
 
 **Where to find the authoritative docs.** Before writing anything that will end up in a user-visible place, check these first — they are the source of truth and must stay in sync with whatever you produce:
 
@@ -89,12 +89,16 @@ The Unicode PUA (`E000`–`F8FF`) is a blank range the Unicode Consortium leaves
     ├── LICENSE                                    ← MIT (redundant w/ root; explicit for this subtree)
     ├── README.md                                  ← subproject docs — pipeline, calibration, manual re-render
     ├── TODO.md                                    ← status notes; §1–§3 done, §4 (publish) + two follow-ups open
-    ├── tools/generate.py                          ← stdlib; reads ../cyrillic-languages/, writes the tables below
+    ├── tools/_catalog.py                          ← shared core: decompose, variants, language catalog (stdlib)
+    ├── tools/generate.py                          ← stdlib; emits the MD tables below
     ├── tools/generate_svgs.py                     ← needs fontTools + FontDocTools; emits SVG diagrams
+    ├── tools/generate_json.py                     ← stdlib; emits data/pan-cyrillic.json + data/languages/*.json
     ├── characters-uppercase.md                    ← generated; pan-Cyrillic uppercase codepoints
     ├── characters-lowercase.md                    ← generated; pan-Cyrillic lowercase codepoints
     ├── glyph-variants.md                          ← generated; locl variants
-    └── svg/{Sans,Serif}/{uc,lc,variants}/         ← generated; per-row .svg + plotter .txt sources per family
+    ├── data/pan-cyrillic.json, data/languages/*.json  ← generated; machine-readable mirror (see data/README.md)
+    ├── svg/{Sans,Serif}/{uc,lc,variants}/         ← generated; per-row .svg per family
+    └── glyphplotter/{Sans,Serif}/{uc,lc,variants}/ ← generated; per-row plotter .txt sources per family
 ```
 
 Two categories of files are **gitignored** here and kept only on the maintainer's machine:
