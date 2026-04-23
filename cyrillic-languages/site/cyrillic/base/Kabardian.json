@@ -1,5 +1,6 @@
 {
     "name_eng": "Kabardian",
+    "language_tag": "kbd",
     "glyphs_list": [
         {
             "type": "alphabet",

@@ -528,11 +528,13 @@ def compileLagnuages(workPath, libraryMainFile, libraryGlyphsList, scriptlang, l
 
 			glyphslists = data['glyphs_list']
 			local = data['local']
+			language_tag = data['language_tag']
 			# print(local)
 			print('%s; localdef: %s; local: %s' % (name, local_def, local))
 
 			outputdata = {
 				'name_eng': name,
+				'language_tag': language_tag,
 				'glyphs_list': []
 			}
 			makeCharSet = True
@@ -607,8 +609,8 @@ def compileLagnuages(workPath, libraryMainFile, libraryGlyphsList, scriptlang, l
 			print('*** Not found: %s path:%s' % (name, namefile))
 
 
-def filterCharacters(name, local, charlist, unicodedlist, puazonelist, nonunicodedlist):
-	"""Partition a charset into three dicts keyed by codepoint: regular Unicode, PUA (``display_unicode`` starts with ``F``), and localized forms without their own display codepoint."""
+def filterCharacters(name, local, language_tag, charlist, unicodedlist, puazonelist, nonunicodedlist):
+	"""Partition a charset into three dicts keyed by codepoint: regular Unicode, PUA (``display_unicode`` starts with ``F``), and localized forms without their own display codepoint. Each entry's ``languages`` list carries ``language_tag`` (BCP 47) alongside ``name`` so pan-script consumers can set ``<html lang>``/``<span lang>`` directly."""
 	for item in charlist:
 		sign = item['sign']
 		unicodes = item['unicodes']
@@ -650,11 +652,11 @@ def filterCharacters(name, local, charlist, unicodedlist, puazonelist, nonunicod
 					display_unicode = display_unicode,
 					description = description,
 					hide = hide,
-					languages = [dict(name = name, types = types)],
+					languages = [dict(name = name, types = types, language_tag = language_tag)],
 					id = getUniqName(8)
 				)
 			else:
-				nonunicodedlist['%s.%s' % (unicodes[0], _local)]['languages'].append(dict(name = name, types = types))
+				nonunicodedlist['%s.%s' % (unicodes[0], _local)]['languages'].append(dict(name = name, types = types, language_tag = language_tag))
 
 		elif display_unicode.startswith('F'):
 			if unicodes[0] not in puazonelist:
@@ -665,11 +667,11 @@ def filterCharacters(name, local, charlist, unicodedlist, puazonelist, nonunicod
 					display_unicode = display_unicode,
 					description = description,
 					hide = hide,
-					languages = [dict(name = name, types = types)],
+					languages = [dict(name = name, types = types, language_tag = language_tag)],
 					id = getUniqName(8)
 				)
 			else:
-				puazonelist[unicodes[0]]['languages'].append(dict(name = name, types = types))
+				puazonelist[unicodes[0]]['languages'].append(dict(name = name, types = types, language_tag = language_tag))
 		else:
 			if unicodes[0] not in unicodedlist:
 				unicodedlist[unicodes[0]] = dict(
@@ -679,11 +681,11 @@ def filterCharacters(name, local, charlist, unicodedlist, puazonelist, nonunicod
 					display_unicode = display_unicode,
 					description = description,
 					hide = hide,
-					languages = [dict(name = name, types = types)],
+					languages = [dict(name = name, types = types, language_tag = language_tag)],
 					id = getUniqName(8)
 				)
 			else:
-				unicodedlist[unicodes[0]]['languages'].append(dict(name = name, types = types))
+				unicodedlist[unicodes[0]]['languages'].append(dict(name = name, types = types, language_tag = language_tag))
 
 	return unicodedlist, puazonelist, nonunicodedlist
 
@@ -758,11 +760,13 @@ def makeMainCharactersSet(workPath, libraryMainFile, sortOrderFile, outputGenera
 			# print('%s path:%s' % (name, inputJSONfile))
 
 			local = 'en'
+			language_tag = None
 			if os.path.exists(mainfile):
 				with open(mainfile, "r") as read_file:
 					maindata = json.load(read_file)
 				# print('%s path:%s' % (name, mainfile))
 				local = maindata['local']
+				language_tag = maindata['language_tag']
 			# print(local)
 			uppercase_unicodes_list = None
 			lowercase_unicodes_list = None
@@ -773,8 +777,8 @@ def makeMainCharactersSet(workPath, libraryMainFile, sortOrderFile, outputGenera
 					uppercase_unicodes_list = glyphslist['uppercase']
 					lowercase_unicodes_list = glyphslist['lowercase']
 			if uppercase_unicodes_list and lowercase_unicodes_list:
-				unicodedlist_UC, puazonelist_UC, nonunicodedlist_UC = filterCharacters(name, local, uppercase_unicodes_list, unicodedlist_UC, puazonelist_UC, nonunicodedlist_UC)
-				unicodedlist_LC, puazonelist_LC, nonunicodedlist_LC = filterCharacters(name, local, lowercase_unicodes_list, unicodedlist_LC, puazonelist_LC, nonunicodedlist_LC)
+				unicodedlist_UC, puazonelist_UC, nonunicodedlist_UC = filterCharacters(name, local, language_tag, uppercase_unicodes_list, unicodedlist_UC, puazonelist_UC, nonunicodedlist_UC)
+				unicodedlist_LC, puazonelist_LC, nonunicodedlist_LC = filterCharacters(name, local, language_tag, lowercase_unicodes_list, unicodedlist_LC, puazonelist_LC, nonunicodedlist_LC)
 
 	UC_unicoded_list = sortGlyphsList({ **unicodedlist_UC, **puazonelist_UC, **nonunicodedlist_UC}, names, sortOrder = SortOrderCyrl)
 	# UC_pua_list = sortGlyphsList(puazonelist_UC, names, sortOrder = SortOrderCyrl)

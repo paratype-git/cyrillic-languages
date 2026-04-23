@@ -2,6 +2,7 @@
     "name_eng": "Chukchi",
     "name_rus": "Чукотский",
     "local": "ru",
+    "language_tag": "ckt",
     "language_group_eng": [
         "Chukchi - Kamchatka",
         "Chukchi - Koryak"

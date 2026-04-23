@@ -2,6 +2,7 @@
     "name_eng": "Uighur",
     "name_rus": "Уйгурский",
     "local": "ru",
+    "language_tag": "ug",
     "language_group_eng": [
         "Altaic",
         "Turkic"

@@ -2,6 +2,7 @@
     "name_eng": "Negidal",
     "name_rus": "Негидальский",
     "local": "ru",
+    "language_tag": "neg",
     "language_group_eng": [
         "Altaic",
         "Tungus-Manchu"

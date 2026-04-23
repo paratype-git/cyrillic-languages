@@ -2,6 +2,7 @@
     "name_eng": "Udmurt",
     "name_rus": "Удмуртский",
     "local": "ru",
+    "language_tag": "udm",
     "language_group_eng": [
         "Uralic",
         "Finno - Ugric",

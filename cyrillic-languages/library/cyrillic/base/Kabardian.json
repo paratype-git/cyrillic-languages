@@ -2,6 +2,7 @@
     "name_eng": "Kabardian",
     "name_rus": "Кабардинский",
     "local": "ru",
+    "language_tag": "kbd",
     "language_group_eng": [
         "North Caucasian",
         "Abkhazian - Adyghe (Western Caucasian)"

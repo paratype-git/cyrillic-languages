@@ -2,6 +2,7 @@
     "name_eng": "Kalmyk",
     "name_rus": "Калмыцкий",
     "local": "ru",
+    "language_tag": "xal",
     "language_group_eng": [
         "Altaic",
         "Mongolian"

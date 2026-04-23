@@ -2,6 +2,7 @@
     "name_eng": "Chuvash",
     "name_rus": "Чувашский",
     "local": "cv",
+    "language_tag": "cv",
     "language_group_eng": [
         "Altaic",
         "Turkic",

@@ -2,6 +2,7 @@
     "name_eng": "Kumyk",
     "name_rus": "Кумыкский",
     "local": "ru",
+    "language_tag": "kum",
     "language_group_eng": [
         "Altaic",
         "Turkic"

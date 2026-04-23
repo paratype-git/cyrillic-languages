@@ -2,6 +2,7 @@
     "name_eng": "Shor",
     "name_rus": "Шорский",
     "local": "ru",
+    "language_tag": "cjs",
     "language_group_eng": [
         "Altaic",
         "Turkic"

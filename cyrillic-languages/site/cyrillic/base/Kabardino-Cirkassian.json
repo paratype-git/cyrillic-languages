@@ -1,5 +1,6 @@
 {
     "name_eng": "Kabardino-Cirkassian",
+    "language_tag": "kbd",
     "glyphs_list": [
         {
             "type": "alphabet",

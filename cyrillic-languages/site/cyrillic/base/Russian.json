@@ -1,5 +1,6 @@
 {
     "name_eng": "Russian",
+    "language_tag": "ru",
     "glyphs_list": [
         {
             "type": "alphabet",

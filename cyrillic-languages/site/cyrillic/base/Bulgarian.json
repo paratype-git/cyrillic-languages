@@ -1,5 +1,6 @@
 {
     "name_eng": "Bulgarian",
+    "language_tag": "bg",
     "glyphs_list": [
         {
             "type": "alphabet",

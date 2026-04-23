@@ -2,6 +2,7 @@
     "name_eng": "Buryat",
     "name_rus": "Бурятский",
     "local": "ru",
+    "language_tag": "bua",
     "language_group_eng": [
         "Altaic",
         "Mongolian"

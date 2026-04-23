@@ -2,6 +2,7 @@
     "name_eng": "Komi-Permyak",
     "name_rus": "Коми-пермяцкий",
     "local": "ru",
+    "language_tag": "koi",
     "language_group_eng": [
         "Uralic",
         "Finno - Ugric",

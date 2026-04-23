@@ -2,6 +2,7 @@
     "name_eng": "Nivkh",
     "name_rus": "Нивхский",
     "local": "ru",
+    "language_tag": "niv",
     "language_group_eng": [
         "isolated 'Paleoasiatic' language"
     ],

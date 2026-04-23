@@ -2,6 +2,7 @@
     "name_eng": "Evenki (Tungus)",
     "name_rus": "Эвенкийский",
     "local": "ru",
+    "language_tag": "evn",
     "language_group_eng": [
         "Altaic",
         "Tungus-Manchu"

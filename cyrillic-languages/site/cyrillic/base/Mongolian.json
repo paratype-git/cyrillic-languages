@@ -1,5 +1,6 @@
 {
     "name_eng": "Mongolian",
+    "language_tag": "mn",
     "glyphs_list": [
         {
             "type": "alphabet",

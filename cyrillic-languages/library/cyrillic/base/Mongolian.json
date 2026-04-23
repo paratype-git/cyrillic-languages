@@ -2,6 +2,7 @@
     "name_eng": "Mongolian",
     "name_rus": "Монгольский",
     "local": "ru",
+    "language_tag": "mn",
     "language_group_eng": [
         "Altaic",
         "Mongolian"

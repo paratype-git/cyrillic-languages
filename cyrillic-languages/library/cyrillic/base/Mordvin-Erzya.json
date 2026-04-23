@@ -2,6 +2,7 @@
     "name_eng": "Mordvin-Erzya",
     "name_rus": "Мордовско-Эрзянский",
     "local": "ru",
+    "language_tag": "myv",
     "language_group_eng": [
         "Uralic",
         "Finno - Ugric",

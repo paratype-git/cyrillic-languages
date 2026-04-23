@@ -2,6 +2,7 @@
     "name_eng": "Kazakh",
     "name_rus": "Казахский",
     "local": "ru",
+    "language_tag": "kk",
     "language_group_eng": [
         "Altaic",
         "Turkic"

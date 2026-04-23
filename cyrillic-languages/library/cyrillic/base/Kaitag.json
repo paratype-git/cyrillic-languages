@@ -2,23 +2,24 @@
     "name_eng": "Kaitag",
     "name_rus": "Кайтагский",
     "local": "ru",
+    "language_tag": "xdq",
     "language_group_eng": [
         "North Caucasian",
         "East Caucasian",
-		"Dagestan"
+        "Dagestan"
     ],
     "language_group_rus": [
         "Северокавказские языки",
         "Восточнокавказские языки",
-		"Дагестанские языки"
+        "Дагестанские языки"
     ],
     "alt_names_eng": [
         "Kaitag",
         "Kaitak",
         "Qaitaq",
-		"Kaytag",
-		"Khaydak",
-		"Ucumi"
+        "Kaytag",
+        "Khaydak",
+        "Ucumi"
     ],
     "description_eng": "The modern Kaitag alphabet, based on the Cyrillic alphabet, was developed in 2024 and updated in 2026. It consists of 27 letters of the Russian alphabet ( Щ, Ф, Ы, Э, Ё, Ю are missing ), and 3 specific characters as well as 12 digraphs (doubled geminates and abrupives with Ӏӏ). mportant symbols that are not part of the alphabet are shown separately.",
     "description_rus": "Современный кайтагский алфавит на основе кириллицы разработан в 2024 году и уточнен в 2026 году. Он состоит из 27 букв русского алфавита (отсутствуют Щ, Ф, Ы, Э, Ё, Ю), 3 специфических знаков (Ғ, Ҡ, Ҳ), и 12 диграфов (удвоенные геминаты и абруптивы с Ӏӏ). Отдельно показаны важные знаки, не входящие в алфавит. ",

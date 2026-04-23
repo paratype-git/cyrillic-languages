@@ -2,6 +2,7 @@
     "name_eng": "Ukrainian",
     "name_rus": "Украинский",
     "local": "ru",
+    "language_tag": "uk",
     "language_group_eng": [
         "Indo-European",
         "Slavic"

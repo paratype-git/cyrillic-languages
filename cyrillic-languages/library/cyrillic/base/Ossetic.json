@@ -2,6 +2,7 @@
     "name_eng": "Ossetic",
     "name_rus": "Осетинский",
     "local": "ru",
+    "language_tag": "os",
     "language_group_eng": [
         "Indo-European",
         "Iranian",

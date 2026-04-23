@@ -111,6 +111,7 @@ for item in strukt:
 		_data['name_eng'] = data['name_eng']
 		_data['name_rus'] = data['name_rus']
 		_data['local'] = data['local']
+		_data['language_tag'] = data['language_tag']
 		_data['language_group_eng'] = [] # item['language_group_eng']
 		_data['language_group_rus'] = item['language_group_rus']
 		_data['alt_names_eng'] = item['alt_names_eng']

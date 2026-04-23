@@ -2,6 +2,7 @@
     "name_eng": "Karachay-Balkar",
     "name_rus": "Карачаево-Балкарский",
     "local": "ru",
+    "language_tag": "krc",
     "language_group_eng": [
         "Altaic",
         "Turkic"

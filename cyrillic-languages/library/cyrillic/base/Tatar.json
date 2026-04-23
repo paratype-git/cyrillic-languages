@@ -2,6 +2,7 @@
     "name_eng": "Tatar",
     "name_rus": "Татарский",
     "local": "ru",
+    "language_tag": "tt",
     "language_group_eng": [
         "Altaic",
         "Turkic"

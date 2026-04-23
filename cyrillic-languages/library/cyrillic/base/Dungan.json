@@ -2,6 +2,7 @@
     "name_eng": "Dungan",
     "name_rus": "Дунганский",
     "local": "ru",
+    "language_tag": "dng",
     "language_group_eng": [
         "Sino- Tibetan",
         "Chinese"

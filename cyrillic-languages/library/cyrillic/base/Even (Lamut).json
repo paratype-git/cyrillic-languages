@@ -2,6 +2,7 @@
     "name_eng": "Even (Lamut)",
     "name_rus": "Эвенский",
     "local": "ru",
+    "language_tag": "eve",
     "language_group_eng": [
         "Altaic",
         "Tungus-Manchu"

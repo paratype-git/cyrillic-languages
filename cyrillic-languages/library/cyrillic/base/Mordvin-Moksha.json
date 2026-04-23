@@ -2,6 +2,7 @@
     "name_eng": "Mordvin-Moksha",
     "name_rus": "Мордовско-Мокшанский",
     "local": "ru",
+    "language_tag": "mdf",
     "language_group_eng": [
         "Uralic",
         "Finno - Ugric",

@@ -2,6 +2,7 @@
     "name_eng": "Bashkir",
     "name_rus": "Башкирский",
     "local": "ba",
+    "language_tag": "ba",
     "language_group_eng": [
         "Altaic",
         "Turkic"

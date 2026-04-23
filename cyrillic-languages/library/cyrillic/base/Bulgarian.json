@@ -2,6 +2,7 @@
     "name_eng": "Bulgarian",
     "name_rus": "Болгарский",
     "local": "bg",
+    "language_tag": "bg",
     "language_group_eng": [
         "Indo-European",
         "Slavic"

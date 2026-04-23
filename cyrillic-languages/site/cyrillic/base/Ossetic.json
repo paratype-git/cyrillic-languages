@@ -1,5 +1,6 @@
 {
     "name_eng": "Ossetic",
+    "language_tag": "os",
     "glyphs_list": [
         {
             "type": "alphabet",

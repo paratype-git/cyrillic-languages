@@ -389,26 +389,35 @@ Before opening the Latin tree to contributors, the schema and conventions would 
 
 A running list of things that are known-imperfect and should be addressed when someone has the time.
 
-1. **Hardcoded locale list in `compile_languages.py`.** `locales = ['', '.ru', '.ba', '.bg', '.cv', '.sr', '.en']` should be read from `locales.json` instead. See [Locales](#locales). Until this is fixed, adding a locale requires coordinated edits in three places.
+1. **Hardcoded locale list in `compile_languages.py`.** `locales = ['', '.ru', '.ba', '.bg', '.cv', '.sr', '.en']` should be auto-derived from the data (walk all enabled base files, collect unique render-tag values that appear on `&`-marked tokens) instead of being hand-maintained. Part of the Phase 2 initiative below.
 
-2. **Dead marker code in `compile_languages.py`.** The `marks` list contains `*`, `$`, `#`, `@`, `(`, `)`, `[`, `]`, `<`, `.alt` — none of which are used in any current source file:
+2. **BCP47 rollout Phase 2 — migrate `&`-token render source from `local` to `language_tag`.** Phase 1 (additive) shipped the `language_tag` field at the top level of each `site/<Language>.json` and on every `languages[i]` entry in `cyrillic_characters_lib.json`. Phase 2 is the semantic switch:
+   - In `compile_languages.py`, feed `data['language_tag']` into `cascadeAltsChar` and `filterCharacters` in place of `data['local']` for the `&`-branches (the plain / `+` branches keep using `local_default` from `languages.json`).
+   - Remove `local` from all 79 base JSONs and from `reloadDescriptions.py`.
+   - Auto-derive the hardcoded `locales` list (closes item 1 above).
+   - Update `MAINTAINING.md` (this file) and `CONTRIBUTING*.md` to drop the `local` field from the schema description; `language_tag` becomes the required per-file identity tag.
+   - **Product cost:** Macedonian is the one file where `local != language_tag` AND uses `&`-tokens (`local: "sr"`, `language_tag: "mk"`). Today it renders `&б` via a borrowed Serbian `locl`; after Phase 2, `<span lang="mk">` falls back to default because PT Expert has no MKD `locl` yet, so the `&б` / `+б` pair visually collapses until Paratype ships MKD support.
+
+   Phase 2 therefore waits for either (a) font-side MKD support, or (b) an explicit product decision to accept the Macedonian regression.
+
+3. **Dead marker code in `compile_languages.py`.** The `marks` list contains `*`, `$`, `#`, `@`, `(`, `)`, `[`, `]`, `<`, `.alt` — none of which are used in any current source file:
    - `*`, `$`, `#`, `@`, `<` → their function was migrated to the `type` field in `glyphs_list`.
    - `(`, `)`, `[`, `]` → listed in `marks` but missing from `signtypes`; will raise `KeyError` if a contributor types one.
    - `.alt` → listed in `marks` but its `signtypes` entry is commented out; same crash.
 
    Cleanup would mean trimming both tables and the `getCharInfo` loop. Done carefully, this would turn the footguns into explicit "unknown marker" errors.
 
-3. **Utility scripts with absolute user paths.** `scripts/dumpLangDescriptions.py` and several archived one-shots under `scripts/_legacy/` contain macOS-style absolute paths from an earlier developer setup. Any run starts with a mandatory path edit.
+4. **Utility scripts with absolute user paths.** `scripts/dumpLangDescriptions.py` and several archived one-shots under `scripts/_legacy/` contain macOS-style absolute paths from an earlier developer setup. Any run starts with a mandatory path edit.
 
-4. **No pre-merge validator.** PRs are reviewed by eye. A small validator script (`scripts/validate.py`) that checks schema completeness, filename/name_eng match, locale validity, and absence of dead/trap markers would remove most of the routine review work. **This is deferred pending scope agreement**; see project history for the outstanding decision.
+5. **No pre-merge validator.** PRs are reviewed by eye. A small validator script (`scripts/validate.py`) that checks schema completeness, filename/name_eng match, locale validity, and absence of dead/trap markers would remove most of the routine review work. **This is deferred pending scope agreement**; see project history for the outstanding decision.
 
-5. **Legacy files not migrated.** See [The legacy folder](#the-legacy-folder).
+6. **Legacy files not migrated.** See [The legacy folder](#the-legacy-folder).
 
-6. **Stale contact email in the compiled site bundle.** The React bundle served at <https://paratype.github.io/cyrillic-languages/> still contains `fonts@paratype.com` in the "About the project" panel. The new canonical contact is `info@paratype.net`. Fixing this means rebuilding the React app and committing the new bundle in the [paratype/paratype.github.io](https://github.com/paratype/paratype.github.io) repository — out of scope for routine data maintenance here, because the site engine is not tracked in this repository.
+7. **Stale contact email in the compiled site bundle.** The React bundle served at <https://paratype.github.io/cyrillic-languages/> still contains `fonts@paratype.com` in the "About the project" panel. The new canonical contact is `info@paratype.net`. Fixing this means rebuilding the React app and committing the new bundle in the [paratype/paratype.github.io](https://github.com/paratype/paratype.github.io) repository — out of scope for routine data maintenance here, because the site engine is not tracked in this repository.
 
-7. **Production URLs in the compiled site bundle still point at the old data location.** The site bundle at `paratype/paratype.github.io` fetches per-language JSON from `raw.githubusercontent.com/paratype/paratype.github.io/main/cyrillic-languages/site/...`. After this repo (`paratype-git/cyrillic-languages`) became the data-only home, those URLs need to be updated in the React app and the bundle recommitted to the `paratype.github.io` repository. Until that happens, the production site is served from a stale copy of the data.
+8. **Production URLs in the compiled site bundle still point at the old data location.** The site bundle at `paratype/paratype.github.io` fetches per-language JSON from `raw.githubusercontent.com/paratype/paratype.github.io/main/cyrillic-languages/site/...`. After this repo (`paratype-git/cyrillic-languages`) became the data-only home, those URLs need to be updated in the React app and the bundle recommitted to the `paratype.github.io` repository. Until that happens, the production site is served from a stale copy of the data.
 
-8. **`glyphs_list_categories.json` includes `digraph` and `foreign`**, both currently unused in source data (`digraph` is handled inline via the `:` marker). Either remove them from the categories file, or adopt them in data, or document why they are reserved.
+9. **`glyphs_list_categories.json` includes `digraph` and `foreign`**, both currently unused in source data (`digraph` is handled inline via the `:` marker). Either remove them from the categories file, or adopt them in data, or document why they are reserved.
 
 ## Contact
 

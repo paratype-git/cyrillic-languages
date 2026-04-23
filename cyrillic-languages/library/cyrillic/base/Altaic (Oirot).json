@@ -2,6 +2,7 @@
     "name_eng": "Altaic (Oirot)",
     "name_rus": "Алтайский",
     "local": "ru",
+    "language_tag": "alt",
     "language_group_eng": [
         "Altaic",
         "Turkic"

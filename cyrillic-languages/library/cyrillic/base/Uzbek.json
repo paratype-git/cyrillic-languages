@@ -2,6 +2,7 @@
     "name_eng": "Uzbek",
     "name_rus": "Узбекский",
     "local": "ru",
+    "language_tag": "uz",
     "language_group_eng": [
         "Altaic",
         "Turkic"
