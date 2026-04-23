@@ -8,11 +8,10 @@
         "code_pt": 11,
         "url": "https://paratype.github.io/cyrillic-languages/index.html?lang=Bulgarian&group=cyrillic&ui=en&pg=2",
         "language_tag": "bg",
-        "default_language_tag": "bg",
+        "default_language_tag": "ru",
         "feature_locl_tag": "BGR ",
         "iso639_1": "bg",
         "iso639_3": "bul",
-        "confidence": "high",
         "note": null
     },
     "characters": [

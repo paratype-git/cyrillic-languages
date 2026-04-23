@@ -303,11 +303,10 @@ def main() -> int:
             "code_pt": coerce_code_pt(reg.get("code_pt")),
             "url": build_url(name),
             "language_tag": reg.get("language_tag") or tag.get("bcp47"),
-            "default_language_tag": base.get("local"),
+            "default_language_tag": "ru",
             "feature_locl_tag": tag.get("ot_lang"),
             "iso639_1": tag.get("iso639_1"),
             "iso639_3": tag.get("iso639_3"),
-            "confidence": tag.get("confidence"),
             "note": tag.get("note"),
         }
 

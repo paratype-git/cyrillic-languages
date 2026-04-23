@@ -15,7 +15,6 @@
         "feature_locl_tag": "AZE ",
         "iso639_1": "az",
         "iso639_3": "aze",
-        "confidence": "high",
         "note": "Macrolanguage; Cyrillic-script Azeri corresponds to 'azb'/'azj' variants but OT uses AZE."
     },
     "characters": [

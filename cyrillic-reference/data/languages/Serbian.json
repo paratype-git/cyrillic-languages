@@ -8,11 +8,10 @@
         "code_pt": 66,
         "url": "https://paratype.github.io/cyrillic-languages/index.html?lang=Serbian&group=cyrillic&ui=en&pg=2",
         "language_tag": "sr",
-        "default_language_tag": "sr",
+        "default_language_tag": "ru",
         "feature_locl_tag": "SRB ",
         "iso639_1": "sr",
         "iso639_3": "srp",
-        "confidence": "high",
         "note": null
     },
     "characters": [

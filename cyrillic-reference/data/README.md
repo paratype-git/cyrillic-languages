@@ -11,7 +11,7 @@ Machine-readable counterparts to the Markdown tables in the parent directory. Ge
 
 ## Languages
 
-77 in-scope languages, sorted alphabetically by `name_eng`. The full `meta` block for each language — with `default_language_tag`, `iso639_1/3`, `confidence`, and `note` — is in the per-language JSON.
+77 in-scope languages, sorted alphabetically by `name_eng`. The full `meta` block for each language — with `default_language_tag`, `iso639_1/3`, and `note` — is in the per-language JSON.
 
 | # | name_eng | name_rus | `language_tag` | `feature_locl_tag` | chars | variants | file |
 | ---: | --- | --- | :---: | :---: | ---: | ---: | --- |
@@ -151,7 +151,6 @@ One file per in-scope language (77 total). `<Name>` is the language's `name_eng`
         "feature_locl_tag": "ABK ",
         "iso639_1": "ab",
         "iso639_3": "abk",
-        "confidence": "high",
         "note": null
     },
     "characters": [
@@ -183,11 +182,10 @@ One file per in-scope language (77 total). `<Name>` is the language's `name_eng`
 | `code_pt` | `cyrillic_library.json` | Paratype's internal integer per-language identifier. |
 | `url` | derived from `name_eng` | Canonical URL on the Paratype Cyrillic Languages reference site. Spaces are percent-encoded (`%20`); parentheses kept literal. |
 | `language_tag` | `cyrillic_library.json#language_tag` | BCP 47 tag. Note: **Macedonian is temporarily `"sr"`** as a font-rendering workaround and will revert to `"mk"` once PT Expert ships `MKD` locl support. |
-| `default_language_tag` | `base/<Name>.json#local` | OT locale used as the source file's default. One of `ru`, `bg`, `sr`, `ba`, `cv`. |
+| `default_language_tag` | script default | The tag that renders the baseline (non-locl-overridden) letters of this language. Always `"ru"` in the Cyrillic library — the Russian typographic tradition is the baseline for every language covered here. To see a language's locale-specific glyph variants, activate its `feature_locl_tag`. |
 | `feature_locl_tag` | `language-tags.json#ot_lang` | 4-letter OpenType language-system tag (e.g. `ABK `, `BGR `, `SRB `), padded to 4 chars with trailing space per the OT spec. This is the language's **own** OT identifier — for Macedonian it remains `"MKD "` even though `language_tag` is currently `"sr"`. |
 | `iso639_1`, `iso639_3` | `language-tags.json` | ISO 639-1 / ISO 639-3 codes. `null` when the standard has no assignment. |
-| `confidence` | `language-tags.json` | `"high"` / `"medium"` / `"low"` — reliability of the ISO / BCP 47 / OT mapping. |
-| `note` | `language-tags.json` | Free-text rationale when the mapping involved judgement (macrolanguages, dialect variants, provisional codes, OT tag collisions). `null` when no note is recorded. |
+| `note` | `language-tags.json` | Free-text rationale when the tag mapping involved judgement (macrolanguages, dialect variants, provisional codes, OT tag collisions). `null` when no note is recorded. |
 
 ### `characters[]` — per-entry fields
 

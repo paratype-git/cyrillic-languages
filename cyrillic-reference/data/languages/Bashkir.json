@@ -8,11 +8,10 @@
         "code_pt": 8,
         "url": "https://paratype.github.io/cyrillic-languages/index.html?lang=Bashkir&group=cyrillic&ui=en&pg=2",
         "language_tag": "ba",
-        "default_language_tag": "ba",
+        "default_language_tag": "ru",
         "feature_locl_tag": "BSH ",
         "iso639_1": "ba",
         "iso639_3": "bak",
-        "confidence": "high",
         "note": null
     },
     "characters": [

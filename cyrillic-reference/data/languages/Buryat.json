@@ -13,7 +13,6 @@
         "feature_locl_tag": "BUR ",
         "iso639_1": null,
         "iso639_3": "bua",
-        "confidence": "medium",
         "note": "Microsoft OT tag for Buryat is BUR (not BGR, which is Bulgarian). ISO 'bua' is a macrolanguage; sub-codes bxr/bxu/bxm exist for the three Buryat dialects."
     },
     "characters": [

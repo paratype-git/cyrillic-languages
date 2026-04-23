@@ -8,11 +8,10 @@
         "code_pt": 97,
         "url": "https://paratype.github.io/cyrillic-languages/index.html?lang=Chuvash&group=cyrillic&ui=en&pg=2",
         "language_tag": "cv",
-        "default_language_tag": "cv",
+        "default_language_tag": "ru",
         "feature_locl_tag": "CHU ",
         "iso639_1": "cv",
         "iso639_3": "chv",
-        "confidence": "high",
         "note": "OT 'CHU ' is Chuvash, NOT Church Slavonic (OT uses 'CSL ' for Church Slavonic)."
     },
     "characters": [
