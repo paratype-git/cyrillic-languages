@@ -116,7 +116,7 @@ Everything lives under `cyrillic-languages/`. The subtrees, grouped by role:
 
 **Data configuration (operator-only)**
 
-- `library/cyrillic/cyrillic_library.json` — registry of languages, with `enable` flag and internal `code_pt` values.
+- `library/cyrillic/cyrillic_library.json` — registry of languages, with `enable` flag.
 - `library/cyrillic/sortorder_cyrillic.txt` — pan-Cyrillic sort order.
 - `languages.json` — top-level pipeline config: which scripts to build, and the per-script config file names.
 - `locales.json` — mapping of OT-locale tags to human-readable language names. (See [Locales](#locales) for the caveat.)
@@ -158,7 +158,6 @@ Shape:
     {
         "name_eng": "Abazin",
         "name_rus": "Абазинский",
-        "code_pt": "1",
         "enable": true
     },
     ...
@@ -169,13 +168,12 @@ Shape:
 
 - `name_eng` — must match the filename of the source JSON (minus `.json`) and the `name_eng` field inside it.
 - `name_rus` — Russian display name. Used by the site UI.
-- `code_pt` — an internal Paratype identifier. Most Latin-tree entries and new Cyrillic entries carry a placeholder `"1"`; assign a real value when one is provided by Paratype.
 - `enable` — boolean. When `false`, the pipeline silently skips this language; its source file is kept but not processed and no output is emitted. All entries currently are `true`; `false` is useful for temporarily parking a language pending revision.
 
 ### Registering a new language
 
 1. Place the source file at `library/cyrillic/base/<Language>.json`.
-2. Append a new entry to `cyrillic_library.json` with `enable: true` and a real `code_pt` (or `"1"` placeholder pending assignment).
+2. Append a new entry to `cyrillic_library.json` with `enable: true`.
 3. Run the pipeline and commit the results.
 
 ### Invariants

@@ -76,7 +76,7 @@ The Unicode PUA (`E000`–`F8FF`) is a blank range the Unicode Consortium leaves
 ├── LICENSE                                        ← MIT, covers the whole repository
 ├── cyrillic-languages/
 │   ├── library/cyrillic/base/<Language>.json      ← contributor surface
-│   ├── library/cyrillic/cyrillic_library.json     ← language registry (enable, code_pt)
+│   ├── library/cyrillic/cyrillic_library.json     ← language registry (enable)
 │   ├── library/cyrillic/sortorder_cyrillic.txt    ← pan-Cyrillic sort order
 │   ├── library/cyrillic/_legacy/                  ← archived legacy-schema files, not processed
 │   ├── library/latin/**                           ← WIP, not open for contributions

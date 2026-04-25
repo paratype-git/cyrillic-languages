@@ -54,12 +54,6 @@ One file per language, named after the English name of the language, e.g. `Avar.
 
 `description_*`, `name_*`, `language_group_*`, and `alt_names_eng` are **plain text** — no Markdown, no HTML. Inside `description_*` you may use `\n` to separate paragraphs. A trailing `\n` is not required. Typical descriptions are a paragraph or two (up to ~500 characters).
 
-### Internal/ignored fields
-
-You may see the following in some files; contributors should not add or modify them:
-
-- `code_pt` (in `cyrillic_library.json`, not inside the per-language file) — an internal Paratype identifier. Curators assign the real value.
-
 ## Glyph blocks
 
 The `glyphs_list` field is an array of blocks. Each block represents one view of the language's glyph inventory, for example the alphabet proper, or historical forms, or dialect-only glyphs.
@@ -187,12 +181,12 @@ The usual case: you want to add, remove, or correct a glyph in an existing alpha
 
 ## Adding a new language
 
-This is a bigger change because it touches more than one file and may require new entries in the shared sort-order table. Before doing the work, please **open an issue first** describing the language you want to add — this helps the maintainers plan the sort-order and `code_pt` assignment.
+This is a bigger change because it touches more than one file and may require new entries in the shared sort-order table. Before doing the work, please **open an issue first** describing the language you want to add — this helps the maintainers plan the sort-order.
 
 Once that is discussed, a new-language PR will usually include:
 
 - A new file `cyrillic-languages/library/cyrillic/base/<Language>.json` filled out according to this document.
-- (Via the maintainer) a corresponding entry in `cyrillic-languages/library/cyrillic/cyrillic_library.json` with `enable: true` and a `code_pt` value assigned by the maintainer; leave `"code_pt": "1"` as a placeholder if you include it in the PR.
+- (Via the maintainer) a corresponding entry in `cyrillic-languages/library/cyrillic/cyrillic_library.json` with `enable: true`.
 
 Contributors do not need to (and should not) edit `sortorder_cyrillic.txt` themselves.
 

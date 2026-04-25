@@ -212,13 +212,6 @@ def build_url(name_eng: str) -> str:
     return f"https://paratype.github.io/cyrillic-languages/index.html?lang={q}&group=cyrillic&ui=en&pg=2"
 
 
-def coerce_code_pt(v) -> int | str | None:
-    if v is None:
-        return None
-    s = str(v)
-    return int(s) if s.isdigit() else s
-
-
 # ─── main ──────────────────────────────────────────────────────────────────
 
 def main() -> int:
@@ -300,7 +293,6 @@ def main() -> int:
             "name_eng": name,
             "name_rus": base.get("name_rus"),
             "alternative_names": alts,
-            "code_pt": coerce_code_pt(reg.get("code_pt")),
             "url": build_url(name),
             "language_tag": reg.get("language_tag") or tag.get("bcp47"),
             "default_language_tag": "ru",

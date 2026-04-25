@@ -144,7 +144,6 @@ One file per in-scope language (77 total). `<Name>` is the language's `name_eng`
         "name_eng": "Abkhazian",
         "name_rus": "Абхазский",
         "alternative_names": ["Bzyb", "Abzhui", "Samurzakan"],
-        "code_pt": 90,
         "url": "https://paratype.github.io/cyrillic-languages/index.html?lang=Abkhazian&group=cyrillic&ui=en&pg=2",
         "language_tag": "ab",
         "default_language_tag": "ru",
@@ -179,7 +178,6 @@ One file per in-scope language (77 total). `<Name>` is the language's `name_eng`
 | --- | --- | --- |
 | `name_eng`, `name_rus` | `cyrillic_library.json` | English and Russian display names. |
 | `alternative_names` | `base/<Name>.json#alt_names_eng`, deduplicated against `name_eng` | Commonly-cited alternative labels. Array, possibly empty. |
-| `code_pt` | `cyrillic_library.json` | Paratype's internal integer per-language identifier. |
 | `url` | derived from `name_eng` | Canonical URL on the Paratype Cyrillic Languages reference site. Spaces are percent-encoded (`%20`); parentheses kept literal. |
 | `language_tag` | `cyrillic_library.json#language_tag` | BCP 47 tag. Note: **Macedonian is temporarily `"sr"`** as a font-rendering workaround and will revert to `"mk"` once PT Expert ships `MKD` locl support. |
 | `default_language_tag` | script default | The tag that renders the baseline (non-locl-overridden) letters of this language. Always `"ru"` in the Cyrillic library — the Russian typographic tradition is the baseline for every language covered here. To see a language's locale-specific glyph variants, activate its `feature_locl_tag`. |
@@ -257,7 +255,7 @@ Variants carry `used_by[]` in `pan-cyrillic.json` only; in `languages/<Name>.jso
 | --- | --- |
 | `../../cyrillic-languages/site/cyrillic/cyrillic_characters_lib.json` | Pan-Cyrillic deduplicated codepoint list: `character`, `codepoint`, `description`. Produced by `compile_languages.py` in the source repo. |
 | `../../cyrillic-languages/library/cyrillic/base/<Name>.json` | Which codepoints a given language uses (via the tokenised `glyphs_list` blocks and their `type`); `alt_names_eng`, `name_rus`, `local`. Also the source for `&` / `+` variant markers. |
-| `../../cyrillic-languages/library/cyrillic/cyrillic_library.json` | Registry of enabled languages, `code_pt`, `language_tag`. |
+| `../../cyrillic-languages/library/cyrillic/cyrillic_library.json` | Registry of enabled languages, `language_tag`. |
 | [`../language-tags.json`](../language-tags.json) | BCP 47 / ISO / OT enrichment, `confidence`, `note`. |
 
 `decomposition` is computed live per row by `_catalog.decompose`, which applies the Paratype-aware NFD (`… WITH <mark>` parsing → base + combining mark sequence, with the BREVE swap to U+F6D1 / U+F6D4). Structural composites (DESCENDER, HOOK, STROKE, …) return `[]` — their shape has no standard Unicode sequence.

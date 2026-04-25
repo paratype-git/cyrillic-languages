@@ -2,553 +2,474 @@
     {
         "name_eng": "Abazin",
         "name_rus": "Абазинский",
-        "code_pt": "1",
         "enable": true,
         "language_tag": "abq"
     },
     {
         "name_eng": "Abkhazian",
         "name_rus": "Абхазский",
-        "code_pt": "90",
         "enable": true,
         "language_tag": "ab"
     },
     {
         "name_eng": "Avar",
         "name_rus": "Аварский",
-        "code_pt": "5",
         "enable": true,
         "language_tag": "av"
     },
     {
         "name_eng": "Aghul",
         "name_rus": "Агульский",
-        "code_pt": "147",
         "enable": true,
         "language_tag": "agx"
     },
     {
         "name_eng": "Adyge",
         "name_rus": "Адыгейский",
-        "code_pt": "2",
         "enable": true,
         "language_tag": "ady"
     },
     {
         "name_eng": "Azeri",
         "name_rus": "Азербайджанский",
-        "code_pt": "6",
         "enable": true,
         "language_tag": "az"
     },
     {
         "name_eng": "Altaic (Oirot)",
         "name_rus": "Алтайский",
-        "code_pt": "92",
         "enable": true,
         "language_tag": "alt"
     },
     {
         "name_eng": "Bashkir",
         "name_rus": "Башкирский",
-        "code_pt": "8",
         "enable": true,
         "language_tag": "ba"
     },
     {
         "name_eng": "Belarusian",
         "name_rus": "Белорусский",
-        "code_pt": "9",
         "enable": true,
         "language_tag": "be"
     },
     {
         "name_eng": "Bulgarian",
         "name_rus": "Болгарский",
-        "code_pt": "11",
         "enable": true,
         "language_tag": "bg"
     },
     {
         "name_eng": "Buryat",
         "name_rus": "Бурятский",
-        "code_pt": "12",
         "enable": true,
         "language_tag": "bua"
     },
     {
         "name_eng": "Gagauz",
         "name_rus": "Гагаузский",
-        "code_pt": "105",
         "enable": true,
         "language_tag": "gag"
     },
     {
         "name_eng": "Dargwa",
         "name_rus": "Даргинский",
-        "code_pt": "18",
         "enable": true,
         "language_tag": "dar"
     },
     {
         "name_eng": "Dolgan",
         "name_rus": "Долганский",
-        "code_pt": "148",
         "enable": true,
         "language_tag": "dlg"
     },
     {
         "name_eng": "Dungan",
         "name_rus": "Дунганский",
-        "code_pt": "20",
         "enable": true,
         "language_tag": "dng"
     },
     {
         "name_eng": "Ingush",
         "name_rus": "Ингушский",
-        "code_pt": "34",
         "enable": true,
         "language_tag": "inh"
     },
     {
         "name_eng": "Itelmen",
         "name_rus": "Ительменский",
-        "code_pt": "146",
         "enable": true,
         "language_tag": "itl"
     },
     {
         "name_eng": "Kabardino-Cirkassian",
         "name_rus": "Кабардино-Черкесский",
-        "code_pt": "37",
         "enable": true,
         "language_tag": "kbd"
     },
     {
         "name_eng": "Kabardian",
         "name_rus": "Кабардинский",
-        "code_pt": "136",
         "enable": true,
         "language_tag": "kbd"
     },
     {
         "name_eng": "Kazakh",
         "name_rus": "Казахский",
-        "code_pt": "40",
         "enable": true,
         "language_tag": "kk"
     },
     {
         "name_eng": "Kaitag",
         "name_rus": "Кайтагский",
-        "code_pt": "161",
         "enable": true,
         "language_tag": "xdq"
     },
     {
         "name_eng": "Kalmyk",
         "name_rus": "Калмыцкий",
-        "code_pt": "38",
         "enable": true,
         "language_tag": "xal"
     },
     {
         "name_eng": "Karakalpak",
         "name_rus": "Каракалпакский",
-        "code_pt": "39",
         "enable": true,
         "language_tag": "kaa"
     },
     {
         "name_eng": "Karachay-Balkar",
         "name_rus": "Карачаево-Балкарский",
-        "code_pt": "114",
         "enable": true,
         "language_tag": "krc"
     },
     {
         "name_eng": "Saami Kildin",
         "name_rus": "Кильдинский",
-        "code_pt": "116",
         "enable": true,
         "language_tag": "sjd"
     },
     {
         "name_eng": "Kirghiz",
         "name_rus": "Киргизский",
-        "code_pt": "41",
         "enable": true,
         "language_tag": "ky"
     },
     {
         "name_eng": "Komi-Zyrian",
         "name_rus": "Коми-зырянский",
-        "code_pt": "112",
         "enable": true,
         "language_tag": "kpv"
     },
     {
         "name_eng": "Komi-Permyak",
         "name_rus": "Коми-пермяцкий",
-        "code_pt": "111",
         "enable": true,
         "language_tag": "koi"
     },
     {
         "name_eng": "Koryak",
         "name_rus": "Корякский",
-        "code_pt": "113",
         "enable": true,
         "language_tag": "kpy"
     },
     {
         "name_eng": "Kryashen Tatar",
         "name_rus": "Кряшенский",
-        "code_pt": "135",
         "enable": true,
         "language_tag": "tat"
     },
     {
         "name_eng": "Kumyk",
         "name_rus": "Кумыкский",
-        "code_pt": "42",
         "enable": true,
         "language_tag": "kum"
     },
     {
         "name_eng": "Kurdish",
         "name_rus": "Курдский",
-        "code_pt": "142",
         "enable": true,
         "language_tag": "ku"
     },
     {
         "name_eng": "Lak",
         "name_rus": "Лакский",
-        "code_pt": "44",
         "enable": true,
         "language_tag": "lbe"
     },
     {
         "name_eng": "Lezgin",
         "name_rus": "Лезгинский",
-        "code_pt": "46",
         "enable": true,
         "language_tag": "lez"
     },
     {
         "name_eng": "Macedonian",
         "name_rus": "Македонский",
-        "code_pt": "48",
         "enable": true,
         "language_tag": "sr"
     },
     {
         "name_eng": "Manci",
         "name_rus": "Мансийский",
-        "code_pt": "121",
         "enable": true,
         "language_tag": "mns"
     },
     {
         "name_eng": "Mari-high",
         "name_rus": "Марийский (горный)",
-        "code_pt": "122",
         "enable": true,
         "language_tag": "mrj"
     },
     {
         "name_eng": "Mari-low",
         "name_rus": "Марийский (луговой)",
-        "code_pt": "118",
         "enable": true,
         "language_tag": "mhr"
     },
     {
         "name_eng": "Moldavian",
         "name_rus": "Молдавский",
-        "code_pt": "50",
         "enable": true,
         "language_tag": "ro-MD"
     },
     {
         "name_eng": "Mongolian",
         "name_rus": "Монгольский",
-        "code_pt": "51",
         "enable": true,
         "language_tag": "mn"
     },
     {
         "name_eng": "Mordvin-Moksha",
         "name_rus": "Мордовско-Мокшанский",
-        "code_pt": "53",
         "enable": true,
         "language_tag": "mdf"
     },
     {
         "name_eng": "Mordvin-Erzya",
         "name_rus": "Мордовско-Эрзянский",
-        "code_pt": "52",
         "enable": true,
         "language_tag": "myv"
     },
     {
         "name_eng": "Nanai",
         "name_rus": "Нанайский",
-        "code_pt": "54",
         "enable": true,
         "language_tag": "gld"
     },
     {
         "name_eng": "Nganasan",
         "name_rus": "Нганасанский",
-        "code_pt": "149",
         "enable": true,
         "language_tag": "nio"
     },
     {
         "name_eng": "Negidal",
         "name_rus": "Негидальский",
-        "code_pt": "159",
         "enable": true,
         "language_tag": "neg"
     },
     {
         "name_eng": "Nenets (Yurak)",
         "name_rus": "Ненецкий",
-        "code_pt": "55",
         "enable": true,
         "language_tag": "yrk"
     },
     {
         "name_eng": "Nivkh",
         "name_rus": "Нивхский",
-        "code_pt": "56",
         "enable": true,
         "language_tag": "niv"
     },
     {
         "name_eng": "Nogai",
         "name_rus": "Ногайский",
-        "code_pt": "57",
         "enable": true,
         "language_tag": "nog"
     },
     {
         "name_eng": "Ossetic",
         "name_rus": "Осетинский",
-        "code_pt": "123",
         "enable": true,
         "language_tag": "os"
     },
     {
         "name_eng": "Russian",
         "name_rus": "Русский",
-        "code_pt": "64",
         "enable": true,
         "language_tag": "ru"
     },
     {
         "name_eng": "Rutul",
         "name_rus": "Рутульский",
-        "code_pt": "151",
         "enable": true,
         "language_tag": "rut"
     },
     {
         "name_eng": "Selkup",
         "name_rus": "Селькупский",
-        "code_pt": "65",
         "enable": true,
         "language_tag": "sel"
     },
     {
         "name_eng": "Serbian",
         "name_rus": "Сербский",
-        "code_pt": "66",
         "enable": true,
         "language_tag": "sr"
     },
     {
         "name_eng": "Tabasaran",
         "name_rus": "Табасаранский",
-        "code_pt": "73",
         "enable": true,
         "language_tag": "tab"
     },
     {
         "name_eng": "Tadzhik",
         "name_rus": "Таджикский",
-        "code_pt": "85",
         "enable": true,
         "language_tag": "tg"
     },
     {
         "name_eng": "Talysh",
         "name_rus": "Талышский",
-        "code_pt": "137",
         "enable": true,
         "language_tag": "tly"
     },
     {
         "name_eng": "Tatar",
         "name_rus": "Татарский",
-        "code_pt": "74",
         "enable": true,
         "language_tag": "tt"
     },
     {
         "name_eng": "Tat",
         "name_rus": "Татский",
-        "code_pt": "144",
         "enable": true,
         "language_tag": "ttt"
     },
     {
         "name_eng": "Tofalar",
         "name_rus": "Тофаларский",
-        "code_pt": "134",
         "enable": true,
         "language_tag": "kim"
     },
     {
         "name_eng": "Touva (Soyot)",
         "name_rus": "Тувинский",
-        "code_pt": "77",
         "enable": true,
         "language_tag": "tyv"
     },
     {
         "name_eng": "Turkmen",
         "name_rus": "Туркменский",
-        "code_pt": "76",
         "enable": true,
         "language_tag": "tk"
     },
     {
         "name_eng": "Udmurt",
         "name_rus": "Удмуртский",
-        "code_pt": "129",
         "enable": true,
         "language_tag": "udm"
     },
     {
         "name_eng": "Uzbek",
         "name_rus": "Узбекский",
-        "code_pt": "81",
         "enable": true,
         "language_tag": "uz"
     },
     {
         "name_eng": "Uighur",
         "name_rus": "Уйгурский",
-        "code_pt": "78",
         "enable": true,
         "language_tag": "ug"
     },
     {
         "name_eng": "Ukrainian",
         "name_rus": "Украинский",
-        "code_pt": "79",
         "enable": true,
         "language_tag": "uk"
     },
     {
         "name_eng": "Ulch",
         "name_rus": "Ульчский",
-        "code_pt": "160",
         "enable": true,
         "language_tag": "ulc"
     },
     {
         "name_eng": "Khakass",
         "name_rus": "Хакасский",
-        "code_pt": "110",
         "enable": true,
         "language_tag": "kjh"
     },
     {
         "name_eng": "Khanty",
         "name_rus": "Хантыйский",
-        "code_pt": "109",
         "enable": true,
         "language_tag": "kca"
     },
     {
         "name_eng": "Tsakhur",
         "name_rus": "Цахурский",
-        "code_pt": "152",
         "enable": true,
         "language_tag": "tkr"
     },
     {
         "name_eng": "Chechen",
         "name_rus": "Чеченский",
-        "code_pt": "14",
         "enable": true,
         "language_tag": "ce"
     },
     {
         "name_eng": "Chuvash",
         "name_rus": "Чувашский",
-        "code_pt": "97",
         "enable": true,
         "language_tag": "cv"
     },
     {
         "name_eng": "Chukchi",
         "name_rus": "Чукотский",
-        "code_pt": "98",
         "enable": true,
         "language_tag": "ckt"
     },
     {
         "name_eng": "Shor",
         "name_rus": "Шорский",
-        "code_pt": "133",
         "enable": true,
         "language_tag": "cjs"
     },
     {
         "name_eng": "Evenki (Tungus)",
         "name_rus": "Эвенкийский",
-        "code_pt": "102",
         "enable": true,
         "language_tag": "evn"
     },
     {
         "name_eng": "Even (Lamut)",
         "name_rus": "Эвенский",
-        "code_pt": "101",
         "enable": true,
         "language_tag": "eve"
     },
     {
         "name_eng": "Enets",
         "name_rus": "Энецкий",
-        "code_pt": "150",
         "enable": true,
         "language_tag": "enf"
     },
     {
         "name_eng": "Eskimo (Yupik)",
         "name_rus": "Эскимосский",
-        "code_pt": "100",
         "enable": true,
         "language_tag": "ess"
     },
     {
         "name_eng": "Yukagir",
         "name_rus": "Юкагирский",
-        "code_pt": "158",
         "enable": true,
         "language_tag": "ykg"
     },
     {
         "name_eng": "Yakut",
         "name_rus": "Якутский",
-        "code_pt": "130",
         "enable": true,
         "language_tag": "sah"
     }

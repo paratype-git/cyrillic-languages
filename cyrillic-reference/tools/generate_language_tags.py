@@ -5,7 +5,7 @@ Combines three source files into a single machine-readable JSON + a
 human-readable Markdown table:
 
   cyrillic-languages/library/cyrillic/cyrillic_library.json
-      name_eng, name_rus, code_pt, enable
+      name_eng, name_rus, enable
 
   cyrillic-languages/library/cyrillic/base/<Language>.json
       local  — the OT `locl` tag used as the source language's default
@@ -64,7 +64,6 @@ def main(argv: list[str] | None = None) -> int:
         row = {
             "name_eng": name_eng,
             "name_rus": entry.get("name_rus", ""),
-            "code_pt": entry.get("code_pt", ""),
             "enable": bool(entry.get("enable", False)),
             "local": "",
         }
@@ -100,7 +99,6 @@ def main(argv: list[str] | None = None) -> int:
     md.append("**Columns:**")
     md.append("")
     md.append("- **name_eng / name_rus** — from `cyrillic_library.json`.")
-    md.append("- **code_pt** — Paratype's internal per-language identifier.")
     md.append("- **enable** — whether the language is currently compiled by the pipeline.")
     md.append("- **local** — OT `locl` tag used as the source file's default "
               "(blank = inherits script default, which is `ru` for this library).")
@@ -112,13 +110,13 @@ def main(argv: list[str] | None = None) -> int:
               "call (macrolanguages, dialect variants, provisional codes). "
               "See the `note` field in the JSON for per-row rationale.")
     md.append("")
-    md.append("| # | name_eng | name_rus | code_pt | enable | local | iso639_1 | iso639_3 | bcp47 | ot_lang | conf |")
-    md.append("| ---: | --- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |")
+    md.append("| # | name_eng | name_rus | enable | local | iso639_1 | iso639_3 | bcp47 | ot_lang | conf |")
+    md.append("| ---: | --- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |")
     def fmt(v):
         return "—" if v is None else v
     for i, r in enumerate(rows, start=1):
         md.append(
-            f"| {i} | {r['name_eng']} | {r['name_rus']} | {r['code_pt']} | "
+            f"| {i} | {r['name_eng']} | {r['name_rus']} | "
             f"{'yes' if r['enable'] else 'no'} | {r['local'] or '—'} | "
             f"{fmt(r['iso639_1'])} | {fmt(r['iso639_3'])} | {fmt(r['bcp47'])} | "
             f"`{fmt(r['ot_lang'])}` | {fmt(r['confidence'])} |"
