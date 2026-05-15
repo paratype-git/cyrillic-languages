@@ -1369,6 +1369,18 @@
                     ],
                     "description": "F468",
                     "alts": []
+                },
+                {
+                    "sign": "Ӏ",
+                    "unicodes": [
+                        "04C0"
+                    ],
+                    "local": "ru",
+                    "types": [
+                        "extended"
+                    ],
+                    "description": "04C0",
+                    "alts": []
                 }
             ],
             "lowercase": [
@@ -1442,6 +1454,18 @@
                         "extended"
                     ],
                     "description": "F472",
+                    "alts": []
+                },
+                {
+                    "sign": "ӏ",
+                    "unicodes": [
+                        "04CF"
+                    ],
+                    "local": "ru",
+                    "types": [
+                        "extended"
+                    ],
+                    "description": "04CF",
                     "alts": []
                 }
             ]
@@ -2007,6 +2031,18 @@
                         "extended"
                     ],
                     "description": "Cyrillic Capital Letter Ya With Acute"
+                },
+                {
+                    "sign": "Ӏ",
+                    "unicodes": [
+                        "04C0"
+                    ],
+                    "local": "ru",
+                    "display_unicode": "04C0",
+                    "types": [
+                        "extended"
+                    ],
+                    "description": "Cyrillic Letter Palochka"
                 }
             ],
             "lowercase": [
@@ -2453,6 +2489,18 @@
                         "extended"
                     ],
                     "description": "Cyrillic Small Letter Ya With Acute"
+                },
+                {
+                    "sign": "ӏ",
+                    "unicodes": [
+                        "04CF"
+                    ],
+                    "local": "ru",
+                    "display_unicode": "04CF",
+                    "types": [
+                        "extended"
+                    ],
+                    "description": "Cyrillic Small Letter Palochka"
                 }
             ]
         }
