@@ -18,3 +18,6 @@ __pycache__/
 /cyrillic-languages/scripts/_legacy/
 
 *.ufo
+cyrillic-reference/tools/export_tables.py
+
+cyrillic-reference/exports/
