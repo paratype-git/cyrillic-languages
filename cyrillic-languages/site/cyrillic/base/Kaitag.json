@@ -165,16 +165,16 @@
                     "alts": []
                 },
                 {
-                    "sign": "КӀ",
+                    "sign": "Кӏ",
                     "unicodes": [
                         "041A",
-                        "04C0"
+                        "04CF"
                     ],
                     "local": "ru",
                     "types": [
                         "alphabet"
                     ],
-                    "description": "041A, 04C0",
+                    "description": "041A, 04CF",
                     "alts": []
                 },
                 {
@@ -203,16 +203,16 @@
                     "alts": []
                 },
                 {
-                    "sign": "ҠӀ",
+                    "sign": "Ҡӏ",
                     "unicodes": [
                         "04A0",
-                        "04C0"
+                        "04CF"
                     ],
                     "local": "ru",
                     "types": [
                         "alphabet"
                     ],
-                    "description": "04A0, 04C0",
+                    "description": "04A0, 04CF",
                     "alts": []
                 },
                 {
@@ -289,16 +289,16 @@
                     "alts": []
                 },
                 {
-                    "sign": "ПӀ",
+                    "sign": "Пӏ",
                     "unicodes": [
                         "041F",
-                        "04C0"
+                        "04CF"
                     ],
                     "local": "ru",
                     "types": [
                         "alphabet"
                     ],
-                    "description": "041F, 04C0",
+                    "description": "041F, 04CF",
                     "alts": []
                 },
                 {
@@ -351,16 +351,16 @@
                     "alts": []
                 },
                 {
-                    "sign": "ТӀ",
+                    "sign": "Тӏ",
                     "unicodes": [
                         "0422",
-                        "04C0"
+                        "04CF"
                     ],
                     "local": "ru",
                     "types": [
                         "alphabet"
                     ],
-                    "description": "0422, 04C0",
+                    "description": "0422, 04CF",
                     "alts": []
                 },
                 {
@@ -425,16 +425,16 @@
                     "alts": []
                 },
                 {
-                    "sign": "ЦӀ",
+                    "sign": "Цӏ",
                     "unicodes": [
                         "0426",
-                        "04C0"
+                        "04CF"
                     ],
                     "local": "ru",
                     "types": [
                         "alphabet"
                     ],
-                    "description": "0426, 04C0",
+                    "description": "0426, 04CF",
                     "alts": []
                 },
                 {
@@ -463,16 +463,16 @@
                     "alts": []
                 },
                 {
-                    "sign": "ЧӀ",
+                    "sign": "Чӏ",
                     "unicodes": [
                         "0427",
-                        "04C0"
+                        "04CF"
                     ],
                     "local": "ru",
                     "types": [
                         "alphabet"
                     ],
-                    "description": "0427, 04C0",
+                    "description": "0427, 04CF",
                     "alts": []
                 },
                 {
@@ -2007,30 +2007,6 @@
                         "extended"
                     ],
                     "description": "Cyrillic Capital Letter Ya With Acute"
-                },
-                {
-                    "sign": "Ӏ",
-                    "unicodes": [
-                        "04C0"
-                    ],
-                    "local": "ru",
-                    "display_unicode": "04C0",
-                    "types": [
-                        "alphabet"
-                    ],
-                    "description": "Cyrillic Letter Palochka"
-                },
-                {
-                    "sign": "ӏ",
-                    "unicodes": [
-                        "04CF"
-                    ],
-                    "local": "ru",
-                    "display_unicode": "04CF",
-                    "types": [
-                        "dialect"
-                    ],
-                    "description": "Cyrillic Small Letter Palochka"
                 }
             ],
             "lowercase": [
