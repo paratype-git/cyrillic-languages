@@ -55,7 +55,7 @@ This repository — the per-language JSON data, the Python pipeline, the contrib
 
 ## Fonts
 
-The Paratype site served from <https://paratype.github.io/cyrillic-languages/> renders its samples with **PT Sans Expert** and **PT Serif Expert** (Paratype, 2022), distributed under the SIL Open Font License (OFL). Fonts are located at: `cyrillic-languages/fonts/web/**`.
+The Paratype site served from <https://paratype.github.io/cyrillic-languages/> renders its samples with **PT Sans Expert** and **PT Serif Expert** (Paratype, 2022), distributed under the SIL Open Font License (OFL). Fonts are located at: [`cyrillic-languages/fonts/web`](https://github.com/paratype-git/cyrillic-languages/tree/master/cyrillic-languages/fonts/web).
 
 ## Contact
 
