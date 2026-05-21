@@ -1441,19 +1441,19 @@
             "character": "ӏ",
             "codepoint": "04CF",
             "decomposition": [],
-            "case": "uppercase",
+            "case": "lowercase",
             "description": "Cyrillic Small Letter Palochka",
             "categories": [
                 "alphabet"
             ],
             "diagram": {
                 "svg": {
-                    "sans": "svg/Sans/uc/04CF.svg",
-                    "serif": "svg/Serif/uc/04CF.svg"
+                    "sans": "svg/Sans/lc/04CF.svg",
+                    "serif": "svg/Serif/lc/04CF.svg"
                 },
                 "plotter": {
-                    "sans": "glyphplotter/Sans/uc/04CF.txt",
-                    "serif": "glyphplotter/Serif/uc/04CF.txt"
+                    "sans": "glyphplotter/Sans/lc/04CF.txt",
+                    "serif": "glyphplotter/Serif/lc/04CF.txt"
                 }
             },
             "variants": []

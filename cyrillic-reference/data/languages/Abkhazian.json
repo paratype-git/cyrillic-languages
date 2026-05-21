@@ -1631,7 +1631,7 @@
             "case": "uppercase",
             "description": "Cyrillic Capital Ligature Te Tse",
             "categories": [
-                "historic"
+                "alphabet"
             ],
             "diagram": {
                 "svg": {
@@ -1652,7 +1652,7 @@
             "case": "lowercase",
             "description": "Cyrillic Small Ligature Te Tse",
             "categories": [
-                "historic"
+                "alphabet"
             ],
             "diagram": {
                 "svg": {
