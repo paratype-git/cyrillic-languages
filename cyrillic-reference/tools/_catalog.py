@@ -71,7 +71,7 @@ _KNOWN_COMBINING_MARK_CPS = {
 # The 77 Cyrillic-based languages in scope. Values are JSON filename stems
 # under `<data>/library/cyrillic/base/`.
 LANGUAGES_IN_SCOPE = [
-    "Abazin", "Abkhazian", "Adyge", "Aghul", "Altaic (Oirot)", "Avar",
+    "Abaza", "Abkhazian", "Adyge", "Aghul", "Altaic (Oirot)", "Avar",
     "Azeri", "Bashkir", "Belarusian", "Bulgarian", "Buryat", "Chechen",
     "Chukchi", "Chuvash", "Dargwa", "Dolgan", "Dungan", "Enets",
     "Eskimo (Yupik)", "Even (Lamut)", "Evenki (Tungus)", "Gagauz",

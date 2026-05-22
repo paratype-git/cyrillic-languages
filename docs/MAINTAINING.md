@@ -156,7 +156,7 @@ Shape:
 ```json
 [
     {
-        "name_eng": "Abazin",
+        "name_eng": "Abaza",
         "name_rus": "Абазинский",
         "enable": true
     },

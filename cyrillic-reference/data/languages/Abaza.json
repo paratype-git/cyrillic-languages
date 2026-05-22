@@ -1,18 +1,18 @@
 {
     "meta": {
-        "name_eng": "Abazin",
+        "name_eng": "Abaza",
         "name_rus": "Абазинский",
         "alternative_names": [
-            "Abaza",
+            "Abazin",
             "Abazintsy",
             "Ashuwa"
         ],
-        "url": "https://paratype.github.io/cyrillic-languages/index.html?lang=Abazin&group=cyrillic&ui=en&pg=2",
+        "url": "https://paratype.github.io/cyrillic-languages/index.html?lang=Abaza&group=cyrillic&ui=en&pg=2",
         "language_tag": "abq",
         "default_language_tag": "ru",
-        "feature_locl_tag": "ABA ",
+        "feature_locl_tag": null,
         "iso639_1": null,
-        "iso639_3": "abq",
+        "iso639_3": null,
         "note": null
     },
     "characters": [

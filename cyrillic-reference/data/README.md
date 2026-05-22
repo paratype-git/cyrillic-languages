@@ -15,7 +15,7 @@ Machine-readable counterparts to the Markdown tables in the parent directory. Ge
 
 | # | name_eng | name_rus | `language_tag` | `feature_locl_tag` | chars | variants | file |
 | ---: | --- | --- | :---: | :---: | ---: | ---: | --- |
-| 1 | Abazin | Абазинский | `abq` | `ABA` | 68 | 0 | [`Abazin.json`](languages/Abazin.json) |
+| 1 | Abaza | Абазинский | `abq` | `ABA` | 68 | 0 | [`Abaza.json`](languages/Abaza.json) |
 | 2 | Abkhazian | Абхазский | `ab` | `ABK` | 92 | 0 | [`Abkhazian.json`](languages/Abkhazian.json) |
 | 3 | Adyge | Адыгейский | `ady` | `ADY` | 68 | 0 | [`Adyge.json`](languages/Adyge.json) |
 | 4 | Aghul | Агульский | `agx` | `AGU` | 68 | 0 | [`Aghul.json`](languages/Aghul.json) |
@@ -128,7 +128,7 @@ Every in-scope codepoint, sorted by Unicode value. Variants are nested under the
                     "used_by": ["Macedonian", "Serbian"]
                 }
             ],
-            "used_by": ["Abazin", "Abkhazian", "…"]
+            "used_by": ["Abaza", "Abkhazian", "…"]
         }
     ]
 }

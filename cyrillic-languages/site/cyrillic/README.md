@@ -166,7 +166,7 @@ The four “reserved” keys exist so that the site engine can parse the file wi
   "description": "Cyrillic Capital Letter A",
   "hide": "",                                // "", "italic", or "straight"
   "languages": [
-    { "name": "Abazin",      "types": ["alphabet"], "language_tag": "abq" },
+    { "name": "Abaza",       "types": ["alphabet"], "language_tag": "abq" },
     { "name": "Abkhazian",   "types": ["alphabet"], "language_tag": "ab" },
     …
     { "name": "All",         "types": ["alphabet"], "language_tag": null }  // only if every language uses it

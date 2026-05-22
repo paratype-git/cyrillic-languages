@@ -12,7 +12,7 @@ All 79 languages declared in `cyrillic-languages/library/cyrillic/cyrillic_libra
 
 | # | name_eng | name_rus | enable | local | iso639_1 | iso639_3 | bcp47 | ot_lang | conf |
 | ---: | --- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| 1 | Abazin | Абазинский | yes | ru | — | abq | abq | `ABA ` | high |
+| 1 | Abaza | Абазинский | yes | ru | — | abq | abq | `ABA ` | high |
 | 2 | Abkhazian | Абхазский | yes | ru | ab | abk | ab | `ABK ` | high |
 | 3 | Avar | Аварский | yes | ru | av | ava | av | `AVR ` | high |
 | 4 | Aghul | Агульский | yes | ru | — | agx | agx | `AGU ` | high |

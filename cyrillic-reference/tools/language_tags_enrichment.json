@@ -1,5 +1,5 @@
 [
-  {"name_eng": "Abazin", "iso639_1": null, "iso639_3": "abq", "bcp47": "abq", "ot_lang": "ABA ", "confidence": "high"},
+  {"name_eng": "Abaza", "iso639_1": null, "iso639_3": "abq", "bcp47": "abq", "ot_lang": "ABA ", "confidence": "high"},
   {"name_eng": "Abkhazian", "iso639_1": "ab", "iso639_3": "abk", "bcp47": "ab", "ot_lang": "ABK ", "confidence": "high"},
   {"name_eng": "Avar", "iso639_1": "av", "iso639_3": "ava", "bcp47": "av", "ot_lang": "AVR ", "confidence": "high"},
   {"name_eng": "Aghul", "iso639_1": null, "iso639_3": "agx", "bcp47": "agx", "ot_lang": "AGU ", "confidence": "high"},
