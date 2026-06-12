@@ -570,7 +570,7 @@
                     ]
                 }
             ],
-            "id": "id7FS64BXJ"
+            "id": "idJG4XHTYU"
         },
         {
             "sign": "",
@@ -653,7 +653,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idSXT9ZTGX"
+            "id": "idKO8PA62Z"
         },
         {
             "sign": "Ӑ",
@@ -687,7 +687,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idXA2LCA3N"
+            "id": "id3QDEGJ1Q"
         },
         {
             "sign": "Ӓ",
@@ -756,7 +756,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idFR0627WE"
+            "id": "idVJ81PC0S"
         },
         {
             "sign": "",
@@ -776,7 +776,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idO92IBEH2"
+            "id": "idAIR4J69E"
         },
         {
             "sign": "",
@@ -810,7 +810,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idHWPNEDCL"
+            "id": "idOMEU7QQ0"
         },
         {
             "sign": "Ӕ",
@@ -830,7 +830,7 @@
                     "language_tag": "os"
                 }
             ],
-            "id": "id6MXTC9RA"
+            "id": "id4HC07YXL"
         },
         {
             "sign": "Б",
@@ -1402,7 +1402,7 @@
                     ]
                 }
             ],
-            "id": "idP5RA8AIN"
+            "id": "id5LD6F2FC"
         },
         {
             "sign": "В",
@@ -1974,7 +1974,7 @@
                     ]
                 }
             ],
-            "id": "idTZUZPYAR"
+            "id": "id894208RK"
         },
         {
             "sign": "Ԝ",
@@ -2001,7 +2001,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idXOE5B733"
+            "id": "idDJNU9QIP"
         },
         {
             "sign": "Г",
@@ -2573,7 +2573,7 @@
                     ]
                 }
             ],
-            "id": "id5CDNEKQO"
+            "id": "id0K89BJZQ"
         },
         {
             "sign": "Ґ",
@@ -2600,7 +2600,7 @@
                     "language_tag": "uk"
                 }
             ],
-            "id": "id8MOEURPD"
+            "id": "idEVAB5F7C"
         },
         {
             "sign": "Ғ",
@@ -2746,7 +2746,7 @@
                     "language_tag": "cjs"
                 }
             ],
-            "id": "idJQYO32M8"
+            "id": "idTPMFZREQ"
         },
         {
             "sign": "",
@@ -2766,7 +2766,7 @@
                     "language_tag": "ba"
                 }
             ],
-            "id": "idNRP47LEH"
+            "id": "idU60JITBD"
         },
         {
             "sign": "Ӷ",
@@ -2814,7 +2814,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idASMNMUSY"
+            "id": "idZTFUH2L8"
         },
         {
             "sign": "Ҕ",
@@ -2855,7 +2855,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idI9WIQ2M5"
+            "id": "idTLOGJZNS"
         },
         {
             "sign": "Ӻ",
@@ -2875,7 +2875,7 @@
                     "language_tag": "niv"
                 }
             ],
-            "id": "idJ6WIS3YH"
+            "id": "idCPMA7733"
         },
         {
             "sign": "Һ",
@@ -2928,6 +2928,13 @@
                         "alphabet"
                     ],
                     "language_tag": "kk"
+                },
+                {
+                    "name": "Kaitag",
+                    "types": [
+                        "alphabet"
+                    ],
+                    "language_tag": "xdq"
                 },
                 {
                     "name": "Kalmyk",
@@ -3000,7 +3007,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idRA9UY9PS"
+            "id": "id7HM53UM6"
         },
         {
             "sign": "Ԧ",
@@ -3020,7 +3027,7 @@
                     "language_tag": "ttt"
                 }
             ],
-            "id": "idJ7JHDIYJ"
+            "id": "idZ3MOX2F5"
         },
         {
             "sign": "",
@@ -3040,7 +3047,7 @@
                     "language_tag": "ttt"
                 }
             ],
-            "id": "id823E28GX"
+            "id": "idC8BV1195"
         },
         {
             "sign": "Д",
@@ -3612,7 +3619,7 @@
                     ]
                 }
             ],
-            "id": "idM8Q7KPZN"
+            "id": "idT4XC5H9A"
         },
         {
             "sign": "Д",
@@ -3632,7 +3639,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idIP18WEIO"
+            "id": "idB00LL2T8"
         },
         {
             "sign": "Ђ",
@@ -3659,7 +3666,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "id4IJASA7D"
+            "id": "idVWRCW4C2"
         },
         {
             "sign": "Ѓ",
@@ -3679,7 +3686,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idGHFYNKSX"
+            "id": "idEMFRHLFL"
         },
         {
             "sign": "Е",
@@ -4251,7 +4258,7 @@
                     ]
                 }
             ],
-            "id": "id50G70Z8Q"
+            "id": "idLFCBBK0Y"
         },
         {
             "sign": "Ѐ",
@@ -4278,7 +4285,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id07PC59EC"
+            "id": "id81GB0LF4"
         },
         {
             "sign": "",
@@ -4354,7 +4361,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idH87T7FZ6"
+            "id": "idNSPSAXUT"
         },
         {
             "sign": "Ӗ",
@@ -4374,7 +4381,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idWNI9RT7V"
+            "id": "idW5QS1JN8"
         },
         {
             "sign": "Ё",
@@ -4870,7 +4877,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idLIE2XJCM"
+            "id": "id4NLC9BOC"
         },
         {
             "sign": "",
@@ -4932,7 +4939,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idI3NPXCZL"
+            "id": "idJI55VC47"
         },
         {
             "sign": "",
@@ -4952,7 +4959,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idTIG9KHRX"
+            "id": "id1B4LF5WV"
         },
         {
             "sign": "",
@@ -4972,7 +4979,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idM2LOQ7NQ"
+            "id": "idOUXW8WC9"
         },
         {
             "sign": "",
@@ -5006,7 +5013,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idS5MH67IK"
+            "id": "id67HV9XSD"
         },
         {
             "sign": "",
@@ -5033,7 +5040,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idZNCLBU9A"
+            "id": "idB96IC4A9"
         },
         {
             "sign": "Є",
@@ -5060,7 +5067,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idEL6FHQ32"
+            "id": "idG4GSKY5G"
         },
         {
             "sign": "",
@@ -5080,7 +5087,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idNC5F3X74"
+            "id": "idMLUQWDS1"
         },
         {
             "sign": "Ԑ",
@@ -5107,7 +5114,7 @@
                     "language_tag": "enf"
                 }
             ],
-            "id": "id617I12K6"
+            "id": "id45NH957Y"
         },
         {
             "sign": "",
@@ -5127,7 +5134,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idLF2IRPTZ"
+            "id": "idJFBZ0LD6"
         },
         {
             "sign": "Ә",
@@ -5180,6 +5187,13 @@
                         "alphabet"
                     ],
                     "language_tag": "kk"
+                },
+                {
+                    "name": "Kaitag",
+                    "types": [
+                        "alphabet"
+                    ],
+                    "language_tag": "xdq"
                 },
                 {
                     "name": "Kalmyk",
@@ -5266,7 +5280,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "id0HTVKE89"
+            "id": "id3MKGIFGI"
         },
         {
             "sign": "",
@@ -5286,7 +5300,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "id4VB0RPWO"
+            "id": "idG4CUO6QX"
         },
         {
             "sign": "Ӛ",
@@ -5306,7 +5320,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idNV10DEGN"
+            "id": "idH2TNGJIQ"
         },
         {
             "sign": "Ж",
@@ -5865,7 +5879,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id141Z8ZD0"
+            "id": "id653CDL0N"
         },
         {
             "sign": "Ж",
@@ -5885,7 +5899,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id6BHU3ZA6"
+            "id": "idE41W9UYE"
         },
         {
             "sign": "Ӂ",
@@ -5912,7 +5926,7 @@
                     "language_tag": "ro-MD"
                 }
             ],
-            "id": "idQZ41V1VN"
+            "id": "idVUSS4GNN"
         },
         {
             "sign": "Ӝ",
@@ -5932,7 +5946,7 @@
                     "language_tag": "udm"
                 }
             ],
-            "id": "idF1OA10X2"
+            "id": "idDFW0JVJU"
         },
         {
             "sign": "Җ",
@@ -6022,7 +6036,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idZIIKPY35"
+            "id": "id02OYKI0A"
         },
         {
             "sign": "Ѕ",
@@ -6049,7 +6063,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idAFG765NK"
+            "id": "idTT4SCSJV"
         },
         {
             "sign": "Ӡ",
@@ -6090,7 +6104,7 @@
                     "language_tag": "ulc"
                 }
             ],
-            "id": "idKTRNR76U"
+            "id": "idD8WZV5JZ"
         },
         {
             "sign": "З",
@@ -6649,7 +6663,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idQTHERGZZ"
+            "id": "id1O1I2BL9"
         },
         {
             "sign": "Ӟ",
@@ -6669,7 +6683,7 @@
                     "language_tag": "udm"
                 }
             ],
-            "id": "idUJFHF4P7"
+            "id": "idQ4H22LQ4"
         },
         {
             "sign": "Ҙ",
@@ -6703,7 +6717,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "id2FAJYW0J"
+            "id": "id7HUZ9IKV"
         },
         {
             "sign": "",
@@ -6730,7 +6744,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "idCBMXHFWP"
+            "id": "id4HFL66TB"
         },
         {
             "sign": "",
@@ -6750,7 +6764,7 @@
                     "language_tag": "nio"
                 }
             ],
-            "id": "idJDV1Q6UK"
+            "id": "idZ6G31YGD"
         },
         {
             "sign": "И",
@@ -7302,7 +7316,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idXBF8DSI1"
+            "id": "idD2EIT5T9"
         },
         {
             "sign": "Ѝ",
@@ -7329,7 +7343,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idG41HU83C"
+            "id": "idR1KJCKF1"
         },
         {
             "sign": "Ӣ",
@@ -7405,7 +7419,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idOE56UPUV"
+            "id": "idE8I6R5IX"
         },
         {
             "sign": "Ӥ",
@@ -7425,7 +7439,7 @@
                     "language_tag": "udm"
                 }
             ],
-            "id": "id6U57THC2"
+            "id": "id3QSA2AQ9"
         },
         {
             "sign": "",
@@ -7459,7 +7473,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idQQJB41NL"
+            "id": "idVJTKKEIB"
         },
         {
             "sign": "І",
@@ -7542,7 +7556,7 @@
                     "language_tag": "kjh"
                 }
             ],
-            "id": "idIP2ADMEW"
+            "id": "idXUYRKID9"
         },
         {
             "sign": "Ї",
@@ -7562,7 +7576,7 @@
                     "language_tag": "uk"
                 }
             ],
-            "id": "idILTA6793"
+            "id": "idGWUY8JB7"
         },
         {
             "sign": "Й",
@@ -8093,7 +8107,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idHPEK7UD4"
+            "id": "idH4ZDF41C"
         },
         {
             "sign": "Ҋ",
@@ -8113,7 +8127,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idXUO5U5HS"
+            "id": "idXFZP3358"
         },
         {
             "sign": "",
@@ -8133,7 +8147,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idSAAPKD5X"
+            "id": "idGR0IVU3U"
         },
         {
             "sign": "Ј",
@@ -8195,7 +8209,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idTGKDPAW3"
+            "id": "id76SM3H0K"
         },
         {
             "sign": "К",
@@ -8767,7 +8781,7 @@
                     ]
                 }
             ],
-            "id": "id22ONJKY2"
+            "id": "idVPZ2TIKJ"
         },
         {
             "sign": "К",
@@ -8787,7 +8801,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idI8ETY0Z1"
+            "id": "idL7FAIKLY"
         },
         {
             "sign": "Қ",
@@ -8891,7 +8905,7 @@
                     "language_tag": "cjs"
                 }
             ],
-            "id": "idMV69HM4W"
+            "id": "idCSD5271A"
         },
         {
             "sign": "Ӄ",
@@ -8967,7 +8981,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idKI7PB9GJ"
+            "id": "idVQ4XQ4Q4"
         },
         {
             "sign": "Ҟ",
@@ -8987,7 +9001,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idAAYOONRV"
+            "id": "idIAGA7UXV"
         },
         {
             "sign": "Ҝ",
@@ -9014,7 +9028,7 @@
                     "language_tag": "tly"
                 }
             ],
-            "id": "idJLL57OVP"
+            "id": "idL6ZQP7WJ"
         },
         {
             "sign": "Ҡ",
@@ -9041,7 +9055,7 @@
                     "language_tag": "xdq"
                 }
             ],
-            "id": "idZF8ZGSX2"
+            "id": "idI301CQGR"
         },
         {
             "sign": "",
@@ -9061,7 +9075,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "idT1IH12RF"
+            "id": "id2VTKUH74"
         },
         {
             "sign": "Ԛ",
@@ -9081,7 +9095,7 @@
                     "language_tag": "ku"
                 }
             ],
-            "id": "idA2YD09MJ"
+            "id": "idYQPWEX8J"
         },
         {
             "sign": "Л",
@@ -9653,7 +9667,7 @@
                     ]
                 }
             ],
-            "id": "id8IPD2BVX"
+            "id": "idLR2870VS"
         },
         {
             "sign": "Л",
@@ -9673,7 +9687,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idAFZ4K8YQ"
+            "id": "id7XNOVALX"
         },
         {
             "sign": "Ӆ",
@@ -9693,7 +9707,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idM0FWXLV0"
+            "id": "idHTSEL1XB"
         },
         {
             "sign": "Ԯ",
@@ -9720,7 +9734,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idIE4XSN01"
+            "id": "idPNGY4933"
         },
         {
             "sign": "Ԓ",
@@ -9754,7 +9768,7 @@
                     "language_tag": "ckt"
                 }
             ],
-            "id": "idSQOD59ZE"
+            "id": "id3EJXIG0L"
         },
         {
             "sign": "Љ",
@@ -9788,7 +9802,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id95GTD2FC"
+            "id": "idRY2T1PGA"
         },
         {
             "sign": "",
@@ -9808,7 +9822,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "idSSACJ6G5"
+            "id": "idBS682355"
         },
         {
             "sign": "М",
@@ -10380,7 +10394,7 @@
                     ]
                 }
             ],
-            "id": "idSXIZ1QXX"
+            "id": "id04EB72PU"
         },
         {
             "sign": "Ӎ",
@@ -10400,7 +10414,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "id6A18YXT9"
+            "id": "idGO7BOKNM"
         },
         {
             "sign": "Н",
@@ -10972,7 +10986,7 @@
                     ]
                 }
             ],
-            "id": "idYTEINBES"
+            "id": "idS0X6AA7P"
         },
         {
             "sign": "Ӊ",
@@ -10992,7 +11006,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "id4NFQDOVR"
+            "id": "idQWAFD5RG"
         },
         {
             "sign": "Ң",
@@ -11131,7 +11145,7 @@
                     "language_tag": "cjs"
                 }
             ],
-            "id": "id6ZD4IRSG"
+            "id": "idMVWUWLM0"
         },
         {
             "sign": "Ӈ",
@@ -11277,7 +11291,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "id8JDH5F6P"
+            "id": "idS9A1DW8U"
         },
         {
             "sign": "Ҥ",
@@ -11339,7 +11353,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idONNKT6ZI"
+            "id": "idGXHFU09S"
         },
         {
             "sign": "Њ",
@@ -11373,7 +11387,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idVOQ6M9XA"
+            "id": "idQ1MT5XGV"
         },
         {
             "sign": "О",
@@ -11945,7 +11959,7 @@
                     ]
                 }
             ],
-            "id": "id76QCSVYQ"
+            "id": "idUEK6IW59"
         },
         {
             "sign": "",
@@ -12021,7 +12035,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idSBZ8NQCH"
+            "id": "idRVURX8XL"
         },
         {
             "sign": "",
@@ -12055,7 +12069,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idRPAHGEVH"
+            "id": "idSBYU0971"
         },
         {
             "sign": "Ӧ",
@@ -12173,7 +12187,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idCRXHPUMR"
+            "id": "idWO0VFZYC"
         },
         {
             "sign": "",
@@ -12200,7 +12214,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idGVQOV6XI"
+            "id": "idFU8DAXRU"
         },
         {
             "sign": "",
@@ -12220,7 +12234,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id2JYQO50M"
+            "id": "idIINPWVSS"
         },
         {
             "sign": "",
@@ -12254,7 +12268,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idSRLWC5MB"
+            "id": "idAUGHHASM"
         },
         {
             "sign": "Ө",
@@ -12463,7 +12477,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idRJNIAH3G"
+            "id": "id4OIU35J6"
         },
         {
             "sign": "",
@@ -12483,7 +12497,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "id3C4QJHF8"
+            "id": "idU29MPSL0"
         },
         {
             "sign": "Ӫ",
@@ -12524,7 +12538,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "id9WHEUPBP"
+            "id": "id3IVWNDYA"
         },
         {
             "sign": "",
@@ -12544,7 +12558,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "id2P7KSNOV"
+            "id": "id5AUIUWC4"
         },
         {
             "sign": "",
@@ -12578,7 +12592,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idNDZ84K46"
+            "id": "idV9ICL6DY"
         },
         {
             "sign": "П",
@@ -13150,7 +13164,7 @@
                     ]
                 }
             ],
-            "id": "idI7GNPCYZ"
+            "id": "idXUCUNP7M"
         },
         {
             "sign": "Ԥ",
@@ -13170,7 +13184,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idE78F7O1N"
+            "id": "id1ZL5BHNO"
         },
         {
             "sign": "Ҧ",
@@ -13190,7 +13204,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idUEVWWL53"
+            "id": "idSYJP07L5"
         },
         {
             "sign": "Р",
@@ -13762,7 +13776,7 @@
                     ]
                 }
             ],
-            "id": "idFR5VNMSI"
+            "id": "idY5XMLOD5"
         },
         {
             "sign": "",
@@ -13782,7 +13796,7 @@
                     "language_tag": "niv"
                 }
             ],
-            "id": "idOM6IWNGN"
+            "id": "idCDYIXNFA"
         },
         {
             "sign": "Ҏ",
@@ -13802,7 +13816,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idSOQO0XJQ"
+            "id": "id77CFN3RY"
         },
         {
             "sign": "С",
@@ -14374,7 +14388,7 @@
                     ]
                 }
             ],
-            "id": "idFCDEQQAS"
+            "id": "idP32O8J4H"
         },
         {
             "sign": "Ҫ",
@@ -14422,7 +14436,7 @@
                     "language_tag": "enf"
                 }
             ],
-            "id": "idRCPHPWG5"
+            "id": "idA58ZXYTG"
         },
         {
             "sign": "",
@@ -14456,7 +14470,7 @@
                     "language_tag": "enf"
                 }
             ],
-            "id": "idSGIWEZ8N"
+            "id": "id1D016BPD"
         },
         {
             "sign": "",
@@ -14476,7 +14490,7 @@
                     "language_tag": "ba"
                 }
             ],
-            "id": "idYFOA1XSA"
+            "id": "idFIAXGK83"
         },
         {
             "sign": "",
@@ -14496,7 +14510,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "id7BUMOCVT"
+            "id": "id8TG1A700"
         },
         {
             "sign": "Т",
@@ -15068,7 +15082,7 @@
                     ]
                 }
             ],
-            "id": "idQYCMDAV7"
+            "id": "idGPJO82NM"
         },
         {
             "sign": "Ҭ",
@@ -15088,7 +15102,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idE7OO7Z6Z"
+            "id": "id5R4ULOX0"
         },
         {
             "sign": "Ћ",
@@ -15108,7 +15122,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id2WYCTIS5"
+            "id": "id6VYI84AO"
         },
         {
             "sign": "Ќ",
@@ -15128,7 +15142,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id7F7VDJ55"
+            "id": "idTBABAFXZ"
         },
         {
             "sign": "У",
@@ -15700,7 +15714,7 @@
                     ]
                 }
             ],
-            "id": "id7Y5G3IS4"
+            "id": "id2WL8YF53"
         },
         {
             "sign": "Ӯ",
@@ -15783,7 +15797,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idYXELYMLA"
+            "id": "id0X97WXAH"
         },
         {
             "sign": "Ӱ",
@@ -15894,7 +15908,7 @@
                     "language_tag": "cjs"
                 }
             ],
-            "id": "idD162US8W"
+            "id": "id1V8BIDHR"
         },
         {
             "sign": "Ӳ",
@@ -15914,7 +15928,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idJAAI8RO2"
+            "id": "idSQFW9SSG"
         },
         {
             "sign": "",
@@ -15934,7 +15948,7 @@
                     "language_tag": "krc"
                 }
             ],
-            "id": "idOYSUJINA"
+            "id": "idWPHOR5IK"
         },
         {
             "sign": "",
@@ -15968,7 +15982,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idUL22R7SF"
+            "id": "idS6FCFXT3"
         },
         {
             "sign": "Ү",
@@ -16128,7 +16142,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id4OF4BWNH"
+            "id": "idRSXW8M21"
         },
         {
             "sign": "",
@@ -16148,7 +16162,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idB6EVA9YA"
+            "id": "id35NH0U50"
         },
         {
             "sign": "Ұ",
@@ -16168,7 +16182,7 @@
                     "language_tag": "kk"
                 }
             ],
-            "id": "id58FB3QB2"
+            "id": "id5OQ1OKNA"
         },
         {
             "sign": "Ў",
@@ -16251,7 +16265,7 @@
                     "language_tag": "ess"
                 }
             ],
-            "id": "idNH37QIPZ"
+            "id": "idCYGVQFTJ"
         },
         {
             "sign": "Ф",
@@ -16810,7 +16824,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id8H98V7XR"
+            "id": "idNMGWANZ1"
         },
         {
             "sign": "Х",
@@ -17382,7 +17396,7 @@
                     ]
                 }
             ],
-            "id": "idN0DFQ4TH"
+            "id": "idSUOMVO64"
         },
         {
             "sign": "Ҳ",
@@ -17444,7 +17458,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idD8MK4NR6"
+            "id": "idXMNMBEXN"
         },
         {
             "sign": "Ӽ",
@@ -17478,7 +17492,7 @@
                     "language_tag": "ess"
                 }
             ],
-            "id": "id3TMYFH1L"
+            "id": "idL7IXRIS1"
         },
         {
             "sign": "Ӿ",
@@ -17498,7 +17512,7 @@
                     "language_tag": "niv"
                 }
             ],
-            "id": "idNI1J8KRO"
+            "id": "idM7P3H50H"
         },
         {
             "sign": "",
@@ -17518,7 +17532,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "id7H2U0WI8"
+            "id": "idT65OKEPE"
         },
         {
             "sign": "Ц",
@@ -18056,7 +18070,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idOBM837AR"
+            "id": "idA82O1GPC"
         },
         {
             "sign": "",
@@ -18076,7 +18090,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "id29XU15IT"
+            "id": "id1K67UUF9"
         },
         {
             "sign": "Ҵ",
@@ -18096,7 +18110,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "id9Y8GDAF3"
+            "id": "idUEL75614"
         },
         {
             "sign": "Ч",
@@ -18655,7 +18669,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id0MEL8FRG"
+            "id": "id7OGGDZV8"
         },
         {
             "sign": "Ӵ",
@@ -18675,7 +18689,7 @@
                     "language_tag": "udm"
                 }
             ],
-            "id": "idHIOUES8L"
+            "id": "idXZOD65V7"
         },
         {
             "sign": "Ӌ",
@@ -18702,7 +18716,7 @@
                     "language_tag": "kjh"
                 }
             ],
-            "id": "id9KKW2YZX"
+            "id": "idVLEYVAEL"
         },
         {
             "sign": "Ҷ",
@@ -18736,7 +18750,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idPFCWHZ4P"
+            "id": "idBK8S9U3Q"
         },
         {
             "sign": "",
@@ -18756,7 +18770,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idUXX5MOHL"
+            "id": "idXA9D07G3"
         },
         {
             "sign": "Ҹ",
@@ -18783,7 +18797,7 @@
                     "language_tag": "tly"
                 }
             ],
-            "id": "idQ6LCQMHA"
+            "id": "idM5MKRMIX"
         },
         {
             "sign": "",
@@ -18803,7 +18817,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "id6NA2H5JB"
+            "id": "idY6HKZI3O"
         },
         {
             "sign": "Ҽ",
@@ -18823,7 +18837,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "id0JDYPH6P"
+            "id": "idI5M2YY9D"
         },
         {
             "sign": "Ҿ",
@@ -18843,7 +18857,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idM67SLWNL"
+            "id": "id7X7OHPBD"
         },
         {
             "sign": "Џ",
@@ -18877,7 +18891,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idL3BX55T6"
+            "id": "idRCNM1I5Y"
         },
         {
             "sign": "Ш",
@@ -19449,7 +19463,7 @@
                     ]
                 }
             ],
-            "id": "id58F6G0TC"
+            "id": "id6D6KLWCC"
         },
         {
             "sign": "Щ",
@@ -19952,7 +19966,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idPRTH30I1"
+            "id": "id2B9FVAPU"
         },
         {
             "sign": "Ъ",
@@ -20086,7 +20100,7 @@
                 {
                     "name": "Kaitag",
                     "types": [
-                        "alphabet"
+                        "historic"
                     ],
                     "language_tag": "xdq"
                 },
@@ -20455,7 +20469,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idT7EEN4OE"
+            "id": "id86K16I7X"
         },
         {
             "sign": "Ы",
@@ -20979,7 +20993,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idC9WZVNK8"
+            "id": "idK08SHB32"
         },
         {
             "sign": "",
@@ -21041,7 +21055,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "id8O7BJQMC"
+            "id": "idLFTG4CHK"
         },
         {
             "sign": "",
@@ -21068,7 +21082,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idHPWLDI5C"
+            "id": "id91FUQQXF"
         },
         {
             "sign": "Ӹ",
@@ -21095,7 +21109,7 @@
                     "language_tag": "mhr"
                 }
             ],
-            "id": "idZMQ65TWA"
+            "id": "idI93W6JSH"
         },
         {
             "sign": "",
@@ -21122,7 +21136,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idWLFMPBYA"
+            "id": "idYM4CW7QP"
         },
         {
             "sign": "Ь",
@@ -21270,7 +21284,7 @@
                 {
                     "name": "Kaitag",
                     "types": [
-                        "alphabet"
+                        "historic"
                     ],
                     "language_tag": "xdq"
                 },
@@ -21653,7 +21667,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idYA4MMEH8"
+            "id": "idKNFWNORT"
         },
         {
             "sign": "Ҍ",
@@ -21673,7 +21687,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idAULT2KUE"
+            "id": "idLGVM3YSE"
         },
         {
             "sign": "Ѣ",
@@ -21700,7 +21714,7 @@
                     "language_tag": "tat"
                 }
             ],
-            "id": "idNVY782KD"
+            "id": "id4WKB0HML"
         },
         {
             "sign": "Э",
@@ -22203,7 +22217,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idKPPZT7CR"
+            "id": "id6VDGSVE8"
         },
         {
             "sign": "",
@@ -22279,7 +22293,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idPO5BERWX"
+            "id": "id0RE5RKIN"
         },
         {
             "sign": "",
@@ -22299,7 +22313,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "id85BKLTNJ"
+            "id": "idP4OPSQEC"
         },
         {
             "sign": "Ӭ",
@@ -22333,7 +22347,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "id8G9IN58O"
+            "id": "idFOTX1YB8"
         },
         {
             "sign": "",
@@ -22353,7 +22367,7 @@
                     "language_tag": "yrk"
                 }
             ],
-            "id": "idMPFY8RH0"
+            "id": "id3KCOD09O"
         },
         {
             "sign": "",
@@ -22380,7 +22394,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "id45V8SQRT"
+            "id": "id4R48OA0T"
         },
         {
             "sign": "Ю",
@@ -22904,7 +22918,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id2MMVDN84"
+            "id": "idPLO2TAIN"
         },
         {
             "sign": "",
@@ -22980,7 +22994,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "id0BBAXENF"
+            "id": "idGUAR1G16"
         },
         {
             "sign": "",
@@ -23000,7 +23014,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idZ27JXI51"
+            "id": "idQBRK4TIJ"
         },
         {
             "sign": "",
@@ -23027,7 +23041,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idWR8PIT1E"
+            "id": "id6EGR5W8B"
         },
         {
             "sign": "",
@@ -23047,7 +23061,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "idMZ688ICB"
+            "id": "id5B9GFPVD"
         },
         {
             "sign": "Я",
@@ -23188,7 +23202,7 @@
                 {
                     "name": "Kaitag",
                     "types": [
-                        "alphabet"
+                        "historic"
                     ],
                     "language_tag": "xdq"
                 },
@@ -23571,7 +23585,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idFXXK0BDJ"
+            "id": "idU1C8ZB7B"
         },
         {
             "sign": "",
@@ -23654,7 +23668,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idQ6CJPYZM"
+            "id": "idMTTJXIT2"
         },
         {
             "sign": "",
@@ -23674,7 +23688,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idGBXGM6WG"
+            "id": "idFI2SKWTU"
         },
         {
             "sign": "",
@@ -23708,7 +23722,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "id0KDH8OT1"
+            "id": "id5VOZX2K5"
         },
         {
             "sign": "",
@@ -23735,7 +23749,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "id21M0T8Z1"
+            "id": "idDUWAUI5N"
         },
         {
             "sign": "Ѳ",
@@ -23755,7 +23769,7 @@
                     "language_tag": "tat"
                 }
             ],
-            "id": "id676UW0VV"
+            "id": "idYFAVQFYH"
         },
         {
             "sign": "Ѵ",
@@ -23775,7 +23789,7 @@
                     "language_tag": "tat"
                 }
             ],
-            "id": "id53Z7BOUX"
+            "id": "id4FXURI86"
         },
         {
             "sign": "Ҩ",
@@ -23795,7 +23809,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idCL98V4HI"
+            "id": "idBH0TGD2U"
         },
         {
             "sign": "Ӏ",
@@ -23866,7 +23880,7 @@
                 {
                     "name": "Kaitag",
                     "types": [
-                        "extended"
+                        "alphabet"
                     ],
                     "language_tag": "xdq"
                 },
@@ -23920,7 +23934,7 @@
                     "language_tag": "ce"
                 }
             ],
-            "id": "id6RMGEMRK"
+            "id": "id40B99AHF"
         },
         {
             "sign": "Ꙗ",
@@ -23940,7 +23954,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id0F3IWBOB"
+            "id": "idZXVSYMQX"
         },
         {
             "sign": "Ѥ",
@@ -23960,7 +23974,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idTMO6H5P0"
+            "id": "idXHLOYYCP"
         },
         {
             "sign": "Ѫ",
@@ -23980,7 +23994,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idD0RZ8CRH"
+            "id": "idN02Y8GJX"
         },
         {
             "sign": "Ѭ",
@@ -24000,7 +24014,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id79DLJPQB"
+            "id": "idVBF6KT11"
         },
         {
             "sign": "ʼ",
@@ -24111,7 +24125,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idQ297WW49"
+            "id": "idFMPWYUZ0"
         }
     ],
     "lowercase_unicodes_list": [
@@ -24685,7 +24699,7 @@
                     ]
                 }
             ],
-            "id": "id74UY038R"
+            "id": "idDLCC1HNV"
         },
         {
             "sign": "",
@@ -24768,7 +24782,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idEGZBQUQF"
+            "id": "idEJ6XXL0K"
         },
         {
             "sign": "ӑ",
@@ -24802,7 +24816,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idF87LLTXK"
+            "id": "idXFY4P049"
         },
         {
             "sign": "ӓ",
@@ -24871,7 +24885,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "id8FJA9IS2"
+            "id": "idLUGAS9WQ"
         },
         {
             "sign": "",
@@ -24891,7 +24905,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id337ZFONO"
+            "id": "idPFOYMBOQ"
         },
         {
             "sign": "",
@@ -24925,7 +24939,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "id3XPRGDOY"
+            "id": "idUQQ0NPHY"
         },
         {
             "sign": "ӕ",
@@ -24945,7 +24959,7 @@
                     "language_tag": "os"
                 }
             ],
-            "id": "idYKTZBNCI"
+            "id": "idXGHN6C7C"
         },
         {
             "sign": "б",
@@ -25517,7 +25531,7 @@
                     ]
                 }
             ],
-            "id": "idUP30YXM9"
+            "id": "idLDD05G13"
         },
         {
             "sign": "б",
@@ -25544,7 +25558,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id64UBYDZK"
+            "id": "id85H8SJV6"
         },
         {
             "sign": "в",
@@ -26116,7 +26130,7 @@
                     ]
                 }
             ],
-            "id": "id3XAUBPNO"
+            "id": "id6OEXLFWA"
         },
         {
             "sign": "в",
@@ -26136,7 +26150,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idMJZ96HI8"
+            "id": "id6BRQAVHM"
         },
         {
             "sign": "ԝ",
@@ -26163,7 +26177,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idWI8JXSFA"
+            "id": "id1W2T97NL"
         },
         {
             "sign": "г",
@@ -26737,7 +26751,7 @@
                     ]
                 }
             ],
-            "id": "idLUY8FQD5"
+            "id": "idEG54MHXC"
         },
         {
             "sign": "г",
@@ -26758,7 +26772,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id7519SQA3"
+            "id": "idMO2T4WNR"
         },
         {
             "sign": "г",
@@ -26779,7 +26793,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idOKM8GIOL"
+            "id": "id469SL6EA"
         },
         {
             "sign": "ґ",
@@ -26806,7 +26820,7 @@
                     "language_tag": "uk"
                 }
             ],
-            "id": "id01GU6M7Y"
+            "id": "idQE92MNDS"
         },
         {
             "sign": "ғ",
@@ -26952,7 +26966,7 @@
                     "language_tag": "cjs"
                 }
             ],
-            "id": "idGEA4RJAF"
+            "id": "idEE7V7T6G"
         },
         {
             "sign": "",
@@ -26972,7 +26986,7 @@
                     "language_tag": "ba"
                 }
             ],
-            "id": "idUVRMI2M1"
+            "id": "idENX1IZYM"
         },
         {
             "sign": "ӷ",
@@ -27020,7 +27034,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idA7J17YUC"
+            "id": "id1WBCZ81O"
         },
         {
             "sign": "ҕ",
@@ -27061,7 +27075,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idMHFKVRBH"
+            "id": "idB6QN8F91"
         },
         {
             "sign": "ӻ",
@@ -27081,7 +27095,7 @@
                     "language_tag": "niv"
                 }
             ],
-            "id": "idJQTHP2QP"
+            "id": "idESJHTCGY"
         },
         {
             "sign": "һ",
@@ -27134,6 +27148,13 @@
                         "alphabet"
                     ],
                     "language_tag": "kk"
+                },
+                {
+                    "name": "Kaitag",
+                    "types": [
+                        "alphabet"
+                    ],
+                    "language_tag": "xdq"
                 },
                 {
                     "name": "Kalmyk",
@@ -27206,7 +27227,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idIKSN5NTW"
+            "id": "idXG32OJDT"
         },
         {
             "sign": "ԧ",
@@ -27226,7 +27247,7 @@
                     "language_tag": "ttt"
                 }
             ],
-            "id": "idNCUGUK72"
+            "id": "idUHB4O9Y4"
         },
         {
             "sign": "",
@@ -27246,7 +27267,7 @@
                     "language_tag": "ttt"
                 }
             ],
-            "id": "idU1MPSILB"
+            "id": "idKMVBMQRL"
         },
         {
             "sign": "д",
@@ -27819,7 +27840,7 @@
                     ]
                 }
             ],
-            "id": "idEPSTVTTU"
+            "id": "idASJG5MT8"
         },
         {
             "sign": "д",
@@ -27839,7 +27860,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idOMPTTGKK"
+            "id": "idG61BSCYY"
         },
         {
             "sign": "д",
@@ -27860,7 +27881,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idQEAGOBA6"
+            "id": "id4JRY1E6W"
         },
         {
             "sign": "ђ",
@@ -27887,7 +27908,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idOF5AJGZS"
+            "id": "idNEX2J885"
         },
         {
             "sign": "ѓ",
@@ -27907,7 +27928,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idOXSFDZ0V"
+            "id": "idVVDARBDS"
         },
         {
             "sign": "е",
@@ -28479,7 +28500,7 @@
                     ]
                 }
             ],
-            "id": "idKG8MUXBX"
+            "id": "idUB5WVUMT"
         },
         {
             "sign": "ѐ",
@@ -28506,7 +28527,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idZUTM9AIO"
+            "id": "idP2B1SC4Y"
         },
         {
             "sign": "",
@@ -28582,7 +28603,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idM6AZ6Y9D"
+            "id": "id53KBTBZ8"
         },
         {
             "sign": "ӗ",
@@ -28602,7 +28623,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "id7LLTZ8TL"
+            "id": "idIFCT36QV"
         },
         {
             "sign": "ё",
@@ -29098,7 +29119,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idEZI685B0"
+            "id": "idH6L94DYP"
         },
         {
             "sign": "",
@@ -29160,7 +29181,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "id4IB3R8VQ"
+            "id": "idX5VVSG9D"
         },
         {
             "sign": "",
@@ -29180,7 +29201,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idO3NH0BT4"
+            "id": "id2E044H1W"
         },
         {
             "sign": "",
@@ -29200,7 +29221,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id3H7E7C2W"
+            "id": "idPMXP23RK"
         },
         {
             "sign": "",
@@ -29234,7 +29255,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "id8DT5ZK23"
+            "id": "id4VGCICXG"
         },
         {
             "sign": "",
@@ -29261,7 +29282,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "id1GXL19Y3"
+            "id": "idCMP78IWM"
         },
         {
             "sign": "є",
@@ -29288,7 +29309,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "id5P7VES18"
+            "id": "idU01KXMVS"
         },
         {
             "sign": "",
@@ -29308,7 +29329,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idWVRVHJDQ"
+            "id": "idGKM5WKS8"
         },
         {
             "sign": "ԑ",
@@ -29335,7 +29356,7 @@
                     "language_tag": "enf"
                 }
             ],
-            "id": "id07OPQT7V"
+            "id": "id7XN4YJGV"
         },
         {
             "sign": "",
@@ -29355,7 +29376,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idQE17G3H1"
+            "id": "idD3XK1BE1"
         },
         {
             "sign": "ә",
@@ -29408,6 +29429,13 @@
                         "alphabet"
                     ],
                     "language_tag": "kk"
+                },
+                {
+                    "name": "Kaitag",
+                    "types": [
+                        "alphabet"
+                    ],
+                    "language_tag": "xdq"
                 },
                 {
                     "name": "Kalmyk",
@@ -29494,7 +29522,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idHU5ATS3G"
+            "id": "idRD79ODRP"
         },
         {
             "sign": "",
@@ -29514,7 +29542,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "id4GUPG0GV"
+            "id": "idS18LOK48"
         },
         {
             "sign": "ӛ",
@@ -29534,7 +29562,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idLKDGPKI9"
+            "id": "idUV1QT1FM"
         },
         {
             "sign": "ж",
@@ -30093,7 +30121,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idC5HKHFQQ"
+            "id": "idJNAC4W6Z"
         },
         {
             "sign": "ж",
@@ -30113,7 +30141,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idZJI7MSAD"
+            "id": "id93SSFTG6"
         },
         {
             "sign": "ӂ",
@@ -30140,7 +30168,7 @@
                     "language_tag": "ro-MD"
                 }
             ],
-            "id": "idRTC29K2D"
+            "id": "id0E5Q1VXB"
         },
         {
             "sign": "ӝ",
@@ -30160,7 +30188,7 @@
                     "language_tag": "udm"
                 }
             ],
-            "id": "idPIVCJYMV"
+            "id": "idOUMMWOTM"
         },
         {
             "sign": "җ",
@@ -30250,7 +30278,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idGA3WR6Y2"
+            "id": "idPTB6I9SO"
         },
         {
             "sign": "ѕ",
@@ -30277,7 +30305,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idO3EQHTPK"
+            "id": "id8F4MAMN6"
         },
         {
             "sign": "ӡ",
@@ -30318,7 +30346,7 @@
                     "language_tag": "ulc"
                 }
             ],
-            "id": "idKMRQVLZ9"
+            "id": "id6USPO9S0"
         },
         {
             "sign": "з",
@@ -30877,7 +30905,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id5U7USXA2"
+            "id": "id4X7Y0Q1Q"
         },
         {
             "sign": "з",
@@ -30897,7 +30925,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id6RNI0U21"
+            "id": "idIONST6MG"
         },
         {
             "sign": "ӟ",
@@ -30917,7 +30945,7 @@
                     "language_tag": "udm"
                 }
             ],
-            "id": "idX4LO2N5R"
+            "id": "id9SDG58PH"
         },
         {
             "sign": "ҙ",
@@ -30951,7 +30979,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "idTINS49HH"
+            "id": "id11HV1VMN"
         },
         {
             "sign": "",
@@ -30978,7 +31006,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "idZV5YYYK6"
+            "id": "idVMGWYBH5"
         },
         {
             "sign": "",
@@ -30998,7 +31026,7 @@
                     "language_tag": "nio"
                 }
             ],
-            "id": "idV5FHY9VF"
+            "id": "idKYZW2MZA"
         },
         {
             "sign": "и",
@@ -31551,7 +31579,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id6Z9DDLLW"
+            "id": "idNK2LGXTB"
         },
         {
             "sign": "и",
@@ -31572,7 +31600,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idQ3KN99HT"
+            "id": "idY13K97AX"
         },
         {
             "sign": "ѝ",
@@ -31599,7 +31627,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idIRXQHSM8"
+            "id": "idUFX0SJ7Q"
         },
         {
             "sign": "ӣ",
@@ -31675,7 +31703,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idHXPEJDMG"
+            "id": "idT0Z3RE33"
         },
         {
             "sign": "ӥ",
@@ -31695,7 +31723,7 @@
                     "language_tag": "udm"
                 }
             ],
-            "id": "idGMTUUMLT"
+            "id": "id1RWXAM1B"
         },
         {
             "sign": "",
@@ -31729,7 +31757,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idUBSU9ZUL"
+            "id": "idXG6B9B00"
         },
         {
             "sign": "і",
@@ -31812,7 +31840,7 @@
                     "language_tag": "kjh"
                 }
             ],
-            "id": "idWSGL0ZUT"
+            "id": "idT506L8EK"
         },
         {
             "sign": "ї",
@@ -31832,7 +31860,7 @@
                     "language_tag": "uk"
                 }
             ],
-            "id": "id6AM4MAH4"
+            "id": "idTGQUJO74"
         },
         {
             "sign": "й",
@@ -32364,7 +32392,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idN1W35OEX"
+            "id": "idFXRT6HLC"
         },
         {
             "sign": "й",
@@ -32385,7 +32413,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id4VU40YQ4"
+            "id": "id0D4UBE0E"
         },
         {
             "sign": "ҋ",
@@ -32405,7 +32433,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idXZ8LUVPQ"
+            "id": "idF2DV5MJY"
         },
         {
             "sign": "",
@@ -32425,7 +32453,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id25YQ767W"
+            "id": "idQDPLXHEI"
         },
         {
             "sign": "ј",
@@ -32487,7 +32515,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idD2L4DSTD"
+            "id": "idJX649GE7"
         },
         {
             "sign": "к",
@@ -33059,7 +33087,7 @@
                     ]
                 }
             ],
-            "id": "idENZBJS9L"
+            "id": "idE5DCMRFL"
         },
         {
             "sign": "к",
@@ -33079,7 +33107,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id9ELRO6QX"
+            "id": "idXYFFRIL3"
         },
         {
             "sign": "қ",
@@ -33183,7 +33211,7 @@
                     "language_tag": "cjs"
                 }
             ],
-            "id": "idS720WKG5"
+            "id": "idJ5MGBIHX"
         },
         {
             "sign": "ӄ",
@@ -33259,7 +33287,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idOE13CNLC"
+            "id": "id291JUEJ9"
         },
         {
             "sign": "ҟ",
@@ -33279,7 +33307,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idUI7LI2CW"
+            "id": "idQ2125AW5"
         },
         {
             "sign": "ҝ",
@@ -33306,7 +33334,7 @@
                     "language_tag": "tly"
                 }
             ],
-            "id": "idCLQ5M25Q"
+            "id": "idT87GZMDY"
         },
         {
             "sign": "ҡ",
@@ -33333,7 +33361,7 @@
                     "language_tag": "xdq"
                 }
             ],
-            "id": "id7BYJGOLF"
+            "id": "idEVI29U5B"
         },
         {
             "sign": "",
@@ -33353,7 +33381,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "id0BOHALO9"
+            "id": "idR82V2R3K"
         },
         {
             "sign": "ԛ",
@@ -33373,7 +33401,7 @@
                     "language_tag": "ku"
                 }
             ],
-            "id": "idOJAMIQAX"
+            "id": "idGGUYE22M"
         },
         {
             "sign": "л",
@@ -33945,7 +33973,7 @@
                     ]
                 }
             ],
-            "id": "idO1LI31VW"
+            "id": "idPXF3J5ZL"
         },
         {
             "sign": "л",
@@ -33965,7 +33993,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idXNCXW6L9"
+            "id": "idAS3OL4MP"
         },
         {
             "sign": "ӆ",
@@ -33985,7 +34013,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idV74RWOSQ"
+            "id": "idHGFKAM1L"
         },
         {
             "sign": "ԯ",
@@ -34012,7 +34040,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idCNHYQART"
+            "id": "id6NU9NA0J"
         },
         {
             "sign": "ԓ",
@@ -34046,7 +34074,7 @@
                     "language_tag": "ckt"
                 }
             ],
-            "id": "id4WXVB5CZ"
+            "id": "idF7ZKOOT3"
         },
         {
             "sign": "љ",
@@ -34080,7 +34108,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id8OWPNKYK"
+            "id": "idYJ02LI6X"
         },
         {
             "sign": "",
@@ -34100,7 +34128,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "idEI8OSTKQ"
+            "id": "idG5C2F9CC"
         },
         {
             "sign": "м",
@@ -34672,7 +34700,7 @@
                     ]
                 }
             ],
-            "id": "idI75ZU455"
+            "id": "id8DB2RR18"
         },
         {
             "sign": "ӎ",
@@ -34692,7 +34720,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idSAI57BZP"
+            "id": "idV37QSJNC"
         },
         {
             "sign": "н",
@@ -35265,7 +35293,7 @@
                     ]
                 }
             ],
-            "id": "id1MAIQCCW"
+            "id": "id74SFFWJA"
         },
         {
             "sign": "н",
@@ -35286,7 +35314,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idN7B07ZIK"
+            "id": "idOIZLZI9Q"
         },
         {
             "sign": "ӊ",
@@ -35306,7 +35334,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idS5TS4XT1"
+            "id": "idK9K6MOLK"
         },
         {
             "sign": "ң",
@@ -35445,7 +35473,7 @@
                     "language_tag": "cjs"
                 }
             ],
-            "id": "id5TPOQ454"
+            "id": "idLEI4PZ1B"
         },
         {
             "sign": "ӈ",
@@ -35591,7 +35619,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idNKCDOERW"
+            "id": "idQ1KS09VR"
         },
         {
             "sign": "ҥ",
@@ -35653,7 +35681,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idS2X34CBR"
+            "id": "id7Z2TUQSS"
         },
         {
             "sign": "њ",
@@ -35687,7 +35715,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idPU0RKXDP"
+            "id": "idLAPXJF4C"
         },
         {
             "sign": "о",
@@ -36259,7 +36287,7 @@
                     ]
                 }
             ],
-            "id": "idK564QPVS"
+            "id": "idGT68Z2XF"
         },
         {
             "sign": "",
@@ -36335,7 +36363,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idZXD9YX5F"
+            "id": "idNVC74IGP"
         },
         {
             "sign": "",
@@ -36369,7 +36397,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idPBTFS6M2"
+            "id": "id89BI8OKV"
         },
         {
             "sign": "ӧ",
@@ -36487,7 +36515,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idGI5DYU44"
+            "id": "id4Q21I4RJ"
         },
         {
             "sign": "",
@@ -36514,7 +36542,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idBRYYWPRB"
+            "id": "idD7N6DXY3"
         },
         {
             "sign": "",
@@ -36534,7 +36562,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idK4OORETF"
+            "id": "idS4J48LVQ"
         },
         {
             "sign": "",
@@ -36568,7 +36596,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "id2CQWUQWF"
+            "id": "idE14F5R83"
         },
         {
             "sign": "ө",
@@ -36777,7 +36805,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idIX7PCXYG"
+            "id": "idHSO0UJCM"
         },
         {
             "sign": "",
@@ -36797,7 +36825,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idYHY93SAD"
+            "id": "id5QG9WEGX"
         },
         {
             "sign": "ӫ",
@@ -36838,7 +36866,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idIFAUPZCE"
+            "id": "idGBXALH7R"
         },
         {
             "sign": "",
@@ -36858,7 +36886,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idS7I5RWVI"
+            "id": "idEZC9VDDE"
         },
         {
             "sign": "",
@@ -36892,7 +36920,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idMYOVZ748"
+            "id": "idEE7MR7NS"
         },
         {
             "sign": "п",
@@ -37466,7 +37494,7 @@
                     ]
                 }
             ],
-            "id": "idOKC5VNCF"
+            "id": "id2ZPG8PK9"
         },
         {
             "sign": "п",
@@ -37487,7 +37515,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idSGM1NON4"
+            "id": "id638JQYT2"
         },
         {
             "sign": "п",
@@ -37508,7 +37536,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idBITQR1AN"
+            "id": "id9W8NW20S"
         },
         {
             "sign": "ԥ",
@@ -37528,7 +37556,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idNT2427ST"
+            "id": "idRFRKUCSK"
         },
         {
             "sign": "ҧ",
@@ -37548,7 +37576,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "id5NT3NO1K"
+            "id": "idALT9PAAM"
         },
         {
             "sign": "р",
@@ -38120,7 +38148,7 @@
                     ]
                 }
             ],
-            "id": "idLDIYMEAW"
+            "id": "id9PD9TQJS"
         },
         {
             "sign": "",
@@ -38140,7 +38168,7 @@
                     "language_tag": "niv"
                 }
             ],
-            "id": "idZL6WQC5T"
+            "id": "idETKERVZJ"
         },
         {
             "sign": "ҏ",
@@ -38160,7 +38188,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idKCWP8GGB"
+            "id": "idYQ0ZFW3G"
         },
         {
             "sign": "с",
@@ -38732,7 +38760,7 @@
                     ]
                 }
             ],
-            "id": "idJM9O749S"
+            "id": "idG0Y85NCC"
         },
         {
             "sign": "ҫ",
@@ -38780,7 +38808,7 @@
                     "language_tag": "enf"
                 }
             ],
-            "id": "idO5O7QU6S"
+            "id": "idED63C4T7"
         },
         {
             "sign": "",
@@ -38814,7 +38842,7 @@
                     "language_tag": "enf"
                 }
             ],
-            "id": "idS6T9QRKS"
+            "id": "idVFJ2MMXL"
         },
         {
             "sign": "",
@@ -38834,7 +38862,7 @@
                     "language_tag": "ba"
                 }
             ],
-            "id": "id7QAABBQS"
+            "id": "idCZVDE6DT"
         },
         {
             "sign": "",
@@ -38854,7 +38882,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "idCZ82422J"
+            "id": "idD57KGZWM"
         },
         {
             "sign": "т",
@@ -39428,7 +39456,7 @@
                     ]
                 }
             ],
-            "id": "idEF3J74VQ"
+            "id": "id6EX59PY5"
         },
         {
             "sign": "т",
@@ -39449,7 +39477,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idTB5QB57T"
+            "id": "id66L4S45S"
         },
         {
             "sign": "т",
@@ -39470,7 +39498,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idZSWCFCGF"
+            "id": "idOTRY6SGT"
         },
         {
             "sign": "ҭ",
@@ -39490,7 +39518,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idA5YDMW8Z"
+            "id": "idL3R2RKML"
         },
         {
             "sign": "ћ",
@@ -39510,7 +39538,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idGP5WCGXJ"
+            "id": "idAANB4G9F"
         },
         {
             "sign": "ќ",
@@ -39530,7 +39558,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idCM5SQCXT"
+            "id": "idWAUQAUV2"
         },
         {
             "sign": "у",
@@ -40102,7 +40130,7 @@
                     ]
                 }
             ],
-            "id": "idGN2GPBUX"
+            "id": "idLJ8YMEAM"
         },
         {
             "sign": "ӯ",
@@ -40185,7 +40213,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idRHMEB76D"
+            "id": "idMRT5LLPI"
         },
         {
             "sign": "ӱ",
@@ -40296,7 +40324,7 @@
                     "language_tag": "cjs"
                 }
             ],
-            "id": "idLR9I9E2E"
+            "id": "id7Q17RWBG"
         },
         {
             "sign": "ӳ",
@@ -40316,7 +40344,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idIMCI58C2"
+            "id": "idVC5VTL8F"
         },
         {
             "sign": "",
@@ -40336,7 +40364,7 @@
                     "language_tag": "krc"
                 }
             ],
-            "id": "id0H59V23Q"
+            "id": "idOUL1DKD9"
         },
         {
             "sign": "",
@@ -40370,7 +40398,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idI1J472OV"
+            "id": "idQYNAEPMK"
         },
         {
             "sign": "ү",
@@ -40530,7 +40558,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id5799ALFA"
+            "id": "idXP5CRVKG"
         },
         {
             "sign": "",
@@ -40550,7 +40578,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idJ1TKZ3YU"
+            "id": "idGWSI1X7P"
         },
         {
             "sign": "ұ",
@@ -40570,7 +40598,7 @@
                     "language_tag": "kk"
                 }
             ],
-            "id": "idOX7W33PA"
+            "id": "idSF2YDDIF"
         },
         {
             "sign": "ў",
@@ -40653,7 +40681,7 @@
                     "language_tag": "ess"
                 }
             ],
-            "id": "idYYST1A9W"
+            "id": "idMUZ17Q57"
         },
         {
             "sign": "ф",
@@ -41212,7 +41240,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id847AH3Y0"
+            "id": "idVTIMJ0CY"
         },
         {
             "sign": "х",
@@ -41784,7 +41812,7 @@
                     ]
                 }
             ],
-            "id": "idSRW8935T"
+            "id": "idT09IH974"
         },
         {
             "sign": "ҳ",
@@ -41846,7 +41874,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idK12K8UGS"
+            "id": "idI05GDUKP"
         },
         {
             "sign": "ӽ",
@@ -41880,7 +41908,7 @@
                     "language_tag": "ess"
                 }
             ],
-            "id": "idNC57CWOM"
+            "id": "idRLHZJ2IE"
         },
         {
             "sign": "ӿ",
@@ -41900,7 +41928,7 @@
                     "language_tag": "niv"
                 }
             ],
-            "id": "idNW6HJBT8"
+            "id": "idW48FSQJF"
         },
         {
             "sign": "",
@@ -41920,7 +41948,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "idCSNTA2YK"
+            "id": "idHV129AJY"
         },
         {
             "sign": "ц",
@@ -42459,7 +42487,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id8KENYM2Y"
+            "id": "idTHU71OK5"
         },
         {
             "sign": "ц",
@@ -42480,7 +42508,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idOBRDSWZ7"
+            "id": "idCJ9JS5Z9"
         },
         {
             "sign": "",
@@ -42500,7 +42528,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "id6IHQBS2F"
+            "id": "idR7IGH66N"
         },
         {
             "sign": "ҵ",
@@ -42520,7 +42548,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "id08CI30DS"
+            "id": "idS9K5JEEF"
         },
         {
             "sign": "ч",
@@ -43080,7 +43108,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idUH56CWIK"
+            "id": "id6I4PU6MX"
         },
         {
             "sign": "ч",
@@ -43101,7 +43129,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idVSU2Q4NB"
+            "id": "idUPDI6QP5"
         },
         {
             "sign": "ӵ",
@@ -43121,7 +43149,7 @@
                     "language_tag": "udm"
                 }
             ],
-            "id": "idBSNQYKWC"
+            "id": "id3QJ7TMSF"
         },
         {
             "sign": "ӌ",
@@ -43148,7 +43176,7 @@
                     "language_tag": "kjh"
                 }
             ],
-            "id": "idRUPJPYIS"
+            "id": "idL6QVHZ1S"
         },
         {
             "sign": "ҷ",
@@ -43182,7 +43210,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idZ8IJ9QIR"
+            "id": "idSVJA8P08"
         },
         {
             "sign": "",
@@ -43202,7 +43230,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idZMF93RTB"
+            "id": "idU6DR0TXA"
         },
         {
             "sign": "ҹ",
@@ -43229,7 +43257,7 @@
                     "language_tag": "tly"
                 }
             ],
-            "id": "id74RC7QRZ"
+            "id": "idG0PZQJNV"
         },
         {
             "sign": "",
@@ -43249,7 +43277,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "idYZWB5OE1"
+            "id": "idWUCRW9XO"
         },
         {
             "sign": "ҽ",
@@ -43269,7 +43297,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "id1Q7K1JIZ"
+            "id": "idK14OVEP7"
         },
         {
             "sign": "ҿ",
@@ -43289,7 +43317,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "id8CDOJ6AA"
+            "id": "id41GHQ6HH"
         },
         {
             "sign": "џ",
@@ -43323,7 +43351,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idWA1G8QBX"
+            "id": "idIN2S5DPO"
         },
         {
             "sign": "ш",
@@ -43897,7 +43925,7 @@
                     ]
                 }
             ],
-            "id": "idPEGHLY80"
+            "id": "id8O2Y9KJW"
         },
         {
             "sign": "ш",
@@ -43918,7 +43946,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id99TQDBPG"
+            "id": "id7ZJ7CIPJ"
         },
         {
             "sign": "ш",
@@ -43939,7 +43967,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idZE48XXTO"
+            "id": "id2YJUANBO"
         },
         {
             "sign": "щ",
@@ -44443,7 +44471,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idBT3NR05S"
+            "id": "idLW6B9HO5"
         },
         {
             "sign": "щ",
@@ -44464,7 +44492,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idT9OY96LG"
+            "id": "id4FL83XS9"
         },
         {
             "sign": "ъ",
@@ -44599,7 +44627,7 @@
                 {
                     "name": "Kaitag",
                     "types": [
-                        "alphabet"
+                        "historic"
                     ],
                     "language_tag": "xdq"
                 },
@@ -44968,7 +44996,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idSKUJHYRC"
+            "id": "idUKMT2O9G"
         },
         {
             "sign": "ъ",
@@ -44989,7 +45017,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idMTI43XQT"
+            "id": "idHRXBN82C"
         },
         {
             "sign": "ы",
@@ -45506,7 +45534,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id5774ASJJ"
+            "id": "idY0B3EKIR"
         },
         {
             "sign": "",
@@ -45568,7 +45596,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "id1LQMEC8Z"
+            "id": "idOR58M9JW"
         },
         {
             "sign": "",
@@ -45595,7 +45623,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idZRT7359O"
+            "id": "idCTXD4II7"
         },
         {
             "sign": "ӹ",
@@ -45622,7 +45650,7 @@
                     "language_tag": "mhr"
                 }
             ],
-            "id": "idP2JLVGOK"
+            "id": "id9UE8WII9"
         },
         {
             "sign": "",
@@ -45649,7 +45677,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idHXBDY0SJ"
+            "id": "idETRENACK"
         },
         {
             "sign": "ь",
@@ -45798,7 +45826,7 @@
                 {
                     "name": "Kaitag",
                     "types": [
-                        "alphabet"
+                        "historic"
                     ],
                     "language_tag": "xdq"
                 },
@@ -46181,7 +46209,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idMOYFAXIY"
+            "id": "idZTGWBI04"
         },
         {
             "sign": "ь",
@@ -46202,7 +46230,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id5I26ID99"
+            "id": "id9ZGV5NCL"
         },
         {
             "sign": "ҍ",
@@ -46222,7 +46250,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idUS3NTXCF"
+            "id": "idBHLNM0NW"
         },
         {
             "sign": "ѣ",
@@ -46250,7 +46278,7 @@
                     "language_tag": "tat"
                 }
             ],
-            "id": "id61TOFVOY"
+            "id": "id8RMBQ6WS"
         },
         {
             "sign": "ѣ",
@@ -46271,7 +46299,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idWMMLDCSH"
+            "id": "idJZYS46IF"
         },
         {
             "sign": "э",
@@ -46774,7 +46802,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idZQVW1T9V"
+            "id": "idUWWDMTM2"
         },
         {
             "sign": "",
@@ -46850,7 +46878,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idEU62YSFZ"
+            "id": "idQUTSC41R"
         },
         {
             "sign": "",
@@ -46870,7 +46898,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "id523E47NM"
+            "id": "id6LQO1Z1X"
         },
         {
             "sign": "ӭ",
@@ -46904,7 +46932,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "idSHT0CG51"
+            "id": "idPZ2PGG3P"
         },
         {
             "sign": "",
@@ -46924,7 +46952,7 @@
                     "language_tag": "yrk"
                 }
             ],
-            "id": "idN3T7395P"
+            "id": "idJN9DI754"
         },
         {
             "sign": "",
@@ -46951,7 +46979,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "id0ISXZ5YQ"
+            "id": "idHVOX9SME"
         },
         {
             "sign": "ю",
@@ -47475,7 +47503,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idFOCHLDQP"
+            "id": "idF2SDXKLU"
         },
         {
             "sign": "ю",
@@ -47495,7 +47523,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idSY66A7BV"
+            "id": "idWLXR2KW5"
         },
         {
             "sign": "",
@@ -47571,7 +47599,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idMB4BDLE4"
+            "id": "id6OWY5PJV"
         },
         {
             "sign": "",
@@ -47591,7 +47619,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idRJ1YIBWC"
+            "id": "idNVVBUB0D"
         },
         {
             "sign": "",
@@ -47618,7 +47646,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idOZ05CQL5"
+            "id": "idGHW3G2ZW"
         },
         {
             "sign": "",
@@ -47638,7 +47666,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "id7W4FB1MX"
+            "id": "idE2CEEEWN"
         },
         {
             "sign": "я",
@@ -47779,7 +47807,7 @@
                 {
                     "name": "Kaitag",
                     "types": [
-                        "alphabet"
+                        "historic"
                     ],
                     "language_tag": "xdq"
                 },
@@ -48162,7 +48190,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idW1VFXC8K"
+            "id": "idEANGSQG6"
         },
         {
             "sign": "",
@@ -48245,7 +48273,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idMDUVXRTC"
+            "id": "id6VZ0NAFC"
         },
         {
             "sign": "",
@@ -48265,7 +48293,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "id0NI347N5"
+            "id": "id2WL0UEJL"
         },
         {
             "sign": "",
@@ -48299,7 +48327,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idCU3U2MDZ"
+            "id": "idJDSSSHGE"
         },
         {
             "sign": "",
@@ -48326,7 +48354,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "idW82DND8Q"
+            "id": "id49W36DH6"
         },
         {
             "sign": "ѳ",
@@ -48346,7 +48374,7 @@
                     "language_tag": "tat"
                 }
             ],
-            "id": "idKCGI37RI"
+            "id": "idBV91O8DA"
         },
         {
             "sign": "ѵ",
@@ -48366,7 +48394,7 @@
                     "language_tag": "tat"
                 }
             ],
-            "id": "idFB6B3AGY"
+            "id": "id5984QN7P"
         },
         {
             "sign": "ҩ",
@@ -48386,7 +48414,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idPCMU2P69"
+            "id": "id129GE1UZ"
         },
         {
             "sign": "ӏ",
@@ -48457,7 +48485,7 @@
                 {
                     "name": "Kaitag",
                     "types": [
-                        "extended"
+                        "alphabet"
                     ],
                     "language_tag": "xdq"
                 },
@@ -48511,7 +48539,7 @@
                     "language_tag": "ce"
                 }
             ],
-            "id": "idKMABRKU7"
+            "id": "idSKED5LVA"
         },
         {
             "sign": "ꙗ",
@@ -48532,7 +48560,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idTV1TJTIO"
+            "id": "id71E8U9DR"
         },
         {
             "sign": "ꙗ",
@@ -48553,7 +48581,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idHCN83ESY"
+            "id": "idX2TVKV05"
         },
         {
             "sign": "ѥ",
@@ -48574,7 +48602,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idI48BHAN7"
+            "id": "idJFUL64SC"
         },
         {
             "sign": "ѥ",
@@ -48595,7 +48623,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idDEW1HXQE"
+            "id": "id86BX3E18"
         },
         {
             "sign": "ѫ",
@@ -48615,7 +48643,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id8SLMXBJW"
+            "id": "id7T7HSYZY"
         },
         {
             "sign": "ѭ",
@@ -48636,7 +48664,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id3EVGQPVQ"
+            "id": "idMHTOSEB4"
         },
         {
             "sign": "ѭ",
@@ -48657,7 +48685,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idB0MC1O8J"
+            "id": "idXB0ZPG92"
         },
         {
             "sign": "ʼ",
@@ -48740,7 +48768,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idDTA18V0S"
+            "id": "idVOM9PSOM"
         }
     ],
     "uppercase_puazone_list": [],
@@ -48857,7 +48885,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idQ297WW49"
+            "id": "idFMPWYUZ0"
         },
         {
             "sign": "Ѐ",
@@ -48884,7 +48912,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id07PC59EC"
+            "id": "id81GB0LF4"
         },
         {
             "sign": "Ё",
@@ -49380,7 +49408,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idLIE2XJCM"
+            "id": "id4NLC9BOC"
         },
         {
             "sign": "Ђ",
@@ -49407,7 +49435,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "id4IJASA7D"
+            "id": "idVWRCW4C2"
         },
         {
             "sign": "Ѓ",
@@ -49427,7 +49455,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idGHFYNKSX"
+            "id": "idEMFRHLFL"
         },
         {
             "sign": "Є",
@@ -49454,7 +49482,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idEL6FHQ32"
+            "id": "idG4GSKY5G"
         },
         {
             "sign": "Ѕ",
@@ -49481,7 +49509,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idAFG765NK"
+            "id": "idTT4SCSJV"
         },
         {
             "sign": "І",
@@ -49564,7 +49592,7 @@
                     "language_tag": "kjh"
                 }
             ],
-            "id": "idIP2ADMEW"
+            "id": "idXUYRKID9"
         },
         {
             "sign": "Ї",
@@ -49584,7 +49612,7 @@
                     "language_tag": "uk"
                 }
             ],
-            "id": "idILTA6793"
+            "id": "idGWUY8JB7"
         },
         {
             "sign": "Ј",
@@ -49646,7 +49674,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idTGKDPAW3"
+            "id": "id76SM3H0K"
         },
         {
             "sign": "Љ",
@@ -49680,7 +49708,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id95GTD2FC"
+            "id": "idRY2T1PGA"
         },
         {
             "sign": "Њ",
@@ -49714,7 +49742,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idVOQ6M9XA"
+            "id": "idQ1MT5XGV"
         },
         {
             "sign": "Ћ",
@@ -49734,7 +49762,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id2WYCTIS5"
+            "id": "id6VYI84AO"
         },
         {
             "sign": "Ќ",
@@ -49754,7 +49782,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id7F7VDJ55"
+            "id": "idTBABAFXZ"
         },
         {
             "sign": "Ѝ",
@@ -49781,7 +49809,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idG41HU83C"
+            "id": "idR1KJCKF1"
         },
         {
             "sign": "Ў",
@@ -49864,7 +49892,7 @@
                     "language_tag": "ess"
                 }
             ],
-            "id": "idNH37QIPZ"
+            "id": "idCYGVQFTJ"
         },
         {
             "sign": "Џ",
@@ -49898,7 +49926,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idL3BX55T6"
+            "id": "idRCNM1I5Y"
         },
         {
             "sign": "А",
@@ -50470,7 +50498,7 @@
                     ]
                 }
             ],
-            "id": "id7FS64BXJ"
+            "id": "idJG4XHTYU"
         },
         {
             "sign": "Б",
@@ -51042,7 +51070,7 @@
                     ]
                 }
             ],
-            "id": "idP5RA8AIN"
+            "id": "id5LD6F2FC"
         },
         {
             "sign": "В",
@@ -51614,7 +51642,7 @@
                     ]
                 }
             ],
-            "id": "idTZUZPYAR"
+            "id": "id894208RK"
         },
         {
             "sign": "Г",
@@ -52186,7 +52214,7 @@
                     ]
                 }
             ],
-            "id": "id5CDNEKQO"
+            "id": "id0K89BJZQ"
         },
         {
             "sign": "Д",
@@ -52758,7 +52786,7 @@
                     ]
                 }
             ],
-            "id": "idM8Q7KPZN"
+            "id": "idT4XC5H9A"
         },
         {
             "sign": "Д",
@@ -52778,7 +52806,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idIP18WEIO"
+            "id": "idB00LL2T8"
         },
         {
             "sign": "Е",
@@ -53350,7 +53378,7 @@
                     ]
                 }
             ],
-            "id": "id50G70Z8Q"
+            "id": "idLFCBBK0Y"
         },
         {
             "sign": "Ж",
@@ -53909,7 +53937,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id141Z8ZD0"
+            "id": "id653CDL0N"
         },
         {
             "sign": "Ж",
@@ -53929,7 +53957,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id6BHU3ZA6"
+            "id": "idE41W9UYE"
         },
         {
             "sign": "З",
@@ -54488,7 +54516,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idQTHERGZZ"
+            "id": "id1O1I2BL9"
         },
         {
             "sign": "И",
@@ -55040,7 +55068,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idXBF8DSI1"
+            "id": "idD2EIT5T9"
         },
         {
             "sign": "Й",
@@ -55571,7 +55599,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idHPEK7UD4"
+            "id": "idH4ZDF41C"
         },
         {
             "sign": "К",
@@ -56143,7 +56171,7 @@
                     ]
                 }
             ],
-            "id": "id22ONJKY2"
+            "id": "idVPZ2TIKJ"
         },
         {
             "sign": "К",
@@ -56163,7 +56191,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idI8ETY0Z1"
+            "id": "idL7FAIKLY"
         },
         {
             "sign": "Л",
@@ -56735,7 +56763,7 @@
                     ]
                 }
             ],
-            "id": "id8IPD2BVX"
+            "id": "idLR2870VS"
         },
         {
             "sign": "Л",
@@ -56755,7 +56783,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idAFZ4K8YQ"
+            "id": "id7XNOVALX"
         },
         {
             "sign": "М",
@@ -57327,7 +57355,7 @@
                     ]
                 }
             ],
-            "id": "idSXIZ1QXX"
+            "id": "id04EB72PU"
         },
         {
             "sign": "Н",
@@ -57899,7 +57927,7 @@
                     ]
                 }
             ],
-            "id": "idYTEINBES"
+            "id": "idS0X6AA7P"
         },
         {
             "sign": "О",
@@ -58471,7 +58499,7 @@
                     ]
                 }
             ],
-            "id": "id76QCSVYQ"
+            "id": "idUEK6IW59"
         },
         {
             "sign": "П",
@@ -59043,7 +59071,7 @@
                     ]
                 }
             ],
-            "id": "idI7GNPCYZ"
+            "id": "idXUCUNP7M"
         },
         {
             "sign": "Р",
@@ -59615,7 +59643,7 @@
                     ]
                 }
             ],
-            "id": "idFR5VNMSI"
+            "id": "idY5XMLOD5"
         },
         {
             "sign": "С",
@@ -60187,7 +60215,7 @@
                     ]
                 }
             ],
-            "id": "idFCDEQQAS"
+            "id": "idP32O8J4H"
         },
         {
             "sign": "Т",
@@ -60759,7 +60787,7 @@
                     ]
                 }
             ],
-            "id": "idQYCMDAV7"
+            "id": "idGPJO82NM"
         },
         {
             "sign": "У",
@@ -61331,7 +61359,7 @@
                     ]
                 }
             ],
-            "id": "id7Y5G3IS4"
+            "id": "id2WL8YF53"
         },
         {
             "sign": "Ф",
@@ -61890,7 +61918,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id8H98V7XR"
+            "id": "idNMGWANZ1"
         },
         {
             "sign": "Х",
@@ -62462,7 +62490,7 @@
                     ]
                 }
             ],
-            "id": "idN0DFQ4TH"
+            "id": "idSUOMVO64"
         },
         {
             "sign": "Ц",
@@ -63000,7 +63028,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idOBM837AR"
+            "id": "idA82O1GPC"
         },
         {
             "sign": "Ч",
@@ -63559,7 +63587,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id0MEL8FRG"
+            "id": "id7OGGDZV8"
         },
         {
             "sign": "Ш",
@@ -64131,7 +64159,7 @@
                     ]
                 }
             ],
-            "id": "id58F6G0TC"
+            "id": "id6D6KLWCC"
         },
         {
             "sign": "Щ",
@@ -64634,7 +64662,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idPRTH30I1"
+            "id": "id2B9FVAPU"
         },
         {
             "sign": "Ъ",
@@ -64768,7 +64796,7 @@
                 {
                     "name": "Kaitag",
                     "types": [
-                        "alphabet"
+                        "historic"
                     ],
                     "language_tag": "xdq"
                 },
@@ -65137,7 +65165,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idT7EEN4OE"
+            "id": "id86K16I7X"
         },
         {
             "sign": "Ы",
@@ -65661,7 +65689,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idC9WZVNK8"
+            "id": "idK08SHB32"
         },
         {
             "sign": "Ь",
@@ -65809,7 +65837,7 @@
                 {
                     "name": "Kaitag",
                     "types": [
-                        "alphabet"
+                        "historic"
                     ],
                     "language_tag": "xdq"
                 },
@@ -66192,7 +66220,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idYA4MMEH8"
+            "id": "idKNFWNORT"
         },
         {
             "sign": "Э",
@@ -66695,7 +66723,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idKPPZT7CR"
+            "id": "id6VDGSVE8"
         },
         {
             "sign": "Ю",
@@ -67219,7 +67247,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id2MMVDN84"
+            "id": "idPLO2TAIN"
         },
         {
             "sign": "Я",
@@ -67360,7 +67388,7 @@
                 {
                     "name": "Kaitag",
                     "types": [
-                        "alphabet"
+                        "historic"
                     ],
                     "language_tag": "xdq"
                 },
@@ -67743,7 +67771,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idFXXK0BDJ"
+            "id": "idU1C8ZB7B"
         },
         {
             "sign": "Ѣ",
@@ -67770,7 +67798,7 @@
                     "language_tag": "tat"
                 }
             ],
-            "id": "idNVY782KD"
+            "id": "id4WKB0HML"
         },
         {
             "sign": "Ѥ",
@@ -67790,7 +67818,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idTMO6H5P0"
+            "id": "idXHLOYYCP"
         },
         {
             "sign": "Ѫ",
@@ -67810,7 +67838,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idD0RZ8CRH"
+            "id": "idN02Y8GJX"
         },
         {
             "sign": "Ѭ",
@@ -67830,7 +67858,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id79DLJPQB"
+            "id": "idVBF6KT11"
         },
         {
             "sign": "Ѳ",
@@ -67850,7 +67878,7 @@
                     "language_tag": "tat"
                 }
             ],
-            "id": "id676UW0VV"
+            "id": "idYFAVQFYH"
         },
         {
             "sign": "Ѵ",
@@ -67870,7 +67898,7 @@
                     "language_tag": "tat"
                 }
             ],
-            "id": "id53Z7BOUX"
+            "id": "id4FXURI86"
         },
         {
             "sign": "Ҋ",
@@ -67890,7 +67918,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idXUO5U5HS"
+            "id": "idXFZP3358"
         },
         {
             "sign": "Ҍ",
@@ -67910,7 +67938,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idAULT2KUE"
+            "id": "idLGVM3YSE"
         },
         {
             "sign": "Ҏ",
@@ -67930,7 +67958,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idSOQO0XJQ"
+            "id": "id77CFN3RY"
         },
         {
             "sign": "Ґ",
@@ -67957,7 +67985,7 @@
                     "language_tag": "uk"
                 }
             ],
-            "id": "id8MOEURPD"
+            "id": "idEVAB5F7C"
         },
         {
             "sign": "Ғ",
@@ -68103,7 +68131,7 @@
                     "language_tag": "cjs"
                 }
             ],
-            "id": "idJQYO32M8"
+            "id": "idTPMFZREQ"
         },
         {
             "sign": "Ҕ",
@@ -68144,7 +68172,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idI9WIQ2M5"
+            "id": "idTLOGJZNS"
         },
         {
             "sign": "Җ",
@@ -68234,7 +68262,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idZIIKPY35"
+            "id": "id02OYKI0A"
         },
         {
             "sign": "Ҙ",
@@ -68268,7 +68296,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "id2FAJYW0J"
+            "id": "id7HUZ9IKV"
         },
         {
             "sign": "Қ",
@@ -68372,7 +68400,7 @@
                     "language_tag": "cjs"
                 }
             ],
-            "id": "idMV69HM4W"
+            "id": "idCSD5271A"
         },
         {
             "sign": "Ҝ",
@@ -68399,7 +68427,7 @@
                     "language_tag": "tly"
                 }
             ],
-            "id": "idJLL57OVP"
+            "id": "idL6ZQP7WJ"
         },
         {
             "sign": "Ҟ",
@@ -68419,7 +68447,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idAAYOONRV"
+            "id": "idIAGA7UXV"
         },
         {
             "sign": "Ҡ",
@@ -68446,7 +68474,7 @@
                     "language_tag": "xdq"
                 }
             ],
-            "id": "idZF8ZGSX2"
+            "id": "idI301CQGR"
         },
         {
             "sign": "Ң",
@@ -68585,7 +68613,7 @@
                     "language_tag": "cjs"
                 }
             ],
-            "id": "id6ZD4IRSG"
+            "id": "idMVWUWLM0"
         },
         {
             "sign": "Ҥ",
@@ -68647,7 +68675,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idONNKT6ZI"
+            "id": "idGXHFU09S"
         },
         {
             "sign": "Ҧ",
@@ -68667,7 +68695,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idUEVWWL53"
+            "id": "idSYJP07L5"
         },
         {
             "sign": "Ҩ",
@@ -68687,7 +68715,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idCL98V4HI"
+            "id": "idBH0TGD2U"
         },
         {
             "sign": "Ҫ",
@@ -68735,7 +68763,7 @@
                     "language_tag": "enf"
                 }
             ],
-            "id": "idRCPHPWG5"
+            "id": "idA58ZXYTG"
         },
         {
             "sign": "Ҭ",
@@ -68755,7 +68783,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idE7OO7Z6Z"
+            "id": "id5R4ULOX0"
         },
         {
             "sign": "Ү",
@@ -68915,7 +68943,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id4OF4BWNH"
+            "id": "idRSXW8M21"
         },
         {
             "sign": "Ұ",
@@ -68935,7 +68963,7 @@
                     "language_tag": "kk"
                 }
             ],
-            "id": "id58FB3QB2"
+            "id": "id5OQ1OKNA"
         },
         {
             "sign": "Ҳ",
@@ -68997,7 +69025,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idD8MK4NR6"
+            "id": "idXMNMBEXN"
         },
         {
             "sign": "Ҵ",
@@ -69017,7 +69045,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "id9Y8GDAF3"
+            "id": "idUEL75614"
         },
         {
             "sign": "Ҷ",
@@ -69051,7 +69079,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idPFCWHZ4P"
+            "id": "idBK8S9U3Q"
         },
         {
             "sign": "Ҹ",
@@ -69078,7 +69106,7 @@
                     "language_tag": "tly"
                 }
             ],
-            "id": "idQ6LCQMHA"
+            "id": "idM5MKRMIX"
         },
         {
             "sign": "Һ",
@@ -69131,6 +69159,13 @@
                         "alphabet"
                     ],
                     "language_tag": "kk"
+                },
+                {
+                    "name": "Kaitag",
+                    "types": [
+                        "alphabet"
+                    ],
+                    "language_tag": "xdq"
                 },
                 {
                     "name": "Kalmyk",
@@ -69203,7 +69238,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idRA9UY9PS"
+            "id": "id7HM53UM6"
         },
         {
             "sign": "Ҽ",
@@ -69223,7 +69258,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "id0JDYPH6P"
+            "id": "idI5M2YY9D"
         },
         {
             "sign": "Ҿ",
@@ -69243,7 +69278,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idM67SLWNL"
+            "id": "id7X7OHPBD"
         },
         {
             "sign": "Ӏ",
@@ -69314,7 +69349,7 @@
                 {
                     "name": "Kaitag",
                     "types": [
-                        "extended"
+                        "alphabet"
                     ],
                     "language_tag": "xdq"
                 },
@@ -69368,7 +69403,7 @@
                     "language_tag": "ce"
                 }
             ],
-            "id": "id6RMGEMRK"
+            "id": "id40B99AHF"
         },
         {
             "sign": "Ӂ",
@@ -69395,7 +69430,7 @@
                     "language_tag": "ro-MD"
                 }
             ],
-            "id": "idQZ41V1VN"
+            "id": "idVUSS4GNN"
         },
         {
             "sign": "Ӄ",
@@ -69471,7 +69506,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idKI7PB9GJ"
+            "id": "idVQ4XQ4Q4"
         },
         {
             "sign": "Ӆ",
@@ -69491,7 +69526,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idM0FWXLV0"
+            "id": "idHTSEL1XB"
         },
         {
             "sign": "Ӈ",
@@ -69637,7 +69672,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "id8JDH5F6P"
+            "id": "idS9A1DW8U"
         },
         {
             "sign": "Ӊ",
@@ -69657,7 +69692,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "id4NFQDOVR"
+            "id": "idQWAFD5RG"
         },
         {
             "sign": "Ӌ",
@@ -69684,7 +69719,7 @@
                     "language_tag": "kjh"
                 }
             ],
-            "id": "id9KKW2YZX"
+            "id": "idVLEYVAEL"
         },
         {
             "sign": "Ӎ",
@@ -69704,7 +69739,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "id6A18YXT9"
+            "id": "idGO7BOKNM"
         },
         {
             "sign": "Ӑ",
@@ -69738,7 +69773,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idXA2LCA3N"
+            "id": "id3QDEGJ1Q"
         },
         {
             "sign": "Ӓ",
@@ -69807,7 +69842,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idFR0627WE"
+            "id": "idVJ81PC0S"
         },
         {
             "sign": "Ӕ",
@@ -69827,7 +69862,7 @@
                     "language_tag": "os"
                 }
             ],
-            "id": "id6MXTC9RA"
+            "id": "id4HC07YXL"
         },
         {
             "sign": "Ӗ",
@@ -69847,7 +69882,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idWNI9RT7V"
+            "id": "idW5QS1JN8"
         },
         {
             "sign": "Ә",
@@ -69900,6 +69935,13 @@
                         "alphabet"
                     ],
                     "language_tag": "kk"
+                },
+                {
+                    "name": "Kaitag",
+                    "types": [
+                        "alphabet"
+                    ],
+                    "language_tag": "xdq"
                 },
                 {
                     "name": "Kalmyk",
@@ -69986,7 +70028,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "id0HTVKE89"
+            "id": "id3MKGIFGI"
         },
         {
             "sign": "Ӛ",
@@ -70006,7 +70048,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idNV10DEGN"
+            "id": "idH2TNGJIQ"
         },
         {
             "sign": "Ӝ",
@@ -70026,7 +70068,7 @@
                     "language_tag": "udm"
                 }
             ],
-            "id": "idF1OA10X2"
+            "id": "idDFW0JVJU"
         },
         {
             "sign": "Ӟ",
@@ -70046,7 +70088,7 @@
                     "language_tag": "udm"
                 }
             ],
-            "id": "idUJFHF4P7"
+            "id": "idQ4H22LQ4"
         },
         {
             "sign": "Ӡ",
@@ -70087,7 +70129,7 @@
                     "language_tag": "ulc"
                 }
             ],
-            "id": "idKTRNR76U"
+            "id": "idD8WZV5JZ"
         },
         {
             "sign": "Ӣ",
@@ -70163,7 +70205,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idOE56UPUV"
+            "id": "idE8I6R5IX"
         },
         {
             "sign": "Ӥ",
@@ -70183,7 +70225,7 @@
                     "language_tag": "udm"
                 }
             ],
-            "id": "id6U57THC2"
+            "id": "id3QSA2AQ9"
         },
         {
             "sign": "Ӧ",
@@ -70301,7 +70343,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idCRXHPUMR"
+            "id": "idWO0VFZYC"
         },
         {
             "sign": "Ө",
@@ -70510,7 +70552,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idRJNIAH3G"
+            "id": "id4OIU35J6"
         },
         {
             "sign": "Ӫ",
@@ -70551,7 +70593,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "id9WHEUPBP"
+            "id": "id3IVWNDYA"
         },
         {
             "sign": "Ӭ",
@@ -70585,7 +70627,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "id8G9IN58O"
+            "id": "idFOTX1YB8"
         },
         {
             "sign": "Ӯ",
@@ -70668,7 +70710,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idYXELYMLA"
+            "id": "id0X97WXAH"
         },
         {
             "sign": "Ӱ",
@@ -70779,7 +70821,7 @@
                     "language_tag": "cjs"
                 }
             ],
-            "id": "idD162US8W"
+            "id": "id1V8BIDHR"
         },
         {
             "sign": "Ӳ",
@@ -70799,7 +70841,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idJAAI8RO2"
+            "id": "idSQFW9SSG"
         },
         {
             "sign": "Ӵ",
@@ -70819,7 +70861,7 @@
                     "language_tag": "udm"
                 }
             ],
-            "id": "idHIOUES8L"
+            "id": "idXZOD65V7"
         },
         {
             "sign": "Ӷ",
@@ -70867,7 +70909,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idASMNMUSY"
+            "id": "idZTFUH2L8"
         },
         {
             "sign": "Ӹ",
@@ -70894,7 +70936,7 @@
                     "language_tag": "mhr"
                 }
             ],
-            "id": "idZMQ65TWA"
+            "id": "idI93W6JSH"
         },
         {
             "sign": "Ӻ",
@@ -70914,7 +70956,7 @@
                     "language_tag": "niv"
                 }
             ],
-            "id": "idJ6WIS3YH"
+            "id": "idCPMA7733"
         },
         {
             "sign": "Ӽ",
@@ -70948,7 +70990,7 @@
                     "language_tag": "ess"
                 }
             ],
-            "id": "id3TMYFH1L"
+            "id": "idL7IXRIS1"
         },
         {
             "sign": "Ӿ",
@@ -70968,7 +71010,7 @@
                     "language_tag": "niv"
                 }
             ],
-            "id": "idNI1J8KRO"
+            "id": "idM7P3H50H"
         },
         {
             "sign": "Ԑ",
@@ -70995,7 +71037,7 @@
                     "language_tag": "enf"
                 }
             ],
-            "id": "id617I12K6"
+            "id": "id45NH957Y"
         },
         {
             "sign": "Ԓ",
@@ -71029,7 +71071,7 @@
                     "language_tag": "ckt"
                 }
             ],
-            "id": "idSQOD59ZE"
+            "id": "id3EJXIG0L"
         },
         {
             "sign": "Ԛ",
@@ -71049,7 +71091,7 @@
                     "language_tag": "ku"
                 }
             ],
-            "id": "idA2YD09MJ"
+            "id": "idYQPWEX8J"
         },
         {
             "sign": "Ԝ",
@@ -71076,7 +71118,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idXOE5B733"
+            "id": "idDJNU9QIP"
         },
         {
             "sign": "Ԥ",
@@ -71096,7 +71138,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idE78F7O1N"
+            "id": "id1ZL5BHNO"
         },
         {
             "sign": "Ԧ",
@@ -71116,7 +71158,7 @@
                     "language_tag": "ttt"
                 }
             ],
-            "id": "idJ7JHDIYJ"
+            "id": "idZ3MOX2F5"
         },
         {
             "sign": "Ԯ",
@@ -71143,7 +71185,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idIE4XSN01"
+            "id": "idPNGY4933"
         },
         {
             "sign": "Ꙗ",
@@ -71163,7 +71205,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id0F3IWBOB"
+            "id": "idZXVSYMQX"
         },
         {
             "sign": "",
@@ -71183,7 +71225,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idB6EVA9YA"
+            "id": "id35NH0U50"
         },
         {
             "sign": "",
@@ -71217,7 +71259,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idHWPNEDCL"
+            "id": "idOMEU7QQ0"
         },
         {
             "sign": "",
@@ -71251,7 +71293,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idS5MH67IK"
+            "id": "id67HV9XSD"
         },
         {
             "sign": "",
@@ -71285,7 +71327,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idQQJB41NL"
+            "id": "idVJTKKEIB"
         },
         {
             "sign": "",
@@ -71319,7 +71361,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idSRLWC5MB"
+            "id": "idAUGHHASM"
         },
         {
             "sign": "",
@@ -71353,7 +71395,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idUL22R7SF"
+            "id": "idS6FCFXT3"
         },
         {
             "sign": "",
@@ -71380,7 +71422,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idWLFMPBYA"
+            "id": "idYM4CW7QP"
         },
         {
             "sign": "",
@@ -71407,7 +71449,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "id45V8SQRT"
+            "id": "id4R48OA0T"
         },
         {
             "sign": "",
@@ -71434,7 +71476,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idWR8PIT1E"
+            "id": "id6EGR5W8B"
         },
         {
             "sign": "",
@@ -71468,7 +71510,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "id0KDH8OT1"
+            "id": "id5VOZX2K5"
         },
         {
             "sign": "",
@@ -71495,7 +71537,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idZNCLBU9A"
+            "id": "idB96IC4A9"
         },
         {
             "sign": "",
@@ -71515,7 +71557,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "idMZ688ICB"
+            "id": "id5B9GFPVD"
         },
         {
             "sign": "",
@@ -71549,7 +71591,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idNDZ84K46"
+            "id": "idV9ICL6DY"
         },
         {
             "sign": "",
@@ -71569,7 +71611,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "id4VB0RPWO"
+            "id": "idG4CUO6QX"
         },
         {
             "sign": "",
@@ -71589,7 +71631,7 @@
                     "language_tag": "ttt"
                 }
             ],
-            "id": "id823E28GX"
+            "id": "idC8BV1195"
         },
         {
             "sign": "",
@@ -71609,7 +71651,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idUXX5MOHL"
+            "id": "idXA9D07G3"
         },
         {
             "sign": "",
@@ -71629,7 +71671,7 @@
                     "language_tag": "krc"
                 }
             ],
-            "id": "idOYSUJINA"
+            "id": "idWPHOR5IK"
         },
         {
             "sign": "",
@@ -71656,7 +71698,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idGVQOV6XI"
+            "id": "idFU8DAXRU"
         },
         {
             "sign": "",
@@ -71676,7 +71718,7 @@
                     "language_tag": "niv"
                 }
             ],
-            "id": "idOM6IWNGN"
+            "id": "idCDYIXNFA"
         },
         {
             "sign": "",
@@ -71696,7 +71738,7 @@
                     "language_tag": "yrk"
                 }
             ],
-            "id": "idMPFY8RH0"
+            "id": "id3KCOD09O"
         },
         {
             "sign": "",
@@ -71723,7 +71765,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "id21M0T8Z1"
+            "id": "idDUWAUI5N"
         },
         {
             "sign": "",
@@ -71750,7 +71792,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "idCBMXHFWP"
+            "id": "id4HFL66TB"
         },
         {
             "sign": "",
@@ -71784,7 +71826,7 @@
                     "language_tag": "enf"
                 }
             ],
-            "id": "idSGIWEZ8N"
+            "id": "id1D016BPD"
         },
         {
             "sign": "",
@@ -71867,7 +71909,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idSXT9ZTGX"
+            "id": "idKO8PA62Z"
         },
         {
             "sign": "",
@@ -71943,7 +71985,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idH87T7FZ6"
+            "id": "idNSPSAXUT"
         },
         {
             "sign": "",
@@ -72005,7 +72047,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idI3NPXCZL"
+            "id": "idJI55VC47"
         },
         {
             "sign": "",
@@ -72025,7 +72067,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idTIG9KHRX"
+            "id": "id1B4LF5WV"
         },
         {
             "sign": "",
@@ -72045,7 +72087,7 @@
                     "language_tag": "nio"
                 }
             ],
-            "id": "idJDV1Q6UK"
+            "id": "idZ6G31YGD"
         },
         {
             "sign": "",
@@ -72121,7 +72163,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idSBZ8NQCH"
+            "id": "idRVURX8XL"
         },
         {
             "sign": "",
@@ -72155,7 +72197,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idRPAHGEVH"
+            "id": "idSBYU0971"
         },
         {
             "sign": "",
@@ -72175,7 +72217,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "id3C4QJHF8"
+            "id": "idU29MPSL0"
         },
         {
             "sign": "",
@@ -72195,7 +72237,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "id2P7KSNOV"
+            "id": "id5AUIUWC4"
         },
         {
             "sign": "",
@@ -72257,7 +72299,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "id8O7BJQMC"
+            "id": "idLFTG4CHK"
         },
         {
             "sign": "",
@@ -72333,7 +72375,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idPO5BERWX"
+            "id": "id0RE5RKIN"
         },
         {
             "sign": "",
@@ -72353,7 +72395,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "id85BKLTNJ"
+            "id": "idP4OPSQEC"
         },
         {
             "sign": "",
@@ -72373,7 +72415,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idNC5F3X74"
+            "id": "idMLUQWDS1"
         },
         {
             "sign": "",
@@ -72456,7 +72498,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idQ6CJPYZM"
+            "id": "idMTTJXIT2"
         },
         {
             "sign": "",
@@ -72476,7 +72518,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idGBXGM6WG"
+            "id": "idFI2SKWTU"
         },
         {
             "sign": "",
@@ -72552,7 +72594,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "id0BBAXENF"
+            "id": "idGUAR1G16"
         },
         {
             "sign": "",
@@ -72572,7 +72614,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idZ27JXI51"
+            "id": "idQBRK4TIJ"
         },
         {
             "sign": "",
@@ -72592,7 +72634,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idSAAPKD5X"
+            "id": "idGR0IVU3U"
         },
         {
             "sign": "",
@@ -72619,7 +72661,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idHPWLDI5C"
+            "id": "id91FUQQXF"
         },
         {
             "sign": "",
@@ -72639,7 +72681,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idLF2IRPTZ"
+            "id": "idJFBZ0LD6"
         },
         {
             "sign": "",
@@ -72659,7 +72701,7 @@
                     "language_tag": "ba"
                 }
             ],
-            "id": "idNRP47LEH"
+            "id": "idU60JITBD"
         },
         {
             "sign": "",
@@ -72679,7 +72721,7 @@
                     "language_tag": "ba"
                 }
             ],
-            "id": "idYFOA1XSA"
+            "id": "idFIAXGK83"
         },
         {
             "sign": "",
@@ -72699,7 +72741,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idO92IBEH2"
+            "id": "idAIR4J69E"
         },
         {
             "sign": "",
@@ -72719,7 +72761,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idM2LOQ7NQ"
+            "id": "idOUXW8WC9"
         },
         {
             "sign": "",
@@ -72739,7 +72781,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id2JYQO50M"
+            "id": "idIINPWVSS"
         },
         {
             "sign": "",
@@ -72759,7 +72801,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "idT1IH12RF"
+            "id": "id2VTKUH74"
         },
         {
             "sign": "",
@@ -72779,7 +72821,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "idSSACJ6G5"
+            "id": "idBS682355"
         },
         {
             "sign": "",
@@ -72799,7 +72841,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "id7BUMOCVT"
+            "id": "id8TG1A700"
         },
         {
             "sign": "",
@@ -72819,7 +72861,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "id7H2U0WI8"
+            "id": "idT65OKEPE"
         },
         {
             "sign": "",
@@ -72839,7 +72881,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "id29XU15IT"
+            "id": "id1K67UUF9"
         },
         {
             "sign": "",
@@ -72859,7 +72901,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "id6NA2H5JB"
+            "id": "idY6HKZI3O"
         }
     ],
     "lowercase_sorted_by_unicodes": [
@@ -72944,7 +72986,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idDTA18V0S"
+            "id": "idVOM9PSOM"
         },
         {
             "sign": "а",
@@ -73516,7 +73558,7 @@
                     ]
                 }
             ],
-            "id": "id74UY038R"
+            "id": "idDLCC1HNV"
         },
         {
             "sign": "б",
@@ -74088,7 +74130,7 @@
                     ]
                 }
             ],
-            "id": "idUP30YXM9"
+            "id": "idLDD05G13"
         },
         {
             "sign": "б",
@@ -74115,7 +74157,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id64UBYDZK"
+            "id": "id85H8SJV6"
         },
         {
             "sign": "в",
@@ -74687,7 +74729,7 @@
                     ]
                 }
             ],
-            "id": "id3XAUBPNO"
+            "id": "id6OEXLFWA"
         },
         {
             "sign": "в",
@@ -74707,7 +74749,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idMJZ96HI8"
+            "id": "id6BRQAVHM"
         },
         {
             "sign": "г",
@@ -75281,7 +75323,7 @@
                     ]
                 }
             ],
-            "id": "idLUY8FQD5"
+            "id": "idEG54MHXC"
         },
         {
             "sign": "г",
@@ -75302,7 +75344,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id7519SQA3"
+            "id": "idMO2T4WNR"
         },
         {
             "sign": "г",
@@ -75323,7 +75365,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idOKM8GIOL"
+            "id": "id469SL6EA"
         },
         {
             "sign": "д",
@@ -75896,7 +75938,7 @@
                     ]
                 }
             ],
-            "id": "idEPSTVTTU"
+            "id": "idASJG5MT8"
         },
         {
             "sign": "д",
@@ -75916,7 +75958,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idOMPTTGKK"
+            "id": "idG61BSCYY"
         },
         {
             "sign": "д",
@@ -75937,7 +75979,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idQEAGOBA6"
+            "id": "id4JRY1E6W"
         },
         {
             "sign": "е",
@@ -76509,7 +76551,7 @@
                     ]
                 }
             ],
-            "id": "idKG8MUXBX"
+            "id": "idUB5WVUMT"
         },
         {
             "sign": "ж",
@@ -77068,7 +77110,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idC5HKHFQQ"
+            "id": "idJNAC4W6Z"
         },
         {
             "sign": "ж",
@@ -77088,7 +77130,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idZJI7MSAD"
+            "id": "id93SSFTG6"
         },
         {
             "sign": "з",
@@ -77647,7 +77689,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id5U7USXA2"
+            "id": "id4X7Y0Q1Q"
         },
         {
             "sign": "з",
@@ -77667,7 +77709,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id6RNI0U21"
+            "id": "idIONST6MG"
         },
         {
             "sign": "и",
@@ -78220,7 +78262,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id6Z9DDLLW"
+            "id": "idNK2LGXTB"
         },
         {
             "sign": "и",
@@ -78241,7 +78283,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idQ3KN99HT"
+            "id": "idY13K97AX"
         },
         {
             "sign": "й",
@@ -78773,7 +78815,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idN1W35OEX"
+            "id": "idFXRT6HLC"
         },
         {
             "sign": "й",
@@ -78794,7 +78836,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id4VU40YQ4"
+            "id": "id0D4UBE0E"
         },
         {
             "sign": "к",
@@ -79366,7 +79408,7 @@
                     ]
                 }
             ],
-            "id": "idENZBJS9L"
+            "id": "idE5DCMRFL"
         },
         {
             "sign": "к",
@@ -79386,7 +79428,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id9ELRO6QX"
+            "id": "idXYFFRIL3"
         },
         {
             "sign": "л",
@@ -79958,7 +80000,7 @@
                     ]
                 }
             ],
-            "id": "idO1LI31VW"
+            "id": "idPXF3J5ZL"
         },
         {
             "sign": "л",
@@ -79978,7 +80020,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idXNCXW6L9"
+            "id": "idAS3OL4MP"
         },
         {
             "sign": "м",
@@ -80550,7 +80592,7 @@
                     ]
                 }
             ],
-            "id": "idI75ZU455"
+            "id": "id8DB2RR18"
         },
         {
             "sign": "н",
@@ -81123,7 +81165,7 @@
                     ]
                 }
             ],
-            "id": "id1MAIQCCW"
+            "id": "id74SFFWJA"
         },
         {
             "sign": "н",
@@ -81144,7 +81186,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idN7B07ZIK"
+            "id": "idOIZLZI9Q"
         },
         {
             "sign": "о",
@@ -81716,7 +81758,7 @@
                     ]
                 }
             ],
-            "id": "idK564QPVS"
+            "id": "idGT68Z2XF"
         },
         {
             "sign": "п",
@@ -82290,7 +82332,7 @@
                     ]
                 }
             ],
-            "id": "idOKC5VNCF"
+            "id": "id2ZPG8PK9"
         },
         {
             "sign": "п",
@@ -82311,7 +82353,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idSGM1NON4"
+            "id": "id638JQYT2"
         },
         {
             "sign": "п",
@@ -82332,7 +82374,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idBITQR1AN"
+            "id": "id9W8NW20S"
         },
         {
             "sign": "р",
@@ -82904,7 +82946,7 @@
                     ]
                 }
             ],
-            "id": "idLDIYMEAW"
+            "id": "id9PD9TQJS"
         },
         {
             "sign": "с",
@@ -83476,7 +83518,7 @@
                     ]
                 }
             ],
-            "id": "idJM9O749S"
+            "id": "idG0Y85NCC"
         },
         {
             "sign": "т",
@@ -84050,7 +84092,7 @@
                     ]
                 }
             ],
-            "id": "idEF3J74VQ"
+            "id": "id6EX59PY5"
         },
         {
             "sign": "т",
@@ -84071,7 +84113,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idTB5QB57T"
+            "id": "id66L4S45S"
         },
         {
             "sign": "т",
@@ -84092,7 +84134,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idZSWCFCGF"
+            "id": "idOTRY6SGT"
         },
         {
             "sign": "у",
@@ -84664,7 +84706,7 @@
                     ]
                 }
             ],
-            "id": "idGN2GPBUX"
+            "id": "idLJ8YMEAM"
         },
         {
             "sign": "ф",
@@ -85223,7 +85265,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id847AH3Y0"
+            "id": "idVTIMJ0CY"
         },
         {
             "sign": "х",
@@ -85795,7 +85837,7 @@
                     ]
                 }
             ],
-            "id": "idSRW8935T"
+            "id": "idT09IH974"
         },
         {
             "sign": "ц",
@@ -86334,7 +86376,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id8KENYM2Y"
+            "id": "idTHU71OK5"
         },
         {
             "sign": "ц",
@@ -86355,7 +86397,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idOBRDSWZ7"
+            "id": "idCJ9JS5Z9"
         },
         {
             "sign": "ч",
@@ -86915,7 +86957,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idUH56CWIK"
+            "id": "id6I4PU6MX"
         },
         {
             "sign": "ч",
@@ -86936,7 +86978,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idVSU2Q4NB"
+            "id": "idUPDI6QP5"
         },
         {
             "sign": "ш",
@@ -87510,7 +87552,7 @@
                     ]
                 }
             ],
-            "id": "idPEGHLY80"
+            "id": "id8O2Y9KJW"
         },
         {
             "sign": "ш",
@@ -87531,7 +87573,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id99TQDBPG"
+            "id": "id7ZJ7CIPJ"
         },
         {
             "sign": "ш",
@@ -87552,7 +87594,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idZE48XXTO"
+            "id": "id2YJUANBO"
         },
         {
             "sign": "щ",
@@ -88056,7 +88098,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idBT3NR05S"
+            "id": "idLW6B9HO5"
         },
         {
             "sign": "щ",
@@ -88077,7 +88119,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idT9OY96LG"
+            "id": "id4FL83XS9"
         },
         {
             "sign": "ъ",
@@ -88212,7 +88254,7 @@
                 {
                     "name": "Kaitag",
                     "types": [
-                        "alphabet"
+                        "historic"
                     ],
                     "language_tag": "xdq"
                 },
@@ -88581,7 +88623,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idSKUJHYRC"
+            "id": "idUKMT2O9G"
         },
         {
             "sign": "ъ",
@@ -88602,7 +88644,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idMTI43XQT"
+            "id": "idHRXBN82C"
         },
         {
             "sign": "ы",
@@ -89119,7 +89161,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id5774ASJJ"
+            "id": "idY0B3EKIR"
         },
         {
             "sign": "ь",
@@ -89268,7 +89310,7 @@
                 {
                     "name": "Kaitag",
                     "types": [
-                        "alphabet"
+                        "historic"
                     ],
                     "language_tag": "xdq"
                 },
@@ -89651,7 +89693,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idMOYFAXIY"
+            "id": "idZTGWBI04"
         },
         {
             "sign": "ь",
@@ -89672,7 +89714,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id5I26ID99"
+            "id": "id9ZGV5NCL"
         },
         {
             "sign": "э",
@@ -90175,7 +90217,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idZQVW1T9V"
+            "id": "idUWWDMTM2"
         },
         {
             "sign": "ю",
@@ -90699,7 +90741,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idFOCHLDQP"
+            "id": "idF2SDXKLU"
         },
         {
             "sign": "ю",
@@ -90719,7 +90761,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idSY66A7BV"
+            "id": "idWLXR2KW5"
         },
         {
             "sign": "я",
@@ -90860,7 +90902,7 @@
                 {
                     "name": "Kaitag",
                     "types": [
-                        "alphabet"
+                        "historic"
                     ],
                     "language_tag": "xdq"
                 },
@@ -91243,7 +91285,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idW1VFXC8K"
+            "id": "idEANGSQG6"
         },
         {
             "sign": "ѐ",
@@ -91270,7 +91312,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idZUTM9AIO"
+            "id": "idP2B1SC4Y"
         },
         {
             "sign": "ё",
@@ -91766,7 +91808,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idEZI685B0"
+            "id": "idH6L94DYP"
         },
         {
             "sign": "ђ",
@@ -91793,7 +91835,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idOF5AJGZS"
+            "id": "idNEX2J885"
         },
         {
             "sign": "ѓ",
@@ -91813,7 +91855,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idOXSFDZ0V"
+            "id": "idVVDARBDS"
         },
         {
             "sign": "є",
@@ -91840,7 +91882,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "id5P7VES18"
+            "id": "idU01KXMVS"
         },
         {
             "sign": "ѕ",
@@ -91867,7 +91909,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idO3EQHTPK"
+            "id": "id8F4MAMN6"
         },
         {
             "sign": "і",
@@ -91950,7 +91992,7 @@
                     "language_tag": "kjh"
                 }
             ],
-            "id": "idWSGL0ZUT"
+            "id": "idT506L8EK"
         },
         {
             "sign": "ї",
@@ -91970,7 +92012,7 @@
                     "language_tag": "uk"
                 }
             ],
-            "id": "id6AM4MAH4"
+            "id": "idTGQUJO74"
         },
         {
             "sign": "ј",
@@ -92032,7 +92074,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idD2L4DSTD"
+            "id": "idJX649GE7"
         },
         {
             "sign": "љ",
@@ -92066,7 +92108,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id8OWPNKYK"
+            "id": "idYJ02LI6X"
         },
         {
             "sign": "њ",
@@ -92100,7 +92142,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idPU0RKXDP"
+            "id": "idLAPXJF4C"
         },
         {
             "sign": "ћ",
@@ -92120,7 +92162,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idGP5WCGXJ"
+            "id": "idAANB4G9F"
         },
         {
             "sign": "ќ",
@@ -92140,7 +92182,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idCM5SQCXT"
+            "id": "idWAUQAUV2"
         },
         {
             "sign": "ѝ",
@@ -92167,7 +92209,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idIRXQHSM8"
+            "id": "idUFX0SJ7Q"
         },
         {
             "sign": "ў",
@@ -92250,7 +92292,7 @@
                     "language_tag": "ess"
                 }
             ],
-            "id": "idYYST1A9W"
+            "id": "idMUZ17Q57"
         },
         {
             "sign": "џ",
@@ -92284,7 +92326,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idWA1G8QBX"
+            "id": "idIN2S5DPO"
         },
         {
             "sign": "ѣ",
@@ -92312,7 +92354,7 @@
                     "language_tag": "tat"
                 }
             ],
-            "id": "id61TOFVOY"
+            "id": "id8RMBQ6WS"
         },
         {
             "sign": "ѣ",
@@ -92333,7 +92375,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idWMMLDCSH"
+            "id": "idJZYS46IF"
         },
         {
             "sign": "ѥ",
@@ -92354,7 +92396,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idI48BHAN7"
+            "id": "idJFUL64SC"
         },
         {
             "sign": "ѥ",
@@ -92375,7 +92417,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idDEW1HXQE"
+            "id": "id86BX3E18"
         },
         {
             "sign": "ѫ",
@@ -92395,7 +92437,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id8SLMXBJW"
+            "id": "id7T7HSYZY"
         },
         {
             "sign": "ѭ",
@@ -92416,7 +92458,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "id3EVGQPVQ"
+            "id": "idMHTOSEB4"
         },
         {
             "sign": "ѭ",
@@ -92437,7 +92479,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idB0MC1O8J"
+            "id": "idXB0ZPG92"
         },
         {
             "sign": "ѳ",
@@ -92457,7 +92499,7 @@
                     "language_tag": "tat"
                 }
             ],
-            "id": "idKCGI37RI"
+            "id": "idBV91O8DA"
         },
         {
             "sign": "ѵ",
@@ -92477,7 +92519,7 @@
                     "language_tag": "tat"
                 }
             ],
-            "id": "idFB6B3AGY"
+            "id": "id5984QN7P"
         },
         {
             "sign": "ҋ",
@@ -92497,7 +92539,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idXZ8LUVPQ"
+            "id": "idF2DV5MJY"
         },
         {
             "sign": "ҍ",
@@ -92517,7 +92559,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idUS3NTXCF"
+            "id": "idBHLNM0NW"
         },
         {
             "sign": "ҏ",
@@ -92537,7 +92579,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idKCWP8GGB"
+            "id": "idYQ0ZFW3G"
         },
         {
             "sign": "ґ",
@@ -92564,7 +92606,7 @@
                     "language_tag": "uk"
                 }
             ],
-            "id": "id01GU6M7Y"
+            "id": "idQE92MNDS"
         },
         {
             "sign": "ғ",
@@ -92710,7 +92752,7 @@
                     "language_tag": "cjs"
                 }
             ],
-            "id": "idGEA4RJAF"
+            "id": "idEE7V7T6G"
         },
         {
             "sign": "ҕ",
@@ -92751,7 +92793,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idMHFKVRBH"
+            "id": "idB6QN8F91"
         },
         {
             "sign": "җ",
@@ -92841,7 +92883,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idGA3WR6Y2"
+            "id": "idPTB6I9SO"
         },
         {
             "sign": "ҙ",
@@ -92875,7 +92917,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "idTINS49HH"
+            "id": "id11HV1VMN"
         },
         {
             "sign": "қ",
@@ -92979,7 +93021,7 @@
                     "language_tag": "cjs"
                 }
             ],
-            "id": "idS720WKG5"
+            "id": "idJ5MGBIHX"
         },
         {
             "sign": "ҝ",
@@ -93006,7 +93048,7 @@
                     "language_tag": "tly"
                 }
             ],
-            "id": "idCLQ5M25Q"
+            "id": "idT87GZMDY"
         },
         {
             "sign": "ҟ",
@@ -93026,7 +93068,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idUI7LI2CW"
+            "id": "idQ2125AW5"
         },
         {
             "sign": "ҡ",
@@ -93053,7 +93095,7 @@
                     "language_tag": "xdq"
                 }
             ],
-            "id": "id7BYJGOLF"
+            "id": "idEVI29U5B"
         },
         {
             "sign": "ң",
@@ -93192,7 +93234,7 @@
                     "language_tag": "cjs"
                 }
             ],
-            "id": "id5TPOQ454"
+            "id": "idLEI4PZ1B"
         },
         {
             "sign": "ҥ",
@@ -93254,7 +93296,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idS2X34CBR"
+            "id": "id7Z2TUQSS"
         },
         {
             "sign": "ҧ",
@@ -93274,7 +93316,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "id5NT3NO1K"
+            "id": "idALT9PAAM"
         },
         {
             "sign": "ҩ",
@@ -93294,7 +93336,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idPCMU2P69"
+            "id": "id129GE1UZ"
         },
         {
             "sign": "ҫ",
@@ -93342,7 +93384,7 @@
                     "language_tag": "enf"
                 }
             ],
-            "id": "idO5O7QU6S"
+            "id": "idED63C4T7"
         },
         {
             "sign": "ҭ",
@@ -93362,7 +93404,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idA5YDMW8Z"
+            "id": "idL3R2RKML"
         },
         {
             "sign": "ү",
@@ -93522,7 +93564,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id5799ALFA"
+            "id": "idXP5CRVKG"
         },
         {
             "sign": "ұ",
@@ -93542,7 +93584,7 @@
                     "language_tag": "kk"
                 }
             ],
-            "id": "idOX7W33PA"
+            "id": "idSF2YDDIF"
         },
         {
             "sign": "ҳ",
@@ -93604,7 +93646,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idK12K8UGS"
+            "id": "idI05GDUKP"
         },
         {
             "sign": "ҵ",
@@ -93624,7 +93666,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "id08CI30DS"
+            "id": "idS9K5JEEF"
         },
         {
             "sign": "ҷ",
@@ -93658,7 +93700,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idZ8IJ9QIR"
+            "id": "idSVJA8P08"
         },
         {
             "sign": "ҹ",
@@ -93685,7 +93727,7 @@
                     "language_tag": "tly"
                 }
             ],
-            "id": "id74RC7QRZ"
+            "id": "idG0PZQJNV"
         },
         {
             "sign": "һ",
@@ -93738,6 +93780,13 @@
                         "alphabet"
                     ],
                     "language_tag": "kk"
+                },
+                {
+                    "name": "Kaitag",
+                    "types": [
+                        "alphabet"
+                    ],
+                    "language_tag": "xdq"
                 },
                 {
                     "name": "Kalmyk",
@@ -93810,7 +93859,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idIKSN5NTW"
+            "id": "idXG32OJDT"
         },
         {
             "sign": "ҽ",
@@ -93830,7 +93879,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "id1Q7K1JIZ"
+            "id": "idK14OVEP7"
         },
         {
             "sign": "ҿ",
@@ -93850,7 +93899,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "id8CDOJ6AA"
+            "id": "id41GHQ6HH"
         },
         {
             "sign": "ӂ",
@@ -93877,7 +93926,7 @@
                     "language_tag": "ro-MD"
                 }
             ],
-            "id": "idRTC29K2D"
+            "id": "id0E5Q1VXB"
         },
         {
             "sign": "ӄ",
@@ -93953,7 +94002,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idOE13CNLC"
+            "id": "id291JUEJ9"
         },
         {
             "sign": "ӆ",
@@ -93973,7 +94022,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idV74RWOSQ"
+            "id": "idHGFKAM1L"
         },
         {
             "sign": "ӈ",
@@ -94119,7 +94168,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idNKCDOERW"
+            "id": "idQ1KS09VR"
         },
         {
             "sign": "ӊ",
@@ -94139,7 +94188,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idS5TS4XT1"
+            "id": "idK9K6MOLK"
         },
         {
             "sign": "ӌ",
@@ -94166,7 +94215,7 @@
                     "language_tag": "kjh"
                 }
             ],
-            "id": "idRUPJPYIS"
+            "id": "idL6QVHZ1S"
         },
         {
             "sign": "ӎ",
@@ -94186,7 +94235,7 @@
                     "language_tag": "sjd"
                 }
             ],
-            "id": "idSAI57BZP"
+            "id": "idV37QSJNC"
         },
         {
             "sign": "ӏ",
@@ -94257,7 +94306,7 @@
                 {
                     "name": "Kaitag",
                     "types": [
-                        "extended"
+                        "alphabet"
                     ],
                     "language_tag": "xdq"
                 },
@@ -94311,7 +94360,7 @@
                     "language_tag": "ce"
                 }
             ],
-            "id": "idKMABRKU7"
+            "id": "idSKED5LVA"
         },
         {
             "sign": "ӑ",
@@ -94345,7 +94394,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idF87LLTXK"
+            "id": "idXFY4P049"
         },
         {
             "sign": "ӓ",
@@ -94414,7 +94463,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "id8FJA9IS2"
+            "id": "idLUGAS9WQ"
         },
         {
             "sign": "ӕ",
@@ -94434,7 +94483,7 @@
                     "language_tag": "os"
                 }
             ],
-            "id": "idYKTZBNCI"
+            "id": "idXGHN6C7C"
         },
         {
             "sign": "ӗ",
@@ -94454,7 +94503,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "id7LLTZ8TL"
+            "id": "idIFCT36QV"
         },
         {
             "sign": "ә",
@@ -94507,6 +94556,13 @@
                         "alphabet"
                     ],
                     "language_tag": "kk"
+                },
+                {
+                    "name": "Kaitag",
+                    "types": [
+                        "alphabet"
+                    ],
+                    "language_tag": "xdq"
                 },
                 {
                     "name": "Kalmyk",
@@ -94593,7 +94649,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idHU5ATS3G"
+            "id": "idRD79ODRP"
         },
         {
             "sign": "ӛ",
@@ -94613,7 +94669,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idLKDGPKI9"
+            "id": "idUV1QT1FM"
         },
         {
             "sign": "ӝ",
@@ -94633,7 +94689,7 @@
                     "language_tag": "udm"
                 }
             ],
-            "id": "idPIVCJYMV"
+            "id": "idOUMMWOTM"
         },
         {
             "sign": "ӟ",
@@ -94653,7 +94709,7 @@
                     "language_tag": "udm"
                 }
             ],
-            "id": "idX4LO2N5R"
+            "id": "id9SDG58PH"
         },
         {
             "sign": "ӡ",
@@ -94694,7 +94750,7 @@
                     "language_tag": "ulc"
                 }
             ],
-            "id": "idKMRQVLZ9"
+            "id": "id6USPO9S0"
         },
         {
             "sign": "ӣ",
@@ -94770,7 +94826,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idHXPEJDMG"
+            "id": "idT0Z3RE33"
         },
         {
             "sign": "ӥ",
@@ -94790,7 +94846,7 @@
                     "language_tag": "udm"
                 }
             ],
-            "id": "idGMTUUMLT"
+            "id": "id1RWXAM1B"
         },
         {
             "sign": "ӧ",
@@ -94908,7 +94964,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idGI5DYU44"
+            "id": "id4Q21I4RJ"
         },
         {
             "sign": "ө",
@@ -95117,7 +95173,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "idIX7PCXYG"
+            "id": "idHSO0UJCM"
         },
         {
             "sign": "ӫ",
@@ -95158,7 +95214,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idIFAUPZCE"
+            "id": "idGBXALH7R"
         },
         {
             "sign": "ӭ",
@@ -95192,7 +95248,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "idSHT0CG51"
+            "id": "idPZ2PGG3P"
         },
         {
             "sign": "ӯ",
@@ -95275,7 +95331,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idRHMEB76D"
+            "id": "idMRT5LLPI"
         },
         {
             "sign": "ӱ",
@@ -95386,7 +95442,7 @@
                     "language_tag": "cjs"
                 }
             ],
-            "id": "idLR9I9E2E"
+            "id": "id7Q17RWBG"
         },
         {
             "sign": "ӳ",
@@ -95406,7 +95462,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idIMCI58C2"
+            "id": "idVC5VTL8F"
         },
         {
             "sign": "ӵ",
@@ -95426,7 +95482,7 @@
                     "language_tag": "udm"
                 }
             ],
-            "id": "idBSNQYKWC"
+            "id": "id3QJ7TMSF"
         },
         {
             "sign": "ӷ",
@@ -95474,7 +95530,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idA7J17YUC"
+            "id": "id1WBCZ81O"
         },
         {
             "sign": "ӹ",
@@ -95501,7 +95557,7 @@
                     "language_tag": "mhr"
                 }
             ],
-            "id": "idP2JLVGOK"
+            "id": "id9UE8WII9"
         },
         {
             "sign": "ӻ",
@@ -95521,7 +95577,7 @@
                     "language_tag": "niv"
                 }
             ],
-            "id": "idJQTHP2QP"
+            "id": "idESJHTCGY"
         },
         {
             "sign": "ӽ",
@@ -95555,7 +95611,7 @@
                     "language_tag": "ess"
                 }
             ],
-            "id": "idNC57CWOM"
+            "id": "idRLHZJ2IE"
         },
         {
             "sign": "ӿ",
@@ -95575,7 +95631,7 @@
                     "language_tag": "niv"
                 }
             ],
-            "id": "idNW6HJBT8"
+            "id": "idW48FSQJF"
         },
         {
             "sign": "ԑ",
@@ -95602,7 +95658,7 @@
                     "language_tag": "enf"
                 }
             ],
-            "id": "id07OPQT7V"
+            "id": "id7XN4YJGV"
         },
         {
             "sign": "ԓ",
@@ -95636,7 +95692,7 @@
                     "language_tag": "ckt"
                 }
             ],
-            "id": "id4WXVB5CZ"
+            "id": "idF7ZKOOT3"
         },
         {
             "sign": "ԛ",
@@ -95656,7 +95712,7 @@
                     "language_tag": "ku"
                 }
             ],
-            "id": "idOJAMIQAX"
+            "id": "idGGUYE22M"
         },
         {
             "sign": "ԝ",
@@ -95683,7 +95739,7 @@
                     "language_tag": "ykg"
                 }
             ],
-            "id": "idWI8JXSFA"
+            "id": "id1W2T97NL"
         },
         {
             "sign": "ԥ",
@@ -95703,7 +95759,7 @@
                     "language_tag": "ab"
                 }
             ],
-            "id": "idNT2427ST"
+            "id": "idRFRKUCSK"
         },
         {
             "sign": "ԧ",
@@ -95723,7 +95779,7 @@
                     "language_tag": "ttt"
                 }
             ],
-            "id": "idNCUGUK72"
+            "id": "idUHB4O9Y4"
         },
         {
             "sign": "ԯ",
@@ -95750,7 +95806,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idCNHYQART"
+            "id": "id6NU9NA0J"
         },
         {
             "sign": "ꙗ",
@@ -95771,7 +95827,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idTV1TJTIO"
+            "id": "id71E8U9DR"
         },
         {
             "sign": "ꙗ",
@@ -95792,7 +95848,7 @@
                     "language_tag": "bg"
                 }
             ],
-            "id": "idHCN83ESY"
+            "id": "idX2TVKV05"
         },
         {
             "sign": "",
@@ -95812,7 +95868,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idJ1TKZ3YU"
+            "id": "idGWSI1X7P"
         },
         {
             "sign": "",
@@ -95846,7 +95902,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "id3XPRGDOY"
+            "id": "idUQQ0NPHY"
         },
         {
             "sign": "",
@@ -95880,7 +95936,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "id8DT5ZK23"
+            "id": "id4VGCICXG"
         },
         {
             "sign": "",
@@ -95914,7 +95970,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idUBSU9ZUL"
+            "id": "idXG6B9B00"
         },
         {
             "sign": "",
@@ -95948,7 +96004,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "id2CQWUQWF"
+            "id": "idE14F5R83"
         },
         {
             "sign": "",
@@ -95982,7 +96038,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idI1J472OV"
+            "id": "idQYNAEPMK"
         },
         {
             "sign": "",
@@ -96009,7 +96065,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idHXBDY0SJ"
+            "id": "idETRENACK"
         },
         {
             "sign": "",
@@ -96036,7 +96092,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "id0ISXZ5YQ"
+            "id": "idHVOX9SME"
         },
         {
             "sign": "",
@@ -96063,7 +96119,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idOZ05CQL5"
+            "id": "idGHW3G2ZW"
         },
         {
             "sign": "",
@@ -96097,7 +96153,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "idCU3U2MDZ"
+            "id": "idJDSSSHGE"
         },
         {
             "sign": "",
@@ -96124,7 +96180,7 @@
                     "language_tag": "ru"
                 }
             ],
-            "id": "id1GXL19Y3"
+            "id": "idCMP78IWM"
         },
         {
             "sign": "",
@@ -96144,7 +96200,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "id7W4FB1MX"
+            "id": "idE2CEEEWN"
         },
         {
             "sign": "",
@@ -96178,7 +96234,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idMYOVZ748"
+            "id": "idEE7MR7NS"
         },
         {
             "sign": "",
@@ -96198,7 +96254,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "id4GUPG0GV"
+            "id": "idS18LOK48"
         },
         {
             "sign": "",
@@ -96218,7 +96274,7 @@
                     "language_tag": "ttt"
                 }
             ],
-            "id": "idU1MPSILB"
+            "id": "idKMVBMQRL"
         },
         {
             "sign": "",
@@ -96238,7 +96294,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idZMF93RTB"
+            "id": "idU6DR0TXA"
         },
         {
             "sign": "",
@@ -96258,7 +96314,7 @@
                     "language_tag": "krc"
                 }
             ],
-            "id": "id0H59V23Q"
+            "id": "idOUL1DKD9"
         },
         {
             "sign": "",
@@ -96285,7 +96341,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idBRYYWPRB"
+            "id": "idD7N6DXY3"
         },
         {
             "sign": "",
@@ -96305,7 +96361,7 @@
                     "language_tag": "niv"
                 }
             ],
-            "id": "idZL6WQC5T"
+            "id": "idETKERVZJ"
         },
         {
             "sign": "",
@@ -96325,7 +96381,7 @@
                     "language_tag": "yrk"
                 }
             ],
-            "id": "idN3T7395P"
+            "id": "idJN9DI754"
         },
         {
             "sign": "",
@@ -96352,7 +96408,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "idW82DND8Q"
+            "id": "id49W36DH6"
         },
         {
             "sign": "",
@@ -96379,7 +96435,7 @@
                     "language_tag": "sel"
                 }
             ],
-            "id": "idZV5YYYK6"
+            "id": "idVMGWYBH5"
         },
         {
             "sign": "",
@@ -96413,7 +96469,7 @@
                     "language_tag": "enf"
                 }
             ],
-            "id": "idS6T9QRKS"
+            "id": "idVFJ2MMXL"
         },
         {
             "sign": "",
@@ -96496,7 +96552,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idEGZBQUQF"
+            "id": "idEJ6XXL0K"
         },
         {
             "sign": "",
@@ -96572,7 +96628,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idM6AZ6Y9D"
+            "id": "id53KBTBZ8"
         },
         {
             "sign": "",
@@ -96634,7 +96690,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "id4IB3R8VQ"
+            "id": "idX5VVSG9D"
         },
         {
             "sign": "",
@@ -96654,7 +96710,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idO3NH0BT4"
+            "id": "id2E044H1W"
         },
         {
             "sign": "",
@@ -96674,7 +96730,7 @@
                     "language_tag": "nio"
                 }
             ],
-            "id": "idV5FHY9VF"
+            "id": "idKYZW2MZA"
         },
         {
             "sign": "",
@@ -96750,7 +96806,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idZXD9YX5F"
+            "id": "idNVC74IGP"
         },
         {
             "sign": "",
@@ -96784,7 +96840,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idPBTFS6M2"
+            "id": "id89BI8OKV"
         },
         {
             "sign": "",
@@ -96804,7 +96860,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idYHY93SAD"
+            "id": "id5QG9WEGX"
         },
         {
             "sign": "",
@@ -96824,7 +96880,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idS7I5RWVI"
+            "id": "idEZC9VDDE"
         },
         {
             "sign": "",
@@ -96886,7 +96942,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "id1LQMEC8Z"
+            "id": "idOR58M9JW"
         },
         {
             "sign": "",
@@ -96962,7 +97018,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idEU62YSFZ"
+            "id": "idQUTSC41R"
         },
         {
             "sign": "",
@@ -96982,7 +97038,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "id523E47NM"
+            "id": "id6LQO1Z1X"
         },
         {
             "sign": "",
@@ -97002,7 +97058,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idWVRVHJDQ"
+            "id": "idGKM5WKS8"
         },
         {
             "sign": "",
@@ -97085,7 +97141,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idMDUVXRTC"
+            "id": "id6VZ0NAFC"
         },
         {
             "sign": "",
@@ -97105,7 +97161,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "id0NI347N5"
+            "id": "id2WL0UEJL"
         },
         {
             "sign": "",
@@ -97181,7 +97237,7 @@
                     "language_tag": "eve"
                 }
             ],
-            "id": "idMB4BDLE4"
+            "id": "id6OWY5PJV"
         },
         {
             "sign": "",
@@ -97201,7 +97257,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idRJ1YIBWC"
+            "id": "idNVVBUB0D"
         },
         {
             "sign": "",
@@ -97221,7 +97277,7 @@
                     "language_tag": "sah"
                 }
             ],
-            "id": "id25YQ767W"
+            "id": "idQDPLXHEI"
         },
         {
             "sign": "",
@@ -97248,7 +97304,7 @@
                     "language_tag": "cv"
                 }
             ],
-            "id": "idZRT7359O"
+            "id": "idCTXD4II7"
         },
         {
             "sign": "",
@@ -97268,7 +97324,7 @@
                     "language_tag": "kca"
                 }
             ],
-            "id": "idQE17G3H1"
+            "id": "idD3XK1BE1"
         },
         {
             "sign": "",
@@ -97288,7 +97344,7 @@
                     "language_tag": "ba"
                 }
             ],
-            "id": "idUVRMI2M1"
+            "id": "idENX1IZYM"
         },
         {
             "sign": "",
@@ -97308,7 +97364,7 @@
                     "language_tag": "ba"
                 }
             ],
-            "id": "id7QAABBQS"
+            "id": "idCZVDE6DT"
         },
         {
             "sign": "",
@@ -97328,7 +97384,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id337ZFONO"
+            "id": "idPFOYMBOQ"
         },
         {
             "sign": "",
@@ -97348,7 +97404,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "id3H7E7C2W"
+            "id": "idPMXP23RK"
         },
         {
             "sign": "",
@@ -97368,7 +97424,7 @@
                     "language_tag": "sr"
                 }
             ],
-            "id": "idK4OORETF"
+            "id": "idS4J48LVQ"
         },
         {
             "sign": "",
@@ -97388,7 +97444,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "id0BOHALO9"
+            "id": "idR82V2R3K"
         },
         {
             "sign": "",
@@ -97408,7 +97464,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "idEI8OSTKQ"
+            "id": "idG5C2F9CC"
         },
         {
             "sign": "",
@@ -97428,7 +97484,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "idCZ82422J"
+            "id": "idD57KGZWM"
         },
         {
             "sign": "",
@@ -97448,7 +97504,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "idCSNTA2YK"
+            "id": "idHV129AJY"
         },
         {
             "sign": "",
@@ -97468,7 +97524,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "id6IHQBS2F"
+            "id": "idR7IGH66N"
         },
         {
             "sign": "",
@@ -97488,7 +97544,7 @@
                     "language_tag": "av"
                 }
             ],
-            "id": "idYZWB5OE1"
+            "id": "idWUCRW9XO"
         }
     ]
 }
