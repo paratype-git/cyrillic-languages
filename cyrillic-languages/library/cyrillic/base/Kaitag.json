@@ -21,13 +21,13 @@
         "Khaydak",
         "Ucumi"
     ],
-    "description_eng": "The modern Kaitag alphabet, based on the Cyrillic script, was developed in 2024 and updated in 2026. It consists of 27 letters of the Russian alphabet (Щ, Ф, Ы, Э, Ё, Ю are missing), and 3 specific characters (Ғ, Ҡ, Ҳ) as well as 12 digraphs (doubled geminates and ejectives with Ӏӏ). Important symbols that are not part of the alphabet are shown separately.",
-    "description_rus": "Современный кайтагский алфавит на основе кириллицы разработан в 2024 году и уточнен в 2026 году. Он состоит из 27 букв русского алфавита (отсутствуют Щ, Ф, Ы, Э, Ё, Ю), 3 специфических знаков (Ғ, Ҡ, Ҳ), и 12 диграфов (удвоенные геминаты и абруптивы с Ӏӏ). Отдельно показаны важные знаки, не входящие в алфавит.",
+    "description_eng": "The modern Kaitag Cyrillic alphabet was developed in 2024–2026. It consists of 24 letters from the Russian alphabet (excluding Ёё, Фф, Щщ, Ъъ, Ыы, Ьь, Ээ, Юю, Яя), 6 extended Cyrillic letters (Әә, Ғғ, Ҡҡ, Ҳҳ, Һһ, Ӏӏ), and 12 digraphs (doubled geminates and ejectives with the palochka). Important symbols that are not part of the alphabet are shown separately.",
+    "description_rus": "Современный кайтагский кириллический алфавит разработан в 2024–2026 годах. Он состоит из 24 букв русского алфавита (исключая Ёё, Фф, Щщ, Ъъ, Ыы, Ьь, Ээ, Юю, Яя), 6 расширенных кириллических букв (Әә, Ғғ, Ҡҡ, Ҳҳ, Һһ, Ӏӏ) и 12 диграфов (удвоенные геминаты и абруптивы с палочкой). Отдельно показаны важные знаки, не входящие в алфавит.",
     "glyphs_list": [
         {
             "type": "alphabet",
-            "uppercase": "А Б В Г Ғ Д Е Ж З И Й К Кк Кӏ Ҡ Ҡҡ Ҡӏ Л М Н О П Пп Пӏ Р С Т Тт Тӏ У Х Ҳ Ц Цц Цӏ Ч Чч Чӏ Ш Ъ Ь Я",
-            "lowercase": "а б в г ғ д е ж з и й к кк кӏ ҡ ҡҡ ҡӏ л м н о п пп пӏ р с т тт тӏ у х ҳ ц цц цӏ ч чч чӏ ш ъ ь я"
+            "uppercase": "А Ә Б В Г Ғ Д Е Ж З И Й К Кк Кӏ Ҡ Ҡҡ Ҡӏ Л М Н О П Пп Пӏ Р С Т Тт Тӏ У Х Ҳ Һ Ц Цц Цӏ Ч Чч Чӏ Ш Ӏ",
+            "lowercase": "а ә б в г ғ д е ж з и й к кк кӏ ҡ ҡҡ ҡӏ л м н о п пп пӏ р с т тт тӏ у х ҳ һ ц цц цӏ ч чч чӏ ш ӏ"
         },
         {
             "type": "dialect",
@@ -36,13 +36,13 @@
         },
         {
             "type": "historic",
-            "uppercase": "Кь Ҡь Пь Ть Ць Чь",
-            "lowercase": "кь ҡь пь ть ць чь"
+            "uppercase": "Кь Ҡь Пь Ть Ць Чь Ъ Ь Я",
+            "lowercase": "кь ҡь пь ть ць чь ъ ь я"
         },
         {
             "type": "extended",
-            "uppercase": "      Ӏ",
-            "lowercase": "      ӏ"
+            "uppercase": "     ",
+            "lowercase": "     "
         },
         {
             "type": "consideration",
