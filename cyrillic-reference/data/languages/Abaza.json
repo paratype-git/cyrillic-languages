@@ -10,9 +10,9 @@
         "url": "https://paratype.github.io/cyrillic-languages/index.html?lang=Abaza&group=cyrillic&ui=en&pg=2",
         "language_tag": "abq",
         "default_language_tag": "ru",
-        "feature_locl_tag": null,
+        "feature_locl_tag": "ABA ",
         "iso639_1": null,
-        "iso639_3": null,
+        "iso639_3": "abq",
         "note": null
     },
     "characters": [
