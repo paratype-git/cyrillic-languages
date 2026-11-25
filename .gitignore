@@ -21,3 +21,7 @@ __pycache__/
 cyrillic-reference/tools/export_tables.py
 
 cyrillic-reference/exports/
+
+# Latin-tree audit workspace: analysis scripts, downloaded CLDR reference data
+# and the generated report. Kept locally; not part of the tracked toolchain.
+/latin-audit/
